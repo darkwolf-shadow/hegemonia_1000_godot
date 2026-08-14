@@ -1,0 +1,284 @@
+ARCHITETTURA CITTA', EDIFICI E ALBERO UNITA' (Hegemonia 1000)
+==============================================================
+
+1. CONCETTO GENERALE
+--------------------
+- La mappa strategica mostra le province come poligoni GeoJSON.
+- Cliccando (o zoomando) su una provincia si entra nella SCHERMATA PROVINCIA.
+- All'interno della provincia compaiono gli AGGLOMERATI URBANI predefiniti.
+- Cliccando su un agglomerato si apre la SCHERMATA INSediAMENTO.
+- Il giocatore puo' fondare NUOVI agglomerati in zone libere della provincia,
+  pagando oro, legname e pietra.
+
+2. TIPI DI AGGLOMERATO URBANO
+-----------------------------
+Ogni agglomerato ha un tipo che ne limita gli edifici e le unita' reclutabili.
+
+2.1 Civile (citta')
+    - Edifici base: centro cittadino, mercato, mulino, monastero, caserma.
+    - Puo' reclutare: milizia contadina, fanteria base, arcieri base.
+    - Produzione: oro, cibo, prestigio.
+
+2.2 Militare (fortezza / castello / avamposto)
+    - Edifici: caserma avanzata, campo di tiro, scuderia, cortile del cavaliere,
+      officina d'assedio, fortezza di frontiera.
+    - Puo' reclutare: tutte le unita' terrestri, inclusi elite.
+    - Bonus difesa per la provincia.
+
+2.3 Industriale (centro estrattivo / borgo artigiano)
+    - Edifici: segheria, miniera, fucina, officina d'armi, capanne boscaioli.
+    - Puo' reclutare: milizia contadina (con forcone, ascia, falcetto).
+    - Produzione: legname, pietra, ferro, armi.
+
+2.4 Commerciale / Portuale (porto / emporio)
+    - Edifici: molo, arsenale, mercato marittimo, magazzino.
+    - Puo' reclutare: navi da trasporto e navi da guerra (se c'e' arsenale).
+    - Puo' evolvere in citta' con porto.
+
+3. EDIFICI PRINCIPALI E UNITA' SBLOCCATE
+-----------------------------------------
+Terrestri:
+    Centro cittadino     -> milizia contadina
+    Caserma (I)          -> fanteria con lancia / scudo semplice
+    Caserma (II)         -> fanteria pesante, oplita, spadaccini
+    Campo di tiro (I)    -> arcieri leggeri
+    Campo di tiro (II)   -> arcieri a lungo arco / balestrieri
+    Scuderia (I)         -> cavalleria leggera
+    Scuderia (II)        -> cavalieri, cavalleria media
+    Cortile del Cavaliere-> cavalleria pesante (richiede fucina + armatura)
+    Officina d'Assedio(I)-> balista
+    Officina d'Assedio(II)-> catapulta, ariete
+    Officina d'Assedio(III)-> trabucco, torre d'assedio
+    Fucina               -> sblocca armature e armi avanzate
+    Segheria             -> sblocca navi e edifici in legno
+    Miniera              -> pietra, ferro, argento
+    Officina d'Armi      -> produzione armi, sblocca unita' elite
+    Monastero            -> prestigio, reliquie, cultura
+    Mercato              -> commercio oro
+    Mulino               -> cibo
+    Fortezza di frontiera-> difesa provincia
+
+Navali:
+    Molo (I)             -> canoe, piccole imbarcazioni da pesca/trasporto
+    Molo (II)            -> galea, nave da carico
+    Arsenale (I)         -> drakkar, dromone
+    Arsenale (II)        -> giunca, nave da guerra, nave torre
+
+4. ALBERI EVOLUTIVI UNITA' TERRA
+---------------------------------
+Le frecce indicano "puo' evolvere con l'edificio adatto".
+
+4.1 Fanteria
+    Milizia contadina (forcone)
+        -> Lancieri (lancia + scudo leggero)
+            -> Oplita (scudo grande, lancia piantata, armatura)
+                -> Fanteria pesante (spada lunga / alabarda, armatura pesante)
+
+    Milizia contadina (ascia)
+        -> Picchieri (ascia + scudo)
+            -> Guardia d'onore (armatura, ascia da guerra)
+
+4.2 Arcieri
+    Arcieri leggeri
+        -> Arcieri a lungo arco
+            -> Balestrieri
+                -> Balestrieri pesanti / Shenbi Nu (solo Song)
+
+4.3 Cavalleria leggera
+    Esploratori a cavallo
+        -> Cavalleria leggera arcieri
+            -> Cavalleria leggera con giavellotto (jinete, magiari, turchi)
+
+4.4 Cavalleria pesante
+    Scudieri / Cavalieri in armatura leggera
+        -> Cavalieri corazzati
+            -> Cavalieri pesanti elite (cataphractoi, loricati, mamluk, ghulam)
+
+4.5 Artiglieria (niente polvere da sparo nell'anno 1000)
+    Balista
+        -> Catapulta
+            -> Trabucco
+                -> Ariete
+                -> Torre d'assedio
+
+4.6 Milizia contadina
+    Contadini armati
+        -> Milizia urbana
+            -> Milizia addestrata
+
+5. ALBERI EVOLUTIVI NAVI
+--------------------------
+    Canoa
+        -> Nave da pesca / trasporto leggera
+            -> Galea
+                -> Dromone ( Mediterraneo orientale / Bizantino )
+            -> Drakkar ( Vichinghi )
+            -> Giunca ( Oriente )
+                -> Nave da guerra (Orientale/Indiana)
+                -> Nave torre (Song)
+
+6. UNITA' PARTICOLARI PER FAZIONE
+---------------------------------
+Le unita' particolari sostituiscono o si aggiungono a quelle dell'albero comune,
+ma richiedono EDIFICI SPECIALI che solo quella fazione (o cultura) puo' costruire.
+
+Impero Bizantino:
+    - Toxotai ........... arcieri evoluti (Campo di tiro II + Monastero)
+    - Cataphractoi ...... cavalleria pesante (Cortile del Cavaliere + Fucina)
+    - Varangian Guard ... fanteria pesante (Caserma II + Mercato per reclutare mercenari)
+    - Dromone ........... nave da guerra (Arsenale I)
+    - Fuoco greco ....... attacco navale speciale (Arsenale II + Monastero)
+
+Sacro Romano Impero:
+    - Milites ........... fanteria pesante (Caserma II)
+    - Ministeriales ..... cavalleria feudale (Scuderia II)
+    - Loricati .......... cavalleria pesante corazzata (Cortile del Cavaliere)
+
+Vichinghi:
+    - Bondi ............. milizia libera (Centro cittadino)
+    - Huskarl ........... fanteria pesante con ascia (Caserma II)
+    - Berserker ......... fanteria d'assalto (Caserma II + Officina d'Armi)
+    - Drakkar ........... nave veloce (Arsenale I)
+
+Regno di Francia:
+    - Milites franci .... cavalleria pesante (Scuderia II)
+    - Balestrieri ....... arcieri evoluti (Campo di tiro II)
+
+Califfato di Cordova:
+    - Jinete ............ cavalleria leggera giavellotto (Scuderia I)
+    - Guardia Nera ...... fanteria scelta (Caserma II + Mercato)
+
+Impero Fatimide:
+    - Mamluk cavalry .... cavalleria pesante (Cortile del Cavaliere)
+    - Arcieri Armeni .... arcieri evoluti (Campo di tiro I)
+    - Lancieri Sudanese . fanteria pesante (Caserma II)
+
+Califfato Abbaside:
+    - Ghilman ........... cavalleria pesante (Cortile del Cavaliere)
+    - Fanteria Daylami .. fanteria montanara (Caserma II)
+
+Sultanato Ghaznavide:
+    - Ghulam cavalry .... cavalleria pesante (Cortile del Cavaliere)
+    - Elefanti da guerra  (Officina d'Assedio II + Mercato per cattura)
+
+Regno d'Ungheria:
+    - Cavalleria Magiara  cavalleria leggera arcieri (Scuderia I + Campo di tiro I)
+
+Principato di Kiev:
+    - Druzhina .......... cavalleria pesante (Cortile del Cavaliere)
+    - Voi ............... milizia cittadina (Centro cittadino)
+
+Regno di Polonia:
+    - Druzyna ........... cavalleria pesante (Cortile del Cavaliere)
+
+Dinastia Song:
+    - Balestrieri ....... arcieri evoluti (Campo di tiro II)
+    - Shenbi Nu ......... balestrieri scelti (Campo di tiro III + Officina d'Armi)
+    - Lancia di Fuoco ... fanteria con armi a fuoco primitive (Officina d'Armi)
+    - Nave Torre ........ nave da guerra (Arsenale II)
+
+Impero Khitan Liao:
+    - Arcieri a cavallo Khitan (Scuderia I + Campo di tiro I)
+    - Lancieri Liao ..... cavalleria pesante (Scuderia II)
+
+Impero Chola:
+    - Fanteria Tamil .... fanteria base (Caserma I)
+    - Corpo degli Elefanti (Cortile del Cavaliere / Officina d'Assedio II)
+    - Nave da Guerra Indiana (Arsenale I)
+
+Regno Khmer:
+    - Lancieri Khmer .... fanteria (Caserma I)
+    - Elefanti Khmer .... (Officina d'Assedio II)
+
+Regno Heian:
+    - Samurai ........... cavalleria/cavalleria arcieri (Scuderia II + Monastero)
+    - Fanteria Yamato ... fanteria (Caserma I)
+
+Regno di Srivijaya:
+    - Arcieri Malese .... arcieri (Campo di tiro I)
+    - Nave da guerra malese (Arsenale I)
+
+Impero del Ghana:
+    - Cavalleria Soninke (Scuderia I)
+    - Lancieri Sudani ... fanteria (Caserma I)
+
+Toltechi / Regni Maya:
+    - Atlatl ............ lanciatori di giavellotto (Campo di tiro I)
+    - Holcan / Guerriero Giaguaro / Guerriero Aquila (Caserma II + Monastero)
+    - Canoa da guerra ... (Molo I)
+
+7. STATISTICHE DELLE UNITA'
+----------------------------
+Ogni unita' terrestre e navale avra' i seguenti valori:
+
+- attacco (forza offensiva)
+- difesa (resistenza ai danni)
+- armatura (riduzione danni da colpi diretti)
+- velocita' (movimento sulla mappa e iniziativa in battaglia)
+- morale (se scende troppo l'unita' fuge o si arrende)
+- esperienza (accumulata nelle battaglie, aumenta attacco/difesa/morale)
+- costo_oro
+- costo_risorse (legname, pietra, ferro, armi, cibo)
+- popolazione (abitanti consumati per reclutare)
+- manutenzione_oro_per_turno
+- manutenzione_cibo_per_turno
+
+In battaglia il sistema calcolera' il danno in base a:
+    danno = attacco * bonus_tattica * (morale/100) * fattore_casualita'
+    difesa_effettiva = difesa + armatura * 0.5
+
+Le unita' speciali avranno anche tratti (es. "incursori", "anti-cavalleria",
+"assedio", "navale", "fuoco greco").
+
+8. SCENE GODOT AGGIUNTIVE / MODIFICATE
+---------------------------------------
+- strategic_map.tscn ................. gia' esistente, aggiunto zoom su provincia.
+- province_view.tscn ................. NUOVA: mostra la provincia ingrandita
+                                       con gli agglomerati urbani.
+- settlement_view.tscn ............... NUOVA: schermata di un singolo agglomerato
+                                       per costruire edifici e reclutare unita'.
+- building_panel.tscn .............. NUOVA: lista edifici costruibili.
+- unit_tree_panel.tscn ............. NUOVA: albero evolutivo delle unita'.
+- unit_stats_panel.tscn ............ NUOVA: scheda statistiche unita'.
+- battle_view.tscn ................. gia' esistente, estesa con morale e stats.
+
+9. FILE JSON CHE VERRANNO MODIFICATI
+-------------------------------------
+- data/config/game_config.json
+    -> buildings: nuovi edifici con costi, effetti, unita' sbloccate.
+    -> units: nuove unita' con albero evolutivo, statistiche, requisiti.
+    -> ships: nuove navi con albero evolutivo e statistiche.
+    -> unit_traits: tratti speciali.
+    -> technology_tree: collegamenti tra edifici e unita'.
+
+- data/world/provinces_1000.json
+    -> ogni provincia conterra' un campo "settlements" con gli agglomerati
+       predefiniti (nome, tipo, edifici iniziali, coordinate sulla provincia).
+
+- data/world/factions_1000.json
+    -> i dati iniziali delle fazioni indicheranno gli agglomerati e gli edifici
+       presenti nella capitale e nelle province di partenza.
+
+- data/scenarios/initial_state_1000.json
+    -> snapshot iniziale dello stato con agglomerati ed edifici.
+
+10. FASI DI IMPLEMENTAZIONE SUGGERITE
+--------------------------------------
+Fase A: aggiornare game_config.json con edifici, unita' navi e tratti.
+Fase B: creare gli autoload e script per gestire agglomerati ed edifici
+        (settlement_manager.gd, building_manager.gd).
+Fase C: creare le scene province_view, settlement_view e i pannelli UI.
+Fase D: inserire gli agglomerati predefiniti nelle province (partendo dalle
+        capitali, poi le altre province).
+Fase E: aggiornare battle_system.gd per usare attacco/difesa/armatura/velocita'
+        e morale.
+Fase F: testare con test_runner.gd e correzioni.
+
+11. DOMANDE UTENTE (da chiarire prima della Fase C se possibile)
+---------------------------------------------------------------
+- Vuoi che gli agglomerati siano visibili come icone sulla mappa provincia,
+  oppure solo in una lista laterale?
+- Preferisci che le unita' evolvano automaticamente con l'edificio,
+  oppure che il giocatore paghi per "upgrade" singolo?
+- Il morale e l'esperienza devono gia' funzionare nelle battaglie 2.5D,
+  oppure e' sufficiente che siano salvati nei dati per attivarli dopo?

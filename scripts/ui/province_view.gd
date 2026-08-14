@@ -1,0 +1,59 @@
+extends Control
+
+@onready var title_label: Label = $Title
+@onready var settlements_list: ItemList = $SettlementsList
+@onready var details_label: Label = $Details
+@onready var enter_button: Button = $EnterButton
+@onready var back_button: Button = $BackButton
+
+var current_province: String = ""
+
+
+func _ready():
+	enter_button.pressed.connect(_on_enter)
+	back_button.pressed.connect(_on_back)
+	settlements_list.item_selected.connect(_on_item_selected)
+	visible = false
+
+
+func open(province_name: String):
+	current_province = province_name
+	visible = true
+	title_label.text = province_name
+	_update_list()
+
+
+func _update_list():
+	settlements_list.clear()
+	var prov = GameState.state.provinces.get(current_province, {})
+	var settlements = prov.get("settlements", {})
+	for s_name in settlements.keys():
+		var s = settlements[s_name]
+		settlements_list.add_item("%s (%s)" % [s_name, s.get("type", "")])
+
+	var data = WorldData.get_province(current_province)
+	details_label.text = "Regione: %s\nTerreno: %s\nPopolazione: %d\nProprietario: %s" % [
+		data.get("region", ""),
+		data.get("terrain", ""),
+		data.get("population", 0),
+		prov.get("owner", "")
+	]
+
+
+func _on_item_selected(index: int):
+	pass
+
+
+func _on_enter():
+	var idx = settlements_list.get_selected_items()
+	if idx.size() == 0:
+		return
+	var prov = GameState.state.provinces.get(current_province, {})
+	var s_name = prov.get("settlements", {}).keys()[idx[0]]
+	var settlement_view = get_tree().get_root().get_node_or_null("StrategicMap/CanvasLayer/UI/SettlementView")
+	if settlement_view:
+		settlement_view.open(current_province, s_name)
+
+
+func _on_back():
+	visible = false

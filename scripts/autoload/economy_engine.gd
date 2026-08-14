@@ -11,18 +11,13 @@ func apply_production():
 
 
 func produce_resources(faction: Dictionary):
-	var base = faction.get("production", {})
+	var name = faction.get("name", "")
 	var modifiers = faction.get("modifiers", {})
 	var res = faction.get("resources", {})
-	for r in base.keys():
-		var amount = base[r]
+	var prod = SettlementManager.production_for_faction(name)
+	for r in prod.keys():
+		var amount = prod[r]
 		res[r] = res.get(r, 0) + int(amount * modifiers.get(r, 1.0))
-	# Bonus edifici
-	for building in faction.get("buildings", []):
-		var data = WorldData.get_building(building)
-		for effect in data.get("effects", {}).keys():
-			if effect in res:
-				res[effect] = res.get(effect, 0) + data["effects"][effect]
 
 
 func pay_maintenance(faction: Dictionary):

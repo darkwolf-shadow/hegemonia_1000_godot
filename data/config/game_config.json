@@ -18,7 +18,17 @@
       "cost": 1000,
       "pop": 1000,
       "maintenance": 1,
-      "food": 1
+      "food": 1,
+      "attack": 0.2,
+      "defense": 0.11,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_i"
+      ],
+      "allowed_settlement_types": []
     },
     "arcieri": {
       "name": "Arcieri",
@@ -26,7 +36,17 @@
       "cost": 900,
       "pop": 800,
       "maintenance": 1,
-      "food": 1
+      "food": 1,
+      "attack": 0.22,
+      "defense": 0.07,
+      "armor": 0.05,
+      "speed": 2.8,
+      "base_morale": 95,
+      "experience": 0,
+      "requires_buildings": [
+        "campo_tiro_i"
+      ],
+      "allowed_settlement_types": []
     },
     "cavalleria": {
       "name": "Cavalieri",
@@ -34,7 +54,17 @@
       "cost": 1800,
       "pop": 500,
       "maintenance": 3,
-      "food": 2
+      "food": 2,
+      "attack": 0.4,
+      "defense": 0.24,
+      "armor": 0.1,
+      "speed": 5.5,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "scuderia_i"
+      ],
+      "allowed_settlement_types": []
     },
     "cavalleria_pesante": {
       "name": "Cavalleria Pesante",
@@ -44,7 +74,18 @@
       "maintenance": 3,
       "food": 2,
       "ferro": 3,
-      "armi": 2
+      "armi": 2,
+      "attack": 0.5,
+      "defense": 0.38,
+      "armor": 0.35,
+      "speed": 4.0,
+      "base_morale": 105,
+      "experience": 0,
+      "requires_buildings": [
+        "scuderia_ii",
+        "fucina"
+      ],
+      "allowed_settlement_types": []
     },
     "artiglieria": {
       "name": "Catapulta",
@@ -54,7 +95,17 @@
       "maintenance": 2,
       "food": 0,
       "pietra": 2,
-      "legname": 2
+      "legname": 2,
+      "attack": 0.3,
+      "defense": 0.06,
+      "armor": 0.0,
+      "speed": 1.0,
+      "base_morale": 90,
+      "experience": 0,
+      "requires_buildings": [
+        "officina_assedio_ii"
+      ],
+      "allowed_settlement_types": []
     },
     "cataphractoi": {
       "name": "Cataphractoi",
@@ -64,7 +115,22 @@
       "maintenance": 4,
       "food": 3,
       "ferro": 4,
-      "armi": 3
+      "armi": 3,
+      "attack": 0.6,
+      "defense": 0.45,
+      "armor": 0.35,
+      "speed": 4.0,
+      "base_morale": 105,
+      "experience": 0,
+      "requires_buildings": [
+        "scuderia_iii",
+        "fucina",
+        "officina_armi"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Impero Bizantino"
+      ]
     },
     "varangian_guard": {
       "name": "Guardia Varanga",
@@ -75,7 +141,21 @@
       "food": 2,
       "legname": 2,
       "ferro": 3,
-      "armi": 2
+      "armi": 2,
+      "attack": 0.5,
+      "defense": 0.28,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_iii",
+        "mercato"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Impero Bizantino"
+      ]
     },
     "toxotai": {
       "name": "Toxotai",
@@ -83,7 +163,20 @@
       "cost": 1000,
       "pop": 800,
       "maintenance": 1,
-      "food": 1
+      "food": 1,
+      "attack": 0.25,
+      "defense": 0.07,
+      "armor": 0.05,
+      "speed": 2.8,
+      "base_morale": 95,
+      "experience": 0,
+      "requires_buildings": [
+        "campo_tiro_ii"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Impero Bizantino"
+      ]
     },
     "milites": {
       "name": "Milites",
@@ -93,7 +186,22 @@
       "maintenance": 2,
       "food": 1,
       "legname": 1,
-      "ferro": 1
+      "ferro": 1,
+      "attack": 0.3,
+      "defense": 0.17,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_ii"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Sacro Romano Impero",
+        "Regno di Francia",
+        "Califfato di Cordova"
+      ]
     },
     "ministeriales": {
       "name": "Ministeriales",
@@ -103,7 +211,21 @@
       "maintenance": 3,
       "food": 2,
       "ferro": 2,
-      "armi": 2
+      "armi": 2,
+      "attack": 0.45,
+      "defense": 0.34,
+      "armor": 0.35,
+      "speed": 4.0,
+      "base_morale": 105,
+      "experience": 0,
+      "requires_buildings": [
+        "scuderia_ii",
+        "fucina"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Sacro Romano Impero"
+      ]
     },
     "loricati": {
       "name": "Loricati",
@@ -113,7 +235,21 @@
       "maintenance": 4,
       "food": 2,
       "ferro": 4,
-      "armi": 3
+      "armi": 3,
+      "attack": 0.55,
+      "defense": 0.41,
+      "armor": 0.35,
+      "speed": 4.0,
+      "base_morale": 105,
+      "experience": 0,
+      "requires_buildings": [
+        "cortile_cavaliere",
+        "officina_armi"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Sacro Romano Impero"
+      ]
     },
     "berserker": {
       "name": "Berserker",
@@ -122,7 +258,21 @@
       "pop": 500,
       "maintenance": 2,
       "food": 2,
-      "legname": 2
+      "legname": 2,
+      "attack": 0.45,
+      "defense": 0.25,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_ii",
+        "officina_armi"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Vichinghi"
+      ]
     },
     "huskarl": {
       "name": "Huskarl",
@@ -133,7 +283,21 @@
       "food": 2,
       "legname": 2,
       "ferro": 1,
-      "armi": 1
+      "armi": 1,
+      "attack": 0.4,
+      "defense": 0.22,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_ii",
+        "fucina"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Vichinghi"
+      ]
     },
     "bondi": {
       "name": "Bondi",
@@ -142,7 +306,20 @@
       "pop": 1000,
       "maintenance": 1,
       "food": 1,
-      "legname": 1
+      "legname": 1,
+      "attack": 0.15,
+      "defense": 0.05,
+      "armor": 0.0,
+      "speed": 2.2,
+      "base_morale": 80,
+      "experience": 0,
+      "requires_buildings": [
+        "centro_cittadino"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Vichinghi"
+      ]
     },
     "jinete": {
       "name": "Jinete",
@@ -150,7 +327,20 @@
       "cost": 1500,
       "pop": 400,
       "maintenance": 2,
-      "food": 2
+      "food": 2,
+      "attack": 0.35,
+      "defense": 0.21,
+      "armor": 0.1,
+      "speed": 5.5,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "scuderia_i"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Califfato di Cordova"
+      ]
     },
     "black_guard": {
       "name": "Guardia Nera",
@@ -161,7 +351,21 @@
       "food": 2,
       "legname": 1,
       "ferro": 1,
-      "armi": 1
+      "armi": 1,
+      "attack": 0.4,
+      "defense": 0.22,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_iii",
+        "mercato"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Califfato di Cordova"
+      ]
     },
     "sudanese_spearmen": {
       "name": "Lancieri Sudanese",
@@ -169,7 +373,20 @@
       "cost": 1200,
       "pop": 900,
       "maintenance": 2,
-      "food": 1
+      "food": 1,
+      "attack": 0.3,
+      "defense": 0.17,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_ii"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Impero Fatimide"
+      ]
     },
     "armenian_archers": {
       "name": "Arcieri Armeni",
@@ -177,7 +394,21 @@
       "cost": 1200,
       "pop": 700,
       "maintenance": 2,
-      "food": 1
+      "food": 1,
+      "attack": 0.3,
+      "defense": 0.09,
+      "armor": 0.05,
+      "speed": 2.8,
+      "base_morale": 95,
+      "experience": 0,
+      "requires_buildings": [
+        "campo_tiro_ii"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Impero Fatimide",
+        "Califfato Abbaside"
+      ]
     },
     "mamluk_cavalry": {
       "name": "Cavalleria Mamluk",
@@ -187,7 +418,20 @@
       "maintenance": 3,
       "food": 2,
       "ferro": 3,
-      "armi": 2
+      "armi": 2,
+      "attack": 0.5,
+      "defense": 0.38,
+      "armor": 0.35,
+      "speed": 4.0,
+      "base_morale": 105,
+      "experience": 0,
+      "requires_buildings": [
+        "cortile_cavaliere"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Impero Fatimide"
+      ]
     },
     "magyar_cavalry": {
       "name": "Cavalleria Magiara",
@@ -195,7 +439,21 @@
       "cost": 1600,
       "pop": 400,
       "maintenance": 2,
-      "food": 2
+      "food": 2,
+      "attack": 0.35,
+      "defense": 0.21,
+      "armor": 0.1,
+      "speed": 5.5,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "scuderia_i",
+        "campo_tiro_i"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Regno d'Ungheria"
+      ]
     },
     "szekler_infantry": {
       "name": "Fanteria Szekler",
@@ -203,7 +461,17 @@
       "cost": 1000,
       "pop": 800,
       "maintenance": 1,
-      "food": 1
+      "food": 1,
+      "attack": 0.25,
+      "defense": 0.14,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_i"
+      ],
+      "allowed_settlement_types": []
     },
     "druzhina": {
       "name": "Druzhina",
@@ -213,7 +481,20 @@
       "maintenance": 3,
       "food": 2,
       "ferro": 2,
-      "armi": 2
+      "armi": 2,
+      "attack": 0.5,
+      "defense": 0.38,
+      "armor": 0.35,
+      "speed": 4.0,
+      "base_morale": 105,
+      "experience": 0,
+      "requires_buildings": [
+        "cortile_cavaliere"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Principato di Kiev"
+      ]
     },
     "voi": {
       "name": "Voi (Milizia)",
@@ -221,7 +502,20 @@
       "cost": 700,
       "pop": 1000,
       "maintenance": 1,
-      "food": 1
+      "food": 1,
+      "attack": 0.15,
+      "defense": 0.05,
+      "armor": 0.0,
+      "speed": 2.2,
+      "base_morale": 80,
+      "experience": 0,
+      "requires_buildings": [
+        "centro_cittadino"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Principato di Kiev"
+      ]
     },
     "varangian_mercenaries": {
       "name": "Mercenari Varanghi",
@@ -232,7 +526,22 @@
       "food": 2,
       "legname": 1,
       "ferro": 2,
-      "armi": 2
+      "armi": 2,
+      "attack": 0.45,
+      "defense": 0.25,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_ii",
+        "mercato"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Principato di Kiev",
+        "Impero Bizantino"
+      ]
     },
     "druzyna": {
       "name": "Drużyna",
@@ -242,7 +551,21 @@
       "maintenance": 3,
       "food": 2,
       "ferro": 2,
-      "armi": 2
+      "armi": 2,
+      "attack": 0.45,
+      "defense": 0.25,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "scuderia_ii",
+        "fucina"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Regno di Polonia"
+      ]
     },
     "polish_spearmen": {
       "name": "Lancieri Polacchi",
@@ -250,7 +573,20 @@
       "cost": 900,
       "pop": 900,
       "maintenance": 1,
-      "food": 1
+      "food": 1,
+      "attack": 0.25,
+      "defense": 0.14,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_i"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Regno di Polonia"
+      ]
     },
     "ghilman": {
       "name": "Ghilman",
@@ -260,7 +596,20 @@
       "maintenance": 3,
       "food": 2,
       "ferro": 3,
-      "armi": 2
+      "armi": 2,
+      "attack": 0.5,
+      "defense": 0.38,
+      "armor": 0.35,
+      "speed": 4.0,
+      "base_morale": 105,
+      "experience": 0,
+      "requires_buildings": [
+        "cortile_cavaliere"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Califfato Abbaside"
+      ]
     },
     "daylami_infantry": {
       "name": "Fanteria Daylami",
@@ -268,7 +617,20 @@
       "cost": 1400,
       "pop": 700,
       "maintenance": 2,
-      "food": 1
+      "food": 1,
+      "attack": 0.35,
+      "defense": 0.19,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_ii"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Califfato Abbaside"
+      ]
     },
     "ghulam_cavalry": {
       "name": "Cavalleria Ghulam",
@@ -278,7 +640,20 @@
       "maintenance": 3,
       "food": 2,
       "ferro": 3,
-      "armi": 2
+      "armi": 2,
+      "attack": 0.5,
+      "defense": 0.38,
+      "armor": 0.35,
+      "speed": 4.0,
+      "base_morale": 105,
+      "experience": 0,
+      "requires_buildings": [
+        "cortile_cavaliere"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Sultanato Ghaznavide"
+      ]
     },
     "war_elephants": {
       "name": "Elefanti da Guerra",
@@ -288,7 +663,23 @@
       "maintenance": 5,
       "food": 4,
       "ferro": 1,
-      "armi": 1
+      "armi": 1,
+      "attack": 0.7,
+      "defense": 0.63,
+      "armor": 0.35,
+      "speed": 1.5,
+      "base_morale": 110,
+      "experience": 0,
+      "requires_buildings": [
+        "officina_assedio_ii",
+        "mercato"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Sultanato Ghaznavide",
+        "Impero Chola",
+        "Regno Khmer"
+      ]
     },
     "afghan_infantry": {
       "name": "Fanteria Afghana",
@@ -296,7 +687,20 @@
       "cost": 900,
       "pop": 900,
       "maintenance": 1,
-      "food": 1
+      "food": 1,
+      "attack": 0.25,
+      "defense": 0.14,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_i"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Sultanato Ghaznavide"
+      ]
     },
     "turkish_horse_archers": {
       "name": "Arcieri a Cavallo Turchi",
@@ -304,7 +708,22 @@
       "cost": 1600,
       "pop": 400,
       "maintenance": 2,
-      "food": 2
+      "food": 2,
+      "attack": 0.35,
+      "defense": 0.21,
+      "armor": 0.1,
+      "speed": 5.5,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "scuderia_i",
+        "campo_tiro_i"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Sultanato Ghaznavide",
+        "Impero Khitan Liao"
+      ]
     },
     "crossbowmen": {
       "name": "Balestrieri",
@@ -312,7 +731,23 @@
       "cost": 1100,
       "pop": 700,
       "maintenance": 2,
-      "food": 1
+      "food": 1,
+      "attack": 0.3,
+      "defense": 0.09,
+      "armor": 0.05,
+      "speed": 2.8,
+      "base_morale": 95,
+      "experience": 0,
+      "requires_buildings": [
+        "campo_tiro_ii",
+        "officina_armi"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Regno di Francia",
+        "Sacro Romano Impero",
+        "Dinastia Song"
+      ]
     },
     "shenbi_nu": {
       "name": "Shenbi Nu",
@@ -320,7 +755,21 @@
       "cost": 1300,
       "pop": 700,
       "maintenance": 2,
-      "food": 1
+      "food": 1,
+      "attack": 0.35,
+      "defense": 0.1,
+      "armor": 0.05,
+      "speed": 2.8,
+      "base_morale": 95,
+      "experience": 0,
+      "requires_buildings": [
+        "campo_tiro_iii",
+        "officina_armi"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Dinastia Song"
+      ]
     },
     "fire_lance": {
       "name": "Lancia di Fuoco",
@@ -330,7 +779,21 @@
       "maintenance": 2,
       "food": 1,
       "ferro": 1,
-      "armi": 1
+      "armi": 1,
+      "attack": 0.4,
+      "defense": 0.08,
+      "armor": 0.0,
+      "speed": 1.0,
+      "base_morale": 90,
+      "experience": 0,
+      "requires_buildings": [
+        "officina_assedio_iii",
+        "officina_armi"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Dinastia Song"
+      ]
     },
     "khitan_horse_archers": {
       "name": "Arcieri a Cavallo Khitan",
@@ -338,7 +801,21 @@
       "cost": 1600,
       "pop": 400,
       "maintenance": 2,
-      "food": 2
+      "food": 2,
+      "attack": 0.35,
+      "defense": 0.21,
+      "armor": 0.1,
+      "speed": 5.5,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "scuderia_i",
+        "campo_tiro_i"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Impero Khitan Liao"
+      ]
     },
     "liao_lancers": {
       "name": "Lancieri Liao",
@@ -348,7 +825,20 @@
       "maintenance": 3,
       "food": 2,
       "ferro": 2,
-      "armi": 2
+      "armi": 2,
+      "attack": 0.45,
+      "defense": 0.34,
+      "armor": 0.35,
+      "speed": 4.0,
+      "base_morale": 105,
+      "experience": 0,
+      "requires_buildings": [
+        "scuderia_ii"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Impero Khitan Liao"
+      ]
     },
     "tamil_infantry": {
       "name": "Fanteria Tamil",
@@ -356,7 +846,20 @@
       "cost": 950,
       "pop": 900,
       "maintenance": 1,
-      "food": 1
+      "food": 1,
+      "attack": 0.22,
+      "defense": 0.12,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_i"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Impero Chola"
+      ]
     },
     "elephant_corps": {
       "name": "Corpo degli Elefanti",
@@ -366,7 +869,21 @@
       "maintenance": 4,
       "food": 3,
       "ferro": 1,
-      "armi": 1
+      "armi": 1,
+      "attack": 0.6,
+      "defense": 0.54,
+      "armor": 0.35,
+      "speed": 1.5,
+      "base_morale": 110,
+      "experience": 0,
+      "requires_buildings": [
+        "officina_assedio_ii",
+        "mercato"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Impero Chola"
+      ]
     },
     "khmer_spearmen": {
       "name": "Lancieri Khmer",
@@ -374,7 +891,20 @@
       "cost": 950,
       "pop": 900,
       "maintenance": 1,
-      "food": 1
+      "food": 1,
+      "attack": 0.25,
+      "defense": 0.14,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_i"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Regno Khmer"
+      ]
     },
     "khmer_elephants": {
       "name": "Elefanti Khmer",
@@ -382,7 +912,21 @@
       "cost": 4800,
       "pop": 100,
       "maintenance": 5,
-      "food": 4
+      "food": 4,
+      "attack": 0.65,
+      "defense": 0.59,
+      "armor": 0.35,
+      "speed": 1.5,
+      "base_morale": 110,
+      "experience": 0,
+      "requires_buildings": [
+        "officina_assedio_ii",
+        "mercato"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Regno Khmer"
+      ]
     },
     "samurai": {
       "name": "Samurai",
@@ -392,7 +936,21 @@
       "maintenance": 3,
       "food": 2,
       "ferro": 3,
-      "armi": 2
+      "armi": 2,
+      "attack": 0.5,
+      "defense": 0.28,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "scuderia_ii",
+        "monastero"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Regno Heian"
+      ]
     },
     "yamato_infantry": {
       "name": "Fanteria Yamato",
@@ -400,7 +958,20 @@
       "cost": 900,
       "pop": 900,
       "maintenance": 1,
-      "food": 1
+      "food": 1,
+      "attack": 0.2,
+      "defense": 0.11,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_i"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Regno Heian"
+      ]
     },
     "malay_archers": {
       "name": "Arcieri Malese",
@@ -408,7 +979,20 @@
       "cost": 950,
       "pop": 800,
       "maintenance": 1,
-      "food": 1
+      "food": 1,
+      "attack": 0.25,
+      "defense": 0.07,
+      "armor": 0.05,
+      "speed": 2.8,
+      "base_morale": 95,
+      "experience": 0,
+      "requires_buildings": [
+        "campo_tiro_i"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Regno di Srivijaya"
+      ]
     },
     "soninke_cavalry": {
       "name": "Cavalleria Soninke",
@@ -416,7 +1000,20 @@
       "cost": 1500,
       "pop": 400,
       "maintenance": 2,
-      "food": 2
+      "food": 2,
+      "attack": 0.35,
+      "defense": 0.21,
+      "armor": 0.1,
+      "speed": 5.5,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "scuderia_i"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Impero del Ghana"
+      ]
     },
     "sudani_spearmen": {
       "name": "Lancieri Sudani",
@@ -424,7 +1021,20 @@
       "cost": 900,
       "pop": 900,
       "maintenance": 1,
-      "food": 1
+      "food": 1,
+      "attack": 0.25,
+      "defense": 0.14,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_i"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Impero del Ghana"
+      ]
     },
     "jaguar_warrior": {
       "name": "Guerriero Giaguaro",
@@ -435,7 +1045,21 @@
       "food": 2,
       "legname": 1,
       "ferro": 1,
-      "armi": 1
+      "armi": 1,
+      "attack": 0.45,
+      "defense": 0.25,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_ii",
+        "monastero"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Toltechi"
+      ]
     },
     "eagle_warrior": {
       "name": "Guerriero Aquila",
@@ -443,7 +1067,21 @@
       "cost": 1500,
       "pop": 450,
       "maintenance": 2,
-      "food": 2
+      "food": 2,
+      "attack": 0.35,
+      "defense": 0.19,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "campo_tiro_ii",
+        "monastero"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Toltechi"
+      ]
     },
     "coyote_warrior": {
       "name": "Guerriero Coyote",
@@ -451,7 +1089,20 @@
       "cost": 1200,
       "pop": 500,
       "maintenance": 2,
-      "food": 1
+      "food": 1,
+      "attack": 0.3,
+      "defense": 0.17,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_i"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Toltechi"
+      ]
     },
     "otomi_aux": {
       "name": "Ausiliari Otomi",
@@ -459,7 +1110,20 @@
       "cost": 800,
       "pop": 900,
       "maintenance": 1,
-      "food": 1
+      "food": 1,
+      "attack": 0.2,
+      "defense": 0.07,
+      "armor": 0.0,
+      "speed": 2.2,
+      "base_morale": 80,
+      "experience": 0,
+      "requires_buildings": [
+        "centro_cittadino"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Toltechi"
+      ]
     },
     "maya_spearmen": {
       "name": "Lancieri Maya",
@@ -467,7 +1131,20 @@
       "cost": 850,
       "pop": 900,
       "maintenance": 1,
-      "food": 1
+      "food": 1,
+      "attack": 0.2,
+      "defense": 0.11,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_i"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Regni Maya"
+      ]
     },
     "holcan": {
       "name": "Holcan",
@@ -475,7 +1152,21 @@
       "cost": 1600,
       "pop": 400,
       "maintenance": 2,
-      "food": 2
+      "food": 2,
+      "attack": 0.4,
+      "defense": 0.22,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_ii",
+        "monastero"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Regni Maya"
+      ]
     },
     "atlatl": {
       "name": "Atlatl",
@@ -483,7 +1174,108 @@
       "cost": 900,
       "pop": 700,
       "maintenance": 1,
-      "food": 1
+      "food": 1,
+      "attack": 0.25,
+      "defense": 0.07,
+      "armor": 0.05,
+      "speed": 2.8,
+      "base_morale": 95,
+      "experience": 0,
+      "requires_buildings": [
+        "campo_tiro_i"
+      ],
+      "allowed_settlement_types": [],
+      "factions": [
+        "Toltechi",
+        "Regni Maya"
+      ]
+    },
+    "milizia": {
+      "name": "Milizia contadina",
+      "attack": 0.12,
+      "defense": 0.04,
+      "armor": 0.0,
+      "speed": 2.0,
+      "base_morale": 75,
+      "experience": 0,
+      "cost": 400,
+      "pop": 1200,
+      "maintenance": 0,
+      "food": 1,
+      "requires_buildings": [
+        "centro_cittadino",
+        "capanna_boscaioli"
+      ]
+    },
+    "lancieri": {
+      "name": "Lancieri",
+      "strength": 0.2,
+      "cost": 1000,
+      "pop": 1000,
+      "maintenance": 1,
+      "food": 1,
+      "attack": 0.2,
+      "defense": 0.11,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "caserma_i"
+      ],
+      "allowed_settlement_types": []
+    },
+    "fanteria_pesante": {
+      "name": "Fanteria pesante",
+      "attack": 0.35,
+      "defense": 0.25,
+      "armor": 0.25,
+      "speed": 1.8,
+      "base_morale": 105,
+      "experience": 0,
+      "cost": 1600,
+      "pop": 800,
+      "maintenance": 2,
+      "food": 1,
+      "ferro": 2,
+      "armi": 2,
+      "requires_buildings": [
+        "caserma_ii"
+      ]
+    },
+    "arcieri_evoluti": {
+      "name": "Arcieri evoluti",
+      "attack": 0.32,
+      "defense": 0.1,
+      "armor": 0.1,
+      "speed": 2.5,
+      "base_morale": 100,
+      "experience": 0,
+      "cost": 1200,
+      "pop": 700,
+      "maintenance": 2,
+      "food": 1,
+      "requires_buildings": [
+        "campo_tiro_ii"
+      ]
+    },
+    "balestrieri": {
+      "name": "Balestrieri",
+      "attack": 0.38,
+      "defense": 0.12,
+      "armor": 0.1,
+      "speed": 2.2,
+      "base_morale": 100,
+      "experience": 0,
+      "cost": 1300,
+      "pop": 700,
+      "maintenance": 2,
+      "food": 1,
+      "armi": 1,
+      "requires_buildings": [
+        "campo_tiro_iii",
+        "officina_armi"
+      ]
     }
   },
   "ships": {
@@ -493,7 +1285,16 @@
       "pop": 150,
       "wood": 5,
       "strength": 0.5,
-      "food": 1
+      "food": 1,
+      "attack": 0.5,
+      "defense": 0.2,
+      "armor": 0.05,
+      "speed": 7.0,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "arsenale_i"
+      ]
     },
     "galea": {
       "name": "Galea",
@@ -501,7 +1302,16 @@
       "pop": 150,
       "wood": 4,
       "strength": 0.4,
-      "food": 1
+      "food": 1,
+      "attack": 0.4,
+      "defense": 0.22,
+      "armor": 0.15,
+      "speed": 5.0,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "molo_ii"
+      ]
     },
     "dromone": {
       "name": "Dromone",
@@ -509,7 +1319,17 @@
       "pop": 200,
       "wood": 6,
       "strength": 0.7,
-      "food": 1
+      "food": 1,
+      "attack": 0.7,
+      "defense": 0.39,
+      "armor": 0.15,
+      "speed": 5.0,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "arsenale_i",
+        "fucina"
+      ]
     },
     "giunca": {
       "name": "Giunca Cinese",
@@ -517,7 +1337,17 @@
       "pop": 180,
       "wood": 5,
       "strength": 0.45,
-      "food": 1
+      "food": 1,
+      "attack": 0.45,
+      "defense": 0.25,
+      "armor": 0.15,
+      "speed": 5.0,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "molo_ii",
+        "segheria"
+      ]
     },
     "tower_ship": {
       "name": "Nave Torre",
@@ -525,7 +1355,17 @@
       "pop": 250,
       "wood": 7,
       "strength": 0.65,
-      "food": 1
+      "food": 1,
+      "attack": 0.65,
+      "defense": 0.42,
+      "armor": 0.25,
+      "speed": 4.0,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "arsenale_ii",
+        "segheria"
+      ]
     },
     "nave_guerra": {
       "name": "Nave da Guerra",
@@ -533,7 +1373,17 @@
       "pop": 200,
       "wood": 6,
       "strength": 0.55,
-      "food": 1
+      "food": 1,
+      "attack": 0.55,
+      "defense": 0.36,
+      "armor": 0.25,
+      "speed": 4.0,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "arsenale_ii",
+        "fucina"
+      ]
     },
     "nave_guerra_indiana": {
       "name": "Nave da Guerra Indiana",
@@ -541,7 +1391,16 @@
       "pop": 200,
       "wood": 6,
       "strength": 0.55,
-      "food": 1
+      "food": 1,
+      "attack": 0.55,
+      "defense": 0.36,
+      "armor": 0.25,
+      "speed": 4.0,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "arsenale_i"
+      ]
     },
     "canoa": {
       "name": "Canoa da Guerra",
@@ -549,71 +1408,603 @@
       "pop": 80,
       "wood": 2,
       "strength": 0.2,
-      "food": 0
+      "food": 0,
+      "attack": 0.2,
+      "defense": 0.08,
+      "armor": 0.05,
+      "speed": 7.0,
+      "base_morale": 100,
+      "experience": 0,
+      "requires_buildings": [
+        "molo_i"
+      ]
     }
   },
   "buildings": {
-    "monastero": {
+    "centro_cittadino": {
+      "name": "Centro cittadino",
+      "settlement_types": [
+        "civil",
+        "military",
+        "industrial",
+        "port"
+      ],
       "cost": {
-        "oro": 2000,
-        "pietra": 20,
-        "legname": 30
+        "oro": 600,
+        "legname": 25,
+        "pietra": 15
       },
+      "construction_turns": 2,
       "effects": {
-        "prestigio": 5,
-        "cibo": 5
-      }
-    },
-    "castello": {
-      "cost": {
-        "oro": 5000,
-        "pietra": 50,
-        "legname": 40
+        "cibo": 10,
+        "oro": 15,
+        "prestigio": 2
       },
-      "effects": {
-        "defense": 10
-      }
+      "unlocks_units": [
+        "bondi",
+        "voi",
+        "otomi_aux"
+      ]
     },
-    "fortezza_frontiera": {
-      "name": "Fortezza di frontiera",
+    "mercato": {
+      "name": "Mercato",
+      "settlement_types": [
+        "civil",
+        "military",
+        "port"
+      ],
       "cost": {
-        "oro": 2500,
-        "pietra": 25,
+        "oro": 800,
         "legname": 20
       },
+      "construction_turns": 2,
       "effects": {
-        "defense": 5
-      }
-    },
-    "fucina": {
-      "cost": {
-        "oro": 1500,
-        "legname": 20,
-        "pietra": 10
+        "oro": 30,
+        "prestigio": 1
       },
-      "effects": {
-        "armi": 2,
-        "ferro": -1
-      }
+      "unlocks_units": [
+        "varangian_guard",
+        "black_guard",
+        "varangian_mercenaries",
+        "war_elephants",
+        "elephant_corps",
+        "khmer_elephants"
+      ]
     },
-    "mulino": {
+    "mercato_marittimo": {
+      "name": "Mercato marittimo",
+      "settlement_types": [
+        "port"
+      ],
       "cost": {
         "oro": 1000,
         "legname": 25
       },
+      "construction_turns": 2,
       "effects": {
-        "cibo": 10
-      }
+        "oro": 40,
+        "prestigio": 1
+      },
+      "unlocks_units": []
     },
-    "mercato": {
+    "mulino": {
+      "name": "Mulino",
+      "settlement_types": [
+        "civil",
+        "industrial"
+      ],
       "cost": {
-        "oro": 1200,
+        "oro": 700,
         "legname": 30
       },
+      "construction_turns": 2,
       "effects": {
-        "oro": 50,
-        "prestigio": 2
-      }
+        "cibo": 15
+      },
+      "unlocks_units": []
+    },
+    "monastero": {
+      "name": "Monastero",
+      "settlement_types": [
+        "civil",
+        "military"
+      ],
+      "cost": {
+        "oro": 1500,
+        "legname": 30,
+        "pietra": 20
+      },
+      "construction_turns": 3,
+      "effects": {
+        "prestigio": 5,
+        "cibo": 5
+      },
+      "unlocks_units": [
+        "samurai",
+        "jaguar_warrior",
+        "eagle_warrior",
+        "holcan"
+      ]
+    },
+    "capanna_boscaioli": {
+      "name": "Capanna dei boscaioli",
+      "settlement_types": [
+        "civil",
+        "industrial"
+      ],
+      "cost": {
+        "oro": 300,
+        "legname": 10
+      },
+      "construction_turns": 1,
+      "effects": {
+        "legname": 10
+      },
+      "unlocks_units": []
+    },
+    "segheria": {
+      "name": "Segheria",
+      "settlement_types": [
+        "industrial",
+        "civil",
+        "port"
+      ],
+      "cost": {
+        "oro": 600,
+        "legname": 15
+      },
+      "construction_turns": 2,
+      "effects": {
+        "legname": 20
+      },
+      "unlocks_units": [
+        "giunca",
+        "tower_ship"
+      ]
+    },
+    "miniera": {
+      "name": "Miniera",
+      "settlement_types": [
+        "industrial"
+      ],
+      "cost": {
+        "oro": 800,
+        "legname": 20,
+        "pietra": 10
+      },
+      "construction_turns": 2,
+      "effects": {
+        "pietra": 15,
+        "ferro": 8,
+        "argento": 3
+      },
+      "unlocks_units": []
+    },
+    "fucina": {
+      "name": "Fucina",
+      "settlement_types": [
+        "industrial",
+        "military",
+        "port"
+      ],
+      "cost": {
+        "oro": 900,
+        "legname": 15,
+        "pietra": 10
+      },
+      "construction_turns": 2,
+      "effects": {
+        "armi": 3,
+        "ferro": -2
+      },
+      "unlocks_units": [
+        "cavalleria_pesante",
+        "cataphractoi",
+        "ministeriales",
+        "huskarl",
+        "druzyna",
+        "dromone",
+        "nave_guerra"
+      ]
+    },
+    "officina_armi": {
+      "name": "Officina d'armi",
+      "settlement_types": [
+        "industrial",
+        "military"
+      ],
+      "cost": {
+        "oro": 1200,
+        "legname": 20,
+        "ferro": 15
+      },
+      "construction_turns": 3,
+      "effects": {
+        "armi": 5,
+        "ferro": -3
+      },
+      "unlocks_units": [
+        "cataphractoi",
+        "loricati",
+        "berserker",
+        "crossbowmen",
+        "shenbi_nu",
+        "fire_lance"
+      ]
+    },
+    "caserma_i": {
+      "name": "Caserma I",
+      "settlement_types": [
+        "civil",
+        "military",
+        "industrial"
+      ],
+      "cost": {
+        "oro": 1000,
+        "legname": 20,
+        "pietra": 10
+      },
+      "construction_turns": 2,
+      "effects": {},
+      "unlocks_units": [
+        "fanteria",
+        "szekler_infantry",
+        "polish_spearmen",
+        "afghan_infantry",
+        "tamil_infantry",
+        "khmer_spearmen",
+        "yamato_infantry",
+        "sudani_spearmen",
+        "coyote_warrior",
+        "maya_spearmen"
+      ]
+    },
+    "caserma_ii": {
+      "name": "Caserma II",
+      "settlement_types": [
+        "military"
+      ],
+      "cost": {
+        "oro": 2500,
+        "legname": 40,
+        "pietra": 25,
+        "armi": 10
+      },
+      "construction_turns": 3,
+      "effects": {},
+      "unlocks_units": [
+        "milites",
+        "berserker",
+        "huskarl",
+        "sudanese_spearmen",
+        "varangian_mercenaries",
+        "daylami_infantry",
+        "jaguar_warrior",
+        "holcan"
+      ]
+    },
+    "caserma_iii": {
+      "name": "Caserma III",
+      "settlement_types": [
+        "military"
+      ],
+      "cost": {
+        "oro": 4500,
+        "legname": 60,
+        "pietra": 40,
+        "armi": 20,
+        "ferro": 15
+      },
+      "construction_turns": 4,
+      "effects": {},
+      "unlocks_units": [
+        "varangian_guard",
+        "black_guard"
+      ]
+    },
+    "campo_tiro_i": {
+      "name": "Campo di tiro I",
+      "settlement_types": [
+        "civil",
+        "military"
+      ],
+      "cost": {
+        "oro": 900,
+        "legname": 20
+      },
+      "construction_turns": 2,
+      "effects": {},
+      "unlocks_units": [
+        "arcieri",
+        "magyar_cavalry",
+        "turkish_horse_archers",
+        "khitan_horse_archers",
+        "malay_archers",
+        "atlatl"
+      ]
+    },
+    "campo_tiro_ii": {
+      "name": "Campo di tiro II",
+      "settlement_types": [
+        "military"
+      ],
+      "cost": {
+        "oro": 2200,
+        "legname": 35,
+        "armi": 10
+      },
+      "construction_turns": 3,
+      "effects": {},
+      "unlocks_units": [
+        "toxotai",
+        "armenian_archers",
+        "crossbowmen",
+        "eagle_warrior"
+      ]
+    },
+    "campo_tiro_iii": {
+      "name": "Campo di tiro III",
+      "settlement_types": [
+        "military"
+      ],
+      "cost": {
+        "oro": 4000,
+        "legname": 50,
+        "armi": 20,
+        "ferro": 10
+      },
+      "construction_turns": 4,
+      "effects": {},
+      "unlocks_units": [
+        "shenbi_nu"
+      ]
+    },
+    "scuderia_i": {
+      "name": "Scuderia I",
+      "settlement_types": [
+        "civil",
+        "military"
+      ],
+      "cost": {
+        "oro": 1200,
+        "legname": 30,
+        "pietra": 10
+      },
+      "construction_turns": 2,
+      "effects": {},
+      "unlocks_units": [
+        "cavalleria",
+        "jinete",
+        "magyar_cavalry",
+        "turkish_horse_archers",
+        "khitan_horse_archers",
+        "soninke_cavalry"
+      ]
+    },
+    "scuderia_ii": {
+      "name": "Scuderia II",
+      "settlement_types": [
+        "military"
+      ],
+      "cost": {
+        "oro": 2800,
+        "legname": 45,
+        "pietra": 25,
+        "ferro": 10
+      },
+      "construction_turns": 3,
+      "effects": {},
+      "unlocks_units": [
+        "cavalleria_pesante",
+        "ministeriales",
+        "druzyna",
+        "liao_lancers",
+        "samurai"
+      ]
+    },
+    "scuderia_iii": {
+      "name": "Scuderia III",
+      "settlement_types": [
+        "military"
+      ],
+      "cost": {
+        "oro": 5000,
+        "legname": 60,
+        "pietra": 40,
+        "ferro": 25,
+        "armi": 15
+      },
+      "construction_turns": 4,
+      "effects": {},
+      "unlocks_units": [
+        "cataphractoi"
+      ]
+    },
+    "cortile_cavaliere": {
+      "name": "Cortile del cavaliere",
+      "settlement_types": [
+        "military"
+      ],
+      "cost": {
+        "oro": 3500,
+        "legname": 40,
+        "pietra": 30,
+        "ferro": 15,
+        "armi": 10
+      },
+      "construction_turns": 3,
+      "effects": {
+        "prestigio": 3
+      },
+      "unlocks_units": [
+        "loricati",
+        "mamluk_cavalry",
+        "druzhina",
+        "ghilman",
+        "ghulam_cavalry"
+      ]
+    },
+    "officina_assedio_i": {
+      "name": "Officina d'assedio I",
+      "settlement_types": [
+        "military",
+        "civil"
+      ],
+      "cost": {
+        "oro": 1200,
+        "legname": 25,
+        "pietra": 15
+      },
+      "construction_turns": 2,
+      "effects": {},
+      "unlocks_units": []
+    },
+    "officina_assedio_ii": {
+      "name": "Officina d'assedio II",
+      "settlement_types": [
+        "military"
+      ],
+      "cost": {
+        "oro": 2800,
+        "legname": 40,
+        "pietra": 35,
+        "ferro": 10
+      },
+      "construction_turns": 3,
+      "effects": {},
+      "unlocks_units": [
+        "artiglieria",
+        "war_elephants",
+        "elephant_corps",
+        "khmer_elephants"
+      ]
+    },
+    "officina_assedio_iii": {
+      "name": "Officina d'assedio III",
+      "settlement_types": [
+        "military"
+      ],
+      "cost": {
+        "oro": 5000,
+        "legname": 50,
+        "pietra": 50,
+        "ferro": 20,
+        "armi": 15
+      },
+      "construction_turns": 4,
+      "effects": {},
+      "unlocks_units": [
+        "fire_lance"
+      ]
+    },
+    "fortezza_frontiera": {
+      "name": "Fortezza di frontiera",
+      "settlement_types": [
+        "military"
+      ],
+      "cost": {
+        "oro": 2500,
+        "pietra": 30,
+        "legname": 20
+      },
+      "construction_turns": 3,
+      "effects": {
+        "defense": 8
+      },
+      "unlocks_units": []
+    },
+    "molo_i": {
+      "name": "Molo I",
+      "settlement_types": [
+        "port"
+      ],
+      "cost": {
+        "oro": 800,
+        "legname": 30
+      },
+      "construction_turns": 2,
+      "effects": {
+        "oro": 10
+      },
+      "unlocks_units": [
+        "canoa"
+      ]
+    },
+    "molo_ii": {
+      "name": "Molo II",
+      "settlement_types": [
+        "port"
+      ],
+      "cost": {
+        "oro": 1800,
+        "legname": 50,
+        "pietra": 20
+      },
+      "construction_turns": 3,
+      "effects": {
+        "oro": 25
+      },
+      "unlocks_units": [
+        "galea",
+        "giunca"
+      ]
+    },
+    "arsenale_i": {
+      "name": "Arsenale I",
+      "settlement_types": [
+        "port",
+        "military"
+      ],
+      "cost": {
+        "oro": 2500,
+        "legname": 60,
+        "pietra": 30
+      },
+      "construction_turns": 3,
+      "effects": {},
+      "unlocks_units": [
+        "drakkar",
+        "dromone",
+        "nave_guerra_indiana"
+      ]
+    },
+    "arsenale_ii": {
+      "name": "Arsenale II",
+      "settlement_types": [
+        "port",
+        "military"
+      ],
+      "cost": {
+        "oro": 5000,
+        "legname": 80,
+        "pietra": 50,
+        "ferro": 25,
+        "armi": 15
+      },
+      "construction_turns": 4,
+      "effects": {},
+      "unlocks_units": [
+        "tower_ship",
+        "nave_guerra"
+      ]
+    },
+    "magazzino": {
+      "name": "Magazzino portuale",
+      "settlement_types": [
+        "port",
+        "civil",
+        "industrial"
+      ],
+      "cost": {
+        "oro": 1000,
+        "legname": 30
+      },
+      "construction_turns": 2,
+      "effects": {
+        "cibo": 10,
+        "oro": 10
+      },
+      "unlocks_units": []
     }
   },
   "maintenance": {
@@ -770,5 +2161,84 @@
   "fog_of_war": {
     "enabled": true,
     "reveal_neighbors": true
+  },
+  "settlement_types": {
+    "civil": {
+      "name": "Citta'",
+      "description": "Agglomerato urbano civile: produce oro, cibo e prestigio.",
+      "base_slots": 8,
+      "allowed_buildings": [
+        "centro_cittadino",
+        "mercato",
+        "mulino",
+        "monastero",
+        "caserma_i",
+        "campo_tiro_i",
+        "scuderia_i",
+        "officina_assedio_i",
+        "capanna_boscaioli",
+        "segheria",
+        "fucina",
+        "molo_i",
+        "molo_ii"
+      ]
+    },
+    "military": {
+      "name": "Fortezza",
+      "description": "Agglomerato militare: addestra truppe avanzate e fortifica la provincia.",
+      "base_slots": 10,
+      "allowed_buildings": [
+        "centro_cittadino",
+        "caserma_i",
+        "caserma_ii",
+        "caserma_iii",
+        "campo_tiro_i",
+        "campo_tiro_ii",
+        "campo_tiro_iii",
+        "scuderia_i",
+        "scuderia_ii",
+        "scuderia_iii",
+        "cortile_cavaliere",
+        "officina_assedio_i",
+        "officina_assedio_ii",
+        "officina_assedio_iii",
+        "fortezza_frontiera",
+        "fucina",
+        "officina_armi",
+        "monastero",
+        "mercato"
+      ]
+    },
+    "industrial": {
+      "name": "Centro industriale",
+      "description": "Estrae risorse e produce armi e materiali.",
+      "base_slots": 7,
+      "allowed_buildings": [
+        "capanna_boscaioli",
+        "segheria",
+        "miniera",
+        "fucina",
+        "officina_armi",
+        "mulino",
+        "caserma_i",
+        "centro_cittadino"
+      ]
+    },
+    "port": {
+      "name": "Porto",
+      "description": "Centro commerciale e navale: costruisce navi e commercia.",
+      "base_slots": 7,
+      "allowed_buildings": [
+        "molo_i",
+        "molo_ii",
+        "arsenale_i",
+        "arsenale_ii",
+        "magazzino",
+        "mercato_marittimo",
+        "segheria",
+        "fucina",
+        "centro_cittadino"
+      ]
+    }
   }
 }

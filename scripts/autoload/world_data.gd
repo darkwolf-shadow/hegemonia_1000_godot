@@ -6,6 +6,7 @@ var provinces: Dictionary = {}
 var units: Dictionary = {}
 var ships: Dictionary = {}
 var buildings: Dictionary = {}
+var settlement_types: Dictionary = {}
 var terrain_modifiers: Dictionary = {}
 var tactics: Dictionary = {}
 
@@ -26,6 +27,7 @@ func load_all():
 	units = config.get("units", {})
 	ships = config.get("ships", {})
 	buildings = config.get("buildings", {})
+	settlement_types = config.get("settlement_types", {})
 	terrain_modifiers = config.get("terrain_modifiers", {})
 	tactics = config.get("tactics", {})
 	_load_map()
@@ -86,3 +88,7 @@ func get_ship(type_name: String) -> Dictionary:
 
 func get_building(type_name: String) -> Dictionary:
 	return buildings.get(type_name, {})
+
+
+func get_settlement_type(type_name: String) -> Dictionary:
+	return settlement_types.get(type_name, {})

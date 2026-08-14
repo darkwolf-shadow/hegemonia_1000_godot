@@ -5,13 +5,17 @@ extends Node2D
 @onready var end_turn_button := $CanvasLayer/UI/TopBar/EndTurnButton
 @onready var info_label := $CanvasLayer/UI/SidePanel/InfoLabel
 @onready var details_label := $CanvasLayer/UI/SidePanel/Details
+@onready var open_province_button := $CanvasLayer/UI/SidePanel/OpenProvinceButton
+@onready var province_view := $CanvasLayer/UI/ProvinceView
 @onready var log_text := $CanvasLayer/UI/EventLog/LogText
 
 var province_nodes := {}
+var selected_province: String = ""
 
 
 func _ready():
 	end_turn_button.pressed.connect(_on_end_turn)
+	open_province_button.pressed.connect(_on_open_province)
 	_draw_map()
 	_update_ui()
 
@@ -116,6 +120,7 @@ func _on_province_clicked(viewport, event, shape_idx, province_name):
 
 
 func _select_province(province_name: String):
+	selected_province = province_name
 	var prov = GameState.state.provinces.get(province_name, {})
 	var owner = prov.get("owner", "Terra di Nessuno")
 	var data = WorldData.get_province(province_name)
@@ -128,6 +133,11 @@ func _select_province(province_name: String):
 		JSON.stringify(data.get("resources", {}))
 	]
 	details_label.text = txt
+
+
+func _on_open_province():
+	if selected_province != "":
+		province_view.open(selected_province)
 
 
 func _on_end_turn():

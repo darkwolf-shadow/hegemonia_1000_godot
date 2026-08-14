@@ -1,0 +1,129 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/settlement_view.gd" id="1_xyz"]
+
+[node name="SettlementView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xyz")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 20.0
+offset_right = 400.0
+offset_bottom = 60.0
+grow_horizontal = 2
+text = "Agglomerato urbano"
+horizontal_alignment = 1
+
+[node name="BuildingsLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 100.0
+offset_right = 400.0
+offset_bottom = 130.0
+text = "Edifici presenti"
+
+[node name="BuildingsList" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 140.0
+offset_right = 400.0
+offset_bottom = 350.0
+
+[node name="BuildableLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 370.0
+offset_right = 400.0
+offset_bottom = 400.0
+text = "Costruibile"
+
+[node name="BuildableList" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 410.0
+offset_right = 300.0
+offset_bottom = 445.0
+
+[node name="BuildButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 410.0
+offset_right = 470.0
+offset_bottom = 445.0
+text = "Costruisci"
+
+[node name="UnitsLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 100.0
+offset_right = 900.0
+offset_bottom = 130.0
+text = "Unità reclutabili"
+
+[node name="UnitsList" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 140.0
+offset_right = 900.0
+offset_bottom = 350.0
+
+[node name="AmountLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 370.0
+offset_right = 700.0
+offset_bottom = 400.0
+text = "Quantità"
+
+[node name="AmountSpin" type="SpinBox" parent="."]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 410.0
+offset_right = 700.0
+offset_bottom = 445.0
+min_value = 1.0
+max_value = 100.0
+value = 1.0
+
+[node name="RecruitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 410.0
+offset_right = 870.0
+offset_bottom = 445.0
+text = "Recluta"
+
+[node name="InfoLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 480.0
+offset_right = 900.0
+offset_bottom = 560.0
+autowrap_mode = 3
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 580.0
+offset_right = 200.0
+offset_bottom = 620.0
+text = "Indietro"

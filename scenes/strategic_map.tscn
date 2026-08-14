@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://strategic_map"]
+[gd_scene load_steps=4 format=3 uid="uid://strategic_map"]
 
 [ext_resource type="Script" path="res://scripts/ui/strategic_map.gd" id="1_xyz"]
+[ext_resource type="PackedScene" path="res://scenes/province_view.tscn" id="2_pv"]
+[ext_resource type="PackedScene" path="res://scenes/settlement_view.tscn" id="3_sv"]
 
 [node name="StrategicMap" type="Node2D"]
 script = ExtResource("1_xyz")
@@ -80,11 +82,25 @@ anchor_bottom = 1.0
 offset_left = 10.0
 offset_top = 40.0
 offset_right = -10.0
-offset_bottom = -10.0
+offset_bottom = -60.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Dettagli..."
 autowrap_mode = 3
+
+[node name="OpenProvinceButton" type="Button" parent="UI/SidePanel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -50.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Apri provincia"
 
 [node name="EventLog" type="Panel" parent="UI"]
 layout_mode = 1
@@ -112,3 +128,9 @@ grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
 text = "Cronaca eventi..."
+
+[node name="ProvinceView" parent="UI" instance=ExtResource("2_pv")]
+visible = false
+
+[node name="SettlementView" parent="UI" instance=ExtResource("3_sv")]
+visible = false

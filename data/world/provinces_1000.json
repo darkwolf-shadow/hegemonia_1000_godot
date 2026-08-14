@@ -17,6 +17,27 @@
       "oro": 120,
       "cibo": 80,
       "prestigio": 15
+    },
+    "settlements": {
+      "Costantinopoli": {
+        "name": "Costantinopoli",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 75000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero",
+          "arsenale_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Nicea": {
@@ -37,6 +58,22 @@
     ],
     "resources": {
       "cibo": 40
+    },
+    "settlements": {
+      "Abitato di Nicea": {
+        "name": "Abitato di Nicea",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 13500,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Adrianopoli": {
@@ -56,6 +93,24 @@
     ],
     "resources": {
       "cibo": 30
+    },
+    "settlements": {
+      "Abitato di Adrianopoli": {
+        "name": "Abitato di Adrianopoli",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 10500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Sofia": {
@@ -74,7 +129,25 @@
       "Pannonia",
       "Transilvania"
     ],
-    "resources": {}
+    "resources": {},
+    "settlements": {
+      "Abitato di Sofia": {
+        "name": "Abitato di Sofia",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 7500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
+    }
   },
   "Trebisonda": {
     "name": "Trebisonda",
@@ -89,6 +162,21 @@
     ],
     "resources": {
       "oro": 60
+    },
+    "settlements": {
+      "Abitato di Trebisonda": {
+        "name": "Abitato di Trebisonda",
+        "type": "military",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 9000,
+        "buildings": [
+          "centro_cittadino",
+          "caserma_i",
+          "fortezza_frontiera"
+        ],
+        "roads": []
+      }
     }
   },
   "Ankara": {
@@ -109,6 +197,24 @@
     ],
     "resources": {
       "pietra": 15
+    },
+    "settlements": {
+      "Abitato di Ankara": {
+        "name": "Abitato di Ankara",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 10500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Iconio": {
@@ -129,6 +235,24 @@
     ],
     "resources": {
       "cibo": 35
+    },
+    "settlements": {
+      "Abitato di Iconio": {
+        "name": "Abitato di Iconio",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 9000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Smirne": {
@@ -149,6 +273,22 @@
     "resources": {
       "cibo": 40,
       "oro": 40
+    },
+    "settlements": {
+      "Abitato di Smirne": {
+        "name": "Abitato di Smirne",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 12000,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Antiochia": {
@@ -167,6 +307,22 @@
     ],
     "resources": {
       "oro": 50
+    },
+    "settlements": {
+      "Abitato di Antiochia": {
+        "name": "Abitato di Antiochia",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 16500,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Candia": {
@@ -183,6 +339,22 @@
     ],
     "resources": {
       "cibo": 30
+    },
+    "settlements": {
+      "Abitato di Candia": {
+        "name": "Abitato di Candia",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 9000,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Nicosia": {
@@ -203,6 +375,24 @@
     ],
     "resources": {
       "oro": 30
+    },
+    "settlements": {
+      "Abitato di Nicosia": {
+        "name": "Abitato di Nicosia",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 7500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Salerno": {
@@ -221,6 +411,22 @@
     ],
     "resources": {
       "cibo": 25
+    },
+    "settlements": {
+      "Abitato di Salerno": {
+        "name": "Abitato di Salerno",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 8250,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Siracusa": {
@@ -238,6 +444,22 @@
     "resources": {
       "cibo": 30,
       "oro": 30
+    },
+    "settlements": {
+      "Abitato di Siracusa": {
+        "name": "Abitato di Siracusa",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 9750,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Roma": {
@@ -258,6 +480,26 @@
     "resources": {
       "oro": 80,
       "prestigio": 15
+    },
+    "settlements": {
+      "Roma": {
+        "name": "Roma",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero"
+        ],
+        "roads": []
+      }
     }
   },
   "Ravenna": {
@@ -281,6 +523,22 @@
     ],
     "resources": {
       "cibo": 25
+    },
+    "settlements": {
+      "Abitato di Ravenna": {
+        "name": "Abitato di Ravenna",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 7500,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Milano": {
@@ -303,6 +561,24 @@
     ],
     "resources": {
       "oro": 40
+    },
+    "settlements": {
+      "Abitato di Milano": {
+        "name": "Abitato di Milano",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 9750,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Venezia": {
@@ -325,6 +601,22 @@
     ],
     "resources": {
       "oro": 50
+    },
+    "settlements": {
+      "Abitato di Venezia": {
+        "name": "Abitato di Venezia",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 8250,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Aquisgrana": {
@@ -345,6 +637,24 @@
     ],
     "resources": {
       "legname": 20
+    },
+    "settlements": {
+      "Abitato di Aquisgrana": {
+        "name": "Abitato di Aquisgrana",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6750,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Magonza": {
@@ -368,6 +678,24 @@
     ],
     "resources": {
       "oro": 30
+    },
+    "settlements": {
+      "Abitato di Magonza": {
+        "name": "Abitato di Magonza",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Monaco": {
@@ -391,6 +719,24 @@
     ],
     "resources": {
       "legname": 15
+    },
+    "settlements": {
+      "Abitato di Monaco": {
+        "name": "Abitato di Monaco",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 7500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Praga": {
@@ -419,6 +765,23 @@
     ],
     "resources": {
       "pietra": 15
+    },
+    "settlements": {
+      "Abitato di Praga": {
+        "name": "Abitato di Praga",
+        "type": "industrial",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6300,
+        "buildings": [
+          "centro_cittadino",
+          "capanna_boscaioli",
+          "segheria",
+          "miniera",
+          "fucina"
+        ],
+        "roads": []
+      }
     }
   },
   "Sassonia": {
@@ -444,6 +807,24 @@
     ],
     "resources": {
       "legname": 20
+    },
+    "settlements": {
+      "Abitato di Sassonia": {
+        "name": "Abitato di Sassonia",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 5250,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Hedeby": {
@@ -465,6 +846,27 @@
     "resources": {
       "legname": 25,
       "oro": 20
+    },
+    "settlements": {
+      "Hedeby": {
+        "name": "Hedeby",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 3750,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero",
+          "arsenale_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Roskilde": {
@@ -488,6 +890,22 @@
     ],
     "resources": {
       "legname": 20
+    },
+    "settlements": {
+      "Abitato di Roskilde": {
+        "name": "Abitato di Roskilde",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 3300,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Oslo": {
@@ -504,6 +922,22 @@
     ],
     "resources": {
       "legname": 25
+    },
+    "settlements": {
+      "Abitato di Oslo": {
+        "name": "Abitato di Oslo",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 2700,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Uppsala": {
@@ -519,6 +953,23 @@
     ],
     "resources": {
       "legname": 20
+    },
+    "settlements": {
+      "Abitato di Uppsala": {
+        "name": "Abitato di Uppsala",
+        "type": "industrial",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 2400,
+        "buildings": [
+          "centro_cittadino",
+          "capanna_boscaioli",
+          "segheria",
+          "miniera",
+          "fucina"
+        ],
+        "roads": []
+      }
     }
   },
   "Gotland": {
@@ -537,6 +988,22 @@
     ],
     "resources": {
       "legname": 15
+    },
+    "settlements": {
+      "Abitato di Gotland": {
+        "name": "Abitato di Gotland",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 2100,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Viken": {
@@ -552,6 +1019,22 @@
     ],
     "resources": {
       "legname": 15
+    },
+    "settlements": {
+      "Abitato di Viken": {
+        "name": "Abitato di Viken",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 2250,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Parigi": {
@@ -572,6 +1055,26 @@
     "resources": {
       "oro": 60,
       "prestigio": 10
+    },
+    "settlements": {
+      "Parigi": {
+        "name": "Parigi",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 13500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero"
+        ],
+        "roads": []
+      }
     }
   },
   "Lione": {
@@ -592,6 +1095,23 @@
     ],
     "resources": {
       "cibo": 30
+    },
+    "settlements": {
+      "Abitato di Lione": {
+        "name": "Abitato di Lione",
+        "type": "industrial",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6750,
+        "buildings": [
+          "centro_cittadino",
+          "capanna_boscaioli",
+          "segheria",
+          "miniera",
+          "fucina"
+        ],
+        "roads": []
+      }
     }
   },
   "Tours": {
@@ -611,6 +1131,24 @@
     ],
     "resources": {
       "cibo": 30
+    },
+    "settlements": {
+      "Abitato di Tours": {
+        "name": "Abitato di Tours",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Bordeaux": {
@@ -631,6 +1169,22 @@
     "resources": {
       "cibo": 25,
       "oro": 20
+    },
+    "settlements": {
+      "Abitato di Bordeaux": {
+        "name": "Abitato di Bordeaux",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6300,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Tolosa": {
@@ -650,6 +1204,24 @@
     ],
     "resources": {
       "cibo": 25
+    },
+    "settlements": {
+      "Abitato di Tolosa": {
+        "name": "Abitato di Tolosa",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Marsiglia": {
@@ -670,6 +1242,22 @@
     ],
     "resources": {
       "oro": 40
+    },
+    "settlements": {
+      "Abitato di Marsiglia": {
+        "name": "Abitato di Marsiglia",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 7200,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Cordova": {
@@ -688,6 +1276,26 @@
     "resources": {
       "oro": 70,
       "prestigio": 10
+    },
+    "settlements": {
+      "Cordova": {
+        "name": "Cordova",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 15000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero"
+        ],
+        "roads": []
+      }
     }
   },
   "Siviglia": {
@@ -705,6 +1313,22 @@
     ],
     "resources": {
       "cibo": 30
+    },
+    "settlements": {
+      "Abitato di Siviglia": {
+        "name": "Abitato di Siviglia",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 11250,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Toledo": {
@@ -724,6 +1348,21 @@
     ],
     "resources": {
       "pietra": 15
+    },
+    "settlements": {
+      "Abitato di Toledo": {
+        "name": "Abitato di Toledo",
+        "type": "military",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 9750,
+        "buildings": [
+          "centro_cittadino",
+          "caserma_i",
+          "fortezza_frontiera"
+        ],
+        "roads": []
+      }
     }
   },
   "Saragozza": {
@@ -744,6 +1383,24 @@
     ],
     "resources": {
       "cibo": 25
+    },
+    "settlements": {
+      "Abitato di Saragozza": {
+        "name": "Abitato di Saragozza",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 8250,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Granada": {
@@ -761,6 +1418,21 @@
     ],
     "resources": {
       "cibo": 25
+    },
+    "settlements": {
+      "Abitato di Granada": {
+        "name": "Abitato di Granada",
+        "type": "military",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 9000,
+        "buildings": [
+          "centro_cittadino",
+          "caserma_i",
+          "fortezza_frontiera"
+        ],
+        "roads": []
+      }
     }
   },
   "Lisbona": {
@@ -777,6 +1449,22 @@
     ],
     "resources": {
       "legname": 15
+    },
+    "settlements": {
+      "Abitato di Lisbona": {
+        "name": "Abitato di Lisbona",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6750,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Il Cairo": {
@@ -795,6 +1483,26 @@
       "oro": 100,
       "cibo": 60,
       "prestigio": 12
+    },
+    "settlements": {
+      "Il Cairo": {
+        "name": "Il Cairo",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 52500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero"
+        ],
+        "roads": []
+      }
     }
   },
   "Alessandria": {
@@ -812,6 +1520,22 @@
     ],
     "resources": {
       "cibo": 30
+    },
+    "settlements": {
+      "Abitato di Alessandria": {
+        "name": "Abitato di Alessandria",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 18000,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Gerusalemme": {
@@ -830,6 +1554,21 @@
     ],
     "resources": {
       "prestigio": 15
+    },
+    "settlements": {
+      "Abitato di Gerusalemme": {
+        "name": "Abitato di Gerusalemme",
+        "type": "military",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 10500,
+        "buildings": [
+          "centro_cittadino",
+          "caserma_i",
+          "fortezza_frontiera"
+        ],
+        "roads": []
+      }
     }
   },
   "Damasco": {
@@ -848,6 +1587,24 @@
     ],
     "resources": {
       "cibo": 35
+    },
+    "settlements": {
+      "Abitato di Damasco": {
+        "name": "Abitato di Damasco",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 15000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Tripoli": {
@@ -862,6 +1619,22 @@
     ],
     "resources": {
       "cibo": 20
+    },
+    "settlements": {
+      "Abitato di Tripoli": {
+        "name": "Abitato di Tripoli",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 8250,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Palermo": {
@@ -880,6 +1653,22 @@
     "resources": {
       "cibo": 30,
       "oro": 30
+    },
+    "settlements": {
+      "Abitato di Palermo": {
+        "name": "Abitato di Palermo",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 12000,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Esztergom": {
@@ -905,6 +1694,26 @@
     "resources": {
       "oro": 25,
       "prestigio": 8
+    },
+    "settlements": {
+      "Esztergom": {
+        "name": "Esztergom",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6750,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero"
+        ],
+        "roads": []
+      }
     }
   },
   "Buda": {
@@ -927,6 +1736,24 @@
     ],
     "resources": {
       "cibo": 25
+    },
+    "settlements": {
+      "Abitato di Buda": {
+        "name": "Abitato di Buda",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Pannonia": {
@@ -952,6 +1779,24 @@
     ],
     "resources": {
       "cibo": 30
+    },
+    "settlements": {
+      "Abitato di Pannonia": {
+        "name": "Abitato di Pannonia",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 5250,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Transilvania": {
@@ -972,6 +1817,23 @@
     ],
     "resources": {
       "legname": 20
+    },
+    "settlements": {
+      "Abitato di Transilvania": {
+        "name": "Abitato di Transilvania",
+        "type": "industrial",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 4800,
+        "buildings": [
+          "centro_cittadino",
+          "capanna_boscaioli",
+          "segheria",
+          "miniera",
+          "fucina"
+        ],
+        "roads": []
+      }
     }
   },
   "Kiev": {
@@ -989,6 +1851,26 @@
     "resources": {
       "oro": 40,
       "prestigio": 8
+    },
+    "settlements": {
+      "Kiev": {
+        "name": "Kiev",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 12000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero"
+        ],
+        "roads": []
+      }
     }
   },
   "Novgorod": {
@@ -1003,6 +1885,23 @@
     ],
     "resources": {
       "legname": 25
+    },
+    "settlements": {
+      "Abitato di Novgorod": {
+        "name": "Abitato di Novgorod",
+        "type": "industrial",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6750,
+        "buildings": [
+          "centro_cittadino",
+          "capanna_boscaioli",
+          "segheria",
+          "miniera",
+          "fucina"
+        ],
+        "roads": []
+      }
     }
   },
   "Smolensk": {
@@ -1019,6 +1918,23 @@
     ],
     "resources": {
       "legname": 20
+    },
+    "settlements": {
+      "Abitato di Smolensk": {
+        "name": "Abitato di Smolensk",
+        "type": "industrial",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 5700,
+        "buildings": [
+          "centro_cittadino",
+          "capanna_boscaioli",
+          "segheria",
+          "miniera",
+          "fucina"
+        ],
+        "roads": []
+      }
     }
   },
   "Chernigov": {
@@ -1034,6 +1950,24 @@
     ],
     "resources": {
       "cibo": 25
+    },
+    "settlements": {
+      "Abitato di Chernigov": {
+        "name": "Abitato di Chernigov",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 5250,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Polotsk": {
@@ -1050,6 +1984,23 @@
     ],
     "resources": {
       "legname": 15
+    },
+    "settlements": {
+      "Abitato di Polotsk": {
+        "name": "Abitato di Polotsk",
+        "type": "industrial",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 4500,
+        "buildings": [
+          "centro_cittadino",
+          "capanna_boscaioli",
+          "segheria",
+          "miniera",
+          "fucina"
+        ],
+        "roads": []
+      }
     }
   },
   "Gniezno": {
@@ -1074,6 +2025,26 @@
     "resources": {
       "oro": 20,
       "prestigio": 5
+    },
+    "settlements": {
+      "Gniezno": {
+        "name": "Gniezno",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero"
+        ],
+        "roads": []
+      }
     }
   },
   "Cracovia": {
@@ -1095,6 +2066,24 @@
     ],
     "resources": {
       "cibo": 25
+    },
+    "settlements": {
+      "Abitato di Cracovia": {
+        "name": "Abitato di Cracovia",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 5700,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Poznan": {
@@ -1119,6 +2108,24 @@
     ],
     "resources": {
       "cibo": 25
+    },
+    "settlements": {
+      "Abitato di Poznan": {
+        "name": "Abitato di Poznan",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 5250,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Masovia": {
@@ -1141,6 +2148,24 @@
     ],
     "resources": {
       "legname": 15
+    },
+    "settlements": {
+      "Abitato di Masovia": {
+        "name": "Abitato di Masovia",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 4500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Slesia": {
@@ -1165,6 +2190,23 @@
     ],
     "resources": {
       "ferro": 15
+    },
+    "settlements": {
+      "Abitato di Slesia": {
+        "name": "Abitato di Slesia",
+        "type": "industrial",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 4800,
+        "buildings": [
+          "centro_cittadino",
+          "capanna_boscaioli",
+          "segheria",
+          "miniera",
+          "fucina"
+        ],
+        "roads": []
+      }
     }
   },
   "Baghdad": {
@@ -1180,6 +2222,26 @@
     "resources": {
       "oro": 90,
       "prestigio": 12
+    },
+    "settlements": {
+      "Baghdad": {
+        "name": "Baghdad",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 30000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero"
+        ],
+        "roads": []
+      }
     }
   },
   "Mosul": {
@@ -1194,6 +2256,24 @@
     ],
     "resources": {
       "cibo": 30
+    },
+    "settlements": {
+      "Abitato di Mosul": {
+        "name": "Abitato di Mosul",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 13500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Basra": {
@@ -1210,6 +2290,24 @@
     ],
     "resources": {
       "cibo": 25
+    },
+    "settlements": {
+      "Abitato di Basra": {
+        "name": "Abitato di Basra",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 10500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Isfahan": {
@@ -1224,6 +2322,21 @@
     ],
     "resources": {
       "oro": 40
+    },
+    "settlements": {
+      "Abitato di Isfahan": {
+        "name": "Abitato di Isfahan",
+        "type": "military",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 12000,
+        "buildings": [
+          "centro_cittadino",
+          "caserma_i",
+          "fortezza_frontiera"
+        ],
+        "roads": []
+      }
     }
   },
   "Rey": {
@@ -1238,6 +2351,21 @@
     ],
     "resources": {
       "pietra": 15
+    },
+    "settlements": {
+      "Abitato di Rey": {
+        "name": "Abitato di Rey",
+        "type": "military",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 10500,
+        "buildings": [
+          "centro_cittadino",
+          "caserma_i",
+          "fortezza_frontiera"
+        ],
+        "roads": []
+      }
     }
   },
   "Ghazna": {
@@ -1255,6 +2383,26 @@
     "resources": {
       "oro": 40,
       "prestigio": 8
+    },
+    "settlements": {
+      "Ghazna": {
+        "name": "Ghazna",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 9000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero"
+        ],
+        "roads": []
+      }
     }
   },
   "Kabul": {
@@ -1271,6 +2419,24 @@
     ],
     "resources": {
       "cibo": 20
+    },
+    "settlements": {
+      "Abitato di Kabul": {
+        "name": "Abitato di Kabul",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 8250,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Lahore": {
@@ -1288,6 +2454,24 @@
     "resources": {
       "oro": 50,
       "cibo": 40
+    },
+    "settlements": {
+      "Abitato di Lahore": {
+        "name": "Abitato di Lahore",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 13500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Peshawar": {
@@ -1304,6 +2488,24 @@
     ],
     "resources": {
       "cibo": 20
+    },
+    "settlements": {
+      "Abitato di Peshawar": {
+        "name": "Abitato di Peshawar",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 7500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Multan": {
@@ -1320,6 +2522,23 @@
     ],
     "resources": {
       "oro": 30
+    },
+    "settlements": {
+      "Abitato di Multan": {
+        "name": "Abitato di Multan",
+        "type": "industrial",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6750,
+        "buildings": [
+          "centro_cittadino",
+          "capanna_boscaioli",
+          "segheria",
+          "miniera",
+          "fucina"
+        ],
+        "roads": []
+      }
     }
   },
   "Kaifeng": {
@@ -1338,6 +2557,26 @@
       "oro": 130,
       "cibo": 90,
       "prestigio": 15
+    },
+    "settlements": {
+      "Kaifeng": {
+        "name": "Kaifeng",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 67500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero"
+        ],
+        "roads": []
+      }
     }
   },
   "Hangzhou": {
@@ -1351,6 +2590,22 @@
     ],
     "resources": {
       "cibo": 50
+    },
+    "settlements": {
+      "Abitato di Hangzhou": {
+        "name": "Abitato di Hangzhou",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 27000,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Nanchino": {
@@ -1366,6 +2621,24 @@
     ],
     "resources": {
       "cibo": 45
+    },
+    "settlements": {
+      "Abitato di Nanchino": {
+        "name": "Abitato di Nanchino",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 22500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Luoyang": {
@@ -1383,6 +2656,24 @@
     "resources": {
       "pietra": 20,
       "oro": 40
+    },
+    "settlements": {
+      "Abitato di Luoyang": {
+        "name": "Abitato di Luoyang",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 18000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Chengdu": {
@@ -1394,6 +2685,21 @@
     "neighbors": [],
     "resources": {
       "cibo": 40
+    },
+    "settlements": {
+      "Abitato di Chengdu": {
+        "name": "Abitato di Chengdu",
+        "type": "military",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 15000,
+        "buildings": [
+          "centro_cittadino",
+          "caserma_i",
+          "fortezza_frontiera"
+        ],
+        "roads": []
+      }
     }
   },
   "Guangzhou": {
@@ -1405,6 +2711,22 @@
     "neighbors": [],
     "resources": {
       "oro": 60
+    },
+    "settlements": {
+      "Abitato di Guangzhou": {
+        "name": "Abitato di Guangzhou",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 16500,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Shangjing": {
@@ -1421,6 +2743,26 @@
     "resources": {
       "oro": 40,
       "prestigio": 8
+    },
+    "settlements": {
+      "Shangjing": {
+        "name": "Shangjing",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 10500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero"
+        ],
+        "roads": []
+      }
     }
   },
   "Yanjing": {
@@ -1438,6 +2780,24 @@
     ],
     "resources": {
       "cibo": 40
+    },
+    "settlements": {
+      "Abitato di Yanjing": {
+        "name": "Abitato di Yanjing",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 18000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Datong": {
@@ -1454,6 +2814,21 @@
     ],
     "resources": {
       "ferro": 20
+    },
+    "settlements": {
+      "Abitato di Datong": {
+        "name": "Abitato di Datong",
+        "type": "military",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 9000,
+        "buildings": [
+          "centro_cittadino",
+          "caserma_i",
+          "fortezza_frontiera"
+        ],
+        "roads": []
+      }
     }
   },
   "Liaodong": {
@@ -1468,6 +2843,24 @@
     ],
     "resources": {
       "legname": 20
+    },
+    "settlements": {
+      "Abitato di Liaodong": {
+        "name": "Abitato di Liaodong",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 7500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Tanjore": {
@@ -1485,6 +2878,27 @@
     "resources": {
       "oro": 50,
       "prestigio": 10
+    },
+    "settlements": {
+      "Tanjore": {
+        "name": "Tanjore",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 18000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero",
+          "arsenale_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Madurai": {
@@ -1501,6 +2915,22 @@
     ],
     "resources": {
       "cibo": 35
+    },
+    "settlements": {
+      "Abitato di Madurai": {
+        "name": "Abitato di Madurai",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 13500,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Kanchipuram": {
@@ -1517,6 +2947,21 @@
     ],
     "resources": {
       "oro": 30
+    },
+    "settlements": {
+      "Abitato di Kanchipuram": {
+        "name": "Abitato di Kanchipuram",
+        "type": "military",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 12000,
+        "buildings": [
+          "centro_cittadino",
+          "caserma_i",
+          "fortezza_frontiera"
+        ],
+        "roads": []
+      }
     }
   },
   "Kalinga": {
@@ -1528,6 +2973,21 @@
     "neighbors": [],
     "resources": {
       "cibo": 30
+    },
+    "settlements": {
+      "Abitato di Kalinga": {
+        "name": "Abitato di Kalinga",
+        "type": "military",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 10500,
+        "buildings": [
+          "centro_cittadino",
+          "caserma_i",
+          "fortezza_frontiera"
+        ],
+        "roads": []
+      }
     }
   },
   "Sri Lanka": {
@@ -1545,6 +3005,22 @@
     "resources": {
       "cibo": 30,
       "oro": 30
+    },
+    "settlements": {
+      "Abitato di Sri Lanka": {
+        "name": "Abitato di Sri Lanka",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 9000,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Malabar": {
@@ -1561,6 +3037,22 @@
     ],
     "resources": {
       "oro": 40
+    },
+    "settlements": {
+      "Abitato di Malabar": {
+        "name": "Abitato di Malabar",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 10500,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Angkor": {
@@ -1577,6 +3069,26 @@
     "resources": {
       "oro": 30,
       "prestigio": 8
+    },
+    "settlements": {
+      "Angkor": {
+        "name": "Angkor",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 15000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero"
+        ],
+        "roads": []
+      }
     }
   },
   "Phnom Penh": {
@@ -1592,6 +3104,24 @@
     ],
     "resources": {
       "cibo": 30
+    },
+    "settlements": {
+      "Abitato di Phnom Penh": {
+        "name": "Abitato di Phnom Penh",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 7500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Champasak": {
@@ -1607,6 +3137,23 @@
     ],
     "resources": {
       "legname": 20
+    },
+    "settlements": {
+      "Abitato di Champasak": {
+        "name": "Abitato di Champasak",
+        "type": "industrial",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6000,
+        "buildings": [
+          "centro_cittadino",
+          "capanna_boscaioli",
+          "segheria",
+          "miniera",
+          "fucina"
+        ],
+        "roads": []
+      }
     }
   },
   "Lopburi": {
@@ -1622,6 +3169,24 @@
     ],
     "resources": {
       "cibo": 25
+    },
+    "settlements": {
+      "Abitato di Lopburi": {
+        "name": "Abitato di Lopburi",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6750,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Kyoto": {
@@ -1638,6 +3203,26 @@
     "resources": {
       "oro": 50,
       "prestigio": 10
+    },
+    "settlements": {
+      "Kyoto": {
+        "name": "Kyoto",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 18000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero"
+        ],
+        "roads": []
+      }
     }
   },
   "Kamakura": {
@@ -1653,6 +3238,22 @@
     ],
     "resources": {
       "cibo": 25
+    },
+    "settlements": {
+      "Abitato di Kamakura": {
+        "name": "Abitato di Kamakura",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 7500,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Osaka": {
@@ -1668,6 +3269,22 @@
     ],
     "resources": {
       "cibo": 30
+    },
+    "settlements": {
+      "Abitato di Osaka": {
+        "name": "Abitato di Osaka",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 12000,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Nara": {
@@ -1683,6 +3300,21 @@
     ],
     "resources": {
       "prestigio": 8
+    },
+    "settlements": {
+      "Abitato di Nara": {
+        "name": "Abitato di Nara",
+        "type": "military",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 9000,
+        "buildings": [
+          "centro_cittadino",
+          "caserma_i",
+          "fortezza_frontiera"
+        ],
+        "roads": []
+      }
     }
   },
   "Palembang": {
@@ -1698,6 +3330,27 @@
     "resources": {
       "oro": 50,
       "prestigio": 8
+    },
+    "settlements": {
+      "Palembang": {
+        "name": "Palembang",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 10500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero",
+          "arsenale_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Jambi": {
@@ -1712,6 +3365,22 @@
     ],
     "resources": {
       "legname": 25
+    },
+    "settlements": {
+      "Abitato di Jambi": {
+        "name": "Abitato di Jambi",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6000,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Kedah": {
@@ -1723,6 +3392,22 @@
     "neighbors": [],
     "resources": {
       "oro": 30
+    },
+    "settlements": {
+      "Abitato di Kedah": {
+        "name": "Abitato di Kedah",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6750,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Sumatra": {
@@ -1737,6 +3422,22 @@
     ],
     "resources": {
       "cibo": 30
+    },
+    "settlements": {
+      "Abitato di Sumatra": {
+        "name": "Abitato di Sumatra",
+        "type": "port",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 5250,
+        "buildings": [
+          "centro_cittadino",
+          "molo_i",
+          "segheria",
+          "mercato_marittimo"
+        ],
+        "roads": []
+      }
     }
   },
   "Koumbi Saleh": {
@@ -1752,6 +3453,26 @@
     "resources": {
       "oro": 80,
       "prestigio": 10
+    },
+    "settlements": {
+      "Koumbi Saleh": {
+        "name": "Koumbi Saleh",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 9000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero"
+        ],
+        "roads": []
+      }
     }
   },
   "Aoudaghost": {
@@ -1768,6 +3489,23 @@
     ],
     "resources": {
       "oro": 30
+    },
+    "settlements": {
+      "Abitato di Aoudaghost": {
+        "name": "Abitato di Aoudaghost",
+        "type": "industrial",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 5250,
+        "buildings": [
+          "centro_cittadino",
+          "capanna_boscaioli",
+          "segheria",
+          "miniera",
+          "fucina"
+        ],
+        "roads": []
+      }
     }
   },
   "Walata": {
@@ -1782,6 +3520,23 @@
     ],
     "resources": {
       "oro": 25
+    },
+    "settlements": {
+      "Abitato di Walata": {
+        "name": "Abitato di Walata",
+        "type": "industrial",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 4500,
+        "buildings": [
+          "centro_cittadino",
+          "capanna_boscaioli",
+          "segheria",
+          "miniera",
+          "fucina"
+        ],
+        "roads": []
+      }
     }
   },
   "Gao": {
@@ -1795,6 +3550,23 @@
     ],
     "resources": {
       "cibo": 20
+    },
+    "settlements": {
+      "Abitato di Gao": {
+        "name": "Abitato di Gao",
+        "type": "industrial",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 4200,
+        "buildings": [
+          "centro_cittadino",
+          "capanna_boscaioli",
+          "segheria",
+          "miniera",
+          "fucina"
+        ],
+        "roads": []
+      }
     }
   },
   "Tollan": {
@@ -1811,6 +3583,26 @@
     "resources": {
       "oro": 30,
       "prestigio": 10
+    },
+    "settlements": {
+      "Tollan": {
+        "name": "Tollan",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 12000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero"
+        ],
+        "roads": []
+      }
     }
   },
   "Teotihuacan": {
@@ -1826,6 +3618,24 @@
     ],
     "resources": {
       "pietra": 25
+    },
+    "settlements": {
+      "Abitato di Teotihuacan": {
+        "name": "Abitato di Teotihuacan",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 9000,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Cholula": {
@@ -1841,6 +3651,24 @@
     ],
     "resources": {
       "cibo": 25
+    },
+    "settlements": {
+      "Abitato di Cholula": {
+        "name": "Abitato di Cholula",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 7500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Xochicalco": {
@@ -1856,6 +3684,23 @@
     ],
     "resources": {
       "pietra": 20
+    },
+    "settlements": {
+      "Abitato di Xochicalco": {
+        "name": "Abitato di Xochicalco",
+        "type": "industrial",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6750,
+        "buildings": [
+          "centro_cittadino",
+          "capanna_boscaioli",
+          "segheria",
+          "miniera",
+          "fucina"
+        ],
+        "roads": []
+      }
     }
   },
   "Chichen Itza": {
@@ -1872,6 +3717,26 @@
     "resources": {
       "oro": 20,
       "prestigio": 8
+    },
+    "settlements": {
+      "Chichen Itza": {
+        "name": "Chichen Itza",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 10500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i",
+          "fucina",
+          "monastero"
+        ],
+        "roads": []
+      }
     }
   },
   "Tikal": {
@@ -1887,6 +3752,24 @@
     ],
     "resources": {
       "cibo": 25
+    },
+    "settlements": {
+      "Abitato di Tikal": {
+        "name": "Abitato di Tikal",
+        "type": "civil",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 7500,
+        "buildings": [
+          "centro_cittadino",
+          "mercato",
+          "mulino",
+          "caserma_i",
+          "campo_tiro_i",
+          "scuderia_i"
+        ],
+        "roads": []
+      }
     }
   },
   "Calakmul": {
@@ -1902,6 +3785,23 @@
     ],
     "resources": {
       "legname": 20
+    },
+    "settlements": {
+      "Abitato di Calakmul": {
+        "name": "Abitato di Calakmul",
+        "type": "industrial",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 6750,
+        "buildings": [
+          "centro_cittadino",
+          "capanna_boscaioli",
+          "segheria",
+          "miniera",
+          "fucina"
+        ],
+        "roads": []
+      }
     }
   },
   "Copan": {
@@ -1917,6 +3817,23 @@
     ],
     "resources": {
       "pietra": 15
+    },
+    "settlements": {
+      "Abitato di Copan": {
+        "name": "Abitato di Copan",
+        "type": "industrial",
+        "x": 0.5,
+        "y": 0.5,
+        "population": 5250,
+        "buildings": [
+          "centro_cittadino",
+          "capanna_boscaioli",
+          "segheria",
+          "miniera",
+          "fucina"
+        ],
+        "roads": []
+      }
     }
   },
   "Steppe del Caspio": {

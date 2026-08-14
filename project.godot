@@ -16,6 +16,7 @@ EconomyEngine="*res://scripts/autoload/economy_engine.gd"
 AIController="*res://scripts/autoload/ai_controller.gd"
 BattleSystem="*res://scripts/autoload/battle_system.gd"
 SaveManager="*res://scripts/autoload/save_manager.gd"
+SettlementManager="*res://scripts/autoload/settlement_manager.gd"
 
 [display]
 window/size/viewport_width=1920
