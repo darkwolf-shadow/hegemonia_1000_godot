@@ -26,5 +26,19 @@ func _ready():
 	SaveManager.save_game("test")
 	print("Save ok")
 
+	print("Scene load test")
+	var ps = load("res://scenes/strategic_map.tscn")
+	var scene = ps.instantiate()
+	add_child(scene)
+	await get_tree().process_frame
+	print("Scene children: ", scene.get_children().map(func(n): return n.name))
+	var ui = scene.get_node_or_null("CanvasLayer/UI")
+	print("UI node: ", ui)
+	if ui:
+		print("UI children: ", ui.get_children().map(func(n): return n.name))
+	remove_child(scene)
+	scene.queue_free()
+	print("Scene load ok")
+
 	print("ALL TESTS PASSED")
 	get_tree().quit()

@@ -27,5 +27,10 @@ func _on_load():
 		get_tree().change_scene_to_file("res://scenes/strategic_map.tscn")
 
 
+func _unhandled_input(event):
+	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
+		get_tree().quit()
+
+
 func _on_exit():
 	get_tree().quit()

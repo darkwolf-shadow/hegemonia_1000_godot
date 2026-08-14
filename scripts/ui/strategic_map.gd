@@ -23,6 +23,11 @@ func _ready():
 	_update_ui()
 
 
+func _unhandled_input(event):
+	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
+		get_tree().quit()
+
+
 func _draw_map():
 	for child in map_layer.get_children():
 		child.queue_free()
@@ -99,37 +104,37 @@ func _load_icon(path: String) -> Texture2D:
 
 
 func _draw_settlements(province_name: String, points: PackedVector2Array):
-	var container := Node2D.new()
+	var container: Node2D = Node2D.new()
 	container.name = "Settlements_" + province_name
 	map_layer.add_child(container)
 	settlement_markers[province_name] = container
 
 	var prov = GameState.state.provinces.get(province_name, {})
 	var settlements = prov.get("settlements", {})
-	var count := settlements.keys().size()
+	var count: int = int(settlements.keys().size())
 	if count == 0:
 		return
 
 	var center := _polygon_center(points)
-	var radius := clamp(_polygon_radius(points) * 0.25, 20.0, 80.0)
-	var positions := []
-	var idx := 0
+	var radius: float = clamp(_polygon_radius(points) * 0.25, 20.0, 80.0)
+	var positions: Array[Vector2] = []
+	var idx: int = 0
 
 	for s_name in settlements.keys():
 		var s = settlements[s_name]
-		var angle := idx * TAU / count - PI / 2
-		var pos := center + Vector2(cos(angle), sin(angle)) * radius
+		var angle: float = idx * TAU / count - PI / 2
+		var pos: Vector2 = center + Vector2(cos(angle), sin(angle)) * radius
 		positions.append(pos)
 
 		var icon := _load_icon("res://assets/icons/1000/settlements/%s.svg" % s.get("type", "civil"))
 		if icon:
-			var sprite := Sprite2D.new()
+			var sprite: Sprite2D = Sprite2D.new()
 			sprite.texture = icon
 			sprite.position = pos
 			sprite.scale = Vector2(0.4, 0.4)
 			container.add_child(sprite)
 
-		var label := Label.new()
+		var label: Label = Label.new()
 		label.text = s_name
 		label.position = pos + Vector2(-20, -24)
 		container.add_child(label)
@@ -137,7 +142,7 @@ func _draw_settlements(province_name: String, points: PackedVector2Array):
 		idx += 1
 
 	# Strade
-	var has_roads := false
+	var has_roads: bool = false
 	for s in settlements.values():
 		if "strade" in s.get("buildings", []):
 			has_roads = true
@@ -145,7 +150,7 @@ func _draw_settlements(province_name: String, points: PackedVector2Array):
 
 	if has_roads and positions.size() > 1:
 		for i in range(positions.size()):
-			var road := Line2D.new()
+			var road: Line2D = Line2D.new()
 			road.add_point(positions[i])
 			road.add_point(center)
 			road.width = 2.5
@@ -157,7 +162,7 @@ func _draw_settlements(province_name: String, points: PackedVector2Array):
 
 func _process(_delta):
 	if camera:
-		var show := camera.zoom.x >= settlement_zoom_threshold
+		var show: bool = camera.zoom.x >= settlement_zoom_threshold
 		for markers in settlement_markers.values():
 			markers.visible = show
 
