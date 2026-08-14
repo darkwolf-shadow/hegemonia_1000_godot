@@ -1,0 +1,145 @@
+{
+  "Impero Bizantino": {
+    "name": "Impero Bizantino",
+    "leader": "Basilio II",
+    "attitude": "balanced",
+    "color": "#8A2BE2",
+    "capital": "Costantinopoli",
+    "description": "Impero Romano d'Oriente all'apice sotto Basilio II.",
+    "resources": {
+      "oro": 15000,
+      "legname": 60,
+      "pietra": 50,
+      "ferro": 30,
+      "argento": 20,
+      "armi": 40,
+      "cibo": 20000,
+      "prestigio": 80
+    },
+    "units": {"fanteria": 40, "cavalleria": 20, "arcieri": 15, "artiglieria": 3},
+    "ships": {"dromone": 10, "galea": 5},
+    "buildings": ["monastero", "castello", "fucina"],
+    "production": {"oro": 500, "cibo": 400, "armi": 2, "prestigio": 3},
+    "modifiers": {"oro": 1.0, "cibo": 1.0, "armi": 1.0, "prestigio": 1.0}
+  },
+  "Sacro Romano Impero": {
+    "name": "Sacro Romano Impero",
+    "leader": "Ottone III",
+    "attitude": "defensive",
+    "color": "#FFD700",
+    "capital": "Roma",
+    "description": "Sacro Romano Impero sotto Ottone III.",
+    "resources": {
+      "oro": 12000,
+      "legname": 80,
+      "pietra": 60,
+      "ferro": 40,
+      "argento": 15,
+      "armi": 30,
+      "cibo": 18000,
+      "prestigio": 70
+    },
+    "units": {"fanteria": 35, "cavalleria": 15, "arcieri": 10, "artiglieria": 2},
+    "ships": {"galea": 3},
+    "buildings": ["monastero", "castello", "mulino"],
+    "production": {"oro": 400, "cibo": 350, "armi": 1, "prestigio": 2},
+    "modifiers": {"oro": 1.0, "cibo": 1.0, "armi": 1.0, "prestigio": 1.0}
+  },
+  "Califfato Fatimide": {
+    "name": "Califfato Fatimide",
+    "leader": "Al-Hakim",
+    "attitude": "aggressive",
+    "color": "#228B22",
+    "capital": "Il Cairo",
+    "description": "Califfato ismailita in Egitto e Nord Africa.",
+    "resources": {
+      "oro": 13000,
+      "legname": 50,
+      "pietra": 40,
+      "ferro": 35,
+      "argento": 25,
+      "armi": 35,
+      "cibo": 22000,
+      "prestigio": 75
+    },
+    "units": {"fanteria": 45, "cavalleria": 25, "arcieri": 20, "artiglieria": 4},
+    "ships": {"galea": 8, "dromone": 4},
+    "buildings": ["mercato", "castello", "fucina"],
+    "production": {"oro": 450, "cibo": 380, "armi": 2, "prestigio": 2},
+    "modifiers": {"oro": 1.0, "cibo": 1.0, "armi": 1.0, "prestigio": 1.0}
+  },
+  "Vichinghi": {
+    "name": "Vichinghi",
+    "leader": "Leif Erikson",
+    "attitude": "aggressive",
+    "color": "#B22222",
+    "capital": "Kattegat",
+    "description": "Popoli scandinavi in declino, ma ancora temuti per le incursioni navali.",
+    "resources": {
+      "oro": 8000,
+      "legname": 100,
+      "pietra": 30,
+      "ferro": 50,
+      "argento": 30,
+      "armi": 25,
+      "cibo": 10000,
+      "prestigio": 55
+    },
+    "units": {"fanteria": 30, "cavalleria": 10, "arcieri": 15, "artiglieria": 1},
+    "ships": {"drakkar": 15, "galea": 3},
+    "buildings": ["mulino", "fucina"],
+    "production": {"oro": 300, "cibo": 200, "armi": 1, "prestigio": 1},
+    "modifiers": {"oro": 1.0, "cibo": 1.0, "armi": 1.0, "prestigio": 1.0}
+  },
+  "Regno di Francia": {
+    "name": "Regno di Francia",
+    "leader": "Ugo Capeto",
+    "attitude": "balanced",
+    "color": "#0055AA",
+    "capital": "Parigi",
+    "description": "Regno dei Franchi occidentali in formazione.",
+    "resources": {
+      "oro": 10000,
+      "legname": 70,
+      "pietra": 50,
+      "ferro": 30,
+      "argento": 18,
+      "armi": 25,
+      "cibo": 16000,
+      "prestigio": 65
+    },
+    "units": {"fanteria": 30, "cavalleria": 12, "arcieri": 10, "artiglieria": 1},
+    "ships": {"galea": 2},
+    "buildings": ["monastero", "castello"],
+    "production": {"oro": 350, "cibo": 300, "armi": 1, "prestigio": 1},
+    "modifiers": {"oro": 1.0, "cibo": 1.0, "armi": 1.0, "prestigio": 1.0}
+  },
+  "Dinastia Song": {
+    "name": "Dinastia Song",
+    "leader": "Zhenzong",
+    "attitude": "balanced",
+    "color": "#FF4500",
+    "capital": "Kaifeng",
+    "description": "Cina imperiale florida e tecnologicamente avanzata.",
+    "resources": {
+      "oro": 20000,
+      "legname": 90,
+      "pietra": 70,
+      "ferro": 60,
+      "argento": 50,
+      "armi": 50,
+      "cibo": 30000,
+      "prestigio": 85
+    },
+    "units": {"fanteria": 50, "cavalleria": 15, "arcieri": 30, "artiglieria": 5},
+    "ships": {"galea": 6, "dromone": 3},
+    "buildings": ["mercato", "fucina", "mulino"],
+    "production": {"oro": 600, "cibo": 500, "armi": 3, "prestigio": 4},
+    "modifiers": {"oro": 1.0, "cibo": 1.0, "armi": 1.0, "prestigio": 1.0}
+  },
+  "Terra di Nessuno": {
+    "name": "Terra di Nessuno",
+    "is_neutral": true,
+    "color": "#AAAAAA"
+  }
+}

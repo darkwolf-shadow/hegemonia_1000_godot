@@ -1,0 +1,150 @@
+[gd_scene load_steps=2 format=3 uid="uid://battle_view"]
+
+[ext_resource type="Script" path="res://scripts/ui/battle_view.gd" id="1_bat"]
+
+[node name="BattleView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bat")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 0.15, 0.1, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Battaglia"
+horizontal_alignment = 1
+
+[node name="AttackerPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 300.0
+offset_top = 60.0
+grow_vertical = 2
+
+[node name="AttackerInfo" type="Label" parent="AttackerPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 200.0
+grow_horizontal = 2
+text = "Attaccante"
+autowrap_mode = 3
+
+[node name="MoraleBarAtt" type="ProgressBar" parent="AttackerPanel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -120.0
+offset_right = -10.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+value = 100.0
+
+[node name="DefenderPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = 60.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="DefenderInfo" type="Label" parent="DefenderPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 200.0
+grow_horizontal = 2
+text = "Difensore"
+autowrap_mode = 3
+
+[node name="MoraleBarDef" type="ProgressBar" parent="DefenderPanel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -120.0
+offset_right = -10.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+value = 100.0
+
+[node name="BattleField" type="Node2D" parent="."]
+position = Vector2(960, 600)
+
+[node name="CenterPanel" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 150.0
+offset_right = 150.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="TacticOption" type="OptionButton" parent="CenterPanel"]
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "standard"
+popup/item_1/text = "charge"
+popup/item_2/text = "shield_wall"
+popup/item_3/text = "skirmish"
+
+[node name="NextRoundButton" type="Button" parent="CenterPanel"]
+layout_mode = 2
+text = "Avanza Round"
+
+[node name="AutoButton" type="Button" parent="CenterPanel"]
+layout_mode = 2
+text = "Risolvi Automaticamente"
+
+[node name="ReturnButton" type="Button" parent="CenterPanel"]
+layout_mode = 2
+text = "Torna alla Mappa"
+
+[node name="ReportLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -150.0
+offset_right = 400.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_alignment = 1
+autowrap_mode = 3

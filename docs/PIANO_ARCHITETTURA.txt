@@ -1,0 +1,345 @@
+PIANO ARCHITETTURA - HEGEMONIA 1000 (GODOT)
+============================================
+
+Questo documento descrive come sarebbe strutturato il progetto Godot per Hegemonia 1000.
+Non contiene ancora codice o scene, serve solo per farti controllare il progetto prima di procedere.
+
+
+1. OBIETTIVO DEL PROGETTO
+-------------------------
+Creare una versione di Hegemonia ambientata nell'anno 1000 usando Godot 4 e il linguaggio GDScript.
+Il gioco rimane uno strategico a turni con:
+- una mappa divisa in province;
+- più fazioni (nazioni);
+- risorse, edifici, truppe e navi;
+- turni che fanno avanzare mesi e anni;
+- micro-battaglie a schermo in 2D;
+- intelligenza artificiale che guida le fazioni non giocatore.
+
+Rispetto agli altri episodi di Hegemonia, questa versione parte da zero su Godot, senza Python e senza JavaScript.
+
+
+2. PERCHÉ QUESTO PROGETTO È DIVERSO
+------------------------------------
+- Anno 1000: alto Medioevo, con fazioni come Impero Bizantino, Sacro Romano Impero, Califfato Fatimide, Vichinghi, Regno di Francia, Dinastia Song.
+- Truppe e navi specifiche dell'epoca: fanteria, cavalleria, arcieri, catapulte, drakkar, galea, dromone.
+- Micro-battaglie interattive a schermo: quando c'è uno scontro si apre una scena 2D in cui si vedono le due armate e si possono scegliere tattiche.
+- Il giocatore non può scegliere tutte le nazioni, ma solo alcune situazioni specifiche (per ora le fazioni giocabili sono limitate).
+- Intelligenza artificiale per tutte le fazioni controllate dal computer, sia nella strategia sulla mappa sia nelle battaglie.
+
+
+3. STRUTTURA DELLE CARTELLE
+-----------------------------
+La cartella principale del progetto è hegemonia_1000_godot.
+Dentro ci saranno queste cartelle:
+
+project.godot               -> file di configurazione del motore Godot
+icon.svg                    -> icona del progetto
+README.md                   -> istruzioni semplici per aprire il progetto
+
+assets/                     -> immagini, icone, temi grafici
+  sprites/
+    units/                  -> sprite delle truppe e navi (inizialmente semplici forme colorate)
+    ui/                     -> icone per pulsanti e pannelli
+  themes/                   -> colori e stili dell'interfaccia
+  fonts/                    -> caratteri per i testi
+
+data/                       -> tutti i dati del gioco in formato JSON
+  config/
+    game_config.json        -> regole generali: risorse, tipi di truppe, navi, edifici, modificatori di terreno, tattiche
+  world/
+    factions_1000.json      -> elenco delle fazioni dell'anno 1000 con risorse, truppe, edifici, produzione
+    provinces_1000.json     -> elenco delle province con proprietario, terreno, popolazione, vicini, risorse
+    map_1000.geojson        -> mappa geografica in formato GeoJSON (inizialmente un esempio ridotto)
+  scenarios/
+    initial_state_1000.json -> stato iniziale completo della partita (turno, anno, fazione giocatore, eventi)
+
+docs/                       -> documentazione
+  PIANO_ARCHITETTURA.txt    -> questo documento
+
+scripts/                    -> codice del gioco
+  autoload/                 -> script che restano attivi per tutta la partita
+  core/                     -> classi che rappresentano fazioni, province, truppe, battaglie
+  ui/                       -> script dei pulsanti, pannelli e finestre
+
+scenes/                     -> scene principali di Godot
+  main_menu.tscn            -> schermata iniziale
+  strategic_map.tscn      -> mappa del mondo e gestione del turno
+  battle_view.tscn          -> schermata delle micro-battaglie
+  faction_panel.tscn        -> pannello con le informazioni di una fazione
+  province_panel.tscn     -> pannello con le informazioni di una provincia
+
+
+4. AUTOMATICI SEMPRE ATTIVI (AUTOLOAD)
+--------------------------------------
+In Godot gli Autoload sono script che vengono caricati all'avvio e rimangono attivi in ogni scena.
+Per Hegemonia 1000 servono questi:
+
+A) GameState (stato della partita)
+   - Contiene tutto lo stato attuale: turno, anno, mese, fazione del giocatore, elenco fazioni, elenco province, eserciti, navi, edifici, cronaca eventi, battaglia in corso.
+   - Salva in memoria i dati che cambiano durante la partita.
+   - Si occupa di iniziare una nuova partita e di far avanzare i turni.
+
+B) WorldData (dati del mondo)
+   - Carica i file JSON dalla cartella data/.
+   - Fornisce a tutti gli altri script le informazioni base sulle fazioni, province, truppe, navi, edifici e regole.
+   - Non cambia durante la partita, serve da riferimento.
+
+C) EconomyEngine (motore economico)
+   - Calcola produzione, costi di mantenimento, consumo di cibo, costruzione edifici e reclutamento truppe.
+   - Viene chiamato a ogni turno per aggiornare le risorse di tutte le fazioni.
+
+D) AIController (intelligenza artificiale)
+   - Gestisce le fazioni non giocatore.
+   - Decide cosa fare nel turno: attaccare, difendersi, costruire, reclutare, muovere eserciti.
+   - Nelle battaglie sceglie le tattiche e le carte da usare.
+
+E) BattleSystem (sistema di battaglia)
+   - Gestisce le micro-battaglie a schermo.
+   - Prepara lo scontro, calcola i round in base alle truppe, al morale, al terreno e alle tattiche.
+   - Restituisce il vincitore e aggiorna la mappa.
+
+F) SaveManager (gestione salvataggi)
+   - Salva la partita su file nel computer del giocatore.
+   - Carica una partita salvata.
+
+
+5. CLASSI PRINCIPALI (SCRIPT DI BASE)
+-------------------------------------
+Nella cartella scripts/core/ ci saranno queste classi semplici:
+
+Faction (fazione)
+  - nome, leader, colore, capitale, atteggiamento (aggressivo, difensivo, bilanciato)
+  - risorse (oro, legname, pietra, ferro, argento, armi, cibo)
+  - truppe, navi, edifici
+  - produzione per turno
+
+Province (provincia)
+  - nome, proprietario, regione, terreno, popolazione
+  - province vicine (per movimento e attacchi)
+  - risorse locali
+
+Unit (unità)
+  - tipo (fanteria, cavalleria, arcieri, catapulta, drakkar, galea, dromone)
+  - forza, costo, popolazione necessaria, mantenimento
+
+Building (edificio)
+  - tipo (monastero, castello, fucina, mulino, mercato)
+  - costo, effetti (aumento risorse, difesa, prestigio)
+
+Battle (battaglia)
+  - attaccante, difensore, provincia
+  - truppe coinvolte, morale, munizioni, terreno
+  - round giocati, tattiche scelte
+
+
+6. SCENE PRINCIPALI
+-------------------
+
+A) Schermata iniziale (main_menu)
+   - Titolo del gioco.
+   - Pulsante "Nuova Partita": apre la scelta della fazione.
+   - Pulsante "Carica Partita": mostra i salvataggi disponibili.
+   - Pulsante "Esci".
+
+B) Scelta fazione (nella scena main_menu o in una scena dedicata)
+   - Mostra solo le fazioni giocabili per l'anno 1000 (inizialmente 2-3 scelte, per esempio Impero Bizantino, Sacro Romano Impero, Vichinghi).
+   - Descrizione breve della fazione scelta.
+   - Pulsante "Inizia".
+
+C) Mappa strategica (strategic_map)
+   - Visualizza le province come poligoni colorati in base al proprietario.
+   - Permette di cliccare su una provincia per vedere informazioni.
+   - Pannello laterale con risorse della fazione giocatore, elenco truppe e navi.
+   - Pulsante "Fine Turno".
+   - Pulsante "Salva".
+   - Log degli eventi (cronaca).
+
+D) Pannello fazione (faction_panel)
+   - Mostra nome, leader, risorse, truppe, navi, edifici.
+   - Pulsanti per reclutare, costruire, muovere truppe (solo per la fazione del giocatore).
+
+E) Pannello provincia (province_panel)
+   - Mostra nome, proprietario, popolazione, terreno, risorse, truppe presenti.
+   - Pulsanti per attaccare, muovere truppe, costruire edificio.
+
+F) Battaglia (battle_view)
+   - Schermata 2D con due eserciti disposti frontalmente.
+   - Barre di salute e morale per attaccante e difensore.
+   - Pulsanti per scegliere la tattica (ad esempio: schieramento standard, carica, muro di scudi, tiro con l'arco).
+   - Pulsante "Avanza Round".
+   - Messaggi che raccontano ogni round.
+   - Pulsante "Risolvi automaticamente" per chi non vuole giocare la micro-battaglia.
+
+
+7. FILE DI DATI JSON
+--------------------
+Tutti i dati del gioco sono in file JSON, così possono essere modificati anche senza aprire Godot.
+
+A) data/config/game_config.json
+   Contiene le regole generali:
+   - anno di inizio: 1000;
+   - mesi per turno: 1;
+   - elenco risorse: oro, legname, pietra, ferro, argento, armi, cibo;
+   - truppe: fanteria, cavalleria, arcieri, catapulta con forza, costo, popolazione necessaria, mantenimento, cibo consumato;
+   - navi: drakkar, galea, dromone con costo, legname necessario, popolazione, forza;
+   - edifici: monastero, castello, fucina, mulino, mercato con costi ed effetti;
+   - modificatori di terreno: pianura, colline, foresta, deserto, fiume;
+   - tattiche di battaglia: standard, carica, muro di scudi, tiro con l'arco.
+
+B) data/world/factions_1000.json
+   Contiene una scheda per ogni fazione:
+   - nome, leader, colore, capitale, descrizione;
+   - atteggiamento (aggressivo, difensivo, bilanciato);
+   - risorse iniziali;
+   - truppe e navi iniziali;
+   - edifici iniziali;
+   - produzione base per turno.
+
+C) data/world/provinces_1000.json
+   Contiene una scheda per ogni provincia:
+   - nome, proprietario iniziale, regione;
+   - tipo di terreno;
+   - popolazione;
+   - elenco delle province vicine (per movimento);
+   - risorse locali.
+
+D) data/world/map_1000.geojson
+   Contiene le coordinate geografiche delle province.
+   Inizialmente può essere un esempio piccolo, poi può essere sostituito con la mappa reale.
+   Godot legge il GeoJSON e disegna i poligoni sulla mappa.
+
+E) data/scenarios/initial_state_1000.json
+   Stato iniziale completo quando si inizia una nuova partita:
+   - fazione giocatore;
+   - turno, anno, mese;
+   - copia delle fazioni e province;
+   - cronaca vuota;
+   - eventi storici da attivare.
+
+
+8. FLUSSO DI UN TURNO
+----------------------
+Quando il giocatore preme "Fine Turno" succede questo:
+
+1. Vengono eseguiti gli ordini del giocatore (movimenti, reclutamenti, costruzioni, attacchi).
+2. Se ci sono attacchi, vengono preparate le battaglie.
+   - Se il giocatore è coinvolto, il gioco si ferma e apre la scena battle_view.
+   - Se la battaglia è tra due fazioni del computer, viene risolta automaticamente dall'intelligenza artificiale.
+3. L'intelligenza artificielle esegue le azioni per tutte le fazioni non giocatore.
+4. Il motore economico calcola produzione, mantenimento e cibo per tutte le fazioni.
+5. Vengono aggiornati mesi e anni (ogni turno avanza di un mese).
+6. Vengono controllati eventi storici e obiettivi.
+7. Viene aggiunta una riga nella cronaca.
+
+
+9. MICRO-BATTAGLIE
+------------------
+Quando inizia una battaglia si apre battle_view.
+
+Preparazione:
+- Vengono mostrate le truppe di attaccante e difensore.
+- Viene mostrato il terreno della provincia (pianura, colline, foresta, deserto, fiume).
+- Ogni esercito ha una barra di morale e una barra di salute complessiva.
+
+Round:
+- Il giocatore sceglie una tattica se la sua fazione è coinvolta.
+- L'intelligenza artificiale sceglie la tattica per il computer.
+- Il sistema calcola la forza totale di ogni esercito usando:
+  - numero e tipo di truppe;
+  - forza base della truppa;
+  - bonus o malus del terreno;
+  - bonus della tattica scelta;
+  - morale e munizioni;
+  - un piccolo fattore casuale.
+- Si confrontano le forze e si infliggono perdite al perdente.
+- Il morale scende a chi subisce perdite.
+
+Fine:
+- La battaglia finisce quando il morale di un esercito arriva a zero, o dopo un numero massimo di round.
+- Il vincitore occupa la provincia (se era attaccante e ha vinto).
+- Le perdite vengono tolte dalle truppe.
+- Il gioco torna sulla mappa strategica.
+
+
+10. INTELLIGENZA ARTIFICIALE
+-----------------------------
+A livello strategico ogni fazione del computer ha un atteggiamento:
+- Aggressivo: attacca spesso, recluta molte truppe.
+- Difensivo: fortifica confini, costruisce edifici difensivi, evita attacchi rischiosi.
+- Bilanciato: mix tra sviluppo economico e espansione.
+
+L'intelligenza artificiale decide in base a:
+- risorse disponibili;
+- numero di truppe rispetto ai vicini;
+- relazioni storiche con altre fazioni (amici, nemici, neutrali);
+- obiettivi storici della fazione;
+- provincie strategiche da conquistare.
+
+Nelle battaglie l'intelligenza artificiale:
+- sceglie la tattica più adatta al terreno e alle truppe disponibili;
+- decide se attaccare a turni successivi o difendersi;
+- valuta se continuare la battaglia o ritirarsi.
+
+
+11. SCELTA DELLA FAZIONE LIMITATA
+----------------------------------
+Per ora il giocatore non può scegliere tutte le nazioni.
+Le fazioni giocabili nella prima versione sono limitate.
+Le altre fazioni sono sempre controllate dall'intelligenza artificiale.
+
+Esempio di scelte iniziali:
+- Impero Bizantino (difficoltà media, molte risorse, molti nemici);
+- Sacro Romano Impero (difficoltà facile, posizione centrale difensiva);
+- Vichinghi (difficoltà difficile, poche risorse, forte marina).
+
+In futuro si possono aggiungere altre scelte quando i sistemi sono stabili.
+
+
+12. ASPETTO GRAFICO E INTERFACCIA
+----------------------------------
+- Stile 2D semplice e leggibile, ispirato a mappe storiche e miniature medievali.
+- Mappa: province come poligoni colorati, confini marroni o grigi, nomi in chiaro.
+- Truppe e navi: icone o semplici sprite colorati, non modelli 3D pesanti.
+- Interfaccia: pannelli scuri con bordi dorati o in legno, testo chiaro, icone grandi.
+- Battaglia: due schieramenti con piccole icone di truppe, barre rosse e gialle per salute/morale, messaggi a scorrimento.
+- Tutto progettato per non appesantire il computer: nessun modello 3D grande, nessuna animazione complessa.
+
+Per le micro-battaglie si può usare uno stile 2.5D leggero: sfondo dipinto, truppe come sprite sovrapposti, ombre semplici.
+
+
+13. COSA SERVE PER AVVIARE IL PROGETTO
+----------------------------------------
+- Godot 4 installato sul computer.
+- Aprire la cartella hegemonia_1000_godot con Godot.
+- Godot legge project.godot e carica la scena iniziale.
+- Nella scena iniziale si sceglie la fazione e si inizia a giocare.
+- I dati vengono caricati automaticamente dai file JSON in data/.
+
+
+14. PASSI SUCCESSIVI PREVISTI
+-----------------------------
+Dopo che questo piano viene approvato, i prossimi passi sono:
+
+1. Creare il file project.godot e i primi script Autoload.
+2. Creare i file JSON di dati per l'anno 1000.
+3. Creare la scena del menu iniziale e la scelta fazione.
+4. Creare la mappa strategica con i poligoni delle province.
+5. Collegare pannelli fazione e provincia.
+6. Creare la scena delle micro-battaglie.
+7. Implementare il motore economico e l'intelligenza artificiale.
+8. Testare una partita rapida.
+9. Inserire i dati storici reali che mi darai.
+
+
+15. DOMANDE PER TE
+------------------
+Prima di procedere ho bisogno di sapere:
+
+1. Le fazioni giocabili all'inizio ti vanno bene (Impero Bizantino, Sacro Romano Impero, Vichinghi) o vuoi altre scelte?
+2. Vuoi che la mappa inizi con un esempio piccolo (Europa, Mediterraneo, parte dell'Asia) o preferisci caricare subito il file GeoJSON completo che già hai?
+3. Per le micro-battaglie preferisci uno stile 2D piatto o 2.5D con sprite leggeri e ombre?
+4. Ci sono edifici, truppe o risorse specifiche dell'anno 1000 che vuoi aggiungere subito?
+5. Vuoi che l'intelligenza artificiale sia subito attiva per tutte le fazioni o preferisci iniziare con pochi comportamenti semplici?
+
+Quando mi dici che il piano va bene, passo a creare i file del progetto Godot.

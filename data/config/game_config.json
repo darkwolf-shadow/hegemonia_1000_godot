@@ -1,0 +1,120 @@
+{
+  "year": 1000,
+  "turn_months": 1,
+  "resources": ["oro", "legname", "pietra", "ferro", "argento", "armi", "cibo", "prestigio"],
+  "units": {
+    "fanteria": {
+      "name": "Fanti",
+      "strength": 0.2,
+      "cost": 1000,
+      "pop": 1000,
+      "maintenance": 1,
+      "food": 1
+    },
+    "cavalleria": {
+      "name": "Cavalieri",
+      "strength": 0.4,
+      "cost": 1800,
+      "pop": 500,
+      "maintenance": 3,
+      "food": 2
+    },
+    "artiglieria": {
+      "name": "Catapulta",
+      "strength": 0.3,
+      "cost": 2500,
+      "pop": 150,
+      "maintenance": 2,
+      "food": 0,
+      "pietra": 2,
+      "legname": 2
+    },
+    "arcieri": {
+      "name": "Arcieri",
+      "strength": 0.2,
+      "cost": 800,
+      "pop": 800,
+      "maintenance": 1,
+      "food": 1
+    }
+  },
+  "ships": {
+    "drakkar": {
+      "name": "Drakkar",
+      "cost": 6000,
+      "pop": 150,
+      "wood": 5,
+      "strength": 0.5,
+      "food": 1
+    },
+    "galea": {
+      "name": "Galea",
+      "cost": 5000,
+      "pop": 150,
+      "wood": 4,
+      "strength": 0.4,
+      "food": 1
+    },
+    "dromone": {
+      "name": "Dromone",
+      "cost": 8000,
+      "pop": 200,
+      "wood": 6,
+      "strength": 0.7,
+      "food": 1
+    }
+  },
+  "buildings": {
+    "monastero": {
+      "cost": {"oro": 2000, "pietra": 20, "legname": 30},
+      "effects": {"prestigio": 5, "cibo": 5}
+    },
+    "castello": {
+      "cost": {"oro": 5000, "pietra": 50, "legname": 40},
+      "effects": {"defense": 10}
+    },
+    "fortezza_frontiera": {
+      "name": "Fortezza di frontiera",
+      "cost": {"oro": 2500, "pietra": 25, "legname": 20},
+      "effects": {"defense": 5}
+    },
+    "fucina": {
+      "cost": {"oro": 1500, "legname": 20, "pietra": 10},
+      "effects": {"armi": 2, "ferro": -1}
+    },
+    "mulino": {
+      "cost": {"oro": 1000, "legname": 25},
+      "effects": {"cibo": 10}
+    },
+    "mercato": {
+      "cost": {"oro": 1200, "legname": 30},
+      "effects": {"oro": 50, "prestigio": 2}
+    }
+  },
+  "maintenance": {
+    "fanteria": 1,
+    "cavalleria": 3,
+    "artiglieria": 2,
+    "arcieri": 1,
+    "drakkar": 5,
+    "galea": 4,
+    "dromone": 6
+  },
+  "terrain_modifiers": {
+    "plains": {"attack": 1.0, "defense": 1.0},
+    "hills": {"attack": 0.9, "defense": 1.2},
+    "forest": {"attack": 0.8, "defense": 1.1},
+    "desert": {"attack": 0.8, "defense": 0.8},
+    "river": {"attack": 0.7, "defense": 1.0}
+  },
+  "tactics": {
+    "standard": {},
+    "charge": {"cavalleria": 1.2, "fanteria": 0.9},
+    "shield_wall": {"fanteria": 1.2, "cavalleria": 0.9},
+    "skirmish": {"arcieri": 1.2, "cavalleria": 1.0}
+  },
+  "fog_of_war": {
+    "enabled": true,
+    "reveal_neighbors": true
+  }
+}

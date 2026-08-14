@@ -1,0 +1,29 @@
+{
+  "turn": 1,
+  "year": 1000,
+  "month": 1,
+  "player_faction": "",
+  "factions": {},
+  "provinces": {},
+  "armies": {},
+  "fleets": {},
+  "events": [],
+  "pending_battle": null,
+  "historical_events": [
+    {
+      "year": 1000,
+      "month": 1,
+      "text": "Basilio II governa l'Impero Bizantino all'apice della sua potenza."
+    },
+    {
+      "year": 1000,
+      "month": 1,
+      "text": "Ottone III sogna di ricostruire l'Impero Romano a Roma."
+    },
+    {
+      "year": 1000,
+      "month": 1,
+      "text": "Le incursioni vichinghe stanno scemando, ma i mari del Nord restano pericolosi."
+    }
+  ]
+}

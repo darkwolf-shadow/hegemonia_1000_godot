@@ -1,0 +1,218 @@
+{
+  "Costantinopoli": {
+    "name": "Costantinopoli",
+    "owner": "Impero Bizantino",
+    "region": "Balcani",
+    "terrain": "hills",
+    "population": 500000,
+    "neighbors": ["Nicea", "Adrianopoli"],
+    "resources": {"oro": 100, "cibo": 50, "prestigio": 10}
+  },
+  "Nicea": {
+    "name": "Nicea",
+    "owner": "Impero Bizantino",
+    "region": "Anatolia",
+    "terrain": "plains",
+    "population": 80000,
+    "neighbors": ["Costantinopoli", "Ankara"],
+    "resources": {"cibo": 30}
+  },
+  "Ankara": {
+    "name": "Ankara",
+    "owner": "Impero Bizantino",
+    "region": "Anatolia",
+    "terrain": "hills",
+    "population": 60000,
+    "neighbors": ["Nicea"],
+    "resources": {"pietra": 10}
+  },
+  "Adrianopoli": {
+    "name": "Adrianopoli",
+    "owner": "Impero Bizantino",
+    "region": "Balcani",
+    "terrain": "plains",
+    "population": 60000,
+    "neighbors": ["Costantinopoli", "Sofia"],
+    "resources": {"cibo": 20}
+  },
+  "Sofia": {
+    "name": "Sofia",
+    "owner": "Impero Bizantino",
+    "region": "Balcani",
+    "terrain": "hills",
+    "population": 40000,
+    "neighbors": ["Adrianopoli", "Belgrado"],
+    "resources": {}
+  },
+  "Belgrado": {
+    "name": "Belgrado",
+    "owner": "Sacro Romano Impero",
+    "region": "Balcani",
+    "terrain": "hills",
+    "population": 30000,
+    "neighbors": ["Sofia", "Vienna"],
+    "resources": {}
+  },
+  "Vienna": {
+    "name": "Vienna",
+    "owner": "Sacro Romano Impero",
+    "region": "Europa Centrale",
+    "terrain": "plains",
+    "population": 50000,
+    "neighbors": ["Belgrado", "Monaco", "Praga"],
+    "resources": {"legname": 10}
+  },
+  "Monaco": {
+    "name": "Monaco",
+    "owner": "Sacro Romano Impero",
+    "region": "Europa Centrale",
+    "terrain": "plains",
+    "population": 40000,
+    "neighbors": ["Vienna", "Parigi"],
+    "resources": {}
+  },
+  "Praga": {
+    "name": "Praga",
+    "owner": "Sacro Romano Impero",
+    "region": "Europa Centrale",
+    "terrain": "hills",
+    "population": 45000,
+    "neighbors": ["Vienna", "Cracovia"],
+    "resources": {}
+  },
+  "Cracovia": {
+    "name": "Cracovia",
+    "owner": "Sacro Romano Impero",
+    "region": "Europa Centrale",
+    "terrain": "plains",
+    "population": 35000,
+    "neighbors": ["Praga"],
+    "resources": {"legname": 15}
+  },
+  "Parigi": {
+    "name": "Parigi",
+    "owner": "Regno di Francia",
+    "region": "Europa Occidentale",
+    "terrain": "plains",
+    "population": 70000,
+    "neighbors": ["Monaco", "Lione"],
+    "resources": {"oro": 50, "prestigio": 5}
+  },
+  "Lione": {
+    "name": "Lione",
+    "owner": "Regno di Francia",
+    "region": "Europa Occidentale",
+    "terrain": "hills",
+    "population": 40000,
+    "neighbors": ["Parigi"],
+    "resources": {}
+  },
+  "Il Cairo": {
+    "name": "Il Cairo",
+    "owner": "Califfato Fatimide",
+    "region": "Africa del Nord",
+    "terrain": "desert",
+    "population": 300000,
+    "neighbors": ["Alessandria", "Gerusalemme"],
+    "resources": {"oro": 80, "cibo": 40, "prestigio": 8}
+  },
+  "Alessandria": {
+    "name": "Alessandria",
+    "owner": "Califfato Fatimide",
+    "region": "Africa del Nord",
+    "terrain": "desert",
+    "population": 100000,
+    "neighbors": ["Il Cairo", "Tripoli"],
+    "resources": {"cibo": 20}
+  },
+  "Gerusalemme": {
+    "name": "Gerusalemme",
+    "owner": "Califfato Fatimide",
+    "region": "Medioriente",
+    "terrain": "hills",
+    "population": 60000,
+    "neighbors": ["Il Cairo", "Damasco"],
+    "resources": {"prestigio": 15}
+  },
+  "Tripoli": {
+    "name": "Tripoli",
+    "owner": "Califfato Fatimide",
+    "region": "Africa del Nord",
+    "terrain": "desert",
+    "population": 50000,
+    "neighbors": ["Alessandria"],
+    "resources": {}
+  },
+  "Damasco": {
+    "name": "Damasco",
+    "owner": "Califfato Fatimide",
+    "region": "Medioriente",
+    "terrain": "plains",
+    "population": 90000,
+    "neighbors": ["Gerusalemme", "Baghdad"],
+    "resources": {}
+  },
+  "Baghdad": {
+    "name": "Baghdad",
+    "owner": "Califfato Fatimide",
+    "region": "Medioriente",
+    "terrain": "plains",
+    "population": 120000,
+    "neighbors": ["Damasco"],
+    "resources": {"oro": 60, "prestigio": 5}
+  },
+  "Kattegat": {
+    "name": "Kattegat",
+    "owner": "Vichinghi",
+    "region": "Scandinavia",
+    "terrain": "plains",
+    "population": 30000,
+    "neighbors": ["Oslo", "Stoccolma"],
+    "resources": {"legname": 20}
+  },
+  "Oslo": {
+    "name": "Oslo",
+    "owner": "Vichinghi",
+    "region": "Scandinavia",
+    "terrain": "forest",
+    "population": 25000,
+    "neighbors": ["Kattegat", "Stoccolma"],
+    "resources": {"legname": 15}
+  },
+  "Stoccolma": {
+    "name": "Stoccolma",
+    "owner": "Vichinghi",
+    "region": "Scandinavia",
+    "terrain": "forest",
+    "population": 20000,
+    "neighbors": ["Kattegat", "Oslo"],
+    "resources": {"legname": 15}
+  },
+  "Kaifeng": {
+    "name": "Kaifeng",
+    "owner": "Dinastia Song",
+    "region": "Cina Orientale",
+    "terrain": "plains",
+    "population": 400000,
+    "neighbors": ["Hangzhou", "Nanchino"],
+    "resources": {"oro": 120, "cibo": 80, "prestigio": 12}
+  },
+  "Hangzhou": {
+    "name": "Hangzhou",
+    "owner": "Dinastia Song",
+    "region": "Cina Orientale",
+    "terrain": "hills",
+    "population": 150000,
+    "neighbors": ["Kaifeng", "Nanchino"],
+    "resources": {"cibo": 40}
+  },
+  "Nanchino": {
+    "name": "Nanchino",
+    "owner": "Dinastia Song",
+    "region": "Cina Orientale",
+    "terrain": "plains",
+    "population": 120000,
+    "neighbors": ["Kaifeng", "Hangzhou"],
+    "resources": {"cibo": 30}
+  }
+}

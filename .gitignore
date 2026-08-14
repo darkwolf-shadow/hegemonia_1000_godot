@@ -1,0 +1,17 @@
+# File temporanei e cartella di cache di Godot
+.godot/
+.import/
+*.tmp
+*.uid
+
+# Esportazioni
+export.cfg
+export_presets.cfg
+
+# Salvataggi locali (generati dal giocatore)
+*.save
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
