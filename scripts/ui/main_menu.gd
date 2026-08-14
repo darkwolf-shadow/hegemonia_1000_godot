@@ -14,6 +14,8 @@ func _ready():
 
 func _on_start():
 	var faction = faction_option.get_item_text(faction_option.selected)
+	if faction.is_empty():
+		faction = "Impero Bizantino"
 	GameState.new_game(faction)
 	get_tree().change_scene_to_file("res://scenes/strategic_map.tscn")
 
