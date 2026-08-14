@@ -5,214 +5,1989 @@
     "region": "Balcani",
     "terrain": "hills",
     "population": 500000,
-    "neighbors": ["Nicea", "Adrianopoli"],
-    "resources": {"oro": 100, "cibo": 50, "prestigio": 10}
+    "neighbors": [
+      "Nicea",
+      "Adrianopoli",
+      "Sofia",
+      "Ankara",
+      "Iconio",
+      "Smirne"
+    ],
+    "resources": {
+      "oro": 120,
+      "cibo": 80,
+      "prestigio": 15
+    }
   },
   "Nicea": {
     "name": "Nicea",
     "owner": "Impero Bizantino",
     "region": "Anatolia",
     "terrain": "plains",
-    "population": 80000,
-    "neighbors": ["Costantinopoli", "Ankara"],
-    "resources": {"cibo": 30}
-  },
-  "Ankara": {
-    "name": "Ankara",
-    "owner": "Impero Bizantino",
-    "region": "Anatolia",
-    "terrain": "hills",
-    "population": 60000,
-    "neighbors": ["Nicea"],
-    "resources": {"pietra": 10}
+    "population": 90000,
+    "neighbors": [
+      "Costantinopoli",
+      "Adrianopoli",
+      "Sofia",
+      "Ankara",
+      "Iconio",
+      "Smirne",
+      "Candia",
+      "Nicosia"
+    ],
+    "resources": {
+      "cibo": 40
+    }
   },
   "Adrianopoli": {
     "name": "Adrianopoli",
     "owner": "Impero Bizantino",
     "region": "Balcani",
     "terrain": "plains",
-    "population": 60000,
-    "neighbors": ["Costantinopoli", "Sofia"],
-    "resources": {"cibo": 20}
+    "population": 70000,
+    "neighbors": [
+      "Costantinopoli",
+      "Nicea",
+      "Sofia",
+      "Ankara",
+      "Smirne",
+      "Candia",
+      "Transilvania"
+    ],
+    "resources": {
+      "cibo": 30
+    }
   },
   "Sofia": {
     "name": "Sofia",
     "owner": "Impero Bizantino",
     "region": "Balcani",
     "terrain": "hills",
-    "population": 40000,
-    "neighbors": ["Adrianopoli", "Belgrado"],
+    "population": 50000,
+    "neighbors": [
+      "Costantinopoli",
+      "Nicea",
+      "Adrianopoli",
+      "Smirne",
+      "Esztergom",
+      "Buda",
+      "Pannonia",
+      "Transilvania"
+    ],
     "resources": {}
   },
-  "Belgrado": {
-    "name": "Belgrado",
-    "owner": "Sacro Romano Impero",
-    "region": "Balcani",
+  "Trebisonda": {
+    "name": "Trebisonda",
+    "owner": "Impero Bizantino",
+    "region": "Anatolia",
     "terrain": "hills",
-    "population": 30000,
-    "neighbors": ["Sofia", "Vienna"],
-    "resources": {}
+    "population": 60000,
+    "neighbors": [
+      "Ankara",
+      "Antiochia",
+      "Mosul"
+    ],
+    "resources": {
+      "oro": 60
+    }
   },
-  "Vienna": {
-    "name": "Vienna",
+  "Ankara": {
+    "name": "Ankara",
+    "owner": "Impero Bizantino",
+    "region": "Anatolia",
+    "terrain": "plains",
+    "population": 70000,
+    "neighbors": [
+      "Costantinopoli",
+      "Nicea",
+      "Adrianopoli",
+      "Trebisonda",
+      "Iconio",
+      "Smirne",
+      "Antiochia",
+      "Nicosia"
+    ],
+    "resources": {
+      "pietra": 15
+    }
+  },
+  "Iconio": {
+    "name": "Iconio",
+    "owner": "Impero Bizantino",
+    "region": "Anatolia",
+    "terrain": "plains",
+    "population": 60000,
+    "neighbors": [
+      "Costantinopoli",
+      "Nicea",
+      "Ankara",
+      "Smirne",
+      "Antiochia",
+      "Nicosia",
+      "Gerusalemme",
+      "Damasco"
+    ],
+    "resources": {
+      "cibo": 35
+    }
+  },
+  "Smirne": {
+    "name": "Smirne",
+    "owner": "Impero Bizantino",
+    "region": "Anatolia",
+    "terrain": "hills",
+    "population": 80000,
+    "neighbors": [
+      "Costantinopoli",
+      "Nicea",
+      "Adrianopoli",
+      "Sofia",
+      "Ankara",
+      "Iconio",
+      "Candia"
+    ],
+    "resources": {
+      "cibo": 40,
+      "oro": 40
+    }
+  },
+  "Antiochia": {
+    "name": "Antiochia",
+    "owner": "Impero Bizantino",
+    "region": "Levante",
+    "terrain": "hills",
+    "population": 110000,
+    "neighbors": [
+      "Trebisonda",
+      "Ankara",
+      "Iconio",
+      "Nicosia",
+      "Gerusalemme",
+      "Damasco"
+    ],
+    "resources": {
+      "oro": 50
+    }
+  },
+  "Candia": {
+    "name": "Candia",
+    "owner": "Impero Bizantino",
+    "region": "Mediterraneo",
+    "terrain": "plains",
+    "population": 60000,
+    "neighbors": [
+      "Nicea",
+      "Adrianopoli",
+      "Smirne",
+      "Alessandria"
+    ],
+    "resources": {
+      "cibo": 30
+    }
+  },
+  "Nicosia": {
+    "name": "Nicosia",
+    "owner": "Impero Bizantino",
+    "region": "Mediterraneo",
+    "terrain": "plains",
+    "population": 50000,
+    "neighbors": [
+      "Nicea",
+      "Ankara",
+      "Iconio",
+      "Antiochia",
+      "Il Cairo",
+      "Alessandria",
+      "Gerusalemme",
+      "Damasco"
+    ],
+    "resources": {
+      "oro": 30
+    }
+  },
+  "Salerno": {
+    "name": "Salerno",
+    "owner": "Impero Bizantino",
+    "region": "Italia",
+    "terrain": "hills",
+    "population": 55000,
+    "neighbors": [
+      "Siracusa",
+      "Roma",
+      "Ravenna",
+      "Venezia",
+      "Palermo",
+      "Pannonia"
+    ],
+    "resources": {
+      "cibo": 25
+    }
+  },
+  "Siracusa": {
+    "name": "Siracusa",
+    "owner": "Impero Bizantino",
+    "region": "Mediterraneo",
+    "terrain": "plains",
+    "population": 65000,
+    "neighbors": [
+      "Salerno",
+      "Roma",
+      "Tripoli",
+      "Palermo"
+    ],
+    "resources": {
+      "cibo": 30,
+      "oro": 30
+    }
+  },
+  "Roma": {
+    "name": "Roma",
+    "owner": "Sacro Romano Impero",
+    "region": "Italia",
+    "terrain": "hills",
+    "population": 40000,
+    "neighbors": [
+      "Salerno",
+      "Siracusa",
+      "Ravenna",
+      "Milano",
+      "Venezia",
+      "Monaco",
+      "Palermo"
+    ],
+    "resources": {
+      "oro": 80,
+      "prestigio": 15
+    }
+  },
+  "Ravenna": {
+    "name": "Ravenna",
+    "owner": "Sacro Romano Impero",
+    "region": "Italia",
+    "terrain": "plains",
+    "population": 50000,
+    "neighbors": [
+      "Salerno",
+      "Roma",
+      "Milano",
+      "Venezia",
+      "Magonza",
+      "Monaco",
+      "Praga",
+      "Sassonia",
+      "Marsiglia",
+      "Palermo",
+      "Pannonia"
+    ],
+    "resources": {
+      "cibo": 25
+    }
+  },
+  "Milano": {
+    "name": "Milano",
+    "owner": "Sacro Romano Impero",
+    "region": "Italia",
+    "terrain": "plains",
+    "population": 65000,
+    "neighbors": [
+      "Roma",
+      "Ravenna",
+      "Venezia",
+      "Aquisgrana",
+      "Magonza",
+      "Monaco",
+      "Praga",
+      "Sassonia",
+      "Lione",
+      "Marsiglia"
+    ],
+    "resources": {
+      "oro": 40
+    }
+  },
+  "Venezia": {
+    "name": "Venezia",
+    "owner": "Sacro Romano Impero",
+    "region": "Italia",
+    "terrain": "plains",
+    "population": 55000,
+    "neighbors": [
+      "Salerno",
+      "Roma",
+      "Ravenna",
+      "Milano",
+      "Magonza",
+      "Monaco",
+      "Praga",
+      "Sassonia",
+      "Esztergom",
+      "Pannonia"
+    ],
+    "resources": {
+      "oro": 50
+    }
+  },
+  "Aquisgrana": {
+    "name": "Aquisgrana",
     "owner": "Sacro Romano Impero",
     "region": "Europa Centrale",
     "terrain": "plains",
-    "population": 50000,
-    "neighbors": ["Belgrado", "Monaco", "Praga"],
-    "resources": {"legname": 10}
+    "population": 45000,
+    "neighbors": [
+      "Milano",
+      "Magonza",
+      "Monaco",
+      "Sassonia",
+      "Hedeby",
+      "Parigi",
+      "Lione",
+      "Tours"
+    ],
+    "resources": {
+      "legname": 20
+    }
+  },
+  "Magonza": {
+    "name": "Magonza",
+    "owner": "Sacro Romano Impero",
+    "region": "Europa Centrale",
+    "terrain": "plains",
+    "population": 40000,
+    "neighbors": [
+      "Ravenna",
+      "Milano",
+      "Venezia",
+      "Aquisgrana",
+      "Monaco",
+      "Praga",
+      "Sassonia",
+      "Hedeby",
+      "Roskilde",
+      "Parigi",
+      "Lione"
+    ],
+    "resources": {
+      "oro": 30
+    }
   },
   "Monaco": {
     "name": "Monaco",
     "owner": "Sacro Romano Impero",
     "region": "Europa Centrale",
     "terrain": "plains",
-    "population": 40000,
-    "neighbors": ["Vienna", "Parigi"],
-    "resources": {}
+    "population": 50000,
+    "neighbors": [
+      "Roma",
+      "Ravenna",
+      "Milano",
+      "Venezia",
+      "Aquisgrana",
+      "Magonza",
+      "Praga",
+      "Sassonia",
+      "Hedeby",
+      "Poznan",
+      "Slesia"
+    ],
+    "resources": {
+      "legname": 15
+    }
   },
   "Praga": {
     "name": "Praga",
     "owner": "Sacro Romano Impero",
     "region": "Europa Centrale",
     "terrain": "hills",
-    "population": 45000,
-    "neighbors": ["Vienna", "Cracovia"],
-    "resources": {}
+    "population": 42000,
+    "neighbors": [
+      "Ravenna",
+      "Milano",
+      "Venezia",
+      "Magonza",
+      "Monaco",
+      "Sassonia",
+      "Hedeby",
+      "Roskilde",
+      "Esztergom",
+      "Buda",
+      "Pannonia",
+      "Gniezno",
+      "Cracovia",
+      "Poznan",
+      "Masovia",
+      "Slesia"
+    ],
+    "resources": {
+      "pietra": 15
+    }
   },
-  "Cracovia": {
-    "name": "Cracovia",
+  "Sassonia": {
+    "name": "Sassonia",
     "owner": "Sacro Romano Impero",
     "region": "Europa Centrale",
     "terrain": "plains",
     "population": 35000,
-    "neighbors": ["Praga"],
-    "resources": {"legname": 15}
+    "neighbors": [
+      "Ravenna",
+      "Milano",
+      "Venezia",
+      "Aquisgrana",
+      "Magonza",
+      "Monaco",
+      "Praga",
+      "Hedeby",
+      "Roskilde",
+      "Esztergom",
+      "Gniezno",
+      "Poznan",
+      "Slesia"
+    ],
+    "resources": {
+      "legname": 20
+    }
   },
-  "Parigi": {
-    "name": "Parigi",
-    "owner": "Regno di Francia",
-    "region": "Europa Occidentale",
-    "terrain": "plains",
-    "population": 70000,
-    "neighbors": ["Monaco", "Lione"],
-    "resources": {"oro": 50, "prestigio": 5}
-  },
-  "Lione": {
-    "name": "Lione",
-    "owner": "Regno di Francia",
-    "region": "Europa Occidentale",
-    "terrain": "hills",
-    "population": 40000,
-    "neighbors": ["Parigi"],
-    "resources": {}
-  },
-  "Il Cairo": {
-    "name": "Il Cairo",
-    "owner": "Califfato Fatimide",
-    "region": "Africa del Nord",
-    "terrain": "desert",
-    "population": 300000,
-    "neighbors": ["Alessandria", "Gerusalemme"],
-    "resources": {"oro": 80, "cibo": 40, "prestigio": 8}
-  },
-  "Alessandria": {
-    "name": "Alessandria",
-    "owner": "Califfato Fatimide",
-    "region": "Africa del Nord",
-    "terrain": "desert",
-    "population": 100000,
-    "neighbors": ["Il Cairo", "Tripoli"],
-    "resources": {"cibo": 20}
-  },
-  "Gerusalemme": {
-    "name": "Gerusalemme",
-    "owner": "Califfato Fatimide",
-    "region": "Medioriente",
-    "terrain": "hills",
-    "population": 60000,
-    "neighbors": ["Il Cairo", "Damasco"],
-    "resources": {"prestigio": 15}
-  },
-  "Tripoli": {
-    "name": "Tripoli",
-    "owner": "Califfato Fatimide",
-    "region": "Africa del Nord",
-    "terrain": "desert",
-    "population": 50000,
-    "neighbors": ["Alessandria"],
-    "resources": {}
-  },
-  "Damasco": {
-    "name": "Damasco",
-    "owner": "Califfato Fatimide",
-    "region": "Medioriente",
-    "terrain": "plains",
-    "population": 90000,
-    "neighbors": ["Gerusalemme", "Baghdad"],
-    "resources": {}
-  },
-  "Baghdad": {
-    "name": "Baghdad",
-    "owner": "Califfato Fatimide",
-    "region": "Medioriente",
-    "terrain": "plains",
-    "population": 120000,
-    "neighbors": ["Damasco"],
-    "resources": {"oro": 60, "prestigio": 5}
-  },
-  "Kattegat": {
-    "name": "Kattegat",
+  "Hedeby": {
+    "name": "Hedeby",
     "owner": "Vichinghi",
     "region": "Scandinavia",
     "terrain": "plains",
-    "population": 30000,
-    "neighbors": ["Oslo", "Stoccolma"],
-    "resources": {"legname": 20}
+    "population": 25000,
+    "neighbors": [
+      "Aquisgrana",
+      "Magonza",
+      "Monaco",
+      "Praga",
+      "Sassonia",
+      "Roskilde",
+      "Oslo",
+      "Viken"
+    ],
+    "resources": {
+      "legname": 25,
+      "oro": 20
+    }
+  },
+  "Roskilde": {
+    "name": "Roskilde",
+    "owner": "Vichinghi",
+    "region": "Scandinavia",
+    "terrain": "plains",
+    "population": 22000,
+    "neighbors": [
+      "Magonza",
+      "Praga",
+      "Sassonia",
+      "Hedeby",
+      "Oslo",
+      "Uppsala",
+      "Gotland",
+      "Viken",
+      "Gniezno",
+      "Poznan",
+      "Slesia"
+    ],
+    "resources": {
+      "legname": 20
+    }
   },
   "Oslo": {
     "name": "Oslo",
     "owner": "Vichinghi",
     "region": "Scandinavia",
     "terrain": "forest",
-    "population": 25000,
-    "neighbors": ["Kattegat", "Stoccolma"],
-    "resources": {"legname": 15}
+    "population": 18000,
+    "neighbors": [
+      "Hedeby",
+      "Roskilde",
+      "Uppsala",
+      "Viken"
+    ],
+    "resources": {
+      "legname": 25
+    }
   },
-  "Stoccolma": {
-    "name": "Stoccolma",
+  "Uppsala": {
+    "name": "Uppsala",
     "owner": "Vichinghi",
     "region": "Scandinavia",
     "terrain": "forest",
-    "population": 20000,
-    "neighbors": ["Kattegat", "Oslo"],
-    "resources": {"legname": 15}
+    "population": 16000,
+    "neighbors": [
+      "Roskilde",
+      "Oslo",
+      "Gotland"
+    ],
+    "resources": {
+      "legname": 20
+    }
+  },
+  "Gotland": {
+    "name": "Gotland",
+    "owner": "Vichinghi",
+    "region": "Scandinavia",
+    "terrain": "plains",
+    "population": 14000,
+    "neighbors": [
+      "Roskilde",
+      "Uppsala",
+      "Gniezno",
+      "Poznan",
+      "Masovia",
+      "Slesia"
+    ],
+    "resources": {
+      "legname": 15
+    }
+  },
+  "Viken": {
+    "name": "Viken",
+    "owner": "Vichinghi",
+    "region": "Scandinavia",
+    "terrain": "forest",
+    "population": 15000,
+    "neighbors": [
+      "Hedeby",
+      "Roskilde",
+      "Oslo"
+    ],
+    "resources": {
+      "legname": 15
+    }
+  },
+  "Parigi": {
+    "name": "Parigi",
+    "owner": "Regno di Francia",
+    "region": "Europa Occidentale",
+    "terrain": "plains",
+    "population": 90000,
+    "neighbors": [
+      "Aquisgrana",
+      "Magonza",
+      "Lione",
+      "Tours",
+      "Bordeaux",
+      "Tolosa",
+      "Marsiglia"
+    ],
+    "resources": {
+      "oro": 60,
+      "prestigio": 10
+    }
+  },
+  "Lione": {
+    "name": "Lione",
+    "owner": "Regno di Francia",
+    "region": "Europa Occidentale",
+    "terrain": "hills",
+    "population": 45000,
+    "neighbors": [
+      "Milano",
+      "Aquisgrana",
+      "Magonza",
+      "Parigi",
+      "Tours",
+      "Bordeaux",
+      "Tolosa",
+      "Marsiglia"
+    ],
+    "resources": {
+      "cibo": 30
+    }
+  },
+  "Tours": {
+    "name": "Tours",
+    "owner": "Regno di Francia",
+    "region": "Europa Occidentale",
+    "terrain": "plains",
+    "population": 40000,
+    "neighbors": [
+      "Aquisgrana",
+      "Parigi",
+      "Lione",
+      "Bordeaux",
+      "Tolosa",
+      "Marsiglia",
+      "Saragozza"
+    ],
+    "resources": {
+      "cibo": 30
+    }
+  },
+  "Bordeaux": {
+    "name": "Bordeaux",
+    "owner": "Regno di Francia",
+    "region": "Europa Occidentale",
+    "terrain": "plains",
+    "population": 42000,
+    "neighbors": [
+      "Parigi",
+      "Lione",
+      "Tours",
+      "Tolosa",
+      "Marsiglia",
+      "Toledo",
+      "Saragozza"
+    ],
+    "resources": {
+      "cibo": 25,
+      "oro": 20
+    }
+  },
+  "Tolosa": {
+    "name": "Tolosa",
+    "owner": "Regno di Francia",
+    "region": "Europa Occidentale",
+    "terrain": "plains",
+    "population": 40000,
+    "neighbors": [
+      "Parigi",
+      "Lione",
+      "Tours",
+      "Bordeaux",
+      "Marsiglia",
+      "Toledo",
+      "Saragozza"
+    ],
+    "resources": {
+      "cibo": 25
+    }
+  },
+  "Marsiglia": {
+    "name": "Marsiglia",
+    "owner": "Regno di Francia",
+    "region": "Europa Occidentale",
+    "terrain": "plains",
+    "population": 48000,
+    "neighbors": [
+      "Ravenna",
+      "Milano",
+      "Parigi",
+      "Lione",
+      "Tours",
+      "Bordeaux",
+      "Tolosa",
+      "Saragozza"
+    ],
+    "resources": {
+      "oro": 40
+    }
+  },
+  "Cordova": {
+    "name": "Cordova",
+    "owner": "Califfato di Cordova",
+    "region": "Iberia",
+    "terrain": "plains",
+    "population": 100000,
+    "neighbors": [
+      "Siviglia",
+      "Toledo",
+      "Saragozza",
+      "Granada",
+      "Lisbona"
+    ],
+    "resources": {
+      "oro": 70,
+      "prestigio": 10
+    }
+  },
+  "Siviglia": {
+    "name": "Siviglia",
+    "owner": "Califfato di Cordova",
+    "region": "Iberia",
+    "terrain": "plains",
+    "population": 75000,
+    "neighbors": [
+      "Cordova",
+      "Toledo",
+      "Saragozza",
+      "Granada",
+      "Lisbona"
+    ],
+    "resources": {
+      "cibo": 30
+    }
+  },
+  "Toledo": {
+    "name": "Toledo",
+    "owner": "Califfato di Cordova",
+    "region": "Iberia",
+    "terrain": "hills",
+    "population": 65000,
+    "neighbors": [
+      "Bordeaux",
+      "Tolosa",
+      "Cordova",
+      "Siviglia",
+      "Saragozza",
+      "Granada",
+      "Lisbona"
+    ],
+    "resources": {
+      "pietra": 15
+    }
+  },
+  "Saragozza": {
+    "name": "Saragozza",
+    "owner": "Califfato di Cordova",
+    "region": "Iberia",
+    "terrain": "plains",
+    "population": 55000,
+    "neighbors": [
+      "Tours",
+      "Bordeaux",
+      "Tolosa",
+      "Marsiglia",
+      "Cordova",
+      "Siviglia",
+      "Toledo",
+      "Granada"
+    ],
+    "resources": {
+      "cibo": 25
+    }
+  },
+  "Granada": {
+    "name": "Granada",
+    "owner": "Califfato di Cordova",
+    "region": "Iberia",
+    "terrain": "hills",
+    "population": 60000,
+    "neighbors": [
+      "Cordova",
+      "Siviglia",
+      "Toledo",
+      "Saragozza",
+      "Lisbona"
+    ],
+    "resources": {
+      "cibo": 25
+    }
+  },
+  "Lisbona": {
+    "name": "Lisbona",
+    "owner": "Califfato di Cordova",
+    "region": "Iberia",
+    "terrain": "plains",
+    "population": 45000,
+    "neighbors": [
+      "Cordova",
+      "Siviglia",
+      "Toledo",
+      "Granada"
+    ],
+    "resources": {
+      "legname": 15
+    }
+  },
+  "Il Cairo": {
+    "name": "Il Cairo",
+    "owner": "Impero Fatimide",
+    "region": "Africa del Nord",
+    "terrain": "desert",
+    "population": 350000,
+    "neighbors": [
+      "Nicosia",
+      "Alessandria",
+      "Gerusalemme",
+      "Damasco"
+    ],
+    "resources": {
+      "oro": 100,
+      "cibo": 60,
+      "prestigio": 12
+    }
+  },
+  "Alessandria": {
+    "name": "Alessandria",
+    "owner": "Impero Fatimide",
+    "region": "Africa del Nord",
+    "terrain": "desert",
+    "population": 120000,
+    "neighbors": [
+      "Candia",
+      "Nicosia",
+      "Il Cairo",
+      "Gerusalemme",
+      "Damasco"
+    ],
+    "resources": {
+      "cibo": 30
+    }
+  },
+  "Gerusalemme": {
+    "name": "Gerusalemme",
+    "owner": "Impero Fatimide",
+    "region": "Levante",
+    "terrain": "hills",
+    "population": 70000,
+    "neighbors": [
+      "Iconio",
+      "Antiochia",
+      "Nicosia",
+      "Il Cairo",
+      "Alessandria",
+      "Damasco"
+    ],
+    "resources": {
+      "prestigio": 15
+    }
+  },
+  "Damasco": {
+    "name": "Damasco",
+    "owner": "Impero Fatimide",
+    "region": "Levante",
+    "terrain": "plains",
+    "population": 100000,
+    "neighbors": [
+      "Iconio",
+      "Antiochia",
+      "Nicosia",
+      "Il Cairo",
+      "Alessandria",
+      "Gerusalemme"
+    ],
+    "resources": {
+      "cibo": 35
+    }
+  },
+  "Tripoli": {
+    "name": "Tripoli",
+    "owner": "Impero Fatimide",
+    "region": "Africa del Nord",
+    "terrain": "desert",
+    "population": 55000,
+    "neighbors": [
+      "Siracusa",
+      "Palermo"
+    ],
+    "resources": {
+      "cibo": 20
+    }
+  },
+  "Palermo": {
+    "name": "Palermo",
+    "owner": "Impero Fatimide",
+    "region": "Mediterraneo",
+    "terrain": "plains",
+    "population": 80000,
+    "neighbors": [
+      "Salerno",
+      "Siracusa",
+      "Roma",
+      "Ravenna",
+      "Tripoli"
+    ],
+    "resources": {
+      "cibo": 30,
+      "oro": 30
+    }
+  },
+  "Esztergom": {
+    "name": "Esztergom",
+    "owner": "Regno d'Ungheria",
+    "region": "Europa Centrale",
+    "terrain": "hills",
+    "population": 45000,
+    "neighbors": [
+      "Sofia",
+      "Venezia",
+      "Praga",
+      "Sassonia",
+      "Buda",
+      "Pannonia",
+      "Transilvania",
+      "Gniezno",
+      "Cracovia",
+      "Poznan",
+      "Masovia",
+      "Slesia"
+    ],
+    "resources": {
+      "oro": 25,
+      "prestigio": 8
+    }
+  },
+  "Buda": {
+    "name": "Buda",
+    "owner": "Regno d'Ungheria",
+    "region": "Europa Centrale",
+    "terrain": "plains",
+    "population": 40000,
+    "neighbors": [
+      "Sofia",
+      "Praga",
+      "Esztergom",
+      "Pannonia",
+      "Transilvania",
+      "Gniezno",
+      "Cracovia",
+      "Poznan",
+      "Masovia",
+      "Slesia"
+    ],
+    "resources": {
+      "cibo": 25
+    }
+  },
+  "Pannonia": {
+    "name": "Pannonia",
+    "owner": "Regno d'Ungheria",
+    "region": "Europa Centrale",
+    "terrain": "plains",
+    "population": 35000,
+    "neighbors": [
+      "Sofia",
+      "Salerno",
+      "Ravenna",
+      "Venezia",
+      "Praga",
+      "Esztergom",
+      "Buda",
+      "Transilvania",
+      "Gniezno",
+      "Cracovia",
+      "Poznan",
+      "Masovia",
+      "Slesia"
+    ],
+    "resources": {
+      "cibo": 30
+    }
+  },
+  "Transilvania": {
+    "name": "Transilvania",
+    "owner": "Regno d'Ungheria",
+    "region": "Europa Orientale",
+    "terrain": "hills",
+    "population": 32000,
+    "neighbors": [
+      "Adrianopoli",
+      "Sofia",
+      "Esztergom",
+      "Buda",
+      "Pannonia",
+      "Kiev",
+      "Cracovia",
+      "Masovia"
+    ],
+    "resources": {
+      "legname": 20
+    }
+  },
+  "Kiev": {
+    "name": "Kiev",
+    "owner": "Principato di Kiev",
+    "region": "Europa Orientale",
+    "terrain": "plains",
+    "population": 80000,
+    "neighbors": [
+      "Transilvania",
+      "Smolensk",
+      "Chernigov",
+      "Polotsk"
+    ],
+    "resources": {
+      "oro": 40,
+      "prestigio": 8
+    }
+  },
+  "Novgorod": {
+    "name": "Novgorod",
+    "owner": "Principato di Kiev",
+    "region": "Europa Orientale",
+    "terrain": "forest",
+    "population": 45000,
+    "neighbors": [
+      "Smolensk",
+      "Polotsk"
+    ],
+    "resources": {
+      "legname": 25
+    }
+  },
+  "Smolensk": {
+    "name": "Smolensk",
+    "owner": "Principato di Kiev",
+    "region": "Europa Orientale",
+    "terrain": "forest",
+    "population": 38000,
+    "neighbors": [
+      "Kiev",
+      "Novgorod",
+      "Chernigov",
+      "Polotsk"
+    ],
+    "resources": {
+      "legname": 20
+    }
+  },
+  "Chernigov": {
+    "name": "Chernigov",
+    "owner": "Principato di Kiev",
+    "region": "Europa Orientale",
+    "terrain": "plains",
+    "population": 35000,
+    "neighbors": [
+      "Kiev",
+      "Smolensk",
+      "Polotsk"
+    ],
+    "resources": {
+      "cibo": 25
+    }
+  },
+  "Polotsk": {
+    "name": "Polotsk",
+    "owner": "Principato di Kiev",
+    "region": "Europa Orientale",
+    "terrain": "forest",
+    "population": 30000,
+    "neighbors": [
+      "Kiev",
+      "Novgorod",
+      "Smolensk",
+      "Chernigov"
+    ],
+    "resources": {
+      "legname": 15
+    }
+  },
+  "Gniezno": {
+    "name": "Gniezno",
+    "owner": "Regno di Polonia",
+    "region": "Europa Orientale",
+    "terrain": "plains",
+    "population": 40000,
+    "neighbors": [
+      "Praga",
+      "Sassonia",
+      "Roskilde",
+      "Gotland",
+      "Esztergom",
+      "Buda",
+      "Pannonia",
+      "Cracovia",
+      "Poznan",
+      "Masovia",
+      "Slesia"
+    ],
+    "resources": {
+      "oro": 20,
+      "prestigio": 5
+    }
+  },
+  "Cracovia": {
+    "name": "Cracovia",
+    "owner": "Regno di Polonia",
+    "region": "Europa Orientale",
+    "terrain": "plains",
+    "population": 38000,
+    "neighbors": [
+      "Praga",
+      "Esztergom",
+      "Buda",
+      "Pannonia",
+      "Transilvania",
+      "Gniezno",
+      "Poznan",
+      "Masovia",
+      "Slesia"
+    ],
+    "resources": {
+      "cibo": 25
+    }
+  },
+  "Poznan": {
+    "name": "Poznan",
+    "owner": "Regno di Polonia",
+    "region": "Europa Orientale",
+    "terrain": "plains",
+    "population": 35000,
+    "neighbors": [
+      "Monaco",
+      "Praga",
+      "Sassonia",
+      "Roskilde",
+      "Gotland",
+      "Esztergom",
+      "Buda",
+      "Pannonia",
+      "Gniezno",
+      "Cracovia",
+      "Masovia",
+      "Slesia"
+    ],
+    "resources": {
+      "cibo": 25
+    }
+  },
+  "Masovia": {
+    "name": "Masovia",
+    "owner": "Regno di Polonia",
+    "region": "Europa Orientale",
+    "terrain": "plains",
+    "population": 30000,
+    "neighbors": [
+      "Praga",
+      "Gotland",
+      "Esztergom",
+      "Buda",
+      "Pannonia",
+      "Transilvania",
+      "Gniezno",
+      "Cracovia",
+      "Poznan",
+      "Slesia"
+    ],
+    "resources": {
+      "legname": 15
+    }
+  },
+  "Slesia": {
+    "name": "Slesia",
+    "owner": "Regno di Polonia",
+    "region": "Europa Orientale",
+    "terrain": "hills",
+    "population": 32000,
+    "neighbors": [
+      "Monaco",
+      "Praga",
+      "Sassonia",
+      "Roskilde",
+      "Gotland",
+      "Esztergom",
+      "Buda",
+      "Pannonia",
+      "Gniezno",
+      "Cracovia",
+      "Poznan",
+      "Masovia"
+    ],
+    "resources": {
+      "ferro": 15
+    }
+  },
+  "Baghdad": {
+    "name": "Baghdad",
+    "owner": "Califfato Abbaside",
+    "region": "Medioriente",
+    "terrain": "plains",
+    "population": 200000,
+    "neighbors": [
+      "Mosul",
+      "Basra"
+    ],
+    "resources": {
+      "oro": 90,
+      "prestigio": 12
+    }
+  },
+  "Mosul": {
+    "name": "Mosul",
+    "owner": "Califfato Abbaside",
+    "region": "Medioriente",
+    "terrain": "plains",
+    "population": 90000,
+    "neighbors": [
+      "Trebisonda",
+      "Baghdad"
+    ],
+    "resources": {
+      "cibo": 30
+    }
+  },
+  "Basra": {
+    "name": "Basra",
+    "owner": "Califfato Abbaside",
+    "region": "Medioriente",
+    "terrain": "desert",
+    "population": 70000,
+    "neighbors": [
+      "Baghdad",
+      "Isfahan",
+      "Rey",
+      "Deserto Arabico"
+    ],
+    "resources": {
+      "cibo": 25
+    }
+  },
+  "Isfahan": {
+    "name": "Isfahan",
+    "owner": "Califfato Abbaside",
+    "region": "Persia",
+    "terrain": "hills",
+    "population": 80000,
+    "neighbors": [
+      "Basra",
+      "Rey"
+    ],
+    "resources": {
+      "oro": 40
+    }
+  },
+  "Rey": {
+    "name": "Rey",
+    "owner": "Califfato Abbaside",
+    "region": "Persia",
+    "terrain": "hills",
+    "population": 70000,
+    "neighbors": [
+      "Basra",
+      "Isfahan"
+    ],
+    "resources": {
+      "pietra": 15
+    }
+  },
+  "Ghazna": {
+    "name": "Ghazna",
+    "owner": "Sultanato Ghaznavide",
+    "region": "Asia Centrale",
+    "terrain": "hills",
+    "population": 60000,
+    "neighbors": [
+      "Kabul",
+      "Lahore",
+      "Peshawar",
+      "Multan"
+    ],
+    "resources": {
+      "oro": 40,
+      "prestigio": 8
+    }
+  },
+  "Kabul": {
+    "name": "Kabul",
+    "owner": "Sultanato Ghaznavide",
+    "region": "Asia Centrale",
+    "terrain": "hills",
+    "population": 55000,
+    "neighbors": [
+      "Ghazna",
+      "Lahore",
+      "Peshawar",
+      "Multan"
+    ],
+    "resources": {
+      "cibo": 20
+    }
+  },
+  "Lahore": {
+    "name": "Lahore",
+    "owner": "Sultanato Ghaznavide",
+    "region": "India",
+    "terrain": "plains",
+    "population": 90000,
+    "neighbors": [
+      "Ghazna",
+      "Kabul",
+      "Peshawar",
+      "Multan"
+    ],
+    "resources": {
+      "oro": 50,
+      "cibo": 40
+    }
+  },
+  "Peshawar": {
+    "name": "Peshawar",
+    "owner": "Sultanato Ghaznavide",
+    "region": "Asia Centrale",
+    "terrain": "hills",
+    "population": 50000,
+    "neighbors": [
+      "Ghazna",
+      "Kabul",
+      "Lahore",
+      "Multan"
+    ],
+    "resources": {
+      "cibo": 20
+    }
+  },
+  "Multan": {
+    "name": "Multan",
+    "owner": "Sultanato Ghaznavide",
+    "region": "India",
+    "terrain": "desert",
+    "population": 45000,
+    "neighbors": [
+      "Ghazna",
+      "Kabul",
+      "Lahore",
+      "Peshawar"
+    ],
+    "resources": {
+      "oro": 30
+    }
   },
   "Kaifeng": {
     "name": "Kaifeng",
     "owner": "Dinastia Song",
     "region": "Cina Orientale",
     "terrain": "plains",
-    "population": 400000,
-    "neighbors": ["Hangzhou", "Nanchino"],
-    "resources": {"oro": 120, "cibo": 80, "prestigio": 12}
+    "population": 450000,
+    "neighbors": [
+      "Nanchino",
+      "Luoyang",
+      "Yanjing",
+      "Datong"
+    ],
+    "resources": {
+      "oro": 130,
+      "cibo": 90,
+      "prestigio": 15
+    }
   },
   "Hangzhou": {
     "name": "Hangzhou",
     "owner": "Dinastia Song",
     "region": "Cina Orientale",
     "terrain": "hills",
-    "population": 150000,
-    "neighbors": ["Kaifeng", "Nanchino"],
-    "resources": {"cibo": 40}
+    "population": 180000,
+    "neighbors": [
+      "Nanchino"
+    ],
+    "resources": {
+      "cibo": 50
+    }
   },
   "Nanchino": {
     "name": "Nanchino",
     "owner": "Dinastia Song",
     "region": "Cina Orientale",
     "terrain": "plains",
+    "population": 150000,
+    "neighbors": [
+      "Kaifeng",
+      "Hangzhou",
+      "Luoyang"
+    ],
+    "resources": {
+      "cibo": 45
+    }
+  },
+  "Luoyang": {
+    "name": "Luoyang",
+    "owner": "Dinastia Song",
+    "region": "Cina Orientale",
+    "terrain": "plains",
     "population": 120000,
-    "neighbors": ["Kaifeng", "Hangzhou"],
-    "resources": {"cibo": 30}
+    "neighbors": [
+      "Kaifeng",
+      "Nanchino",
+      "Yanjing",
+      "Datong"
+    ],
+    "resources": {
+      "pietra": 20,
+      "oro": 40
+    }
+  },
+  "Chengdu": {
+    "name": "Chengdu",
+    "owner": "Dinastia Song",
+    "region": "Cina Orientale",
+    "terrain": "hills",
+    "population": 100000,
+    "neighbors": [],
+    "resources": {
+      "cibo": 40
+    }
+  },
+  "Guangzhou": {
+    "name": "Guangzhou",
+    "owner": "Dinastia Song",
+    "region": "Cina Orientale",
+    "terrain": "plains",
+    "population": 110000,
+    "neighbors": [],
+    "resources": {
+      "oro": 60
+    }
+  },
+  "Shangjing": {
+    "name": "Shangjing",
+    "owner": "Impero Khitan Liao",
+    "region": "Cina Settentrionale",
+    "terrain": "plains",
+    "population": 70000,
+    "neighbors": [
+      "Yanjing",
+      "Datong",
+      "Liaodong"
+    ],
+    "resources": {
+      "oro": 40,
+      "prestigio": 8
+    }
+  },
+  "Yanjing": {
+    "name": "Yanjing",
+    "owner": "Impero Khitan Liao",
+    "region": "Cina Settentrionale",
+    "terrain": "plains",
+    "population": 120000,
+    "neighbors": [
+      "Kaifeng",
+      "Luoyang",
+      "Shangjing",
+      "Datong",
+      "Liaodong"
+    ],
+    "resources": {
+      "cibo": 40
+    }
+  },
+  "Datong": {
+    "name": "Datong",
+    "owner": "Impero Khitan Liao",
+    "region": "Cina Settentrionale",
+    "terrain": "hills",
+    "population": 60000,
+    "neighbors": [
+      "Kaifeng",
+      "Luoyang",
+      "Shangjing",
+      "Yanjing"
+    ],
+    "resources": {
+      "ferro": 20
+    }
+  },
+  "Liaodong": {
+    "name": "Liaodong",
+    "owner": "Impero Khitan Liao",
+    "region": "Cina Settentrionale",
+    "terrain": "hills",
+    "population": 50000,
+    "neighbors": [
+      "Shangjing",
+      "Yanjing"
+    ],
+    "resources": {
+      "legname": 20
+    }
+  },
+  "Tanjore": {
+    "name": "Tanjore",
+    "owner": "Impero Chola",
+    "region": "India Meridionale",
+    "terrain": "plains",
+    "population": 120000,
+    "neighbors": [
+      "Madurai",
+      "Kanchipuram",
+      "Sri Lanka",
+      "Malabar"
+    ],
+    "resources": {
+      "oro": 50,
+      "prestigio": 10
+    }
+  },
+  "Madurai": {
+    "name": "Madurai",
+    "owner": "Impero Chola",
+    "region": "India Meridionale",
+    "terrain": "plains",
+    "population": 90000,
+    "neighbors": [
+      "Tanjore",
+      "Kanchipuram",
+      "Sri Lanka",
+      "Malabar"
+    ],
+    "resources": {
+      "cibo": 35
+    }
+  },
+  "Kanchipuram": {
+    "name": "Kanchipuram",
+    "owner": "Impero Chola",
+    "region": "India Meridionale",
+    "terrain": "hills",
+    "population": 80000,
+    "neighbors": [
+      "Tanjore",
+      "Madurai",
+      "Sri Lanka",
+      "Malabar"
+    ],
+    "resources": {
+      "oro": 30
+    }
+  },
+  "Kalinga": {
+    "name": "Kalinga",
+    "owner": "Impero Chola",
+    "region": "India Orientale",
+    "terrain": "hills",
+    "population": 70000,
+    "neighbors": [],
+    "resources": {
+      "cibo": 30
+    }
+  },
+  "Sri Lanka": {
+    "name": "Sri Lanka",
+    "owner": "Impero Chola",
+    "region": "India Meridionale",
+    "terrain": "hills",
+    "population": 60000,
+    "neighbors": [
+      "Tanjore",
+      "Madurai",
+      "Kanchipuram",
+      "Malabar"
+    ],
+    "resources": {
+      "cibo": 30,
+      "oro": 30
+    }
+  },
+  "Malabar": {
+    "name": "Malabar",
+    "owner": "Impero Chola",
+    "region": "India Meridionale",
+    "terrain": "plains",
+    "population": 70000,
+    "neighbors": [
+      "Tanjore",
+      "Madurai",
+      "Kanchipuram",
+      "Sri Lanka"
+    ],
+    "resources": {
+      "oro": 40
+    }
+  },
+  "Angkor": {
+    "name": "Angkor",
+    "owner": "Regno Khmer",
+    "region": "Indocina",
+    "terrain": "plains",
+    "population": 100000,
+    "neighbors": [
+      "Phnom Penh",
+      "Champasak",
+      "Lopburi"
+    ],
+    "resources": {
+      "oro": 30,
+      "prestigio": 8
+    }
+  },
+  "Phnom Penh": {
+    "name": "Phnom Penh",
+    "owner": "Regno Khmer",
+    "region": "Indocina",
+    "terrain": "plains",
+    "population": 50000,
+    "neighbors": [
+      "Angkor",
+      "Champasak",
+      "Lopburi"
+    ],
+    "resources": {
+      "cibo": 30
+    }
+  },
+  "Champasak": {
+    "name": "Champasak",
+    "owner": "Regno Khmer",
+    "region": "Indocina",
+    "terrain": "hills",
+    "population": 40000,
+    "neighbors": [
+      "Angkor",
+      "Phnom Penh",
+      "Lopburi"
+    ],
+    "resources": {
+      "legname": 20
+    }
+  },
+  "Lopburi": {
+    "name": "Lopburi",
+    "owner": "Regno Khmer",
+    "region": "Indocina",
+    "terrain": "plains",
+    "population": 45000,
+    "neighbors": [
+      "Angkor",
+      "Phnom Penh",
+      "Champasak"
+    ],
+    "resources": {
+      "cibo": 25
+    }
+  },
+  "Kyoto": {
+    "name": "Kyoto",
+    "owner": "Regno Heian",
+    "region": "Giappone",
+    "terrain": "hills",
+    "population": 120000,
+    "neighbors": [
+      "Kamakura",
+      "Osaka",
+      "Nara"
+    ],
+    "resources": {
+      "oro": 50,
+      "prestigio": 10
+    }
+  },
+  "Kamakura": {
+    "name": "Kamakura",
+    "owner": "Regno Heian",
+    "region": "Giappone",
+    "terrain": "hills",
+    "population": 50000,
+    "neighbors": [
+      "Kyoto",
+      "Osaka",
+      "Nara"
+    ],
+    "resources": {
+      "cibo": 25
+    }
+  },
+  "Osaka": {
+    "name": "Osaka",
+    "owner": "Regno Heian",
+    "region": "Giappone",
+    "terrain": "plains",
+    "population": 80000,
+    "neighbors": [
+      "Kyoto",
+      "Kamakura",
+      "Nara"
+    ],
+    "resources": {
+      "cibo": 30
+    }
+  },
+  "Nara": {
+    "name": "Nara",
+    "owner": "Regno Heian",
+    "region": "Giappone",
+    "terrain": "hills",
+    "population": 60000,
+    "neighbors": [
+      "Kyoto",
+      "Kamakura",
+      "Osaka"
+    ],
+    "resources": {
+      "prestigio": 8
+    }
+  },
+  "Palembang": {
+    "name": "Palembang",
+    "owner": "Regno di Srivijaya",
+    "region": "Sud-Est Asiatico",
+    "terrain": "forest",
+    "population": 70000,
+    "neighbors": [
+      "Jambi",
+      "Sumatra"
+    ],
+    "resources": {
+      "oro": 50,
+      "prestigio": 8
+    }
+  },
+  "Jambi": {
+    "name": "Jambi",
+    "owner": "Regno di Srivijaya",
+    "region": "Sud-Est Asiatico",
+    "terrain": "forest",
+    "population": 40000,
+    "neighbors": [
+      "Palembang",
+      "Sumatra"
+    ],
+    "resources": {
+      "legname": 25
+    }
+  },
+  "Kedah": {
+    "name": "Kedah",
+    "owner": "Regno di Srivijaya",
+    "region": "Sud-Est Asiatico",
+    "terrain": "forest",
+    "population": 45000,
+    "neighbors": [],
+    "resources": {
+      "oro": 30
+    }
+  },
+  "Sumatra": {
+    "name": "Sumatra",
+    "owner": "Regno di Srivijaya",
+    "region": "Sud-Est Asiatico",
+    "terrain": "forest",
+    "population": 35000,
+    "neighbors": [
+      "Palembang",
+      "Jambi"
+    ],
+    "resources": {
+      "cibo": 30
+    }
+  },
+  "Koumbi Saleh": {
+    "name": "Koumbi Saleh",
+    "owner": "Impero del Ghana",
+    "region": "Sahel",
+    "terrain": "desert",
+    "population": 60000,
+    "neighbors": [
+      "Aoudaghost",
+      "Walata"
+    ],
+    "resources": {
+      "oro": 80,
+      "prestigio": 10
+    }
+  },
+  "Aoudaghost": {
+    "name": "Aoudaghost",
+    "owner": "Impero del Ghana",
+    "region": "Sahel",
+    "terrain": "desert",
+    "population": 35000,
+    "neighbors": [
+      "Koumbi Saleh",
+      "Walata",
+      "Gao",
+      "Sahara Occidentale"
+    ],
+    "resources": {
+      "oro": 30
+    }
+  },
+  "Walata": {
+    "name": "Walata",
+    "owner": "Impero del Ghana",
+    "region": "Sahel",
+    "terrain": "desert",
+    "population": 30000,
+    "neighbors": [
+      "Koumbi Saleh",
+      "Aoudaghost"
+    ],
+    "resources": {
+      "oro": 25
+    }
+  },
+  "Gao": {
+    "name": "Gao",
+    "owner": "Impero del Ghana",
+    "region": "Sahel",
+    "terrain": "desert",
+    "population": 28000,
+    "neighbors": [
+      "Aoudaghost"
+    ],
+    "resources": {
+      "cibo": 20
+    }
+  },
+  "Tollan": {
+    "name": "Tollan",
+    "owner": "Toltechi",
+    "region": "Mesoamerica",
+    "terrain": "plains",
+    "population": 80000,
+    "neighbors": [
+      "Teotihuacan",
+      "Cholula",
+      "Xochicalco"
+    ],
+    "resources": {
+      "oro": 30,
+      "prestigio": 10
+    }
+  },
+  "Teotihuacan": {
+    "name": "Teotihuacan",
+    "owner": "Toltechi",
+    "region": "Mesoamerica",
+    "terrain": "plains",
+    "population": 60000,
+    "neighbors": [
+      "Tollan",
+      "Cholula",
+      "Xochicalco"
+    ],
+    "resources": {
+      "pietra": 25
+    }
+  },
+  "Cholula": {
+    "name": "Cholula",
+    "owner": "Toltechi",
+    "region": "Mesoamerica",
+    "terrain": "plains",
+    "population": 50000,
+    "neighbors": [
+      "Tollan",
+      "Teotihuacan",
+      "Xochicalco"
+    ],
+    "resources": {
+      "cibo": 25
+    }
+  },
+  "Xochicalco": {
+    "name": "Xochicalco",
+    "owner": "Toltechi",
+    "region": "Mesoamerica",
+    "terrain": "hills",
+    "population": 45000,
+    "neighbors": [
+      "Tollan",
+      "Teotihuacan",
+      "Cholula"
+    ],
+    "resources": {
+      "pietra": 20
+    }
+  },
+  "Chichen Itza": {
+    "name": "Chichen Itza",
+    "owner": "Regni Maya",
+    "region": "Mesoamerica",
+    "terrain": "forest",
+    "population": 70000,
+    "neighbors": [
+      "Tikal",
+      "Calakmul",
+      "Copan"
+    ],
+    "resources": {
+      "oro": 20,
+      "prestigio": 8
+    }
+  },
+  "Tikal": {
+    "name": "Tikal",
+    "owner": "Regni Maya",
+    "region": "Mesoamerica",
+    "terrain": "forest",
+    "population": 50000,
+    "neighbors": [
+      "Chichen Itza",
+      "Calakmul",
+      "Copan"
+    ],
+    "resources": {
+      "cibo": 25
+    }
+  },
+  "Calakmul": {
+    "name": "Calakmul",
+    "owner": "Regni Maya",
+    "region": "Mesoamerica",
+    "terrain": "forest",
+    "population": 45000,
+    "neighbors": [
+      "Chichen Itza",
+      "Tikal",
+      "Copan"
+    ],
+    "resources": {
+      "legname": 20
+    }
+  },
+  "Copan": {
+    "name": "Copan",
+    "owner": "Regni Maya",
+    "region": "Mesoamerica",
+    "terrain": "hills",
+    "population": 35000,
+    "neighbors": [
+      "Chichen Itza",
+      "Tikal",
+      "Calakmul"
+    ],
+    "resources": {
+      "pietra": 15
+    }
+  },
+  "Steppe del Caspio": {
+    "name": "Steppe del Caspio",
+    "owner": "Terra di Nessuno",
+    "region": "Asia Centrale",
+    "terrain": "plains",
+    "population": 10000,
+    "neighbors": [],
+    "resources": {}
+  },
+  "Deserto Arabico": {
+    "name": "Deserto Arabico",
+    "owner": "Terra di Nessuno",
+    "region": "Arabia",
+    "terrain": "desert",
+    "population": 5000,
+    "neighbors": [
+      "Basra"
+    ],
+    "resources": {}
+  },
+  "Foresta Amazzonica": {
+    "name": "Foresta Amazzonica",
+    "owner": "Terra di Nessuno",
+    "region": "Sud America",
+    "terrain": "forest",
+    "population": 5000,
+    "neighbors": [],
+    "resources": {
+      "legname": 30
+    }
+  },
+  "Grandi Pianure": {
+    "name": "Grandi Pianure",
+    "owner": "Terra di Nessuno",
+    "region": "America del Nord",
+    "terrain": "plains",
+    "population": 5000,
+    "neighbors": [],
+    "resources": {}
+  },
+  "Sahara Occidentale": {
+    "name": "Sahara Occidentale",
+    "owner": "Terra di Nessuno",
+    "region": "Africa",
+    "terrain": "desert",
+    "population": 2000,
+    "neighbors": [
+      "Aoudaghost"
+    ],
+    "resources": {}
+  },
+  "Siberia": {
+    "name": "Siberia",
+    "owner": "Terra di Nessuno",
+    "region": "Siberia",
+    "terrain": "forest",
+    "population": 2000,
+    "neighbors": [],
+    "resources": {
+      "legname": 20
+    }
+  },
+  "Australia": {
+    "name": "Australia",
+    "owner": "Terra di Nessuno",
+    "region": "Oceania",
+    "terrain": "desert",
+    "population": 3000,
+    "neighbors": [],
+    "resources": {}
   }
 }

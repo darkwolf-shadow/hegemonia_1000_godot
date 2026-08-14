@@ -5,22 +5,47 @@
     "attitude": "balanced",
     "color": "#8A2BE2",
     "capital": "Costantinopoli",
-    "description": "Impero Romano d'Oriente all'apice sotto Basilio II.",
     "resources": {
-      "oro": 15000,
-      "legname": 60,
-      "pietra": 50,
-      "ferro": 30,
-      "argento": 20,
-      "armi": 40,
-      "cibo": 20000,
-      "prestigio": 80
+      "oro": 18000,
+      "legname": 80,
+      "pietra": 70,
+      "ferro": 50,
+      "argento": 40,
+      "armi": 60,
+      "cibo": 25000,
+      "prestigio": 100
     },
-    "units": {"fanteria": 40, "cavalleria": 20, "arcieri": 15, "artiglieria": 3},
-    "ships": {"dromone": 10, "galea": 5},
-    "buildings": ["monastero", "castello", "fucina"],
-    "production": {"oro": 500, "cibo": 400, "armi": 2, "prestigio": 3},
-    "modifiers": {"oro": 1.0, "cibo": 1.0, "armi": 1.0, "prestigio": 1.0}
+    "units": {
+      "fanteria": 30,
+      "arcieri": 20,
+      "cavalleria": 25,
+      "artiglieria": 5,
+      "cataphractoi": 10,
+      "varangian_guard": 5
+    },
+    "ships": {
+      "dromone": 12,
+      "galea": 6
+    },
+    "buildings": [
+      "monastero",
+      "castello",
+      "fucina",
+      "fortezza_frontiera"
+    ],
+    "production": {
+      "oro": 700,
+      "cibo": 600,
+      "armi": 4,
+      "prestigio": 5
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Impero Romano d'Oriente all'apice sotto Basilio II, padrone dei mari e dell'Anatolia."
   },
   "Sacro Romano Impero": {
     "name": "Sacro Romano Impero",
@@ -28,68 +53,93 @@
     "attitude": "defensive",
     "color": "#FFD700",
     "capital": "Roma",
-    "description": "Sacro Romano Impero sotto Ottone III.",
     "resources": {
-      "oro": 12000,
-      "legname": 80,
-      "pietra": 60,
-      "ferro": 40,
-      "argento": 15,
-      "armi": 30,
-      "cibo": 18000,
-      "prestigio": 70
-    },
-    "units": {"fanteria": 35, "cavalleria": 15, "arcieri": 10, "artiglieria": 2},
-    "ships": {"galea": 3},
-    "buildings": ["monastero", "castello", "mulino"],
-    "production": {"oro": 400, "cibo": 350, "armi": 1, "prestigio": 2},
-    "modifiers": {"oro": 1.0, "cibo": 1.0, "armi": 1.0, "prestigio": 1.0}
-  },
-  "Califfato Fatimide": {
-    "name": "Califfato Fatimide",
-    "leader": "Al-Hakim",
-    "attitude": "aggressive",
-    "color": "#228B22",
-    "capital": "Il Cairo",
-    "description": "Califfato ismailita in Egitto e Nord Africa.",
-    "resources": {
-      "oro": 13000,
-      "legname": 50,
-      "pietra": 40,
-      "ferro": 35,
-      "argento": 25,
-      "armi": 35,
+      "oro": 14000,
+      "legname": 100,
+      "pietra": 80,
+      "ferro": 60,
+      "argento": 30,
+      "armi": 50,
       "cibo": 22000,
-      "prestigio": 75
+      "prestigio": 85
     },
-    "units": {"fanteria": 45, "cavalleria": 25, "arcieri": 20, "artiglieria": 4},
-    "ships": {"galea": 8, "dromone": 4},
-    "buildings": ["mercato", "castello", "fucina"],
-    "production": {"oro": 450, "cibo": 380, "armi": 2, "prestigio": 2},
-    "modifiers": {"oro": 1.0, "cibo": 1.0, "armi": 1.0, "prestigio": 1.0}
+    "units": {
+      "fanteria": 35,
+      "arcieri": 15,
+      "cavalleria": 20,
+      "artiglieria": 3,
+      "milites": 12,
+      "loricati": 8
+    },
+    "ships": {
+      "galea": 4
+    },
+    "buildings": [
+      "monastero",
+      "castello",
+      "mulino",
+      "mercato"
+    ],
+    "production": {
+      "oro": 550,
+      "cibo": 500,
+      "armi": 2,
+      "prestigio": 3
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Sacro Romano Impero di Ottone III, tra Germania e Italia."
   },
   "Vichinghi": {
     "name": "Vichinghi",
     "leader": "Leif Erikson",
     "attitude": "aggressive",
     "color": "#B22222",
-    "capital": "Kattegat",
-    "description": "Popoli scandinavi in declino, ma ancora temuti per le incursioni navali.",
+    "capital": "Hedeby",
     "resources": {
-      "oro": 8000,
-      "legname": 100,
+      "oro": 9000,
+      "legname": 120,
       "pietra": 30,
-      "ferro": 50,
-      "argento": 30,
-      "armi": 25,
-      "cibo": 10000,
-      "prestigio": 55
+      "ferro": 60,
+      "argento": 35,
+      "armi": 40,
+      "cibo": 12000,
+      "prestigio": 60
     },
-    "units": {"fanteria": 30, "cavalleria": 10, "arcieri": 15, "artiglieria": 1},
-    "ships": {"drakkar": 15, "galea": 3},
-    "buildings": ["mulino", "fucina"],
-    "production": {"oro": 300, "cibo": 200, "armi": 1, "prestigio": 1},
-    "modifiers": {"oro": 1.0, "cibo": 1.0, "armi": 1.0, "prestigio": 1.0}
+    "units": {
+      "fanteria": 25,
+      "arcieri": 20,
+      "cavalleria": 8,
+      "artiglieria": 1,
+      "berserker": 8,
+      "huskarl": 10
+    },
+    "ships": {
+      "drakkar": 18,
+      "galea": 3
+    },
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 350,
+      "cibo": 250,
+      "armi": 2,
+      "prestigio": 1
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Popoli scandinavi, maestri delle incursioni navali."
   },
   "Regno di Francia": {
     "name": "Regno di Francia",
@@ -97,22 +147,368 @@
     "attitude": "balanced",
     "color": "#0055AA",
     "capital": "Parigi",
-    "description": "Regno dei Franchi occidentali in formazione.",
     "resources": {
-      "oro": 10000,
+      "oro": 11000,
+      "legname": 90,
+      "pietra": 60,
+      "ferro": 40,
+      "argento": 20,
+      "armi": 35,
+      "cibo": 18000,
+      "prestigio": 70
+    },
+    "units": {
+      "fanteria": 30,
+      "arcieri": 12,
+      "cavalleria": 15,
+      "artiglieria": 1,
+      "cavalleria_pesante": 8
+    },
+    "ships": {
+      "galea": 3
+    },
+    "buildings": [
+      "castello",
+      "mulino",
+      "mercato"
+    ],
+    "production": {
+      "oro": 450,
+      "cibo": 400,
+      "armi": 1,
+      "prestigio": 2
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Regno dei Franchi occidentali, fertile ma diviso."
+  },
+  "Califfato di Cordova": {
+    "name": "Califfato di Cordova",
+    "leader": "Hisham II",
+    "attitude": "aggressive",
+    "color": "#2E8B57",
+    "capital": "Cordova",
+    "resources": {
+      "oro": 12000,
       "legname": 70,
       "pietra": 50,
       "ferro": 30,
-      "argento": 18,
+      "argento": 25,
+      "armi": 40,
+      "cibo": 16000,
+      "prestigio": 75
+    },
+    "units": {
+      "fanteria": 32,
+      "arcieri": 18,
+      "cavalleria": 18,
+      "artiglieria": 3,
+      "jinete": 10,
+      "black_guard": 5
+    },
+    "ships": {
+      "galea": 6,
+      "nave_guerra": 3
+    },
+    "buildings": [
+      "mercato",
+      "fucina",
+      "monastero"
+    ],
+    "production": {
+      "oro": 500,
+      "cibo": 350,
+      "armi": 2,
+      "prestigio": 2
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Emirato/Califfato omayyade in Iberia, ricco e culturale."
+  },
+  "Impero Fatimide": {
+    "name": "Impero Fatimide",
+    "leader": "Al-Hakim",
+    "attitude": "aggressive",
+    "color": "#228B22",
+    "capital": "Il Cairo",
+    "resources": {
+      "oro": 15000,
+      "legname": 60,
+      "pietra": 50,
+      "ferro": 40,
+      "argento": 35,
+      "armi": 45,
+      "cibo": 25000,
+      "prestigio": 80
+    },
+    "units": {
+      "fanteria": 40,
+      "arcieri": 22,
+      "cavalleria": 20,
+      "artiglieria": 4,
+      "mamluk_cavalry": 8,
+      "sudanese_spearmen": 12
+    },
+    "ships": {
+      "dromone": 6,
+      "galea": 8
+    },
+    "buildings": [
+      "mercato",
+      "castello",
+      "fucina"
+    ],
+    "production": {
+      "oro": 600,
+      "cibo": 450,
+      "armi": 2,
+      "prestigio": 2
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Califfato ismailita che domina Egitto, Nord Africa e Levante."
+  },
+  "Regno d'Ungheria": {
+    "name": "Regno d'Ungheria",
+    "leader": "Stefano I",
+    "attitude": "balanced",
+    "color": "#556B2F",
+    "capital": "Esztergom",
+    "resources": {
+      "oro": 7000,
+      "legname": 80,
+      "pietra": 30,
+      "ferro": 25,
+      "argento": 10,
       "armi": 25,
+      "cibo": 12000,
+      "prestigio": 55
+    },
+    "units": {
+      "fanteria": 22,
+      "arcieri": 15,
+      "cavalleria": 12,
+      "artiglieria": 1,
+      "magyar_cavalry": 10,
+      "szekler_infantry": 5
+    },
+    "ships": {
+      "galea": 1
+    },
+    "buildings": [
+      "castello",
+      "monastero"
+    ],
+    "production": {
+      "oro": 300,
+      "cibo": 280,
+      "armi": 1,
+      "prestigio": 1
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Regno cristiano degli Ungari, tra steppa ed Europa centrale."
+  },
+  "Principato di Kiev": {
+    "name": "Principato di Kiev",
+    "leader": "Vladimir I",
+    "attitude": "balanced",
+    "color": "#4682B4",
+    "capital": "Kiev",
+    "resources": {
+      "oro": 8000,
+      "legname": 100,
+      "pietra": 40,
+      "ferro": 35,
+      "argento": 20,
+      "armi": 30,
+      "cibo": 15000,
+      "prestigio": 60
+    },
+    "units": {
+      "fanteria": 25,
+      "arcieri": 15,
+      "cavalleria": 12,
+      "artiglieria": 1,
+      "druzhina": 10,
+      "voi": 15
+    },
+    "ships": {
+      "drakkar": 5,
+      "galea": 2
+    },
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 350,
+      "cibo": 320,
+      "armi": 1,
+      "prestigio": 1
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Rus' di Kiev, tra Scandinavia e Bisanzio."
+  },
+  "Regno di Polonia": {
+    "name": "Regno di Polonia",
+    "leader": "Boleslao I",
+    "attitude": "balanced",
+    "color": "#DC143C",
+    "capital": "Gniezno",
+    "resources": {
+      "oro": 6500,
+      "legname": 85,
+      "pietra": 35,
+      "ferro": 25,
+      "argento": 8,
+      "armi": 25,
+      "cibo": 14000,
+      "prestigio": 50
+    },
+    "units": {
+      "fanteria": 25,
+      "arcieri": 12,
+      "cavalleria": 8,
+      "artiglieria": 1,
+      "druzyna": 8,
+      "polish_spearmen": 10
+    },
+    "ships": {
+      "galea": 1
+    },
+    "buildings": [
+      "castello",
+      "mulino"
+    ],
+    "production": {
+      "oro": 280,
+      "cibo": 300,
+      "armi": 1,
+      "prestigio": 1
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Regno slavo occidentale in espansione."
+  },
+  "Califfato Abbaside": {
+    "name": "Califfato Abbaside",
+    "leader": "Al-Qadir",
+    "attitude": "defensive",
+    "color": "#000000",
+    "capital": "Baghdad",
+    "resources": {
+      "oro": 13000,
+      "legname": 70,
+      "pietra": 60,
+      "ferro": 50,
+      "argento": 30,
+      "armi": 40,
+      "cibo": 20000,
+      "prestigio": 75
+    },
+    "units": {
+      "fanteria": 35,
+      "arcieri": 18,
+      "cavalleria": 22,
+      "artiglieria": 4,
+      "ghilman": 10,
+      "daylami_infantry": 8
+    },
+    "ships": {
+      "dromone": 4,
+      "galea": 3
+    },
+    "buildings": [
+      "monastero",
+      "mercato",
+      "fucina"
+    ],
+    "production": {
+      "oro": 550,
+      "cibo": 400,
+      "armi": 2,
+      "prestigio": 2
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Califfato abbaside, teoricamente capo del mondo islamico, ma ormai decentralizzato."
+  },
+  "Sultanato Ghaznavide": {
+    "name": "Sultanato Ghaznavide",
+    "leader": "Mahmud di Ghazna",
+    "attitude": "aggressive",
+    "color": "#8B4513",
+    "capital": "Ghazna",
+    "resources": {
+      "oro": 10000,
+      "legname": 60,
+      "pietra": 30,
+      "ferro": 30,
+      "argento": 15,
+      "armi": 35,
       "cibo": 16000,
       "prestigio": 65
     },
-    "units": {"fanteria": 30, "cavalleria": 12, "arcieri": 10, "artiglieria": 1},
-    "ships": {"galea": 2},
-    "buildings": ["monastero", "castello"],
-    "production": {"oro": 350, "cibo": 300, "armi": 1, "prestigio": 1},
-    "modifiers": {"oro": 1.0, "cibo": 1.0, "armi": 1.0, "prestigio": 1.0}
+    "units": {
+      "fanteria": 30,
+      "arcieri": 15,
+      "cavalleria": 18,
+      "artiglieria": 2,
+      "ghulam_cavalry": 10,
+      "war_elephants": 4
+    },
+    "ships": {
+      "galea": 2
+    },
+    "buildings": [
+      "fucina",
+      "mercato",
+      "monastero"
+    ],
+    "production": {
+      "oro": 450,
+      "cibo": 350,
+      "armi": 2,
+      "prestigio": 1
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Stato turco-afghano, famoso per i raid in India e gli elefanti da guerra."
   },
   "Dinastia Song": {
     "name": "Dinastia Song",
@@ -120,22 +516,410 @@
     "attitude": "balanced",
     "color": "#FF4500",
     "capital": "Kaifeng",
-    "description": "Cina imperiale florida e tecnologicamente avanzata.",
     "resources": {
       "oro": 20000,
-      "legname": 90,
-      "pietra": 70,
-      "ferro": 60,
-      "argento": 50,
-      "armi": 50,
-      "cibo": 30000,
-      "prestigio": 85
+      "legname": 100,
+      "pietra": 80,
+      "ferro": 70,
+      "argento": 55,
+      "armi": 60,
+      "cibo": 35000,
+      "prestigio": 90
     },
-    "units": {"fanteria": 50, "cavalleria": 15, "arcieri": 30, "artiglieria": 5},
-    "ships": {"galea": 6, "dromone": 3},
-    "buildings": ["mercato", "fucina", "mulino"],
-    "production": {"oro": 600, "cibo": 500, "armi": 3, "prestigio": 4},
-    "modifiers": {"oro": 1.0, "cibo": 1.0, "armi": 1.0, "prestigio": 1.0}
+    "units": {
+      "fanteria": 45,
+      "arcieri": 35,
+      "cavalleria": 15,
+      "artiglieria": 6,
+      "crossbowmen": 25,
+      "fire_lance": 5
+    },
+    "ships": {
+      "giunca": 10,
+      "tower_ship": 4
+    },
+    "buildings": [
+      "mercato",
+      "fucina",
+      "mulino"
+    ],
+    "production": {
+      "oro": 800,
+      "cibo": 700,
+      "armi": 4,
+      "prestigio": 4
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Cina imperiale florida, tecnologicamente avanzata con balestre e polvere da sparo."
+  },
+  "Impero Khitan Liao": {
+    "name": "Impero Khitan Liao",
+    "leader": "Shengzong",
+    "attitude": "aggressive",
+    "color": "#87CEEB",
+    "capital": "Shangjing",
+    "resources": {
+      "oro": 11000,
+      "legname": 90,
+      "pietra": 40,
+      "ferro": 45,
+      "argento": 20,
+      "armi": 40,
+      "cibo": 18000,
+      "prestigio": 60
+    },
+    "units": {
+      "fanteria": 20,
+      "arcieri": 25,
+      "cavalleria": 30,
+      "artiglieria": 2,
+      "khitan_horse_archers": 15,
+      "liao_lancers": 10
+    },
+    "ships": {
+      "giunca": 3
+    },
+    "buildings": [
+      "fucina",
+      "mulino"
+    ],
+    "production": {
+      "oro": 400,
+      "cibo": 350,
+      "armi": 2,
+      "prestigio": 1
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Impero nomade Khitan nel nord della Cina, temibile cavalleria."
+  },
+  "Impero Chola": {
+    "name": "Impero Chola",
+    "leader": "Rajaraja I",
+    "attitude": "aggressive",
+    "color": "#FF8C00",
+    "capital": "Tanjore",
+    "resources": {
+      "oro": 12000,
+      "legname": 80,
+      "pietra": 50,
+      "ferro": 35,
+      "argento": 30,
+      "armi": 40,
+      "cibo": 22000,
+      "prestigio": 70
+    },
+    "units": {
+      "fanteria": 35,
+      "arcieri": 15,
+      "cavalleria": 8,
+      "artiglieria": 2,
+      "elephant_corps": 6,
+      "tamil_infantry": 12
+    },
+    "ships": {
+      "nave_guerra_indiana": 8,
+      "giunca": 4
+    },
+    "buildings": [
+      "monastero",
+      "mercato",
+      "fucina"
+    ],
+    "production": {
+      "oro": 500,
+      "cibo": 450,
+      "armi": 2,
+      "prestigio": 2
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Potenza marittima del Sud India con flotta ed elefanti."
+  },
+  "Regno Khmer": {
+    "name": "Regno Khmer",
+    "leader": "Suryavarman I",
+    "attitude": "balanced",
+    "color": "#9932CC",
+    "capital": "Angkor",
+    "resources": {
+      "oro": 8000,
+      "legname": 90,
+      "pietra": 60,
+      "ferro": 25,
+      "argento": 15,
+      "armi": 30,
+      "cibo": 16000,
+      "prestigio": 55
+    },
+    "units": {
+      "fanteria": 25,
+      "arcieri": 12,
+      "cavalleria": 5,
+      "artiglieria": 1,
+      "khmer_spearmen": 10,
+      "war_elephants": 3
+    },
+    "ships": {
+      "giunca": 2
+    },
+    "buildings": [
+      "monastero",
+      "mulino",
+      "mercato"
+    ],
+    "production": {
+      "oro": 300,
+      "cibo": 320,
+      "armi": 1,
+      "prestigio": 1
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Regno dell'Indocina, costruttore di Angkor."
+  },
+  "Regno Heian": {
+    "name": "Regno Heian",
+    "leader": "Emperor Ichijo",
+    "attitude": "defensive",
+    "color": "#FF69B4",
+    "capital": "Kyoto",
+    "resources": {
+      "oro": 9000,
+      "legname": 80,
+      "pietra": 40,
+      "ferro": 30,
+      "argento": 20,
+      "armi": 25,
+      "cibo": 14000,
+      "prestigio": 60
+    },
+    "units": {
+      "fanteria": 20,
+      "arcieri": 18,
+      "cavalleria": 8,
+      "artiglieria": 1,
+      "samurai": 8,
+      "yamato_infantry": 10
+    },
+    "ships": {
+      "giunca": 4
+    },
+    "buildings": [
+      "monastero",
+      "mulino"
+    ],
+    "production": {
+      "oro": 350,
+      "cibo": 300,
+      "armi": 1,
+      "prestigio": 2
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Giappone classico, dominato dai clan samurai."
+  },
+  "Regno di Srivijaya": {
+    "name": "Regno di Srivijaya",
+    "leader": "Sri Cudamani Warmadewa",
+    "attitude": "balanced",
+    "color": "#DAA520",
+    "capital": "Palembang",
+    "resources": {
+      "oro": 9000,
+      "legname": 90,
+      "pietra": 30,
+      "ferro": 20,
+      "argento": 25,
+      "armi": 25,
+      "cibo": 16000,
+      "prestigio": 55
+    },
+    "units": {
+      "fanteria": 20,
+      "arcieri": 18,
+      "cavalleria": 2,
+      "artiglieria": 0,
+      "malay_archers": 12
+    },
+    "ships": {
+      "giunca": 8,
+      "nave_guerra_indiana": 4
+    },
+    "buildings": [
+      "mercato",
+      "mulino"
+    ],
+    "production": {
+      "oro": 400,
+      "cibo": 350,
+      "armi": 1,
+      "prestigio": 1
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Potenza commerciale marittima del Sud-Est asiatico."
+  },
+  "Impero del Ghana": {
+    "name": "Impero del Ghana",
+    "leader": "Re Ghana",
+    "attitude": "balanced",
+    "color": "#CD853F",
+    "capital": "Koumbi Saleh",
+    "resources": {
+      "oro": 11000,
+      "legname": 50,
+      "pietra": 20,
+      "ferro": 20,
+      "argento": 10,
+      "armi": 20,
+      "cibo": 12000,
+      "prestigio": 50
+    },
+    "units": {
+      "fanteria": 25,
+      "arcieri": 15,
+      "cavalleria": 12,
+      "artiglieria": 0,
+      "soninke_cavalry": 8,
+      "sudani_spearmen": 10
+    },
+    "ships": {
+      "galea": 2
+    },
+    "buildings": [
+      "mercato",
+      "mulino"
+    ],
+    "production": {
+      "oro": 500,
+      "cibo": 280,
+      "armi": 1,
+      "prestigio": 1
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Regno del Sahel, ricco d'oro e sale."
+  },
+  "Toltechi": {
+    "name": "Toltechi",
+    "leader": "Ce Acatl Topiltzin",
+    "attitude": "aggressive",
+    "color": "#20B2AA",
+    "capital": "Tollan",
+    "resources": {
+      "oro": 6000,
+      "legname": 80,
+      "pietra": 30,
+      "ferro": 10,
+      "argento": 20,
+      "armi": 20,
+      "cibo": 10000,
+      "prestigio": 50
+    },
+    "units": {
+      "fanteria": 20,
+      "arcieri": 15,
+      "cavalleria": 0,
+      "artiglieria": 0,
+      "jaguar_warrior": 8,
+      "eagle_warrior": 6,
+      "atlatl": 5
+    },
+    "ships": {
+      "canoa": 3
+    },
+    "buildings": [
+      "monastero",
+      "mulino"
+    ],
+    "production": {
+      "oro": 250,
+      "cibo": 220,
+      "armi": 1,
+      "prestigio": 1
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Cultura mesoamericana centrata a Tollan/Tula."
+  },
+  "Regni Maya": {
+    "name": "Regni Maya",
+    "leader": "Signore di Chichen Itza",
+    "attitude": "balanced",
+    "color": "#8B0000",
+    "capital": "Chichen Itza",
+    "resources": {
+      "oro": 5000,
+      "legname": 70,
+      "pietra": 40,
+      "ferro": 5,
+      "argento": 15,
+      "armi": 15,
+      "cibo": 9000,
+      "prestigio": 45
+    },
+    "units": {
+      "fanteria": 18,
+      "arcieri": 12,
+      "cavalleria": 0,
+      "artiglieria": 0,
+      "maya_spearmen": 10,
+      "holcan": 5,
+      "atlatl": 5
+    },
+    "ships": {
+      "canoa": 2
+    },
+    "buildings": [
+      "monastero"
+    ],
+    "production": {
+      "oro": 220,
+      "cibo": 200,
+      "armi": 1,
+      "prestigio": 1
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Città-stato maya del periodo post-classico."
   },
   "Terra di Nessuno": {
     "name": "Terra di Nessuno",
