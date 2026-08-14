@@ -1,5 +1,6 @@
 extends Control
 
+@onready var background: TextureRect = $Background
 @onready var title_label: Label = $Title
 @onready var settlements_list: ItemList = $SettlementsList
 @onready var details_label: Label = $Details
@@ -20,7 +21,25 @@ func open(province_name: String):
 	current_province = province_name
 	visible = true
 	title_label.text = province_name
+	var data = WorldData.get_province(province_name)
+	background.texture = _load_background("res://assets/backgrounds/1000/%s.svg" % data.get("terrain", "generic"))
 	_update_list()
+
+
+func _load_icon(path: String) -> Texture2D:
+	if ResourceLoader.exists(path):
+		var res = load(path)
+		if res is Texture2D:
+			return res
+	return null
+
+
+func _load_background(path: String) -> Texture2D:
+	if ResourceLoader.exists(path):
+		var res = load(path)
+		if res is Texture2D:
+			return res
+	return _load_icon("res://assets/backgrounds/1000/generic.svg")
 
 
 func _update_list():
@@ -29,7 +48,8 @@ func _update_list():
 	var settlements = prov.get("settlements", {})
 	for s_name in settlements.keys():
 		var s = settlements[s_name]
-		settlements_list.add_item("%s (%s)" % [s_name, s.get("type", "")])
+		var icon = _load_icon("res://assets/icons/1000/settlements/%s.svg" % s.get("type", "civil"))
+		settlements_list.add_item("%s (%s)" % [s_name, s.get("type", "")], icon)
 
 	var data = WorldData.get_province(current_province)
 	details_label.text = "Regione: %s\nTerreno: %s\nPopolazione: %d\nProprietario: %s" % [

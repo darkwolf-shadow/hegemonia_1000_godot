@@ -1192,11 +1192,11 @@
     },
     "milizia": {
       "name": "Milizia contadina",
-      "attack": 0.12,
-      "defense": 0.04,
+      "attack": 0.2,
+      "defense": 0.07,
       "armor": 0.0,
-      "speed": 2.0,
-      "base_morale": 75,
+      "speed": 2.2,
+      "base_morale": 80,
       "experience": 0,
       "cost": 400,
       "pop": 1200,
@@ -1205,7 +1205,8 @@
       "requires_buildings": [
         "centro_cittadino",
         "capanna_boscaioli"
-      ]
+      ],
+      "allowed_settlement_types": []
     },
     "lancieri": {
       "name": "Lancieri",
@@ -1227,11 +1228,11 @@
     },
     "fanteria_pesante": {
       "name": "Fanteria pesante",
-      "attack": 0.35,
-      "defense": 0.25,
-      "armor": 0.25,
-      "speed": 1.8,
-      "base_morale": 105,
+      "attack": 0.2,
+      "defense": 0.11,
+      "armor": 0.15,
+      "speed": 2.2,
+      "base_morale": 100,
       "experience": 0,
       "cost": 1600,
       "pop": 800,
@@ -1241,15 +1242,16 @@
       "armi": 2,
       "requires_buildings": [
         "caserma_ii"
-      ]
+      ],
+      "allowed_settlement_types": []
     },
     "arcieri_evoluti": {
       "name": "Arcieri evoluti",
-      "attack": 0.32,
-      "defense": 0.1,
-      "armor": 0.1,
-      "speed": 2.5,
-      "base_morale": 100,
+      "attack": 0.2,
+      "defense": 0.06,
+      "armor": 0.05,
+      "speed": 2.8,
+      "base_morale": 95,
       "experience": 0,
       "cost": 1200,
       "pop": 700,
@@ -1257,15 +1259,16 @@
       "food": 1,
       "requires_buildings": [
         "campo_tiro_ii"
-      ]
+      ],
+      "allowed_settlement_types": []
     },
     "balestrieri": {
       "name": "Balestrieri",
-      "attack": 0.38,
-      "defense": 0.12,
-      "armor": 0.1,
-      "speed": 2.2,
-      "base_morale": 100,
+      "attack": 0.2,
+      "defense": 0.06,
+      "armor": 0.05,
+      "speed": 2.8,
+      "base_morale": 95,
       "experience": 0,
       "cost": 1300,
       "pop": 700,
@@ -1273,9 +1276,9 @@
       "food": 1,
       "armi": 1,
       "requires_buildings": [
-        "campo_tiro_iii",
-        "officina_armi"
-      ]
+        "campo_tiro_iii"
+      ],
+      "allowed_settlement_types": []
     }
   },
   "ships": {
@@ -1443,7 +1446,8 @@
       "unlocks_units": [
         "bondi",
         "voi",
-        "otomi_aux"
+        "otomi_aux",
+        "milizia"
       ]
     },
     "mercato": {
@@ -1540,7 +1544,9 @@
       "effects": {
         "legname": 10
       },
-      "unlocks_units": []
+      "unlocks_units": [
+        "milizia"
+      ]
     },
     "segheria": {
       "name": "Segheria",
@@ -1656,7 +1662,8 @@
         "yamato_infantry",
         "sudani_spearmen",
         "coyote_warrior",
-        "maya_spearmen"
+        "maya_spearmen",
+        "lancieri"
       ]
     },
     "caserma_ii": {
@@ -1680,7 +1687,8 @@
         "varangian_mercenaries",
         "daylami_infantry",
         "jaguar_warrior",
-        "holcan"
+        "holcan",
+        "fanteria_pesante"
       ]
     },
     "caserma_iii": {
@@ -1739,7 +1747,8 @@
         "toxotai",
         "armenian_archers",
         "crossbowmen",
-        "eagle_warrior"
+        "eagle_warrior",
+        "arcieri_evoluti"
       ]
     },
     "campo_tiro_iii": {
@@ -1756,7 +1765,8 @@
       "construction_turns": 4,
       "effects": {},
       "unlocks_units": [
-        "shenbi_nu"
+        "shenbi_nu",
+        "balestrieri"
       ]
     },
     "scuderia_i": {
@@ -2005,6 +2015,26 @@
         "oro": 10
       },
       "unlocks_units": []
+    },
+    "strade": {
+      "name": "Strade",
+      "settlement_types": [
+        "civil",
+        "military",
+        "industrial",
+        "port"
+      ],
+      "cost": {
+        "oro": 600,
+        "legname": 40,
+        "pietra": 20
+      },
+      "construction_turns": 2,
+      "effects": {
+        "oro": 10,
+        "cibo": 5
+      },
+      "unlocks_units": []
     }
   },
   "maintenance": {
@@ -2068,7 +2098,12 @@
     "tower_ship": 8,
     "nave_guerra": 7,
     "nave_guerra_indiana": 7,
-    "canoa": 2
+    "canoa": 2,
+    "milizia": 0,
+    "lancieri": 1,
+    "fanteria_pesante": 2,
+    "arcieri_evoluti": 2,
+    "balestrieri": 2
   },
   "terrain_modifiers": {
     "plains": {
@@ -2180,7 +2215,8 @@
         "segheria",
         "fucina",
         "molo_i",
-        "molo_ii"
+        "molo_ii",
+        "strade"
       ]
     },
     "military": {
@@ -2206,7 +2242,8 @@
         "fucina",
         "officina_armi",
         "monastero",
-        "mercato"
+        "mercato",
+        "strade"
       ]
     },
     "industrial": {
@@ -2221,7 +2258,8 @@
         "officina_armi",
         "mulino",
         "caserma_i",
-        "centro_cittadino"
+        "centro_cittadino",
+        "strade"
       ]
     },
     "port": {
@@ -2237,7 +2275,8 @@
         "mercato_marittimo",
         "segheria",
         "fucina",
-        "centro_cittadino"
+        "centro_cittadino",
+        "strade"
       ]
     }
   }

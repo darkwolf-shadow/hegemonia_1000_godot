@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var map_layer := $MapLayer
+@onready var camera := $Camera2D
 @onready var turn_label := $CanvasLayer/UI/TopBar/TurnLabel
 @onready var end_turn_button := $CanvasLayer/UI/TopBar/EndTurnButton
 @onready var info_label := $CanvasLayer/UI/SidePanel/InfoLabel
@@ -10,7 +11,9 @@ extends Node2D
 @onready var log_text := $CanvasLayer/UI/EventLog/LogText
 
 var province_nodes := {}
+var settlement_markers := {}
 var selected_province: String = ""
+var settlement_zoom_threshold := 1.2
 
 
 func _ready():
@@ -24,6 +27,7 @@ func _draw_map():
 	for child in map_layer.get_children():
 		child.queue_free()
 	province_nodes.clear()
+	settlement_markers.clear()
 
 	var min_x := INF
 	var max_x := -INF
@@ -74,6 +78,88 @@ func _draw_map():
 		label.position = _polygon_center(poly)
 		label.modulate = Color(1, 1, 1, 1.0 if prov.get("visible", true) else 0.3)
 		map_layer.add_child(label)
+
+		_draw_settlements(p, poly)
+
+
+func _polygon_radius(points: PackedVector2Array) -> float:
+	var c = _polygon_center(points)
+	var r := 0.0
+	for pt in points:
+		r = max(r, c.distance_to(pt))
+	return r
+
+
+func _load_icon(path: String) -> Texture2D:
+	if ResourceLoader.exists(path):
+		var res = load(path)
+		if res is Texture2D:
+			return res
+	return null
+
+
+func _draw_settlements(province_name: String, points: PackedVector2Array):
+	var container := Node2D.new()
+	container.name = "Settlements_" + province_name
+	map_layer.add_child(container)
+	settlement_markers[province_name] = container
+
+	var prov = GameState.state.provinces.get(province_name, {})
+	var settlements = prov.get("settlements", {})
+	var count := settlements.keys().size()
+	if count == 0:
+		return
+
+	var center := _polygon_center(points)
+	var radius := clamp(_polygon_radius(points) * 0.25, 20.0, 80.0)
+	var positions := []
+	var idx := 0
+
+	for s_name in settlements.keys():
+		var s = settlements[s_name]
+		var angle := idx * TAU / count - PI / 2
+		var pos := center + Vector2(cos(angle), sin(angle)) * radius
+		positions.append(pos)
+
+		var icon := _load_icon("res://assets/icons/1000/settlements/%s.svg" % s.get("type", "civil"))
+		if icon:
+			var sprite := Sprite2D.new()
+			sprite.texture = icon
+			sprite.position = pos
+			sprite.scale = Vector2(0.4, 0.4)
+			container.add_child(sprite)
+
+		var label := Label.new()
+		label.text = s_name
+		label.position = pos + Vector2(-20, -24)
+		container.add_child(label)
+
+		idx += 1
+
+	# Strade
+	var has_roads := false
+	for s in settlements.values():
+		if "strade" in s.get("buildings", []):
+			has_roads = true
+			break
+
+	if has_roads and positions.size() > 1:
+		for i in range(positions.size()):
+			var road := Line2D.new()
+			road.add_point(positions[i])
+			road.add_point(center)
+			road.width = 2.5
+			road.default_color = Color(0.6, 0.45, 0.25, 0.85)
+			container.add_child(road)
+
+	container.visible = camera.zoom.x >= settlement_zoom_threshold
+
+
+func _process(_delta):
+	if camera:
+		var show := camera.zoom.x >= settlement_zoom_threshold
+		for markers in settlement_markers.values():
+			markers.visible = show
 
 
 func _get_polygon_points(province_name: String) -> PackedVector2Array:

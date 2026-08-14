@@ -1,5 +1,6 @@
 extends Control
 
+@onready var background: TextureRect = $Background
 @onready var title_label: Label = $Title
 @onready var buildings_list: ItemList = $BuildingsList
 @onready var buildable_list: OptionButton = $BuildableList
@@ -15,6 +16,22 @@ var current_settlement_name: String = ""
 var current_settlement: Dictionary = {}
 var available_units: Array = []
 var available_buildings: Array = []
+
+
+func _load_icon(path: String) -> Texture2D:
+	if ResourceLoader.exists(path):
+		var res = load(path)
+		if res is Texture2D:
+			return res
+	return null
+
+
+func _load_background(path: String) -> Texture2D:
+	if ResourceLoader.exists(path):
+		var res = load(path)
+		if res is Texture2D:
+			return res
+	return _load_icon("res://assets/backgrounds/1000/generic.svg")
 
 
 func _ready():
@@ -34,6 +51,7 @@ func open(province_name: String, settlement_name: String):
 		settlement_name
 	)
 	visible = true
+	background.texture = _load_background("res://assets/backgrounds/1000/%s.svg" % current_settlement.get("type", "generic"))
 	_update_ui()
 
 
@@ -42,7 +60,8 @@ func _update_ui():
 
 	buildings_list.clear()
 	for b in current_settlement.get("buildings", []):
-		buildings_list.add_item(WorldData.get_building(b).get("name", b))
+		var icon = _load_icon("res://assets/icons/1000/buildings/%s.svg" % b)
+		buildings_list.add_item(WorldData.get_building(b).get("name", b), icon)
 
 	buildable_list.clear()
 	available_buildings = []
@@ -50,13 +69,18 @@ func _update_ui():
 	for b in WorldData.buildings.keys():
 		if SettlementManager.can_build_settlement_building(faction, current_settlement, b):
 			available_buildings.append(b)
-			buildable_list.add_item(WorldData.get_building(b).get("name", b))
+			var bicon = _load_icon("res://assets/icons/1000/buildings/%s.svg" % b)
+			if bicon:
+				buildable_list.add_icon_item(bicon, WorldData.get_building(b).get("name", b))
+			else:
+				buildable_list.add_item(WorldData.get_building(b).get("name", b))
 
 	units_list.clear()
 	available_units = SettlementManager.get_recruitable_units(faction, current_settlement)
 	for u in available_units:
 		var data = WorldData.get_unit(u)
-		units_list.add_item("%s (oro %d)" % [data.get("name", u), data.get("cost", 0)])
+		var icon = _load_icon("res://assets/icons/1000/units/%s.svg" % u)
+		units_list.add_item("%s (oro %d)" % [data.get("name", u), data.get("cost", 0)], icon)
 
 	info_label.text = "Risorse: " + JSON.stringify(faction.get("resources", {}))
 

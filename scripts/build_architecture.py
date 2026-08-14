@@ -14,7 +14,7 @@ SETTLEMENT_TYPES = {
         "allowed_buildings": [
             "centro_cittadino", "mercato", "mulino", "monastero", "caserma_i",
             "campo_tiro_i", "scuderia_i", "officina_assedio_i", "capanna_boscaioli",
-            "segheria", "fucina", "molo_i", "molo_ii"
+            "segheria", "fucina", "molo_i", "molo_ii", "strade"
         ]
     },
     "military": {
@@ -26,7 +26,7 @@ SETTLEMENT_TYPES = {
             "campo_tiro_ii", "campo_tiro_iii", "scuderia_i", "scuderia_ii", "scuderia_iii",
             "cortile_cavaliere", "officina_assedio_i", "officina_assedio_ii",
             "officina_assedio_iii", "fortezza_frontiera", "fucina", "officina_armi",
-            "monastero", "mercato"
+            "monastero", "mercato", "strade"
         ]
     },
     "industrial": {
@@ -35,7 +35,7 @@ SETTLEMENT_TYPES = {
         "base_slots": 7,
         "allowed_buildings": [
             "capanna_boscaioli", "segheria", "miniera", "fucina", "officina_armi",
-            "mulino", "caserma_i", "centro_cittadino"
+            "mulino", "caserma_i", "centro_cittadino", "strade"
         ]
     },
     "port": {
@@ -44,7 +44,7 @@ SETTLEMENT_TYPES = {
         "base_slots": 7,
         "allowed_buildings": [
             "molo_i", "molo_ii", "arsenale_i", "arsenale_ii", "magazzino", "mercato_marittimo",
-            "segheria", "fucina", "centro_cittadino"
+            "segheria", "fucina", "centro_cittadino", "strade"
         ]
     }
 }
@@ -273,6 +273,13 @@ BUILDINGS = {
         "cost": {"oro": 1000, "legname": 30},
         "construction_turns": 2,
         "effects": {"cibo": 10, "oro": 10},
+    },
+    "strade": {
+        "name": "Strade",
+        "settlement_types": ["civil", "military", "industrial", "port"],
+        "cost": {"oro": 600, "legname": 40, "pietra": 20},
+        "construction_turns": 2,
+        "effects": {"oro": 10, "cibo": 5},
     },
 }
 
