@@ -291,18 +291,13 @@ func _draw_settlement_marker(pos: Vector2, name: String, type_name: String, idx:
 
 
 func _settlement_icon(type_name: String) -> String:
-	# Icone originali di Medieval 2 Total War
-	match type_name:
-		"capital":
-			return "res://assets/ui_textures/settlements/city.png"
-		"military":
-			return "res://assets/ui_textures/settlements/castle.png"
-		"port":
-			return "res://assets/ui_textures/settlements/port.png"
-		"industrial":
-			return "res://assets/ui_textures/settlements/mines.png"
-		_:
-			return "res://assets/ui_textures/settlements/village.png"
+	# Usa le icone SVG base del progetto (non quelle originali di Medieval 2)
+	if type_name == "capital":
+		type_name = "civil"
+	var path := "res://assets/icons/1000/settlements/" + type_name + ".svg"
+	if not ResourceLoader.exists(path):
+		path = "res://assets/icons/1000/settlements/civil.svg"
+	return path
 
 
 func _terrain_svg_path(terrain_lower: String) -> String:
