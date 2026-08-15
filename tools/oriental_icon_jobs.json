@@ -1,0 +1,149 @@
+[
+  {
+    "id": "buildings_0",
+    "category": "buildings",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game building icon, year 1000 Islamic/Byzantine/Middle Eastern aesthetic, hand-painted limited palette, centered in cell, transparent background, no overlap, no text",
+    "cells": [
+      {"id": "centro_cittadino", "desc": "domed town center with arched entrance, small courtyard and cypress trees"},
+      {"id": "mercato", "desc": "bazaar market with striped awnings, woven carpets and pottery stalls"},
+      {"id": "monastero", "desc": "mosque-like monastery with blue dome, slender minaret and arched portico"},
+      {"id": "caserma_i", "desc": "simple stone barracks with small tower and wooden training yard"},
+      {"id": "caserma_ii", "desc": "medium barracks with fortified walls, gate and practice dummies"},
+      {"id": "caserma_iii", "desc": "large citadel barracks with battlements, banners and courtyard"},
+      {"id": "scuderia_i", "desc": "small stable with horses under a tiled roof, hay bales and water trough"},
+      {"id": "scuderia_ii", "desc": "medium cavalry stables with arched stalls, saddles and groom figures"},
+      {"id": "scuderia_iii", "desc": "grand horse breeding complex with domed pavilion, training ring and banners"}
+    ]
+  },
+  {
+    "id": "buildings_1",
+    "category": "buildings",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game building icon, year 1000 Islamic/Byzantine/Middle Eastern aesthetic, hand-painted limited palette, centered in cell, transparent background, no overlap, no text",
+    "cells": [
+      {"id": "campo_tiro_i", "desc": "open archery range with straw targets and low mud-brick walls"},
+      {"id": "campo_tiro_ii", "desc": "covered archery training yard with banners and multiple targets"},
+      {"id": "campo_tiro_iii", "desc": "large marksmanship compound with towers, galleries and elite targets"},
+      {"id": "officina_assedio_i", "desc": "siege workshop with wooden catapult frame and stone piles"},
+      {"id": "officina_assedio_ii", "desc": "siege engineers yard with ballista, timber and ramps"},
+      {"id": "officina_assedio_iii", "desc": "grand arsenal of siege machines with trebuchets and heavy timber"},
+      {"id": "officina_armi", "desc": "weaponsmith workshop with anvil, swords, shields and furnace"},
+      {"id": "fucina", "desc": "blacksmith forge with glowing furnace, hammers and stacked metal bars"},
+      {"id": "arsenale_i", "desc": "small naval arsenal with ship shed, oars and rope coils"}
+    ]
+  },
+  {
+    "id": "buildings_2",
+    "category": "buildings",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game building icon, year 1000 Islamic/Byzantine/Middle Eastern aesthetic, hand-painted limited palette, centered in cell, transparent background, no overlap, no text",
+    "cells": [
+      {"id": "arsenale_ii", "desc": "large naval arsenal with multiple ship sheds, docks and cranes"},
+      {"id": "molo_i", "desc": "simple wooden pier with small mooring bollards and cargo crates"},
+      {"id": "molo_ii", "desc": "stone quay with anchored merchant ship, cranes and warehouses"},
+      {"id": "mercato_marittimo", "desc": "harbor market with palm trees, stalls and ships at dock"},
+      {"id": "miniera", "desc": "mine entrance in rocky hill with cart tracks and ore piles"},
+      {"id": "segheria", "desc": "sawmill with water wheel, stacked logs and cut planks"},
+      {"id": "capanna_boscaioli", "desc": "lumberjack hut with thatched roof, axes and log piles"},
+      {"id": "mulino", "desc": "water mill with turning wheel, aqueduct channel and grain sacks"},
+      {"id": "magazzino", "desc": "warehouse with arched doors, amphorae and crate stacks"}
+    ]
+  },
+  {
+    "id": "buildings_3",
+    "category": "buildings",
+    "rows": 2,
+    "cols": 2,
+    "style": "2.5D isometric medieval strategy game building icon, year 1000 Islamic/Byzantine/Middle Eastern aesthetic, hand-painted limited palette, centered in cell, transparent background, no overlap, no text",
+    "cells": [
+      {"id": "cortile_cavaliere", "desc": "cavalry training courtyard with sand, hitching posts and practice lances"},
+      {"id": "fortezza_frontiera", "desc": "frontier fortress with watchtower, crenellations and desert palms"},
+      {"id": "strade", "desc": "paved desert road with palm trees, milestone and caravan"},
+      {"id": "", "desc": "blank"}
+    ]
+  },
+  {
+    "id": "units_0",
+    "category": "units",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game unit icon, year 1000 Islamic/Byzantine/Middle Eastern aesthetic, hand-painted limited palette, single figure or small group centered in cell, transparent background, no overlap, no text, no repeated faces",
+    "cells": [
+      {"id": "fanteria", "desc": "medium infantry spearman with round shield, turban and chainmail"},
+      {"id": "arcieri", "desc": "archer drawing a composite bow, wearing light robes and cap"},
+      {"id": "cavalleria", "desc": "light cavalry rider with lance, turban and flowing cloak"},
+      {"id": "cavalleria_pesante", "desc": "heavy cavalryman in lamellar armor on armored horse with mace"},
+      {"id": "lancieri", "desc": "spear infantry in light padded armor with long pike"},
+      {"id": "fanteria_pesante", "desc": "heavy swordsman with large shield, conical helmet and scale armor"},
+      {"id": "balestrieri", "desc": "crossbowman aiming a heavy crossbow, wearing quilted armor"},
+      {"id": "artiglieria", "desc": "crew operating a stone-throwing catapult with wooden frame"},
+      {"id": "arcieri_evoluti", "desc": "veteran archer in robes with recurved bow and quiver"}
+    ]
+  },
+  {
+    "id": "units_1",
+    "category": "units",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game unit icon, year 1000 Islamic/Byzantine/Middle Eastern aesthetic, hand-painted limited palette, single figure or small group centered in cell, transparent background, no overlap, no text, no repeated faces",
+    "cells": [
+      {"id": "milizia", "desc": "peasant levy with spear, round shield and simple robes"},
+      {"id": "milites", "desc": "professional heavy spearman in conical helmet and round shield"},
+      {"id": "szekler_infantry", "desc": "steppe-influenced axeman with fur cap, lamellar and axe"},
+      {"id": "sudanese_spearmen", "desc": "Nubian spearmen with large oval shields, white robes and spears"},
+      {"id": "jinete", "desc": "Berber light horse jinete with javelins and round shield"},
+      {"id": "black_guard", "desc": "elite African heavy infantry in dark robes and tall shields"},
+      {"id": "toxotai", "desc": "Byzantine archer in padded armor with recurve bow"},
+      {"id": "ghilman", "desc": "slave-soldier cavalry in turban and mail with lance and shield"},
+      {"id": "ghulam_cavalry", "desc": "ghulam heavy cavalry on barded horse with curved sword"}
+    ]
+  },
+  {
+    "id": "units_2",
+    "category": "units",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game unit icon, year 1000 Islamic/Byzantine/Middle Eastern aesthetic, hand-painted limited palette, single figure or small group centered in cell, transparent background, no overlap, no text, no repeated faces",
+    "cells": [
+      {"id": "mamluk_cavalry", "desc": "Mamluk horseman in conical helmet, lamellar and lance"},
+      {"id": "turkish_horse_archers", "desc": "Turkic horse archer in steppe armor drawing composite bow"},
+      {"id": "cataphractoi", "desc": "Byzantine cataphract heavy cavalry in full lamellar on armored horse"},
+      {"id": "varangian_guard", "desc": "Byzantine Varangian Guard with long axe, nasal helmet and mail"},
+      {"id": "varangian_mercenaries", "desc": "Norse-Byzantine mercenary guards with axes, heavy mail and helmets"},
+      {"id": "afghan_infantry", "desc": "Afghan mountain warrior with turban, shield and short sword"},
+      {"id": "armenian_archers", "desc": "Armenian highland archers in hooded cloaks with composite bows"},
+      {"id": "daylami_infantry", "desc": "Daylami axeman from northern Persia with heavy axe and shield"},
+      {"id": "war_elephants", "desc": "war elephant with armored howdah, tower and mahout"}
+    ]
+  },
+  {
+    "id": "ships_0",
+    "category": "ships",
+    "rows": 2,
+    "cols": 2,
+    "style": "2.5D isometric medieval strategy game ship icon, year 1000 Islamic/Byzantine/Middle Eastern aesthetic, hand-painted limited palette, centered in cell, transparent background, no overlap, no text",
+    "cells": [
+      {"id": "canoa", "desc": "small wooden canoe with oars on a calm water patch"},
+      {"id": "drakkar", "desc": "Viking longship with striped sail and dragon prow"},
+      {"id": "dromone", "desc": "Byzantine dromon war galley with triangular sail and rams"},
+      {"id": "galea", "desc": "Mediterranean war galley with oars, square sail and ram"}
+    ]
+  },
+  {
+    "id": "ships_1",
+    "category": "ships",
+    "rows": 2,
+    "cols": 2,
+    "style": "2.5D isometric medieval strategy game ship icon, year 1000 Islamic/Byzantine/Middle Eastern aesthetic, hand-painted limited palette, centered in cell, transparent background, no overlap, no text",
+    "cells": [
+      {"id": "giunca", "desc": "Chinese-style junk with battened sails and stern castle"},
+      {"id": "nave_guerra", "desc": "heavy war cog with forecastle, square sail and banners"},
+      {"id": "nave_guerra_indiana", "desc": "Indian Ocean dhow with lateen sail and decorated hull"},
+      {"id": "tower_ship", "desc": "Byzantine tower ship with wooden fighting towers and oars"}
+    ]
+  }
+]
