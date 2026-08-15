@@ -49,19 +49,19 @@ func _input(event):
 
 func _check_settlement_click():
 	# Converti posizione mouse in coordinate del territory_view
-	var mouse_global = get_global_mouse_position()
-	var local_pos = territory_view.get_global_transform_with_canvas() * mouse_global
-	# Cerca agglomerato piu' vicino entro 40 pixel
+	var mouse_screen = get_viewport().get_mouse_position()
+	var local_pos = territory_view.get_global_transform_with_canvas().affine_inverse() * mouse_screen
+	# Raggio piu' grande per facilitare il click
 	var best_name: String = ""
-	var best_dist: float = 40.0
+	var best_dist: float = 60.0
 	for s_name in settlement_markers.keys():
 		var marker_pos: Vector2 = settlement_markers[s_name]
 		var dist: float = local_pos.distance_to(marker_pos)
 		if dist < best_dist:
 			best_dist = dist
 			best_name = s_name
+	print("Settlement click @ screen %s | local %s | markers: %d | best: %s (dist %.1f)" % [str(mouse_screen), str(local_pos), settlement_markers.size(), best_name, best_dist])
 	if best_name != "":
-		# Apri la scena dell'agglomerato
 		GameState.state["last_settlement"] = best_name
 		get_tree().change_scene_to_file("res://scenes/settlement_scene.tscn")
 
@@ -249,23 +249,43 @@ func _draw_territory():
 func _draw_settlement_marker(pos: Vector2, name: String, type_name: String, idx: int):
 	# Icona reale di Medieval 2 in base al tipo
 	var icon_path := _settlement_icon(type_name)
+	var tex = load(icon_path)
+	if tex:
+		tex.filter_clip = true
 	var sprite := Sprite2D.new()
-	sprite.texture = load(icon_path)
+	sprite.texture = tex
 	sprite.position = pos
-	sprite.scale = Vector2(1.5, 1.5)
+	sprite.scale = Vector2(2.5, 2.5)
 	sprite.z_index = 5
 	territory_view.add_child(sprite)
 
-	# Etichetta
+	# Ombra sotto l'icona per profondita
+	var shadow := ColorRect.new()
+	shadow.color = Color(0, 0, 0, 0.3)
+	shadow.size = Vector2(60, 12)
+	shadow.position = pos + Vector2(-30, 25)
+	shadow.z_index = 4
+	territory_view.add_child(shadow)
+
+	# Etichetta con sfondo semitrasparente
+	var label_bg := ColorRect.new()
+	label_bg.color = Color(0, 0, 0, 0.6)
+	label_bg.size = Vector2(120, 22)
+	label_bg.position = pos + Vector2(-60, -55)
+	label_bg.z_index = 6
+	territory_view.add_child(label_bg)
+
 	var label := Label.new()
 	label.text = name
-	label.position = pos + Vector2(-40, -45)
-	label.add_theme_color_override("font_color", Color(1, 1, 0.8, 1.0))
-	label.add_theme_font_size_override("font_size", 14)
+	label.position = pos + Vector2(-55, -53)
+	label.size = Vector2(110, 18)
+	label.add_theme_color_override("font_color", Color(1, 0.95, 0.7, 1.0))
+	label.add_theme_font_size_override("font_size", 13)
 	label.add_theme_color_override("font_shadow_color", Color(0, 0, 0, 0.9))
 	label.add_theme_constant_override("shadow_offset_x", 1)
 	label.add_theme_constant_override("shadow_offset_y", 1)
-	label.z_index = 6
+	label.horizontal_alignment = 1
+	label.z_index = 7
 	territory_view.add_child(label)
 
 

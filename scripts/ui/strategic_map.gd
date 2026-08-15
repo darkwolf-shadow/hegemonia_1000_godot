@@ -93,20 +93,21 @@ func _check_province_click():
 	var world_pos: Vector2 = camera.get_global_mouse_position()
 	var best: String = ""
 	var best_area: float = INF
-	for p in province_nodes.keys():
-		var poly_node: Polygon2D = province_nodes[p]
-		if not poly_node:
-			continue
-		# Controlla tutti i poligoni della provincia (MultiPolygon)
-		# Le province in nebbia sono cliccabili comunque
-		var all_polys: Array = province_all_polygons.get(p, [])
+	var total_provs: int = province_all_polygons.size()
+	var checked: int = 0
+	var hit: int = 0
+	for p in province_all_polygons.keys():
+		checked += 1
+		var all_polys: Array = province_all_polygons[p]
 		for poly in all_polys:
 			if _point_in_polygon(world_pos, poly):
 				var area: float = _polygon_area(poly)
 				if area < best_area:
 					best_area = area
 					best = p
+				hit += 1
 				break
+	print("Click @ %s | province totali: %d | controllate: %d | hit: %d | trovata: %s" % [str(world_pos), total_provs, checked, hit, best])
 	if best != "":
 		_select_province(best)
 
