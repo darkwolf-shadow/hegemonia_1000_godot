@@ -65,17 +65,21 @@ func _draw_territory():
 	var data = WorldData.get_province(current_province)
 	var geometry = data.get("geometry", {})
 
-	# Sfondo terreno con colori variabili in base al terrain type
+	# Sfondo terreno con gradiente colorato in base al terrain type
 	var terrain: String = data.get("terrain", "generic")
-	var bg_color: Color = _terrain_color(terrain)
-	var bg := ColorRect.new()
-	bg.color = bg_color
-	bg.size = Vector2(3000, 3000)
-	bg.position = Vector2(-1500, -1500)
-	bg.z_index = -10
-	territory_view.add_child(bg)
+	var terrain_lower: String = terrain.to_lower()
+	var bg_dark: Color = _terrain_color(terrain).darkened(0.3)
+	var bg_light: Color = _terrain_color(terrain).lightened(0.1)
+	for i in range(6):
+		var layer := ColorRect.new()
+		var t: float = float(i) / 6.0
+		layer.color = bg_dark.lerp(bg_light, t)
+		layer.size = Vector2(3000, 500)
+		layer.position = Vector2(-1500, -1500 + i * 500)
+		layer.z_index = -10
+		territory_view.add_child(layer)
 
-	# Aggiungi texture di vegetazione con pattern
+	# Aggiungi vegetazione e elementi del terreno
 	_terrain_pattern(terrain)
 
 	if not geometry.has("coordinates"):
@@ -136,22 +140,33 @@ func _draw_territory():
 		scaled_polys.append(sp)
 
 	# Disegna tutti i poligoni del territorio
+	var ground_color: Color = _terrain_ground_color(terrain_lower)
 	for poly in scaled_polys:
 		var polygon := Polygon2D.new()
 		polygon.polygon = poly
-		polygon.color = Color(0.30, 0.42, 0.25, 0.9)
+		polygon.color = ground_color
 		polygon.antialiased = true
 		territory_view.add_child(polygon)
 
-		# Bordo
-		var border := Line2D.new()
-		border.points = poly
-		border.closed = true
-		border.antialiased = true
-		border.width = 2.0
-		border.default_color = Color(0.2, 0.15, 0.1, 1.0)
-		border.joint_mode = Line2D.LINE_JOINT_ROUND
-		territory_view.add_child(border)
+		# Bordo esterno spesso stile medievale
+		var border_outer := Line2D.new()
+		border_outer.points = poly
+		border_outer.closed = true
+		border_outer.antialiased = true
+		border_outer.width = 4.0
+		border_outer.default_color = Color(0.15, 0.10, 0.05, 0.9)
+		border_outer.joint_mode = Line2D.LINE_JOINT_ROUND
+		territory_view.add_child(border_outer)
+
+		# Bordo interno dorato sottile
+		var border_inner := Line2D.new()
+		border_inner.points = poly
+		border_inner.closed = true
+		border_inner.antialiased = true
+		border_inner.width = 1.5
+		border_inner.default_color = Color(0.55, 0.42, 0.20, 0.8)
+		border_inner.joint_mode = Line2D.LINE_JOINT_ROUND
+		territory_view.add_child(border_inner)
 
 	# Calcola centro del territorio
 	var poly_center := _polygon_center(scaled_polys[0])
@@ -183,16 +198,28 @@ func _draw_territory():
 			settlement_markers[s_name] = pos
 			idx += 1
 
-		# Strade tra agglomerati
+		# Strade tra agglomerati - stile medievale sterrate
 		for i in range(positions.size()):
 			for j in range(i + 1, positions.size()):
-				var road := Line2D.new()
-				road.add_point(positions[i])
-				road.add_point(positions[j])
-				road.width = 1.5
-				road.default_color = Color(0.5, 0.4, 0.25, 0.6)
-				road.antialiased = true
-				territory_view.add_child(road)
+				# Strada base larga color terra
+				var road_base := Line2D.new()
+				road_base.add_point(positions[i])
+				road_base.add_point(positions[j])
+				road_base.width = 5.0
+				road_base.default_color = Color(0.35, 0.28, 0.18, 0.7)
+				road_base.antialiased = true
+				road_base.joint_mode = Line2D.LINE_JOINT_ROUND
+				territory_view.add_child(road_base)
+
+				# Strada interna piu' chiara
+				var road_inner := Line2D.new()
+				road_inner.add_point(positions[i])
+				road_inner.add_point(positions[j])
+				road_inner.width = 2.5
+				road_inner.default_color = Color(0.55, 0.45, 0.28, 0.8)
+				road_inner.antialiased = true
+				road_inner.joint_mode = Line2D.LINE_JOINT_ROUND
+				territory_view.add_child(road_inner)
 
 
 func _draw_settlement_marker(pos: Vector2, name: String, type_name: String, idx: int):
@@ -251,20 +278,196 @@ func _terrain_color(terrain: String) -> Color:
 			return Color(0.15, 0.22, 0.15, 1.0)
 
 
+func _terrain_ground_color(terrain_lower: String) -> Color:
+	# Colori del terreno piu' naturali e ricchi per il suolo della provincia
+	match terrain_lower:
+		"forest", "foresta":
+			return Color(0.22, 0.33, 0.18, 0.92)
+		"mountain", "montagna":
+			return Color(0.32, 0.28, 0.22, 0.92)
+		"desert", "deserto":
+			return Color(0.50, 0.42, 0.25, 0.92)
+		"plains", "pianura":
+			return Color(0.28, 0.38, 0.20, 0.92)
+		"coastal", "costiera":
+			return Color(0.22, 0.32, 0.25, 0.92)
+		"tundra", "tundra":
+			return Color(0.35, 0.37, 0.33, 0.92)
+		"hills", "colline":
+			return Color(0.25, 0.35, 0.18, 0.92)
+		"swamp", "palude":
+			return Color(0.18, 0.25, 0.18, 0.92)
+		"jungle", "giungla":
+			return Color(0.14, 0.28, 0.12, 0.92)
+		"steppe", "steppa":
+			return Color(0.32, 0.35, 0.18, 0.92)
+		"savannah", "savana":
+			return Color(0.40, 0.38, 0.20, 0.92)
+		"river", "fiume":
+			return Color(0.20, 0.28, 0.20, 0.92)
+		_:
+			return Color(0.24, 0.32, 0.18, 0.92)
+
+
 func _terrain_pattern(terrain: String):
-	# Aggiunge punti di vegetazione/terreno per dare profondita'
+	# Disegna vegetazione e elementi del terreno in modo realistico
 	var rng := RandomNumberGenerator.new()
 	rng.seed = hash(current_province)
-	var pattern_color: Color = _terrain_color(terrain).lightened(0.15)
-	for i in range(80):
-		var x: float = rng.randf_range(-1000, 1000)
-		var y: float = rng.randf_range(-1000, 1000)
-		var dot := ColorRect.new()
-		dot.color = pattern_color
-		dot.size = Vector2(rng.randf_range(8, 20), rng.randf_range(8, 20))
-		dot.position = Vector2(x, y)
-		dot.z_index = -5
-		territory_view.add_child(dot)
+	var terrain_lower = terrain.to_lower()
+
+	# Macchie di erba/terreno con variazioni di colore
+	var base_color: Color = _terrain_color(terrain)
+	for i in range(40):
+		var x: float = rng.randf_range(-800, 800)
+		var y: float = rng.randf_range(-800, 800)
+		var patch := Polygon2D.new()
+		var pts := PackedVector2Array()
+		var radius: float = rng.randf_range(30, 70)
+		var sides: int = 8
+		for s in range(sides):
+			var angle: float = s * TAU / sides + rng.randf_range(-0.3, 0.3)
+			var r: float = radius * rng.randf_range(0.7, 1.3)
+			pts.append(Vector2(x + cos(angle) * r, y + sin(angle) * r))
+		patch.polygon = pts
+		var variant: float = rng.randf_range(-0.08, 0.08)
+		patch.color = Color(
+			clamp(base_color.r + variant, 0, 1),
+			clamp(base_color.g + variant, 0, 1),
+			clamp(base_color.b + variant * 0.5, 0, 1),
+			0.6
+		)
+		patch.z_index = -5
+		territory_view.add_child(patch)
+
+	# Alberi per foresta, pianura, costiera, generico
+	if terrain_lower in ["forest", "foresta", "plains", "pianura", "coastal", "costiera", "generic", ""]:
+		var tree_count: int = 30 if terrain_lower in ["forest", "foresta"] else 15
+		for i in range(tree_count):
+			var x: float = rng.randf_range(-700, 700)
+			var y: float = rng.randf_range(-700, 700)
+			_draw_tree(Vector2(x, y), rng.randf_range(0.7, 1.4))
+
+	# Colline per montagna, colline, tundra
+	if terrain_lower in ["mountain", "montagna", "hills", "colline", "tundra"]:
+		for i in range(12):
+			var x: float = rng.randf_range(-600, 600)
+			var y: float = rng.randf_range(-600, 600)
+			_draw_hill(Vector2(x, y), rng.randf_range(40, 80), terrain_lower)
+
+	# Dune per deserto
+	if terrain_lower in ["desert", "deserto"]:
+		for i in range(15):
+			var x: float = rng.randf_range(-700, 700)
+			var y: float = rng.randf_range(-700, 700)
+			_draw_dune(Vector2(x, y), rng)
+
+	# Roccce per montagna
+	if terrain_lower in ["mountain", "montagna"]:
+		for i in range(8):
+			var x: float = rng.randf_range(-600, 600)
+			var y: float = rng.randf_range(-600, 600)
+			_draw_rock(Vector2(x, y), rng.randf_range(15, 35))
+
+
+func _draw_tree(pos: Vector2, scale_factor: float):
+	# Albero con tronco e chioma
+	var s: float = scale_factor
+	# Tronco
+	var trunk := Polygon2D.new()
+	var trunk_pts := PackedVector2Array()
+	trunk_pts.append(pos + Vector2(-2 * s, 0))
+	trunk_pts.append(pos + Vector2(2 * s, 0))
+	trunk_pts.append(pos + Vector2(2 * s, -12 * s))
+	trunk_pts.append(pos + Vector2(-2 * s, -12 * s))
+	trunk.polygon = trunk_pts
+	trunk.color = Color(0.25, 0.15, 0.08, 1.0)
+	trunk.z_index = -3
+	territory_view.add_child(trunk)
+
+	# Chioma - triangoli sovrapposti per effetto fogliame
+	var crown_colors := [Color(0.15, 0.35, 0.12, 0.95), Color(0.18, 0.40, 0.15, 0.95), Color(0.12, 0.30, 0.10, 0.95)]
+	for layer in range(3):
+		var crown := Polygon2D.new()
+		var pts := PackedVector2Array()
+		var offset_y: float = -12 * s - layer * 6 * s
+		var width: float = 14 * s * (1.0 - layer * 0.2)
+		pts.append(pos + Vector2(-width, offset_y))
+		pts.append(pos + Vector2(width, offset_y))
+		pts.append(pos + Vector2(0, offset_y - 16 * s))
+		crown.polygon = pts
+		crown.color = crown_colors[layer]
+		crown.z_index = -2 + layer
+		territory_view.add_child(crown)
+
+
+func _draw_hill(pos: Vector2, radius: float, terrain_type: String):
+	# Collina con curva e ombra
+	var hill := Polygon2D.new()
+	var pts := PackedVector2Array()
+	var sides: int = 12
+	for s in range(sides):
+		var angle: float = s * TAU / sides
+		var r: float = radius * (0.8 + 0.2 * sin(angle * 2))
+		pts.append(pos + Vector2(cos(angle) * r, sin(angle) * r * 0.5))
+	hill.polygon = pts
+	var hill_color: Color = Color(0.30, 0.28, 0.22, 0.85) if terrain_type in ["mountain", "montagna"] else Color(0.25, 0.32, 0.18, 0.85)
+	hill.color = hill_color
+	hill.z_index = -4
+	territory_view.add_child(hill)
+
+	# Ombra della collina
+	var shadow := Polygon2D.new()
+	var shadow_pts := PackedVector2Array()
+	for s in range(sides):
+		var angle: float = s * TAU / sides
+		var r: float = radius * 0.7
+		shadow_pts.append(pos + Vector2(cos(angle) * r + 5, sin(angle) * r * 0.4 + 5))
+	shadow.polygon = shadow_pts
+	shadow.color = Color(0.0, 0.0, 0.0, 0.2)
+	shadow.z_index = -5
+	territory_view.add_child(shadow)
+
+
+func _draw_dune(pos: Vector2, rng: RandomNumberGenerator):
+	# Duna di sabbia
+	var dune := Polygon2D.new()
+	var pts := PackedVector2Array()
+	var sides: int = 10
+	var radius: float = rng.randf_range(40, 80)
+	for s in range(sides):
+		var angle: float = s * TAU / sides
+		var r: float = radius * (0.6 + 0.4 * abs(sin(angle)))
+		pts.append(pos + Vector2(cos(angle) * r, sin(angle) * r * 0.3))
+	dune.polygon = pts
+	var shade: float = rng.randf_range(0.35, 0.50)
+	dune.color = Color(shade, shade * 0.85, shade * 0.55, 0.7)
+	dune.z_index = -4
+	territory_view.add_child(dune)
+
+
+func _draw_rock(pos: Vector2, size: float):
+	# Roccia con facce poligonali
+	var rock := Polygon2D.new()
+	var pts := PackedVector2Array()
+	pts.append(pos + Vector2(-size, size * 0.3))
+	pts.append(pos + Vector2(-size * 0.5, -size))
+	pts.append(pos + Vector2(size * 0.3, -size * 0.8))
+	pts.append(pos + Vector2(size, size * 0.5))
+	rock.polygon = pts
+	rock.color = Color(0.35, 0.32, 0.28, 0.9)
+	rock.z_index = -3
+	territory_view.add_child(rock)
+
+	# Faccia in ombra
+	var face := Polygon2D.new()
+	var face_pts := PackedVector2Array()
+	face_pts.append(pos + Vector2(-size, size * 0.3))
+	face_pts.append(pos + Vector2(-size * 0.5, -size))
+	face_pts.append(pos + Vector2(-size * 0.2, 0))
+	face.polygon = face_pts
+	face.color = Color(0.20, 0.18, 0.15, 0.9)
+	face.z_index = -2
+	territory_view.add_child(face)
 
 
 func _settlement_color(type_name: String) -> Color:
