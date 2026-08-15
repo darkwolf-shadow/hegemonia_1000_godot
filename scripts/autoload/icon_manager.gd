@@ -57,6 +57,14 @@ func get_settlement_icon(settlement_type: String, region: String = "european") -
 	return _get_icon("settlements", settlement_type, region)
 
 
+func get_ship_icon(ship_id: String, region: String = "european") -> Texture2D:
+	return _get_icon("ships", ship_id, region)
+
+
+func get_resource_icon(resource_id: String, region: String = "european") -> Texture2D:
+	return _get_icon("resources", resource_id, region)
+
+
 func _get_icon(category: String, id: String, region: String) -> Texture2D:
 	var key := category + "_" + region + "_" + id
 	if _cache.has(key):
@@ -88,7 +96,29 @@ func _resolve_path(category: String, id: String, region: String) -> String:
 		cat = region_data.get(category, {})
 		if cat.has(id):
 			return cat[id]
+
+	# Se non c'e' un'icona regionale, prova lo stile base SVG dell'anno 1000
+	var base := _default_svg_path(category, id)
+	if not base.is_empty():
+		return base
+
 	return ""
+
+
+func _default_svg_path(category: String, id: String) -> String:
+	match category:
+		"buildings":
+			return "res://assets/icons/1000/buildings/" + id + ".svg"
+		"units":
+			return "res://assets/icons/1000/units/" + id + ".svg"
+		"ships":
+			return "res://assets/icons/1000/ships/" + id + ".svg"
+		"resources":
+			return "res://assets/icons/1000/resources/" + id + ".svg"
+		"settlements":
+			return "res://assets/icons/1000/settlements/" + id + ".svg"
+		_:
+			return ""
 
 
 func _fallback(category: String) -> Texture2D:

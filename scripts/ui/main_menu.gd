@@ -3,12 +3,14 @@ extends Control
 @onready var faction_option := $VBoxContainer/FactionOption
 @onready var start_button := $VBoxContainer/StartButton
 @onready var load_button := $VBoxContainer/LoadButton
+@onready var catalog_button := $VBoxContainer/CatalogButton
 @onready var exit_button := $VBoxContainer/ExitButton
 
 
 func _ready():
 	start_button.pressed.connect(_on_start)
 	load_button.pressed.connect(_on_load)
+	catalog_button.pressed.connect(_on_catalog)
 	exit_button.pressed.connect(_on_exit)
 	_popola_fazioni()
 
@@ -36,6 +38,10 @@ func _on_load():
 	if slots.size() > 0:
 		SaveManager.load_game(slots[0])
 		get_tree().change_scene_to_file("res://scenes/strategic_map.tscn")
+
+
+func _on_catalog():
+	get_tree().change_scene_to_file("res://scenes/catalog_scene.tscn")
 
 
 func _unhandled_input(event):
