@@ -1,9 +1,13 @@
+# Dark Corporation / Stev
+# Stato di gioco Hegemonia 1000 con nebbia di guerra a raggio
 extends Node
 
 const START_YEAR := 1000
 const START_MONTH := 1
 
 var state := {}
+var _fog_center := Vector2.ZERO
+var _fog_radius := 8.0
 
 
 func _ready():
@@ -46,32 +50,62 @@ func new_game(faction_name: String):
 
 func _init_fog_of_war():
 	for p in state.provinces.keys():
-		var prov = state.provinces[p]
-		prov["explored"] = false
-		prov["visible"] = false
-	_reveal_around_player()
+		state.provinces[p]["fog"] = "nebbia"
+	_calculate_fog_center()
+	_apply_fog()
 
 
-func _reveal_around_player():
+func _calculate_fog_center():
+	# Non piu' usato: la nebbia ora parte da ogni singola provincia
+	pass
+
+
+func _apply_fog():
 	var player = state.player_faction
 	if player.is_empty():
+		for p in state.provinces.keys():
+			state.provinces[p]["fog"] = "nebbia"
 		return
+
+	# Raccogli le coordinate di ogni provincia del giocatore
+	var player_coords: Array = []
 	for p in state.provinces.keys():
 		if state.provinces[p].get("owner") == player:
-			_set_visible(p, true)
-			for n in WorldData.get_province(p).get("neighbors", []):
-				_set_visible(n, true)
+			var data = WorldData.get_province(p)
+			var lat: float = float(data.get("latitude", 0.0))
+			var lon: float = float(data.get("longitude", 0.0))
+			if lat != 0.0 or lon != 0.0:
+				player_coords.append(Vector2(lon, lat))
+
+	# Raggio di visibilita' da ogni provincia (5 gradi ~ 550 km)
+	var vis_radius: float = 5.0
+	var half_radius: float = vis_radius * 0.6
+
+	for p in state.provinces.keys():
+		var data = WorldData.get_province(p)
+		var lat: float = float(data.get("latitude", 0.0))
+		var lon: float = float(data.get("longitude", 0.0))
+		if lat == 0.0 and lon == 0.0:
+			state.provinces[p]["fog"] = "nebbia"
+			continue
+		var prov_coord := Vector2(lon, lat)
+		var min_dist: float = INF
+		for pc in player_coords:
+			var d: float = prov_coord.distance_to(pc)
+			if d < min_dist:
+				min_dist = d
+		if min_dist <= half_radius:
+			state.provinces[p]["fog"] = "visibile"
+		elif min_dist <= vis_radius:
+			state.provinces[p]["fog"] = "mezza"
+		else:
+			state.provinces[p]["fog"] = "nebbia"
 
 
-func _set_visible(province_name: String, visible: bool):
+func get_fog(province_name: String) -> String:
 	if not state.provinces.has(province_name):
-		return
-	var prov = state.provinces[province_name]
-	if visible:
-		prov["visible"] = true
-		prov["explored"] = true
-	else:
-		prov["visible"] = false
+		return "nebbia"
+	return state.provinces[province_name].get("fog", "nebbia")
 
 
 func advance_turn(months: int = 1):
@@ -83,12 +117,12 @@ func advance_turn(months: int = 1):
 	_execute_player_orders()
 	EconomyEngine.apply_production()
 	AIController.run_ai_turn()
-	_reveal_around_player()
+	_calculate_fog_center()
+	_apply_fog()
 	push_event("Turno %d: %d-%d" % [state.turn, state.year, state.month])
 
 
 func _execute_player_orders():
-	# Stub: gli ordini del giocatore vengono gestiti dall'interfaccia.
 	pass
 
 

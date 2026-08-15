@@ -1,0 +1,140 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/province_scene.gd" id="1_ps"]
+[ext_resource type="Texture2D" path="res://assets/ui_textures/southern_european/stratpage_01.png" id="2_frame"]
+
+[sub_resource type="StyleBoxFlat" id="sb_panel"]
+bg_color = Color(0.10, 0.08, 0.06, 0.97)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.45, 0.32, 0.15, 1.0)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="ProvinceScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ps")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.06, 0.08, 0.05, 1.0)
+
+[node name="TerritoryView" type="Node2D" parent="."]
+position = Vector2(480, 350)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -420.0
+offset_top = -420.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("sb_panel")
+
+[node name="ParchmentBG" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_frame")
+expand_mode = 1
+stretch_mode = 6
+modulate = Color(1, 1, 1, 0.12)
+
+[node name="Title" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -190.0
+offset_top = 10.0
+offset_right = 190.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.95, 0.80, 0.45, 1.0)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+text = "Provincia"
+horizontal_alignment = 1
+
+[node name="HintLabel" type="Label" parent="Panel"]
+layout_mode = 1
+offset_left = 15.0
+offset_top = 45.0
+offset_right = 400.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0.5, 0.5, 0.45, 0.7)
+theme_override_font_sizes/font_size = 11
+text = "Rotellina: zoom | Tasto destro/centro: trascina"
+
+[node name="SettlementsLabel" type="Label" parent="Panel"]
+layout_mode = 1
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 400.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.75, 0.68, 0.50, 1.0)
+text = "Agglomerati urbani:"
+
+[node name="SettlementsList" type="ItemList" parent="Panel"]
+layout_mode = 1
+offset_left = 15.0
+offset_top = 95.0
+offset_right = 400.0
+offset_bottom = 320.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 1, 1, 1.0)
+
+[node name="Info" type="Label" parent="Panel"]
+layout_mode = 1
+offset_left = 15.0
+offset_top = 330.0
+offset_right = 400.0
+offset_bottom = 470.0
+theme_override_colors/font_color = Color(0.85, 0.85, 0.8, 1.0)
+theme_override_font_sizes/font_size = 14
+text = ""
+autowrap_mode = 3
+
+[node name="EnterButton" type="Button" parent="Panel"]
+layout_mode = 1
+offset_left = 15.0
+offset_top = 480.0
+offset_right = 190.0
+offset_bottom = 520.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.95, 0.80, 0.45, 1.0)
+text = "Entra agglomerato"
+
+[node name="BackButton" type="Button" parent="Panel"]
+layout_mode = 1
+offset_left = 210.0
+offset_top = 480.0
+offset_right = 400.0
+offset_bottom = 520.0
+theme_override_font_sizes/font_size = 14
+text = "Torna alla mappa"

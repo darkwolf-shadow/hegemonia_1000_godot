@@ -13,7 +13,7 @@ var tactics: Dictionary = {}
 const CONFIG_PATH := "res://data/config/game_config.json"
 const FACTIONS_PATH := "res://data/world/factions_1000.json"
 const PROVINCES_PATH := "res://data/world/provinces_1000.json"
-const MAP_PATH := "res://data/world/map_1000.geojson"
+const MAP_PATH := "res://data/world/mappa_anno_1000.geojson"
 
 
 func _ready():
@@ -68,6 +68,9 @@ func _load_map():
 			if not name.is_empty() and provinces.has(name):
 				provinces[name]["geometry"] = feature.get("geometry", {})
 				provinces[name]["properties"] = props
+				# Aggiorna owner dal campo STATO_1000 della mappa
+				if props.has("STATO_1000"):
+					provinces[name]["owner"] = props["STATO_1000"]
 
 
 func get_faction(name: String) -> Dictionary:

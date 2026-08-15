@@ -10,6 +10,17 @@ func _ready():
 	start_button.pressed.connect(_on_start)
 	load_button.pressed.connect(_on_load)
 	exit_button.pressed.connect(_on_exit)
+	_popola_fazioni()
+
+
+func _popola_fazioni():
+	faction_option.clear()
+	for nome in WorldData.factions.keys():
+		if nome == "Terra di Nessuno":
+			continue
+		faction_option.add_item(nome)
+	if faction_option.item_count > 0:
+		faction_option.select(0)
 
 
 func _on_start():

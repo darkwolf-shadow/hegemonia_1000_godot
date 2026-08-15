@@ -1,0 +1,223 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/province_popup.gd" id="1_popup"]
+[ext_resource type="Texture2D" path="res://assets/ui_textures/southern_european/sharedpage_00.png" id="2_tex"]
+
+[sub_resource type="StyleBoxFlat" id="sb_panel"]
+bg_color = Color(0.12, 0.10, 0.08, 0.97)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.45, 0.32, 0.15, 1.0)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+
+[node name="ProvincePopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_popup")
+
+[node name="Dimmer" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+mouse_filter = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -240.0
+offset_right = 260.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("sb_panel")
+
+[node name="ParchmentBG" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tex")
+expand_mode = 1
+stretch_mode = 6
+modulate = Color(1, 1, 1, 0.15)
+
+[node name="Title" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 10.0
+offset_right = 200.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.95, 0.80, 0.45, 1.0)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+text = "Provincia"
+horizontal_alignment = 1
+
+[node name="Info" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 50.0
+offset_right = 200.0
+offset_bottom = 70.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1.0)
+theme_override_font_sizes/font_size = 13
+text = ""
+horizontal_alignment = 1
+
+[node name="OwnerRow" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+offset_left = 30.0
+offset_top = 85.0
+offset_right = 470.0
+offset_bottom = 110.0
+
+[node name="OwnerKey" type="Label" parent="Panel/OwnerRow"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.68, 0.50, 1.0)
+text = "Proprietario:"
+custom_minimum_size = Vector2(130, 0)
+
+[node name="OwnerValue" type="Label" parent="Panel/OwnerRow"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1.0)
+text = "N/D"
+
+[node name="RegionRow" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+offset_left = 30.0
+offset_top = 115.0
+offset_right = 470.0
+offset_bottom = 140.0
+
+[node name="RegionKey" type="Label" parent="Panel/RegionRow"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.68, 0.50, 1.0)
+text = "Regione:"
+custom_minimum_size = Vector2(130, 0)
+
+[node name="RegionValue" type="Label" parent="Panel/RegionRow"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1.0)
+text = "N/D"
+
+[node name="TerrainRow" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+offset_left = 30.0
+offset_top = 145.0
+offset_right = 470.0
+offset_bottom = 170.0
+
+[node name="TerrainKey" type="Label" parent="Panel/TerrainRow"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.68, 0.50, 1.0)
+text = "Terreno:"
+custom_minimum_size = Vector2(130, 0)
+
+[node name="TerrainValue" type="Label" parent="Panel/TerrainRow"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1.0)
+text = "N/D"
+
+[node name="PopRow" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+offset_left = 30.0
+offset_top = 175.0
+offset_right = 470.0
+offset_bottom = 200.0
+
+[node name="PopKey" type="Label" parent="Panel/PopRow"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.68, 0.50, 1.0)
+text = "Popolazione:"
+custom_minimum_size = Vector2(130, 0)
+
+[node name="PopValue" type="Label" parent="Panel/PopRow"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1.0)
+text = "0"
+
+[node name="ResourcesRow" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+offset_left = 30.0
+offset_top = 205.0
+offset_right = 470.0
+offset_bottom = 240.0
+
+[node name="ResourcesKey" type="Label" parent="Panel/ResourcesRow"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.68, 0.50, 1.0)
+text = "Risorse:"
+custom_minimum_size = Vector2(130, 0)
+
+[node name="ResourcesValue" type="Label" parent="Panel/ResourcesRow"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1.0)
+text = "N/D"
+autowrap_mode = 3
+custom_minimum_size = Vector2(300, 0)
+
+[node name="EnterButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -60.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.95, 0.80, 0.45, 1.0)
+text = "Entra nella provincia"
+
+[node name="CloseButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -60.0
+offset_right = 180.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 15
+text = "Chiudi"
