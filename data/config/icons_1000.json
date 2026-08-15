@@ -1,0 +1,84 @@
+{
+  "default_region": "european",
+  "fallback_building": "res://assets/ui_textures/generic/generic_building.png",
+  "fallback_unit": "res://assets/ui_textures/generic/generic_unit_card.png",
+  "fallback_battle": "res://assets/ui_textures/generic/generic_unit_card.png",
+  "regions": {
+    "european": {
+      "buildings": {
+        "centro_cittadino": "res://assets/icons/1000/european/buildings/centro_cittadino.png",
+        "segheria": "res://assets/icons/1000/european/buildings/segheria.png",
+        "caserma_i": "res://assets/icons/1000/european/buildings/caserma_i.png",
+        "campo_tiro_i": "res://assets/icons/1000/european/buildings/campo_tiro_i.png",
+        "scuderia_i": "res://assets/icons/1000/european/buildings/scuderia_i.png",
+        "monastero": "res://assets/icons/1000/european/buildings/monastero.png",
+        "fucina": "res://assets/icons/1000/european/buildings/fucina.png",
+        "miniera": "res://assets/icons/1000/european/buildings/miniera.png",
+        "molo_i": "res://assets/icons/1000/european/buildings/molo_i.png",
+        "mercato": "res://assets/icons/1000/european/buildings/mercato.png"
+      },
+      "units": {
+        "milizia": "res://assets/icons/1000/european/units/milizia.png",
+        "cavalleria": "res://assets/icons/1000/european/units/cavalleria.png",
+        "fanteria": "res://assets/icons/1000/european/units/fanteria.png",
+        "arcieri": "res://assets/icons/1000/european/units/arcieri.png",
+        "cavalleria_pesante": "res://assets/icons/1000/european/units/cavalleria_pesante.png",
+        "artiglieria": "res://assets/icons/1000/european/units/artiglieria.png"
+      },
+      "battle": {
+        "milizia": "res://assets/icons/1000/european/battle/milizia.png",
+        "cavalleria": "res://assets/icons/1000/european/battle/cavalleria.png"
+      },
+      "settlements": {
+        "civil": "res://assets/ui_textures/settlements/town.png",
+        "military": "res://assets/ui_textures/settlements/castle.png",
+        "industrial": "res://assets/ui_textures/settlements/mines.png",
+        "port": "res://assets/ui_textures/settlements/port.png"
+      }
+    },
+    "oriental": {
+      "buildings": {},
+      "units": {},
+      "battle": {},
+      "settlements": {
+        "civil": "res://assets/ui_textures/settlements/town.png",
+        "military": "res://assets/ui_textures/settlements/citadel.png",
+        "industrial": "res://assets/ui_textures/settlements/mines.png",
+        "port": "res://assets/ui_textures/settlements/port.png"
+      }
+    },
+    "asian": {
+      "buildings": {},
+      "units": {},
+      "battle": {},
+      "settlements": {
+        "civil": "res://assets/ui_textures/settlements/town.png",
+        "military": "res://assets/ui_textures/settlements/citadel.png",
+        "industrial": "res://assets/ui_textures/settlements/mines.png",
+        "port": "res://assets/ui_textures/settlements/c_port.png"
+      }
+    },
+    "african": {
+      "buildings": {},
+      "units": {},
+      "battle": {},
+      "settlements": {
+        "civil": "res://assets/ui_textures/settlements/village.png",
+        "military": "res://assets/ui_textures/settlements/wooden_castle.png",
+        "industrial": "res://assets/ui_textures/settlements/mines.png",
+        "port": "res://assets/ui_textures/settlements/c_port.png"
+      }
+    },
+    "american": {
+      "buildings": {},
+      "units": {},
+      "battle": {},
+      "settlements": {
+        "civil": "res://assets/ui_textures/settlements/village.png",
+        "military": "res://assets/ui_textures/settlements/wooden_castle.png",
+        "industrial": "res://assets/ui_textures/settlements/farms.png",
+        "port": "res://assets/ui_textures/settlements/port.png"
+      }
+    }
+  }
+}
