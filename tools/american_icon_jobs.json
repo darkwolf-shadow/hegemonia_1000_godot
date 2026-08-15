@@ -1,0 +1,322 @@
+[
+  {
+    "id": "buildings_0",
+    "category": "buildings",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game icon, Mesoamerican year 1000, Maya and Toltec style stepped pyramids and stone temples with stucco, jungle setting, bright plumage and feathered motifs, hand-painted limited palette, centered in cell, transparent background, no overlap, no text, building",
+    "cells": [
+      {
+        "id": "centro_cittadino",
+        "desc": "town center with administrative hall, main gate and banner"
+      },
+      {
+        "id": "mercato",
+        "desc": "open-air market with stalls, awnings and goods"
+      },
+      {
+        "id": "monastero",
+        "desc": "religious complex with temple/shrine, courtyard and bell tower"
+      },
+      {
+        "id": "caserma_i",
+        "desc": "small wooden barracks with training yard"
+      },
+      {
+        "id": "caserma_ii",
+        "desc": "medium barracks with watchtower and palisade"
+      },
+      {
+        "id": "caserma_iii",
+        "desc": "large fortress barracks with towers and courtyard"
+      },
+      {
+        "id": "scuderia_i",
+        "desc": "small stables with horses and hay"
+      },
+      {
+        "id": "scuderia_ii",
+        "desc": "medium cavalry stables with hitching posts"
+      },
+      {
+        "id": "scuderia_iii",
+        "desc": "grand horse complex with pavilion and training ring"
+      }
+    ]
+  },
+  {
+    "id": "buildings_1",
+    "category": "buildings",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game icon, Mesoamerican year 1000, Maya and Toltec style stepped pyramids and stone temples with stucco, jungle setting, bright plumage and feathered motifs, hand-painted limited palette, centered in cell, transparent background, no overlap, no text, building",
+    "cells": [
+      {
+        "id": "campo_tiro_i",
+        "desc": "archery range with straw targets"
+      },
+      {
+        "id": "campo_tiro_ii",
+        "desc": "covered archery yard with multiple targets"
+      },
+      {
+        "id": "campo_tiro_iii",
+        "desc": "large archery compound with towers and galleries"
+      },
+      {
+        "id": "officina_assedio_i",
+        "desc": "siege workshop with wooden trebuchet frame"
+      },
+      {
+        "id": "officina_assedio_ii",
+        "desc": "siege yard with catapult and ballista"
+      },
+      {
+        "id": "officina_assedio_iii",
+        "desc": "grand siege arsenal with multiple trebuchets"
+      },
+      {
+        "id": "officina_armi",
+        "desc": "weaponsmith workshop with anvil, polearms and furnace"
+      },
+      {
+        "id": "fucina",
+        "desc": "blacksmith forge with bellows and hammers"
+      },
+      {
+        "id": "arsenale_i",
+        "desc": "small dockside ship shed with oars and ropes"
+      }
+    ]
+  },
+  {
+    "id": "buildings_2",
+    "category": "buildings",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game icon, Mesoamerican year 1000, Maya and Toltec style stepped pyramids and stone temples with stucco, jungle setting, bright plumage and feathered motifs, hand-painted limited palette, centered in cell, transparent background, no overlap, no text, building",
+    "cells": [
+      {
+        "id": "arsenale_ii",
+        "desc": "large naval dockyard with ship sheds and cranes"
+      },
+      {
+        "id": "molo_i",
+        "desc": "simple wooden pier with mooring posts"
+      },
+      {
+        "id": "molo_ii",
+        "desc": "stone quay with cargo and a merchant ship"
+      },
+      {
+        "id": "mercato_marittimo",
+        "desc": "harbor market with stalls and a ship at dock"
+      },
+      {
+        "id": "miniera",
+        "desc": "mine entrance in a hill with cart tracks and ore"
+      },
+      {
+        "id": "segheria",
+        "desc": "sawmill with water wheel and cut planks"
+      },
+      {
+        "id": "capanna_boscaioli",
+        "desc": "woodcutter hut with thatched roof and log piles"
+      },
+      {
+        "id": "mulino",
+        "desc": "water mill with turning wheel and grain sacks"
+      },
+      {
+        "id": "magazzino",
+        "desc": "warehouse with roof, amphorae and crate stacks"
+      }
+    ]
+  },
+  {
+    "id": "buildings_3",
+    "category": "buildings",
+    "rows": 2,
+    "cols": 2,
+    "style": "2.5D isometric medieval strategy game icon, Mesoamerican year 1000, Maya and Toltec style stepped pyramids and stone temples with stucco, jungle setting, bright plumage and feathered motifs, hand-painted limited palette, centered in cell, transparent background, no overlap, no text, building",
+    "cells": [
+      {
+        "id": "cortile_cavaliere",
+        "desc": "cavalry training courtyard with sand and posts"
+      },
+      {
+        "id": "fortezza_frontiera",
+        "desc": "frontier fortress with watchtower and crenellated walls"
+      },
+      {
+        "id": "strade",
+        "desc": "paved road with trees and milestone"
+      },
+      {
+        "id": "",
+        "desc": "blank"
+      }
+    ]
+  },
+  {
+    "id": "ships_0",
+    "category": "ships",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game icon, Mesoamerican year 1000, Maya and Toltec style stepped pyramids and stone temples with stucco, jungle setting, bright plumage and feathered motifs, hand-painted limited palette, centered in cell, transparent background, no overlap, no text, ship or boat",
+    "cells": [
+      {
+        "id": "canoa",
+        "desc": "small canoe with paddles"
+      },
+      {
+        "id": "drakkar",
+        "desc": "long Viking-style warship with shields and sail"
+      },
+      {
+        "id": "dromone",
+        "desc": "Byzantine war galley with ram and oars"
+      },
+      {
+        "id": "galea",
+        "desc": "Mediterranean galley with lateen sail"
+      },
+      {
+        "id": "giunca",
+        "desc": "Asian junk with square sails"
+      },
+      {
+        "id": "nave_guerra",
+        "desc": "heavy war cog with forecastle"
+      },
+      {
+        "id": "nave_guerra_indiana",
+        "desc": "Indian ocean war dhow"
+      },
+      {
+        "id": "tower_ship",
+        "desc": "tower ship with fighting platform"
+      },
+      {
+        "id": "",
+        "desc": "blank"
+      }
+    ]
+  },
+  {
+    "id": "settlements_0",
+    "category": "settlements",
+    "rows": 2,
+    "cols": 2,
+    "style": "2.5D isometric medieval strategy game icon, Mesoamerican year 1000, Maya and Toltec style stepped pyramids and stone temples with stucco, jungle setting, bright plumage and feathered motifs, hand-painted limited palette, centered in cell, transparent background, no overlap, no text, settlement",
+    "cells": [
+      {
+        "id": "civil",
+        "desc": "civilian town cluster with houses and market"
+      },
+      {
+        "id": "military",
+        "desc": "military settlement with barracks and watchtower"
+      },
+      {
+        "id": "industrial",
+        "desc": "industrial settlement with workshops and smoke"
+      },
+      {
+        "id": "port",
+        "desc": "port settlement with jetties and warehouses"
+      }
+    ]
+  },
+  {
+    "id": "units_0",
+    "category": "units",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game icon, Mesoamerican year 1000, Maya and Toltec style stepped pyramids and stone temples with stucco, jungle setting, bright plumage and feathered motifs, hand-painted limited palette, centered in cell, transparent background, no overlap, no text, single figure or small group, no repeated faces, unit",
+    "cells": [
+      {
+        "id": "milizia",
+        "desc": "peasant levy with simple weapon and clothes"
+      },
+      {
+        "id": "fanteria",
+        "desc": "infantry spearman with shield"
+      },
+      {
+        "id": "arcieri",
+        "desc": "archer drawing a bow"
+      },
+      {
+        "id": "cavalleria",
+        "desc": "light cavalry rider with lance"
+      },
+      {
+        "id": "cavalleria_pesante",
+        "desc": "heavy cavalry on armored horse"
+      },
+      {
+        "id": "artiglieria",
+        "desc": "siege crew with a stone-thrower"
+      },
+      {
+        "id": "lancieri",
+        "desc": "pikeman with long spear"
+      },
+      {
+        "id": "fanteria_pesante",
+        "desc": "heavy infantry with axe and mail"
+      },
+      {
+        "id": "balestrieri",
+        "desc": "crossbowman aiming a crossbow"
+      }
+    ]
+  },
+  {
+    "id": "units_1",
+    "category": "units",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game icon, Mesoamerican year 1000, Maya and Toltec style stepped pyramids and stone temples with stucco, jungle setting, bright plumage and feathered motifs, hand-painted limited palette, centered in cell, transparent background, no overlap, no text, single figure or small group, no repeated faces, unit",
+    "cells": [
+      {
+        "id": "arcieri_evoluti",
+        "desc": "veteran archers in loose formation"
+      },
+      {
+        "id": "szekler_infantry",
+        "desc": "medium infantry with curved blade and shield"
+      },
+      {
+        "id": "jaguar_warrior",
+        "desc": "jaguar warrior in pelt and macuahuitl"
+      },
+      {
+        "id": "eagle_warrior",
+        "desc": "eagle warrior with feathered cape and spear"
+      },
+      {
+        "id": "coyote_warrior",
+        "desc": "coyote warrior with obsidian-edged club"
+      },
+      {
+        "id": "otomi_aux",
+        "desc": "Otomi auxiliary with bow and quilted armor"
+      },
+      {
+        "id": "maya_spearmen",
+        "desc": "Maya spearman with long pole and shield"
+      },
+      {
+        "id": "holcan",
+        "desc": "Maya shock warrior with heavy club"
+      },
+      {
+        "id": "atlatl",
+        "desc": "warrior throwing a dart with an atlatl"
+      }
+    ]
+  }
+]
