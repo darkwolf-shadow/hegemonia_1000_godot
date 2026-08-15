@@ -220,7 +220,9 @@ func _draw_map():
 		var polygon = Polygon2D.new()
 		polygon.name = p
 		polygon.polygon = biggest
-		polygon.antialiased = true
+		# No antialiased per province in nebbia (risparmio performance)
+		if fog != "nebbia":
+			polygon.antialiased = true
 
 		# Colore in base a nebbia/mare/fazione
 		if fog == "nebbia":
@@ -236,35 +238,33 @@ func _draw_map():
 				var base_color: Color = Color(hex)
 				polygon.color = Color(base_color.r, base_color.g, base_color.b, 0.85)
 
-		# Disegna anche i poligoni secondari (isole)
-		for i in range(1, scaled_polys.size()):
-			var extra = Polygon2D.new()
-			extra.polygon = scaled_polys[i]
-			extra.antialiased = true
-			extra.color = polygon.color
-			extra.visible = polygon.visible
-			polygon.add_child(extra)
+		# Disegna isole extra solo per province visibili o mezza nebbia
+		if fog != "nebbia":
+			for i in range(1, scaled_polys.size()):
+				var extra = Polygon2D.new()
+				extra.polygon = scaled_polys[i]
+				extra.antialiased = true
+				extra.color = polygon.color
+				polygon.add_child(extra)
 
-		# Bordo
-		var border := Line2D.new()
-		border.points = biggest
-		border.closed = true
-		border.antialiased = true
-		border.joint_mode = Line2D.LINE_JOINT_ROUND
-		if fog == "nebbia":
-			border.width = 0.3
-			border.default_color = Color(0.05, 0.05, 0.08, 0.8)
-		elif fog == "mezza":
-			border.width = 0.3
-			border.default_color = Color(0.08, 0.08, 0.10, 0.8)
-		elif is_sea:
-			border.width = 0.3
-			border.default_color = COL_SEA_BORDER
-		else:
-			border.width = 0.4
-			border.default_color = COL_LAND_BORDER
-		border.z_index = 1
-		polygon.add_child(border)
+		# Bordo solo per province visibili o mezza nebbia (salta nebbia totale)
+		if fog != "nebbia":
+			var border := Line2D.new()
+			border.points = biggest
+			border.closed = true
+			border.antialiased = true
+			border.joint_mode = Line2D.LINE_JOINT_ROUND
+			if fog == "mezza":
+				border.width = 0.3
+				border.default_color = Color(0.08, 0.08, 0.10, 0.8)
+			elif is_sea:
+				border.width = 0.3
+				border.default_color = COL_SEA_BORDER
+			else:
+				border.width = 0.4
+				border.default_color = COL_LAND_BORDER
+			border.z_index = 1
+			polygon.add_child(border)
 
 		map_layer.add_child(polygon)
 		province_nodes[p] = polygon
