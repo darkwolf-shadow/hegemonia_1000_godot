@@ -97,9 +97,8 @@ func _check_province_click():
 		var poly_node: Polygon2D = province_nodes[p]
 		if not poly_node:
 			continue
-		if not poly_node.visible:
-			continue
 		# Controlla tutti i poligoni della provincia (MultiPolygon)
+		# Le province in nebbia sono cliccabili comunque
 		var all_polys: Array = province_all_polygons.get(p, [])
 		for poly in all_polys:
 			if _point_in_polygon(world_pos, poly):
@@ -210,8 +209,7 @@ func _draw_map():
 
 		# Colore in base a nebbia/mare/fazione
 		if fog == "nebbia":
-			polygon.color = COL_FOG_BLACK
-			polygon.visible = false
+			polygon.color = Color(0.02, 0.02, 0.04, 0.92)
 		elif fog == "mezza":
 			polygon.color = COL_FOG_HALF
 		else:
@@ -239,10 +237,11 @@ func _draw_map():
 		border.antialiased = true
 		border.joint_mode = Line2D.LINE_JOINT_ROUND
 		if fog == "nebbia":
-			border.width = 0
-			border.visible = false
+			border.width = 0.3
+			border.default_color = Color(0.05, 0.05, 0.08, 0.8)
 		elif fog == "mezza":
-			border.width = 0
+			border.width = 0.3
+			border.default_color = Color(0.08, 0.08, 0.10, 0.8)
 		elif is_sea:
 			border.width = 0.3
 			border.default_color = COL_SEA_BORDER

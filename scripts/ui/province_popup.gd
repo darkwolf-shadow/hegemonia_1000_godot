@@ -44,7 +44,7 @@ func show_province(province_name: String):
 	else:
 		owner_label.text = owner
 		region_label.text = data.get("region", "N/D")
-		terrain_label.text = data.get("terrain", "N/D")
+		terrain_label.text = _translate_terrain(data.get("terrain", "N/D"))
 		pop_label.text = str(int(data.get("population", 0)))
 		var res = data.get("resources", {})
 		if res is Dictionary and res.size() > 0:
@@ -67,3 +67,46 @@ func _on_enter():
 
 func _on_close():
 	visible = false
+
+
+func _translate_terrain(terrain: String) -> String:
+	# Traduce il tipo di terreno in italiano - Dark Corporation / Stev
+	match terrain.to_lower():
+		"forest", "foresta":
+			return "Foresta"
+		"mountain", "montagna":
+			return "Montagna"
+		"mountains":
+			return "Montagne"
+		"desert", "deserto":
+			return "Deserto"
+		"plains", "pianura":
+			return "Pianura"
+		"coastal", "costiera":
+			return "Costiera"
+		"coast":
+			return "Costa"
+		"tundra":
+			return "Tundra"
+		"hills", "colline":
+			return "Colline"
+		"swamp", "palude":
+			return "Palude"
+		"jungle", "giungla":
+			return "Giungla"
+		"steppe", "steppa":
+			return "Steppa"
+		"savannah", "savana":
+			return "Savana"
+		"river", "fiume":
+			return "Fiume"
+		"industrial":
+			return "Industriale"
+		"military":
+			return "Militare"
+		"port":
+			return "Porto"
+		"generic":
+			return "Generico"
+		_:
+			return terrain

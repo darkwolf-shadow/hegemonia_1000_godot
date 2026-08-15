@@ -39,9 +39,31 @@ func _input(event):
 			_dragging = event.pressed
 		elif event.button_index == MOUSE_BUTTON_RIGHT:
 			_dragging = event.pressed
+		elif event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not _dragging:
+			# Verifica se il click e' su un agglomerato
+			_check_settlement_click()
 	elif event is InputEventMouseMotion and _dragging:
 		var factor: float = 1.0 / territory_view.scale.x
 		territory_view.position += event.relative * factor
+
+
+func _check_settlement_click():
+	# Converti posizione mouse in coordinate del territory_view
+	var mouse_global = get_global_mouse_position()
+	var local_pos = territory_view.get_global_transform_with_canvas() * mouse_global
+	# Cerca agglomerato piu' vicino entro 40 pixel
+	var best_name: String = ""
+	var best_dist: float = 40.0
+	for s_name in settlement_markers.keys():
+		var marker_pos: Vector2 = settlement_markers[s_name]
+		var dist: float = local_pos.distance_to(marker_pos)
+		if dist < best_dist:
+			best_dist = dist
+			best_name = s_name
+	if best_name != "":
+		# Apri la scena dell'agglomerato
+		GameState.state["last_settlement"] = best_name
+		get_tree().change_scene_to_file("res://scenes/settlement_scene.tscn")
 
 
 func _zoom_territory(direction: int):
@@ -64,23 +86,22 @@ func _draw_territory():
 
 	var data = WorldData.get_province(current_province)
 	var geometry = data.get("geometry", {})
-
-	# Sfondo terreno con gradiente colorato in base al terrain type
 	var terrain: String = data.get("terrain", "generic")
 	var terrain_lower: String = terrain.to_lower()
-	var bg_dark: Color = _terrain_color(terrain).darkened(0.3)
-	var bg_light: Color = _terrain_color(terrain).lightened(0.1)
-	for i in range(6):
-		var layer := ColorRect.new()
-		var t: float = float(i) / 6.0
-		layer.color = bg_dark.lerp(bg_light, t)
-		layer.size = Vector2(3000, 500)
-		layer.position = Vector2(-1500, -1500 + i * 500)
-		layer.z_index = -10
-		territory_view.add_child(layer)
 
-	# Aggiungi vegetazione e elementi del terreno
-	_terrain_pattern(terrain)
+	# Sfondo SVG del terreno - copre tutta la vista
+	var svg_path := _terrain_svg_path(terrain_lower)
+	if ResourceLoader.exists(svg_path):
+		var bg_tex = load(svg_path)
+		if bg_tex:
+			var bg_rect := TextureRect.new()
+			bg_rect.texture = bg_tex
+			bg_rect.size = Vector2(2400, 1800)
+			bg_rect.position = Vector2(-1200, -1100)
+			bg_rect.z_index = -10
+			bg_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+			bg_rect.stretch_mode = TextureRect.STRETCH_SCALE
+			territory_view.add_child(bg_rect)
 
 	if not geometry.has("coordinates"):
 		return
@@ -171,6 +192,9 @@ func _draw_territory():
 	# Calcola centro del territorio
 	var poly_center := _polygon_center(scaled_polys[0])
 
+	# Vegetazione e dettagli SOLO dentro il poligono della provincia
+	_terrain_pattern(terrain, scaled_polys)
+
 	# Disegna agglomerati urbani
 	var prov = GameState.state.provinces.get(current_province, {})
 	var settlements = prov.get("settlements", {})
@@ -260,6 +284,43 @@ func _settlement_icon(type_name: String) -> String:
 			return "res://assets/ui_textures/settlements/village.png"
 
 
+func _terrain_svg_path(terrain_lower: String) -> String:
+	# Path allo SVG di sfondo per ogni tipo di terreno
+	match terrain_lower:
+		"forest", "foresta":
+			return "res://assets/backgrounds/1000/forest.svg"
+		"mountain", "montagna", "mountains":
+			return "res://assets/backgrounds/1000/mountains.svg"
+		"desert", "deserto":
+			return "res://assets/backgrounds/1000/desert.svg"
+		"plains", "pianura":
+			return "res://assets/backgrounds/1000/plains.svg"
+		"coastal", "costiera", "coast":
+			return "res://assets/backgrounds/1000/coast.svg"
+		"tundra":
+			return "res://assets/backgrounds/1000/tundra.svg"
+		"hills", "colline":
+			return "res://assets/backgrounds/1000/hills.svg"
+		"swamp", "palude":
+			return "res://assets/backgrounds/1000/swamp.svg"
+		"jungle", "giungla":
+			return "res://assets/backgrounds/1000/jungle.svg"
+		"steppe", "steppa":
+			return "res://assets/backgrounds/1000/steppe.svg"
+		"savannah", "savana":
+			return "res://assets/backgrounds/1000/savannah.svg"
+		"river", "fiume":
+			return "res://assets/backgrounds/1000/river.svg"
+		"industrial", "industriale":
+			return "res://assets/backgrounds/1000/industrial.svg"
+		"military", "militare":
+			return "res://assets/backgrounds/1000/military.svg"
+		"port", "porto":
+			return "res://assets/backgrounds/1000/port.svg"
+		_:
+			return "res://assets/backgrounds/1000/generic.svg"
+
+
 func _terrain_color(terrain: String) -> Color:
 	match terrain:
 		"forest", "foresta":
@@ -309,64 +370,106 @@ func _terrain_ground_color(terrain_lower: String) -> Color:
 			return Color(0.24, 0.32, 0.18, 0.92)
 
 
-func _terrain_pattern(terrain: String):
-	# Disegna vegetazione e elementi del terreno in modo realistico
+func _terrain_pattern(terrain: String, scaled_polys: Array):
+	# Disegna vegetazione e elementi del terreno SOLO dentro il poligono
 	var rng := RandomNumberGenerator.new()
 	rng.seed = hash(current_province)
 	var terrain_lower = terrain.to_lower()
 
+	# Funzione helper: verifica se un punto e' dentro almeno un poligono
+	var check_inside := func(pos: Vector2) -> bool:
+		for poly in scaled_polys:
+			if _point_in_polygon(pos, poly):
+				return true
+		return false
+
 	# Macchie di erba/terreno con variazioni di colore
 	var base_color: Color = _terrain_color(terrain)
-	for i in range(40):
-		var x: float = rng.randf_range(-800, 800)
-		var y: float = rng.randf_range(-800, 800)
+	var attempts: int = 0
+	var placed: int = 0
+	while placed < 25 and attempts < 100:
+		attempts += 1
+		var x: float = rng.randf_range(-400, 400)
+		var y: float = rng.randf_range(-400, 400)
+		var pos := Vector2(x, y)
+		if not check_inside.call(pos):
+			continue
 		var patch := Polygon2D.new()
 		var pts := PackedVector2Array()
-		var radius: float = rng.randf_range(30, 70)
+		var radius: float = rng.randf_range(25, 55)
 		var sides: int = 8
 		for s in range(sides):
 			var angle: float = s * TAU / sides + rng.randf_range(-0.3, 0.3)
 			var r: float = radius * rng.randf_range(0.7, 1.3)
-			pts.append(Vector2(x + cos(angle) * r, y + sin(angle) * r))
+			pts.append(pos + Vector2(cos(angle) * r, sin(angle) * r))
 		patch.polygon = pts
 		var variant: float = rng.randf_range(-0.08, 0.08)
 		patch.color = Color(
 			clamp(base_color.r + variant, 0, 1),
 			clamp(base_color.g + variant, 0, 1),
 			clamp(base_color.b + variant * 0.5, 0, 1),
-			0.6
+			0.5
 		)
-		patch.z_index = -5
+		patch.z_index = -3
 		territory_view.add_child(patch)
+		placed += 1
 
 	# Alberi per foresta, pianura, costiera, generico
 	if terrain_lower in ["forest", "foresta", "plains", "pianura", "coastal", "costiera", "generic", ""]:
-		var tree_count: int = 30 if terrain_lower in ["forest", "foresta"] else 15
-		for i in range(tree_count):
-			var x: float = rng.randf_range(-700, 700)
-			var y: float = rng.randf_range(-700, 700)
-			_draw_tree(Vector2(x, y), rng.randf_range(0.7, 1.4))
+		var tree_target: int = 20 if terrain_lower in ["forest", "foresta"] else 10
+		attempts = 0
+		placed = 0
+		while placed < tree_target and attempts < 80:
+			attempts += 1
+			var x: float = rng.randf_range(-350, 350)
+			var y: float = rng.randf_range(-350, 350)
+			var pos := Vector2(x, y)
+			if not check_inside.call(pos):
+				continue
+			_draw_tree(pos, rng.randf_range(0.6, 1.2))
+			placed += 1
 
 	# Colline per montagna, colline, tundra
 	if terrain_lower in ["mountain", "montagna", "hills", "colline", "tundra"]:
-		for i in range(12):
-			var x: float = rng.randf_range(-600, 600)
-			var y: float = rng.randf_range(-600, 600)
-			_draw_hill(Vector2(x, y), rng.randf_range(40, 80), terrain_lower)
+		attempts = 0
+		placed = 0
+		while placed < 8 and attempts < 60:
+			attempts += 1
+			var x: float = rng.randf_range(-350, 350)
+			var y: float = rng.randf_range(-350, 350)
+			var pos := Vector2(x, y)
+			if not check_inside.call(pos):
+				continue
+			_draw_hill(pos, rng.randf_range(30, 60), terrain_lower)
+			placed += 1
 
 	# Dune per deserto
 	if terrain_lower in ["desert", "deserto"]:
-		for i in range(15):
-			var x: float = rng.randf_range(-700, 700)
-			var y: float = rng.randf_range(-700, 700)
-			_draw_dune(Vector2(x, y), rng)
+		attempts = 0
+		placed = 0
+		while placed < 10 and attempts < 60:
+			attempts += 1
+			var x: float = rng.randf_range(-350, 350)
+			var y: float = rng.randf_range(-350, 350)
+			var pos := Vector2(x, y)
+			if not check_inside.call(pos):
+				continue
+			_draw_dune(pos, rng)
+			placed += 1
 
-	# Roccce per montagna
+	# Rocce per montagna
 	if terrain_lower in ["mountain", "montagna"]:
-		for i in range(8):
-			var x: float = rng.randf_range(-600, 600)
-			var y: float = rng.randf_range(-600, 600)
-			_draw_rock(Vector2(x, y), rng.randf_range(15, 35))
+		attempts = 0
+		placed = 0
+		while placed < 6 and attempts < 50:
+			attempts += 1
+			var x: float = rng.randf_range(-350, 350)
+			var y: float = rng.randf_range(-350, 350)
+			var pos := Vector2(x, y)
+			if not check_inside.call(pos):
+				continue
+			_draw_rock(pos, rng.randf_range(12, 28))
+			placed += 1
 
 
 func _draw_tree(pos: Vector2, scale_factor: float):
@@ -491,6 +594,21 @@ func _polygon_center(points: PackedVector2Array) -> Vector2:
 	return c / max(1, points.size())
 
 
+func _point_in_polygon(point: Vector2, poly: PackedVector2Array) -> bool:
+	if poly.size() < 3:
+		return false
+	var inside := false
+	var j: int = poly.size() - 1
+	for i in range(poly.size()):
+		var pi: Vector2 = poly[i]
+		var pj: Vector2 = poly[j]
+		if ((pi.y > point.y) != (pj.y > point.y)) and \
+		   (point.x < (pj.x - pi.x) * (point.y - pi.y) / (pj.y - pi.y) + pi.x):
+			inside = not inside
+		j = i
+	return inside
+
+
 func _update_settlements():
 	settlements_list.clear()
 	var prov = GameState.state.provinces.get(current_province, {})
@@ -499,7 +617,7 @@ func _update_settlements():
 
 	for s_name in settlements.keys():
 		var s = settlements[s_name]
-		var tipo = s.get("type", "civil")
+		var tipo = _translate_settlement_type(s.get("type", "civil"))
 		var pop = s.get("population", 0)
 		settlements_list.add_item("%s (%s, pop. %d)" % [s_name, tipo, pop])
 
@@ -507,9 +625,89 @@ func _update_settlements():
 	info_label.text = "Proprietario: %s\nRegione: %s\nTerreno: %s\nPopolazione: %d" % [
 		owner,
 		data.get("region", "N/D"),
-		data.get("terrain", "N/D"),
+		_translate_terrain(data.get("terrain", "N/D")),
 		int(data.get("population", 0))
 	]
+
+
+func _translate_terrain(terrain: String) -> String:
+	match terrain.to_lower():
+		"forest":
+			return "Foresta"
+		"foresta":
+			return "Foresta"
+		"mountain":
+			return "Montagna"
+		"montagna":
+			return "Montagna"
+		"mountains":
+			return "Montagne"
+		"desert":
+			return "Deserto"
+		"deserto":
+			return "Deserto"
+		"plains":
+			return "Pianura"
+		"pianura":
+			return "Pianura"
+		"coastal":
+			return "Costiera"
+		"costiera":
+			return "Costiera"
+		"coast":
+			return "Costa"
+		"tundra":
+			return "Tundra"
+		"hills":
+			return "Colline"
+		"colline":
+			return "Colline"
+		"swamp":
+			return "Palude"
+		"palude":
+			return "Palude"
+		"jungle":
+			return "Giungla"
+		"giungla":
+			return "Giungla"
+		"steppe":
+			return "Steppa"
+		"steppa":
+			return "Steppa"
+		"savannah":
+			return "Savana"
+		"savana":
+			return "Savana"
+		"river":
+			return "Fiume"
+		"fiume":
+			return "Fiume"
+		"industrial":
+			return "Industriale"
+		"military":
+			return "Militare"
+		"port":
+			return "Porto"
+		"generic":
+			return "Generico"
+		_:
+			return terrain
+
+
+func _translate_settlement_type(type_name: String) -> String:
+	match type_name.to_lower():
+		"capital":
+			return "Capitale"
+		"military":
+			return "Militare"
+		"port":
+			return "Porto"
+		"industrial":
+			return "Industriale"
+		"civil":
+			return "Civile"
+		_:
+			return type_name
 
 
 func _on_settlement_selected(index: int):
