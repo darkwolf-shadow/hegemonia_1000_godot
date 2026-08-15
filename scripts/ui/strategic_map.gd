@@ -13,6 +13,7 @@ extends Node2D
 var province_nodes := {}
 var province_centers := {}
 var province_all_polygons := {}
+var province_bounds := {}
 var selected_province: String = ""
 var _dragging := false
 var _min_zoom := 0.15
@@ -93,11 +94,13 @@ func _check_province_click():
 	var world_pos: Vector2 = camera.get_global_mouse_position()
 	var best: String = ""
 	var best_area: float = INF
-	var total_provs: int = province_all_polygons.size()
-	var checked: int = 0
-	var hit: int = 0
+	# Pre-filtro con bounding box per velocizzare
 	for p in province_all_polygons.keys():
-		checked += 1
+		var bounds: Rect2 = province_bounds.get(p, Rect2())
+		if bounds.size == Vector2.ZERO:
+			continue
+		if not bounds.has_point(world_pos):
+			continue
 		var all_polys: Array = province_all_polygons[p]
 		for poly in all_polys:
 			if _point_in_polygon(world_pos, poly):
@@ -105,9 +108,7 @@ func _check_province_click():
 				if area < best_area:
 					best_area = area
 					best = p
-				hit += 1
 				break
-	print("Click @ %s | province totali: %d | controllate: %d | hit: %d | trovata: %s" % [str(world_pos), total_provs, checked, hit, best])
 	if best != "":
 		_select_province(best)
 
@@ -144,6 +145,7 @@ func _draw_map():
 	province_nodes.clear()
 	province_centers.clear()
 	province_all_polygons.clear()
+	province_bounds.clear()
 
 	# Calcola bounds
 	var min_x := INF
@@ -190,6 +192,18 @@ func _draw_map():
 
 		# Memorizza per click detection
 		province_all_polygons[p] = scaled_polys
+		# Calcola bounding box per pre-filtro click
+		var b_min_x := INF
+		var b_max_x := -INF
+		var b_min_y := INF
+		var b_max_y := -INF
+		for sp in scaled_polys:
+			for pt in sp:
+				b_min_x = min(b_min_x, pt.x)
+				b_max_x = max(b_max_x, pt.x)
+				b_min_y = min(b_min_y, pt.y)
+				b_max_y = max(b_max_y, pt.y)
+		province_bounds[p] = Rect2(Vector2(b_min_x, b_min_y), Vector2(b_max_x - b_min_x, b_max_y - b_min_y))
 
 		var data = WorldData.get_province(p)
 		var prov = GameState.state.provinces.get(p, {})
@@ -341,12 +355,14 @@ func _select_province(province_name: String):
 	# Evidenzia bordo provincia selezionata
 	if province_nodes.has(province_name):
 		var poly_node: Polygon2D = province_nodes[province_name]
-		if poly_node and poly_node.get_child_count() > 0:
-			var border: Line2D = poly_node.get_child(0)
-			if border is Line2D:
-				border.width = 1.0
-				border.default_color = COL_SELECTED
-				_selected_border = border
+		if poly_node:
+			# Cerca il Line2D tra i figli (non e' sempre il primo)
+			for child in poly_node.get_children():
+				if child is Line2D:
+					child.width = 1.0
+					child.default_color = COL_SELECTED
+					_selected_border = child
+					break
 
 	# Mostra popup
 	province_popup.show_province(province_name)

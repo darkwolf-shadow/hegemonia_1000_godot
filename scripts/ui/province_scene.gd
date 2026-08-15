@@ -49,11 +49,14 @@ func _input(event):
 
 func _check_settlement_click():
 	# Converti posizione mouse in coordinate del territory_view
+	# TerritoryView e' un Node2D a position (480, 350) con scale variabile
 	var mouse_screen = get_viewport().get_mouse_position()
-	var local_pos = territory_view.get_global_transform_with_canvas().affine_inverse() * mouse_screen
+	var tv_pos = territory_view.global_position
+	var tv_scale = territory_view.scale.x
+	var local_pos = (mouse_screen - tv_pos) / tv_scale
 	# Raggio piu' grande per facilitare il click
 	var best_name: String = ""
-	var best_dist: float = 60.0
+	var best_dist: float = 80.0
 	for s_name in settlement_markers.keys():
 		var marker_pos: Vector2 = settlement_markers[s_name]
 		var dist: float = local_pos.distance_to(marker_pos)
@@ -250,8 +253,6 @@ func _draw_settlement_marker(pos: Vector2, name: String, type_name: String, idx:
 	# Icona reale di Medieval 2 in base al tipo
 	var icon_path := _settlement_icon(type_name)
 	var tex = load(icon_path)
-	if tex:
-		tex.filter_clip = true
 	var sprite := Sprite2D.new()
 	sprite.texture = tex
 	sprite.position = pos
