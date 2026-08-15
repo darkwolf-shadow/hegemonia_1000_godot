@@ -31,9 +31,30 @@
       }
     },
     "oriental": {
-      "buildings": {},
-      "units": {},
-      "battle": {}
+      "buildings": {
+        "centro_cittadino": "res://assets/icons/1000/oriental/buildings/centro_cittadino.png",
+        "mercato": "res://assets/icons/1000/oriental/buildings/mercato.png",
+        "monastero": "res://assets/icons/1000/oriental/buildings/monastero.png",
+        "caserma_i": "res://assets/icons/1000/oriental/buildings/caserma_i.png",
+        "scuderia_i": "res://assets/icons/1000/oriental/buildings/scuderia_i.png"
+      },
+      "units": {
+        "fanteria": "res://assets/icons/1000/oriental/units/fanteria.png",
+        "arcieri": "res://assets/icons/1000/oriental/units/arcieri.png",
+        "cavalleria": "res://assets/icons/1000/oriental/units/cavalleria.png",
+        "cavalleria_pesante": "res://assets/icons/1000/oriental/units/cavalleria_pesante.png",
+        "mamluk_cavalry": "res://assets/icons/1000/oriental/units/mamluk_cavalry.png"
+      },
+      "battle": {},
+      "ships": {
+        "dromone": "res://assets/icons/1000/oriental/ships/dromone.png"
+      },
+      "settlements": {
+        "civil": "res://assets/icons/1000/oriental/settlements/civil.png",
+        "military": "res://assets/icons/1000/oriental/settlements/military.png",
+        "port": "res://assets/icons/1000/oriental/settlements/port.png",
+        "industrial": "res://assets/icons/1000/oriental/settlements/industrial.png"
+      }
     },
     "asian": {
       "buildings": {},
