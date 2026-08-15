@@ -48,7 +48,6 @@ func _ready():
 		"res://scenes/settlement_scene.tscn",
 		"res://scenes/province_popup.tscn",
 		"res://scenes/battle_view.tscn",
-		"res://scenes/catalog_scene.tscn",
 	]
 	for path in scenes:
 		var packed = load(path)

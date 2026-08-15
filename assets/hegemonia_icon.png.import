@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caoxaysov0inr"
-path="res://.godot/imported/cibo.svg-9211a2fda545ee7dc82a67e970d09bbe.ctex"
+uid="uid://pf8mttwnqc21"
+path="res://.godot/imported/hegemonia_icon.png-ba46ff9d4ce20692d184e1abe4be7394.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/resources/cibo.svg"
-dest_files=["res://.godot/imported/cibo.svg-9211a2fda545ee7dc82a67e970d09bbe.ctex"]
+source_file="res://assets/hegemonia_icon.png"
+dest_files=["res://.godot/imported/hegemonia_icon.png-ba46ff9d4ce20692d184e1abe4be7394.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

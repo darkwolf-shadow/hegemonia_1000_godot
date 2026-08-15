@@ -82,6 +82,10 @@ func _apply_fog():
 	var half_radius: float = vis_radius * 0.6
 
 	for p in state.provinces.keys():
+		# Le province del giocatore sono SEMPRE visibili
+		if state.provinces[p].get("owner") == player:
+			state.provinces[p]["fog"] = "visibile"
+			continue
 		var data = WorldData.get_province(p)
 		var lat: float = float(data.get("latitude", 0.0))
 		var lon: float = float(data.get("longitude", 0.0))

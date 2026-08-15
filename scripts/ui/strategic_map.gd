@@ -13,6 +13,7 @@ extends Node2D
 var province_nodes := {}
 var province_centers := {}
 var province_all_polygons := {}
+var province_bounds := {}
 var selected_province: String = ""
 var _dragging := false
 var _min_zoom := 0.15
@@ -93,14 +94,14 @@ func _check_province_click():
 	var world_pos: Vector2 = camera.get_global_mouse_position()
 	var best: String = ""
 	var best_area: float = INF
-	for p in province_nodes.keys():
-		var poly_node: Polygon2D = province_nodes[p]
-		if not poly_node:
+	# Pre-filtro con bounding box per velocizzare
+	for p in province_all_polygons.keys():
+		var bounds: Rect2 = province_bounds.get(p, Rect2())
+		if bounds.size == Vector2.ZERO:
 			continue
-		if not poly_node.visible:
+		if not bounds.has_point(world_pos):
 			continue
-		# Controlla tutti i poligoni della provincia (MultiPolygon)
-		var all_polys: Array = province_all_polygons.get(p, [])
+		var all_polys: Array = province_all_polygons[p]
 		for poly in all_polys:
 			if _point_in_polygon(world_pos, poly):
 				var area: float = _polygon_area(poly)
@@ -144,6 +145,7 @@ func _draw_map():
 	province_nodes.clear()
 	province_centers.clear()
 	province_all_polygons.clear()
+	province_bounds.clear()
 
 	# Calcola bounds
 	var min_x := INF
@@ -190,6 +192,18 @@ func _draw_map():
 
 		# Memorizza per click detection
 		province_all_polygons[p] = scaled_polys
+		# Calcola bounding box per pre-filtro click
+		var b_min_x := INF
+		var b_max_x := -INF
+		var b_min_y := INF
+		var b_max_y := -INF
+		for sp in scaled_polys:
+			for pt in sp:
+				b_min_x = min(b_min_x, pt.x)
+				b_max_x = max(b_max_x, pt.x)
+				b_min_y = min(b_min_y, pt.y)
+				b_max_y = max(b_max_y, pt.y)
+		province_bounds[p] = Rect2(Vector2(b_min_x, b_min_y), Vector2(b_max_x - b_min_x, b_max_y - b_min_y))
 
 		var data = WorldData.get_province(p)
 		var prov = GameState.state.provinces.get(p, {})
@@ -206,12 +220,13 @@ func _draw_map():
 		var polygon = Polygon2D.new()
 		polygon.name = p
 		polygon.polygon = biggest
-		polygon.antialiased = true
+		# No antialiased per province in nebbia (risparmio performance)
+		if fog != "nebbia":
+			polygon.antialiased = true
 
 		# Colore in base a nebbia/mare/fazione
 		if fog == "nebbia":
-			polygon.color = COL_FOG_BLACK
-			polygon.visible = false
+			polygon.color = Color(0.02, 0.02, 0.04, 0.92)
 		elif fog == "mezza":
 			polygon.color = COL_FOG_HALF
 		else:
@@ -223,34 +238,33 @@ func _draw_map():
 				var base_color: Color = Color(hex)
 				polygon.color = Color(base_color.r, base_color.g, base_color.b, 0.85)
 
-		# Disegna anche i poligoni secondari (isole)
-		for i in range(1, scaled_polys.size()):
-			var extra = Polygon2D.new()
-			extra.polygon = scaled_polys[i]
-			extra.antialiased = true
-			extra.color = polygon.color
-			extra.visible = polygon.visible
-			polygon.add_child(extra)
+		# Disegna isole extra solo per province visibili o mezza nebbia
+		if fog != "nebbia":
+			for i in range(1, scaled_polys.size()):
+				var extra = Polygon2D.new()
+				extra.polygon = scaled_polys[i]
+				extra.antialiased = true
+				extra.color = polygon.color
+				polygon.add_child(extra)
 
-		# Bordo
-		var border := Line2D.new()
-		border.points = biggest
-		border.closed = true
-		border.antialiased = true
-		border.joint_mode = Line2D.LINE_JOINT_ROUND
-		if fog == "nebbia":
-			border.width = 0
-			border.visible = false
-		elif fog == "mezza":
-			border.width = 0
-		elif is_sea:
-			border.width = 0.3
-			border.default_color = COL_SEA_BORDER
-		else:
-			border.width = 0.4
-			border.default_color = COL_LAND_BORDER
-		border.z_index = 1
-		polygon.add_child(border)
+		# Bordo solo per province visibili o mezza nebbia (salta nebbia totale)
+		if fog != "nebbia":
+			var border := Line2D.new()
+			border.points = biggest
+			border.closed = true
+			border.antialiased = true
+			border.joint_mode = Line2D.LINE_JOINT_ROUND
+			if fog == "mezza":
+				border.width = 0.3
+				border.default_color = Color(0.08, 0.08, 0.10, 0.8)
+			elif is_sea:
+				border.width = 0.3
+				border.default_color = COL_SEA_BORDER
+			else:
+				border.width = 0.4
+				border.default_color = COL_LAND_BORDER
+			border.z_index = 1
+			polygon.add_child(border)
 
 		map_layer.add_child(polygon)
 		province_nodes[p] = polygon
@@ -341,12 +355,14 @@ func _select_province(province_name: String):
 	# Evidenzia bordo provincia selezionata
 	if province_nodes.has(province_name):
 		var poly_node: Polygon2D = province_nodes[province_name]
-		if poly_node and poly_node.get_child_count() > 0:
-			var border: Line2D = poly_node.get_child(0)
-			if border is Line2D:
-				border.width = 1.0
-				border.default_color = COL_SELECTED
-				_selected_border = border
+		if poly_node:
+			# Cerca il Line2D tra i figli (non e' sempre il primo)
+			for child in poly_node.get_children():
+				if child is Line2D:
+					child.width = 1.0
+					child.default_color = COL_SELECTED
+					_selected_border = child
+					break
 
 	# Mostra popup
 	province_popup.show_province(province_name)

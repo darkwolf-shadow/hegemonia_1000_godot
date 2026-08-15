@@ -42,10 +42,13 @@ func show_province(province_name: String):
 		resources_label.text = "???"
 		enter_button.disabled = true
 	else:
-		owner_label.text = owner
-		region_label.text = data.get("region", "N/D")
-		terrain_label.text = data.get("terrain", "N/D")
-		pop_label.text = str(int(data.get("population", 0)))
+		owner_label.text = str(owner)
+		var region_val = data.get("region", "N/D")
+		region_label.text = str(region_val) if region_val != null else "N/D"
+		var terrain_val = data.get("terrain", "N/D")
+		terrain_label.text = _translate_terrain(str(terrain_val) if terrain_val != null else "N/D")
+		var pop_val = data.get("population", 0)
+		pop_label.text = str(int(pop_val)) if pop_val != null else "0"
 		var res = data.get("resources", {})
 		if res is Dictionary and res.size() > 0:
 			var parts: Array = []
@@ -67,3 +70,46 @@ func _on_enter():
 
 func _on_close():
 	visible = false
+
+
+func _translate_terrain(terrain: String) -> String:
+	# Traduce il tipo di terreno in italiano - Dark Corporation / Stev
+	match terrain.to_lower():
+		"forest", "foresta":
+			return "Foresta"
+		"mountain", "montagna":
+			return "Montagna"
+		"mountains":
+			return "Montagne"
+		"desert", "deserto":
+			return "Deserto"
+		"plains", "pianura":
+			return "Pianura"
+		"coastal", "costiera":
+			return "Costiera"
+		"coast":
+			return "Costa"
+		"tundra":
+			return "Tundra"
+		"hills", "colline":
+			return "Colline"
+		"swamp", "palude":
+			return "Palude"
+		"jungle", "giungla":
+			return "Giungla"
+		"steppe", "steppa":
+			return "Steppa"
+		"savannah", "savana":
+			return "Savana"
+		"river", "fiume":
+			return "Fiume"
+		"industrial":
+			return "Industriale"
+		"military":
+			return "Militare"
+		"port":
+			return "Porto"
+		"generic":
+			return "Generico"
+		_:
+			return terrain
