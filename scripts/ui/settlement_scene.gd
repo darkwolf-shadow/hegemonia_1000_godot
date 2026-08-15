@@ -34,6 +34,7 @@ func _open_settlement(province_name: String, settlement_name: String):
 	current_settlement = settlement_name
 	title_label.text = settlement_name
 
+	var region := _get_region(province_name)
 	var prov = GameState.state.provinces.get(province_name, {})
 	var settlements = prov.get("settlements", {})
 
@@ -43,7 +44,8 @@ func _open_settlement(province_name: String, settlement_name: String):
 		buildings_list.clear()
 		for b in s.get("buildings", []):
 			var bdata = WorldData.get_building(b)
-			buildings_list.add_item(bdata.get("name", b))
+			var icon = IconManager.get_building_icon(b, region)
+			buildings_list.add_item(bdata.get("name", b), icon)
 
 		info_label.text = "Tipo: %s\nPopolazione: %d\nEdifici: %d" % [
 			s.get("type", "civil"),
@@ -54,12 +56,18 @@ func _open_settlement(province_name: String, settlement_name: String):
 		# Fallback: mostra info generiche
 		var data = WorldData.get_province(province_name)
 		buildings_list.clear()
-		buildings_list.add_item("Centro urbano")
-		buildings_list.add_item("Mercato")
-		buildings_list.add_item("Caserma")
+		buildings_list.add_item("Centro urbano", IconManager.get_building_icon("centro_cittadino", region))
+		buildings_list.add_item("Mercato", IconManager.get_building_icon("mercato", region))
+		buildings_list.add_item("Caserma", IconManager.get_building_icon("caserma_i", region))
 		info_label.text = "Tipo: civile\nPopolazione: %d\nEdifici: 3 (predefiniti)" % [
 			int(data.get("population", 0))
 		]
+
+
+func _get_region(province_name: String) -> String:
+	var pdata = WorldData.get_province(province_name)
+	var owner = pdata.get("owner", "")
+	return IconManager.region_for_faction(owner)
 
 
 func _on_back():

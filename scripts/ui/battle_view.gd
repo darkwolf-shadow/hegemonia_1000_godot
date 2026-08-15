@@ -69,11 +69,13 @@ func _draw_units():
 			battlefield.add_child(icon)
 
 
-func _make_unit_icon(unit_type: String, color: Color) -> Polygon2D:
-	var p = Polygon2D.new()
-	p.polygon = PackedVector2Array([Vector2(0, -12), Vector2(10, 8), Vector2(-10, 8)])
-	p.color = color
-	return p
+func _make_unit_icon(unit_type: String, color: Color) -> Node2D:
+	var region := IconManager.region_for_faction(BattleSystem.current_battle.get("attacker" if color.b > color.r else "defender", ""))
+	var sprite := Sprite2D.new()
+	sprite.texture = IconManager.get_battle_sprite(unit_type, region)
+	sprite.modulate = color
+	sprite.scale = Vector2(0.35, 0.35)
+	return sprite
 
 
 func _on_next_round():

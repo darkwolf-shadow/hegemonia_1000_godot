@@ -196,10 +196,8 @@ func _draw_territory():
 
 
 func _draw_settlement_marker(pos: Vector2, name: String, type_name: String, idx: int):
-	# Icona reale di Medieval 2 in base al tipo
-	var icon_path := _settlement_icon(type_name)
 	var sprite := Sprite2D.new()
-	sprite.texture = load(icon_path)
+	sprite.texture = IconManager.get_settlement_icon(type_name)
 	sprite.position = pos
 	sprite.scale = Vector2(1.5, 1.5)
 	sprite.z_index = 5
@@ -216,21 +214,6 @@ func _draw_settlement_marker(pos: Vector2, name: String, type_name: String, idx:
 	label.add_theme_constant_override("shadow_offset_y", 1)
 	label.z_index = 6
 	territory_view.add_child(label)
-
-
-func _settlement_icon(type_name: String) -> String:
-	# Icone originali di Medieval 2 Total War
-	match type_name:
-		"capital":
-			return "res://assets/ui_textures/settlements/city.png"
-		"military":
-			return "res://assets/ui_textures/settlements/castle.png"
-		"port":
-			return "res://assets/ui_textures/settlements/port.png"
-		"industrial":
-			return "res://assets/ui_textures/settlements/mines.png"
-		_:
-			return "res://assets/ui_textures/settlements/village.png"
 
 
 func _terrain_color(terrain: String) -> Color:
