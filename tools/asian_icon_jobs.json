@@ -1,0 +1,144 @@
+[
+  {
+    "id": "buildings_0",
+    "category": "buildings",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game building icon, East and Southeast Asian year 1000 aesthetic, curved tiled roofs, wooden pagodas, hand-painted limited palette, centered in cell, transparent background, no overlap, no text",
+    "cells": [
+      {"id": "centro_cittadino", "desc": "Asian town center with curved pagoda roofs, wooden gates and lantern poles"},
+      {"id": "mercato", "desc": "open-air Asian market with stalls, paper lanterns and awnings"},
+      {"id": "monastero", "desc": "Buddhist temple with tiered pagoda roof, stone lantern and torii-style gate"},
+      {"id": "caserma_i", "desc": "small wooden barracks with curved roof and training yard"},
+      {"id": "caserma_ii", "desc": "medium barracks with watchtower and wooden palisade"},
+      {"id": "caserma_iii", "desc": "large fortress barracks with pagoda towers, banners and courtyard"},
+      {"id": "scuderia_i", "desc": "small stables with curved roof, horses and hay stacks"},
+      {"id": "scuderia_ii", "desc": "medium cavalry stables with hitching posts and saddles"},
+      {"id": "scuderia_iii", "desc": "grand horse complex with pavilion, training ring and banners"}
+    ]
+  },
+  {
+    "id": "buildings_1",
+    "category": "buildings",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game building icon, East and Southeast Asian year 1000 aesthetic, curved tiled roofs, wooden and bamboo structures, hand-painted limited palette, centered in cell, transparent background, no overlap, no text",
+    "cells": [
+      {"id": "campo_tiro_i", "desc": "archery range with straw targets under bamboo roof"},
+      {"id": "campo_tiro_ii", "desc": "covered archery yard with multiple targets and banners"},
+      {"id": "campo_tiro_iii", "desc": "large archery compound with towers and galleries"},
+      {"id": "officina_assedio_i", "desc": "siege workshop with wooden trebuchet frame and stone piles"},
+      {"id": "officina_assedio_ii", "desc": "siege yard with catapult and ballista under tiled roof"},
+      {"id": "officina_assedio_iii", "desc": "grand siege arsenal with multiple trebuchets and timber"},
+      {"id": "officina_armi", "desc": "weaponsmith workshop with anvil, polearms, bows and furnace"},
+      {"id": "fucina", "desc": "blacksmith forge with bellows, hammers and stacked metal"},
+      {"id": "arsenale_i", "desc": "small dockside ship shed with oars and rope coils"}
+    ]
+  },
+  {
+    "id": "buildings_2",
+    "category": "buildings",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game building icon, East and Southeast Asian year 1000 aesthetic, curved roofs, bamboo and stone, hand-painted limited palette, centered in cell, transparent background, no overlap, no text",
+    "cells": [
+      {"id": "arsenale_ii", "desc": "large naval dockyard with multiple ship sheds, jetties and cranes"},
+      {"id": "molo_i", "desc": "simple wooden pier with mooring posts and small cargo"},
+      {"id": "molo_ii", "desc": "stone quay with an Asian merchant ship and warehouses"},
+      {"id": "mercato_marittimo", "desc": "harbor market with palm trees, stalls and a junk at dock"},
+      {"id": "miniera", "desc": "mine entrance in forested hill with cart tracks and ore"},
+      {"id": "segheria", "desc": "sawmill with water wheel, bamboo and cut planks"},
+      {"id": "capanna_boscaioli", "desc": "woodcutter hut with thatched roof and log piles"},
+      {"id": "mulino", "desc": "water mill with turning wheel, rice paddies and grain sacks"},
+      {"id": "magazzino", "desc": "warehouse with curved roof, amphorae and crate stacks"}
+    ]
+  },
+  {
+    "id": "buildings_3",
+    "category": "buildings",
+    "rows": 2,
+    "cols": 2,
+    "style": "2.5D isometric medieval strategy game building icon, East and Southeast Asian year 1000 aesthetic, curved tiled roofs, hand-painted limited palette, centered in cell, transparent background, no overlap, no text",
+    "cells": [
+      {"id": "cortile_cavaliere", "desc": "cavalry training courtyard with sand, posts and practice lances"},
+      {"id": "fortezza_frontiera", "desc": "frontier fortress with watchtower and crenellated walls"},
+      {"id": "strade", "desc": "paved stone road with pine trees and milestone"},
+      {"id": "", "desc": "blank"}
+    ]
+  },
+  {
+    "id": "units_0",
+    "category": "units",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game unit icon, East and Southeast Asian year 1000 aesthetic, hand-painted limited palette, single figure or small group centered in cell, transparent background, no overlap, no text, no repeated faces",
+    "cells": [
+      {"id": "fanteria", "desc": "East Asian spearman in conical straw hat and lamellar armor"},
+      {"id": "arcieri", "desc": "Asian archer drawing a composite bow, wearing light robes"},
+      {"id": "cavalleria", "desc": "light Asian cavalry with lance and flowing banner"},
+      {"id": "cavalleria_pesante", "desc": "heavy Asian cavalry in lamellar on barded horse with polearm"},
+      {"id": "lancieri", "desc": "pikeman in light Asian armor with long spear"},
+      {"id": "fanteria_pesante", "desc": "heavy swordsman with large shield and conical helmet"},
+      {"id": "balestrieri", "desc": "crossbowman aiming a heavy crossbow in padded armor"},
+      {"id": "artiglieria", "desc": "crew operating a stone-throwing catapult with wooden frame"},
+      {"id": "arcieri_evoluti", "desc": "veteran Asian archer with recurved bow and ornate quiver"}
+    ]
+  },
+  {
+    "id": "units_1",
+    "category": "units",
+    "rows": 3,
+    "cols": 3,
+    "style": "2.5D isometric medieval strategy game unit icon, East and Southeast Asian year 1000 aesthetic, hand-painted limited palette, single figure or small group centered in cell, transparent background, no overlap, no text, no repeated faces",
+    "cells": [
+      {"id": "milizia", "desc": "peasant levy with rice-pole weapon and simple robes"},
+      {"id": "crossbowmen", "desc": "Chinese-style crossbowmen in line with large repeating crossbows"},
+      {"id": "szekler_infantry", "desc": "steppe-influenced axeman with fur cap and lamellar"},
+      {"id": "khmer_spearmen", "desc": "Khmer spearman with shield, curved helmet and sarong"},
+      {"id": "malay_archers", "desc": "Malay archer with longbow, feathered arrows and light tunic"},
+      {"id": "shenbi_nu", "desc": "soldier crewing a large Chinese crossbow called Shenbi Nu"},
+      {"id": "fire_lance", "desc": "Chinese soldier aiming an early fire-lance with gunpowder tube"},
+      {"id": "liao_lancers", "desc": "Khitan heavy lancer on horse with lamellar and lance"},
+      {"id": "yamato_infantry", "desc": "Japanese foot soldier with yari spear, lamellar and kabuto helmet"}
+    ]
+  },
+  {
+    "id": "units_2",
+    "category": "units",
+    "rows": 2,
+    "cols": 2,
+    "style": "2.5D isometric medieval strategy game unit icon, East and Southeast Asian year 1000 aesthetic, hand-painted limited palette, single figure or small group centered in cell, transparent background, no overlap, no text, no repeated faces",
+    "cells": [
+      {"id": "samurai", "desc": "mounted samurai in ornate armor with bow and katana"},
+      {"id": "khitan_horse_archers", "desc": "Khitan horse archer in fur-lined armor drawing composite bow"},
+      {"id": "khmer_elephants", "desc": "Khmer war elephant with howdah, archers and decorated headgear"},
+      {"id": "war_elephants", "desc": "armored war elephant with tower, spearmen and mahout"}
+    ]
+  },
+  {
+    "id": "ships_0",
+    "category": "ships",
+    "rows": 2,
+    "cols": 2,
+    "style": "2.5D isometric medieval strategy game ship icon, East and Southeast Asian year 1000 aesthetic, hand-painted limited palette, centered in cell, transparent background, no overlap, no text",
+    "cells": [
+      {"id": "canoa", "desc": "small Asian wooden canoe with oars"},
+      {"id": "drakkar", "desc": "dragon-prowed longship with striped sail"},
+      {"id": "dromone", "desc": "dromon-style war galley with triangular sail and ram"},
+      {"id": "galea", "desc": "Mediterranean war galley with oars and square sail"}
+    ]
+  },
+  {
+    "id": "ships_1",
+    "category": "ships",
+    "rows": 2,
+    "cols": 2,
+    "style": "2.5D isometric medieval strategy game ship icon, East and Southeast Asian year 1000 aesthetic, hand-painted limited palette, centered in cell, transparent background, no overlap, no text",
+    "cells": [
+      {"id": "giunca", "desc": "Chinese junk with battened sails and stern castle"},
+      {"id": "nave_guerra", "desc": "heavy Asian war junk with forecastle and square sail"},
+      {"id": "nave_guerra_indiana", "desc": "Indian Ocean dhow with lateen sail and decorated hull"},
+      {"id": "tower_ship", "desc": "Korean-style tower ship with fighting decks and oars"}
+    ]
+  }
+]
