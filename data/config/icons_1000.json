@@ -28,57 +28,107 @@
       "battle": {
         "milizia": "res://assets/icons/1000/european/battle/milizia.png",
         "cavalleria": "res://assets/icons/1000/european/battle/cavalleria.png"
-      },
-      "settlements": {
-        "civil": "res://assets/ui_textures/settlements/town.png",
-        "military": "res://assets/ui_textures/settlements/castle.png",
-        "industrial": "res://assets/ui_textures/settlements/mines.png",
-        "port": "res://assets/ui_textures/settlements/port.png"
       }
     },
     "oriental": {
-      "buildings": {},
-      "units": {},
+      "buildings": {
+        "centro_cittadino": "res://assets/icons/1000/oriental/buildings/centro_cittadino.png",
+        "mercato": "res://assets/icons/1000/oriental/buildings/mercato.png",
+        "monastero": "res://assets/icons/1000/oriental/buildings/monastero.png",
+        "caserma_i": "res://assets/icons/1000/oriental/buildings/caserma_i.png",
+        "scuderia_i": "res://assets/icons/1000/oriental/buildings/scuderia_i.png",
+        "caserma_ii": "res://assets/icons/1000/oriental/buildings/caserma_ii.png",
+        "caserma_iii": "res://assets/icons/1000/oriental/buildings/caserma_iii.png",
+        "scuderia_ii": "res://assets/icons/1000/oriental/buildings/scuderia_ii.png",
+        "scuderia_iii": "res://assets/icons/1000/oriental/buildings/scuderia_iii.png",
+        "campo_tiro_i": "res://assets/icons/1000/oriental/buildings/campo_tiro_i.png",
+        "campo_tiro_ii": "res://assets/icons/1000/oriental/buildings/campo_tiro_ii.png",
+        "campo_tiro_iii": "res://assets/icons/1000/oriental/buildings/campo_tiro_iii.png",
+        "officina_assedio_i": "res://assets/icons/1000/oriental/buildings/officina_assedio_i.png",
+        "officina_assedio_ii": "res://assets/icons/1000/oriental/buildings/officina_assedio_ii.png",
+        "officina_assedio_iii": "res://assets/icons/1000/oriental/buildings/officina_assedio_iii.png",
+        "officina_armi": "res://assets/icons/1000/oriental/buildings/officina_armi.png",
+        "fucina": "res://assets/icons/1000/oriental/buildings/fucina.png",
+        "arsenale_i": "res://assets/icons/1000/oriental/buildings/arsenale_i.png",
+        "arsenale_ii": "res://assets/icons/1000/oriental/buildings/arsenale_ii.png",
+        "molo_i": "res://assets/icons/1000/oriental/buildings/molo_i.png",
+        "molo_ii": "res://assets/icons/1000/oriental/buildings/molo_ii.png",
+        "mercato_marittimo": "res://assets/icons/1000/oriental/buildings/mercato_marittimo.png",
+        "miniera": "res://assets/icons/1000/oriental/buildings/miniera.png",
+        "segheria": "res://assets/icons/1000/oriental/buildings/segheria.png",
+        "capanna_boscaioli": "res://assets/icons/1000/oriental/buildings/capanna_boscaioli.png",
+        "mulino": "res://assets/icons/1000/oriental/buildings/mulino.png",
+        "magazzino": "res://assets/icons/1000/oriental/buildings/magazzino.png",
+        "cortile_cavaliere": "res://assets/icons/1000/oriental/buildings/cortile_cavaliere.png",
+        "fortezza_frontiera": "res://assets/icons/1000/oriental/buildings/fortezza_frontiera.png",
+        "strade": "res://assets/icons/1000/oriental/buildings/strade.png"
+      },
+      "units": {
+        "fanteria": "res://assets/icons/1000/oriental/units/fanteria.png",
+        "arcieri": "res://assets/icons/1000/oriental/units/arcieri.png",
+        "cavalleria": "res://assets/icons/1000/oriental/units/cavalleria.png",
+        "cavalleria_pesante": "res://assets/icons/1000/oriental/units/cavalleria_pesante.png",
+        "mamluk_cavalry": "res://assets/icons/1000/oriental/units/mamluk_cavalry.png",
+        "lancieri": "res://assets/icons/1000/oriental/units/lancieri.png",
+        "fanteria_pesante": "res://assets/icons/1000/oriental/units/fanteria_pesante.png",
+        "balestrieri": "res://assets/icons/1000/oriental/units/balestrieri.png",
+        "artiglieria": "res://assets/icons/1000/oriental/units/artiglieria.png",
+        "arcieri_evoluti": "res://assets/icons/1000/oriental/units/arcieri_evoluti.png",
+        "milizia": "res://assets/icons/1000/oriental/units/milizia.png",
+        "milites": "res://assets/icons/1000/oriental/units/milites.png",
+        "szekler_infantry": "res://assets/icons/1000/oriental/units/szekler_infantry.png",
+        "sudanese_spearmen": "res://assets/icons/1000/oriental/units/sudanese_spearmen.png",
+        "jinete": "res://assets/icons/1000/oriental/units/jinete.png",
+        "black_guard": "res://assets/icons/1000/oriental/units/black_guard.png",
+        "toxotai": "res://assets/icons/1000/oriental/units/toxotai.png",
+        "ghilman": "res://assets/icons/1000/oriental/units/ghilman.png",
+        "ghulam_cavalry": "res://assets/icons/1000/oriental/units/ghulam_cavalry.png",
+        "turkish_horse_archers": "res://assets/icons/1000/oriental/units/turkish_horse_archers.png",
+        "cataphractoi": "res://assets/icons/1000/oriental/units/cataphractoi.png",
+        "varangian_guard": "res://assets/icons/1000/oriental/units/varangian_guard.png",
+        "varangian_mercenaries": "res://assets/icons/1000/oriental/units/varangian_mercenaries.png",
+        "afghan_infantry": "res://assets/icons/1000/oriental/units/afghan_infantry.png",
+        "armenian_archers": "res://assets/icons/1000/oriental/units/armenian_archers.png",
+        "daylami_infantry": "res://assets/icons/1000/oriental/units/daylami_infantry.png",
+        "war_elephants": "res://assets/icons/1000/oriental/units/war_elephants.png"
+      },
       "battle": {},
+      "ships": {
+        "dromone": "res://assets/icons/1000/oriental/ships/dromone.png",
+        "canoa": "res://assets/icons/1000/oriental/ships/canoa.png",
+        "drakkar": "res://assets/icons/1000/oriental/ships/drakkar.png",
+        "galea": "res://assets/icons/1000/oriental/ships/galea.png",
+        "giunca": "res://assets/icons/1000/oriental/ships/giunca.png",
+        "nave_guerra": "res://assets/icons/1000/oriental/ships/nave_guerra.png",
+        "nave_guerra_indiana": "res://assets/icons/1000/oriental/ships/nave_guerra_indiana.png",
+        "tower_ship": "res://assets/icons/1000/oriental/ships/tower_ship.png"
+      },
       "settlements": {
-        "civil": "res://assets/ui_textures/settlements/town.png",
-        "military": "res://assets/ui_textures/settlements/citadel.png",
-        "industrial": "res://assets/ui_textures/settlements/mines.png",
-        "port": "res://assets/ui_textures/settlements/port.png"
+        "civil": "res://assets/icons/1000/oriental/settlements/civil.png",
+        "military": "res://assets/icons/1000/oriental/settlements/military.png",
+        "port": "res://assets/icons/1000/oriental/settlements/port.png",
+        "industrial": "res://assets/icons/1000/oriental/settlements/industrial.png"
       }
     },
     "asian": {
       "buildings": {},
       "units": {},
-      "battle": {},
-      "settlements": {
-        "civil": "res://assets/ui_textures/settlements/town.png",
-        "military": "res://assets/ui_textures/settlements/citadel.png",
-        "industrial": "res://assets/ui_textures/settlements/mines.png",
-        "port": "res://assets/ui_textures/settlements/c_port.png"
-      }
+      "battle": {}
+    },
+    "indian": {
+      "buildings": {},
+      "units": {},
+      "battle": {}
     },
     "african": {
       "buildings": {},
       "units": {},
-      "battle": {},
-      "settlements": {
-        "civil": "res://assets/ui_textures/settlements/village.png",
-        "military": "res://assets/ui_textures/settlements/wooden_castle.png",
-        "industrial": "res://assets/ui_textures/settlements/mines.png",
-        "port": "res://assets/ui_textures/settlements/c_port.png"
-      }
+      "battle": {}
     },
     "american": {
       "buildings": {},
       "units": {},
-      "battle": {},
-      "settlements": {
-        "civil": "res://assets/ui_textures/settlements/village.png",
-        "military": "res://assets/ui_textures/settlements/wooden_castle.png",
-        "industrial": "res://assets/ui_textures/settlements/farms.png",
-        "port": "res://assets/ui_textures/settlements/port.png"
-      }
+      "battle": {}
     }
   }
 }
