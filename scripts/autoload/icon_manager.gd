@@ -50,7 +50,10 @@ func get_unit_icon(unit_id: String, region: String = "european") -> Texture2D:
 
 
 func get_battle_sprite(unit_id: String, region: String = "european") -> Texture2D:
-	return _get_icon("battle", unit_id, region)
+	var path := _resolve_path("battle", unit_id, region)
+	if not path.is_empty() and ResourceLoader.exists(path):
+		return _get_icon("battle", unit_id, region)
+	return get_unit_icon(unit_id, region)
 
 
 func get_settlement_icon(settlement_type: String, region: String = "european") -> Texture2D:
