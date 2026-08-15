@@ -38,7 +38,27 @@ func _ready():
 		print("UI children: ", ui.get_children().map(func(n): return n.name))
 	remove_child(scene)
 	scene.queue_free()
-	print("Scene load ok")
+	print("Strategic map scene load ok")
+
+	print("Other scene load test")
+	GameState.state["last_province"] = "Kalimantan Timur"
+	var scenes = [
+		"res://scenes/main_menu.tscn",
+		"res://scenes/province_scene.tscn",
+		"res://scenes/settlement_scene.tscn",
+		"res://scenes/province_popup.tscn",
+		"res://scenes/battle_view.tscn",
+	]
+	for path in scenes:
+		var packed = load(path)
+		var inst = packed.instantiate()
+		add_child(inst)
+		await get_tree().process_frame
+		if inst.has_method("show_province"):
+			inst.show_province("Kalimantan Timur")
+		remove_child(inst)
+		inst.queue_free()
+		print(path, " ok")
 
 	print("ALL TESTS PASSED")
 	get_tree().quit()
