@@ -85,6 +85,11 @@ func apply_parchment_theme(node: Control, font_color: Color = Color(0.18, 0.12, 
 		node.add_theme_color_override("font_shadow_color", Color(1.0, 1.0, 0.9, 0.35))
 		node.add_theme_constant_override("shadow_offset_x", 1)
 		node.add_theme_constant_override("shadow_offset_y", 1)
+	elif node is RichTextLabel:
+		node.add_theme_color_override("default_color", font_color)
+		node.add_theme_color_override("font_shadow_color", Color(1.0, 1.0, 0.9, 0.35))
+		node.add_theme_constant_override("shadow_offset_x", 1)
+		node.add_theme_constant_override("shadow_offset_y", 1)
 	elif node is ItemList:
 		node.add_theme_stylebox_override("panel", parchment_stylebox(Color(0.78, 0.68, 0.54, 0.92)))
 		node.add_theme_color_override("font_color", font_color)
@@ -96,6 +101,25 @@ func apply_parchment_theme(node: Control, font_color: Color = Color(0.18, 0.12, 
 		node.add_theme_stylebox_override("normal", parchment_stylebox(Color(0.78, 0.68, 0.54, 0.92)))
 	elif node is Button:
 		style_button(node)
+	elif node is ProgressBar:
+		node.add_theme_stylebox_override("background", parchment_stylebox(Color(0.65, 0.55, 0.42, 0.85)))
+		var fill := button_stylebox(Color(0.55, 0.42, 0.26))
+		fill.border_color = Color(0.35, 0.25, 0.15)
+		node.add_theme_stylebox_override("fill", fill)
+		node.add_theme_color_override("font_color", Color(0.95, 0.90, 0.80))
+	elif node is CheckBox:
+		node.add_theme_color_override("font_color", font_color)
+		node.add_theme_color_override("font_hover_color", font_color.lightened(0.15))
+		node.add_theme_color_override("font_pressed_color", font_color.darkened(0.10))
+	elif node is TabContainer:
+		node.add_theme_stylebox_override("panel", parchment_stylebox(Color(0.80, 0.70, 0.56, 0.95)))
+		node.add_theme_stylebox_override("tab_selected", button_stylebox(Color(0.55, 0.42, 0.28)))
+		node.add_theme_stylebox_override("tab_unselected", parchment_stylebox(Color(0.76, 0.66, 0.52, 0.92)))
+		node.add_theme_stylebox_override("tab_disabled", parchment_stylebox(Color(0.60, 0.52, 0.40, 0.60)))
+		node.add_theme_color_override("font_selected_color", Color(0.95, 0.90, 0.80))
+		node.add_theme_color_override("font_unselected_color", font_color)
+	elif node is Panel:
+		node.add_theme_stylebox_override("panel", parchment_stylebox(Color(0.82, 0.72, 0.58, 0.97)))
 	for child in node.get_children():
 		if child is Control:
 			apply_parchment_theme(child, font_color)

@@ -8,6 +8,9 @@ extends Control
 @onready var info_label: Label = $Panel/Info
 @onready var back_button: Button = $Panel/BackButton
 @onready var enter_button: Button = $Panel/EnterButton
+@onready var panel: Panel = $Panel
+@onready var parchment_bg: TextureRect = $Panel/ParchmentBG
+@onready var bg: ColorRect = $BG
 
 var current_province: String = ""
 var settlement_markers: Dictionary = {}
@@ -17,6 +20,11 @@ var _max_zoom := 5.0
 
 
 func _ready():
+	bg.color = Color(0.82, 0.72, 0.58)
+	panel.add_theme_stylebox_override("panel", UiHelper.parchment_stylebox(Color(0.82, 0.72, 0.58, 0.97)))
+	parchment_bg.texture = UiHelper.create_parchment_texture(512, 512)
+	parchment_bg.modulate = Color(1.0, 1.0, 1.0, 1.0)
+	UiHelper.apply_parchment_theme(panel)
 	back_button.pressed.connect(_on_back)
 	enter_button.pressed.connect(_on_enter_settlement)
 	settlements_list.item_selected.connect(_on_settlement_selected)

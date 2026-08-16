@@ -377,6 +377,16 @@ func _show_end_panel(winner: String):
 
 
 func _setup_ui():
+	var top_bar_bg := Panel.new()
+	top_bar_bg.set_anchors_preset(Control.PRESET_TOP_WIDE)
+	top_bar_bg.offset_left = 8.0
+	top_bar_bg.offset_top = 8.0
+	top_bar_bg.offset_right = -8.0
+	top_bar_bg.offset_bottom = 72.0
+	top_bar_bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	top_bar_bg.add_theme_stylebox_override("panel", UiHelper.parchment_stylebox(Color(0.78, 0.68, 0.54, 0.95)))
+	add_child(top_bar_bg)
+
 	_top_bar = HBoxContainer.new()
 	_top_bar.alignment = BoxContainer.ALIGNMENT_CENTER
 	_top_bar.set_anchors_preset(Control.PRESET_TOP_WIDE)
@@ -386,6 +396,7 @@ func _setup_ui():
 	_top_bar.offset_bottom = 60.0
 	_top_bar.add_theme_constant_override("separation", 12)
 	add_child(_top_bar)
+	UiHelper.apply_parchment_theme(_top_bar)
 
 	_phase_label = Label.new()
 	_phase_label.text = "Fase di Posizionamento"
@@ -430,6 +441,7 @@ func _setup_ui():
 	_bottom_panel.offset_right = -20.0
 	_bottom_panel.offset_bottom = -20.0
 	_bottom_panel.visible = false
+	_bottom_panel.add_theme_stylebox_override("panel", UiHelper.parchment_stylebox(Color(0.82, 0.72, 0.58, 0.97)))
 	add_child(_bottom_panel)
 
 	var bottom_hbox := HBoxContainer.new()
@@ -487,6 +499,7 @@ func _setup_ui():
 	_end_panel.set_anchors_preset(Control.PRESET_CENTER)
 	_end_panel.custom_minimum_size = Vector2(400, 200)
 	_end_panel.visible = false
+	_end_panel.add_theme_stylebox_override("panel", UiHelper.parchment_stylebox(Color(0.82, 0.72, 0.58, 0.98)))
 	add_child(_end_panel)
 
 	var end_vbox := VBoxContainer.new()
@@ -509,6 +522,9 @@ func _setup_ui():
 	end_return.text = "Torna alla Mappa"
 	end_return.pressed.connect(_on_return)
 	end_vbox.add_child(end_return)
+
+	UiHelper.apply_parchment_theme(_bottom_panel)
+	UiHelper.apply_parchment_theme(_end_panel)
 
 
 func _update_top_bar():

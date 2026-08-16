@@ -3,12 +3,15 @@ extends Control
 @onready var tab_container: TabContainer = $TabContainer
 @onready var back_button: Button = $BackButton
 @onready var region_select: OptionButton = $RegionSelect
+@onready var background: ColorRect = $ColorRect
 
 var _icon_size := Vector2(64, 64)
 var _regions := ["", "european", "oriental", "asian", "indian", "african", "american"]
 var _region_labels := ["Automatica", "Europea", "Orientale", "Asiatica", "Indiana", "Africana", "Americana"]
 
 func _ready():
+	background.color = Color(0.82, 0.72, 0.58)
+	UiHelper.apply_parchment_theme(self)
 	back_button.pressed.connect(_on_back)
 	for label in _region_labels:
 		region_select.add_item(label)
@@ -62,7 +65,7 @@ func _add_list_tab(title: String, ids: Array, category: String, region: String):
 		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		icon.custom_minimum_size = _icon_size
 		icon.size = _icon_size
-		icon.texture = _get_icon(category, id, region)
+		icon.texture = _get_icon_masked(category, id, region)
 
 		var label := Label.new()
 		label.text = _get_name(category, id)
@@ -107,6 +110,22 @@ func _get_icon(category: String, id: String, region: String) -> Texture2D:
 			return IconManager.get_resource_icon(id, region)
 		"settlement":
 			return IconManager.get_settlement_icon(id, region)
+		_:
+			return null
+
+
+func _get_icon_masked(category: String, id: String, region: String) -> Texture2D:
+	match category:
+		"building":
+			return IconManager.get_building_icon_masked(id, region)
+		"unit":
+			return IconManager.get_unit_icon_masked(id, region)
+		"ship":
+			return IconManager.get_ship_icon_masked(id, region) if IconManager.has_method("get_ship_icon_masked") else IconManager.get_ship_icon(id, region)
+		"resource":
+			return IconManager.get_resource_icon_masked(id, region) if IconManager.has_method("get_resource_icon_masked") else IconManager.get_resource_icon(id, region)
+		"settlement":
+			return IconManager.get_settlement_icon_masked(id, region)
 		_:
 			return null
 

@@ -6,11 +6,14 @@ extends Control
 @onready var catalog_button := $VBoxContainer/CatalogButton
 @onready var exit_button := $VBoxContainer/ExitButton
 @onready var vbox := $VBoxContainer
+@onready var background := $ColorRect
 
 var _side_option: OptionButton
 
 
 func _ready():
+	background.color = Color(0.82, 0.72, 0.58)
+	UiHelper.apply_parchment_theme(self)
 	start_button.pressed.connect(_on_start)
 	load_button.pressed.connect(_on_load)
 	catalog_button.pressed.connect(_on_catalog)

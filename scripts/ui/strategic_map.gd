@@ -4,6 +4,8 @@ extends Node2D
 
 @onready var map_layer := $MapLayer
 @onready var camera := $Camera2D
+@onready var top_bar := $CanvasLayer/UI/TopBar
+@onready var event_log := $CanvasLayer/UI/EventLog
 @onready var turn_label := $CanvasLayer/UI/TopBar/TurnLabel
 @onready var end_turn_button := $CanvasLayer/UI/TopBar/EndTurnButton
 @onready var province_popup = $CanvasLayer/UI/ProvincePopup
@@ -31,6 +33,10 @@ const COL_SELECTED := Color(1.0, 1.0, 0.3, 1.0)
 
 
 func _ready():
+	top_bar.add_theme_stylebox_override("panel", UiHelper.parchment_stylebox(Color(0.78, 0.68, 0.54, 0.95)))
+	event_log.add_theme_stylebox_override("panel", UiHelper.parchment_stylebox(Color(0.78, 0.68, 0.54, 0.92)))
+	UiHelper.apply_parchment_theme(top_bar)
+	UiHelper.apply_parchment_theme(event_log)
 	end_turn_button.pressed.connect(_on_end_turn)
 	province_popup.enter_province.connect(_on_enter_province)
 	_draw_map()

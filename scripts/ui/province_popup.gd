@@ -5,6 +5,7 @@ extends Control
 signal enter_province(province_name: String)
 
 @onready var panel: Panel = $Panel
+@onready var parchment_bg: TextureRect = $Panel/ParchmentBG
 @onready var title_label: Label = $Panel/Title
 @onready var info_label: Label = $Panel/Info
 @onready var enter_button: Button = $Panel/EnterButton
@@ -19,6 +20,10 @@ var current_province: String = ""
 
 
 func _ready():
+	panel.add_theme_stylebox_override("panel", UiHelper.parchment_stylebox(Color(0.82, 0.72, 0.58, 0.97)))
+	parchment_bg.texture = UiHelper.create_parchment_texture(512, 512)
+	parchment_bg.modulate = Color(1.0, 1.0, 1.0, 1.0)
+	UiHelper.apply_parchment_theme(panel)
 	enter_button.pressed.connect(_on_enter)
 	close_button.pressed.connect(_on_close)
 	visible = false
