@@ -375,48 +375,6 @@ func _terrain_svg_path(terrain_lower: String) -> String:
 			return "res://assets/backgrounds/1000/generic.svg"
 
 
-func _png_background_name(terrain_lower: String) -> String:
-	if terrain_lower in ["forest", "foresta", "jungle", "giungla", "swamp", "palude"]:
-		return "forest"
-	if terrain_lower in ["mountain", "montagna", "mountains", "hills", "colline", "tundra"]:
-		return "mountains"
-	if terrain_lower in ["desert", "deserto", "savannah", "savana", "steppe", "steppa"]:
-		return "desert"
-	return "plains"
-
-func _has_strade(settlement: Dictionary) -> bool:
-	if settlement is Dictionary:
-		return "strade" in settlement.get("buildings", [])
-	return false
-
-func _draw_road(a: Vector2, b: Vector2, stone: bool):
-	var base_color := Color(0.35, 0.28, 0.18, 0.7)
-	var inner_color := Color(0.55, 0.45, 0.28, 0.8)
-	var width := 5.0
-	var inner_width := 2.5
-	if stone:
-		base_color = Color(0.45, 0.45, 0.48, 0.8)
-		inner_color = Color(0.70, 0.70, 0.74, 0.85)
-		width = 6.0
-		inner_width = 3.0
-	var road_base := Line2D.new()
-	road_base.add_point(a)
-	road_base.add_point(b)
-	road_base.width = width
-	road_base.default_color = base_color
-	road_base.antialiased = true
-	road_base.joint_mode = Line2D.LINE_JOINT_ROUND
-	territory_view.add_child(road_base)
-
-	var road_inner := Line2D.new()
-	road_inner.add_point(a)
-	road_inner.add_point(b)
-	road_inner.width = inner_width
-	road_inner.default_color = inner_color
-	road_inner.antialiased = true
-	road_inner.joint_mode = Line2D.LINE_JOINT_ROUND
-	territory_view.add_child(road_inner)
-
 func _terrain_color(terrain: String) -> Color:
 	match terrain:
 		"forest", "foresta":

@@ -1,0 +1,183 @@
+PROPOSTA SISTEMA DI BATTAGLIA IN TEMPO REALE 2.5D
+Hegemonia 1000 – Godot 4.3 / GDScript
+
+1. COSA MANCA ORA
+La battaglia attuale è a round: il giocatore sceglie una tattica,
+clicca "Prossimo round" e il sistema calcola i danni per entrambi
+i lati. Gli sprite si muovono solo come animazione decorativa.
+Manca:
+- controllo diretto delle singole unità o gruppi;
+- un campo di battaglia con sfondo del bioma della provincia;
+- fase di posizionamento pre-battaglia;
+- tempo reale con possibilità di pausa per dare ordini;
+- IA avversaria che reagisce in tempo reale.
+
+2. OBIETTIVO
+Trasformare la scena `battle_view.tscn` in una battaglia tattica
+2.5D in tempo reale:
+- il giocatore posiziona le sue unità prima dello scontro;
+- durante la battaglia può selezionare unità, dare ordini di
+  movimento, attacco, fermo, ritirata;
+- il tempo scorre in continuazione, ma si può mettere in pausa;
+- l'IA avversaria obbedisce alla tattica scelta in fase pre-battaglia
+  e adatta il comportamento in base alla situazione.
+
+3. SFONDO DEL CAMPO DI BATTAGLIA
+Il fondale riusa gli sfondi per bioma già creati:
+- `assets/backgrounds/1000/png/plains.png`
+- `assets/backgrounds/1000/png/forest.png`
+- `assets/backgrounds/1000/png/mountains.png`
+- `assets/backgrounds/1000/png/desert.png`
+La provincia passa il proprio terreno a `BattleSystem`, che sceglie
+il PNG corretto. Se non esiste, fallback su `generic.svg`.
+
+4. FASE DI POSIZIONAMENTO PRE-BATTAGLIA
+4.1 All'apertura della scena:
+- l'attaccante dispone le unità nella zona di sinistra (x < -150);
+- il difensore dispone le unità nella zona di destra (x > 150);
+- il giocatore umano trascina i gruppi di unità con il mouse;
+- l'IA posiziona i suoi gruppi automaticamente in base alla
+  tattica scelta.
+4.2 Gruppi di unità:
+- ogni "slot" rappresenta fino a 10 unità visive (una icona per
+  ogni 10 unità reali);
+- le icone sono gli sprite regionali già presenti
+  (`IconManager.get_battle_sprite`);
+- i tipi di unità con la stessa icona si raggruppano.
+4.3 Tattica pre-battaglia:
+- il giocatore sceglie la tattica generale dal menu a tendina
+  (standard, charge, skirmish, shield_wall, elephant_charge, hold);
+- l'IA sceglie la sua con `AIController.choose_battle_tactic`;
+- la tattica influenza posizionamento iniziale, obiettivi e bonus.
+
+5. TEMPO DI GIOCO
+5.1 Modalità normale
+- la battaglia avanza frame per frame in `_process(delta)`;
+- le unità si muovono, inseguono, sparano, caricano;
+- il morale scende se subiscono perdite o vedono alleati fuggire.
+5.2 Pausa tattica
+- premendo SPAZIO o un pulsante "Pausa" il tempo si ferma;
+- il giocatore può cliccare unità e dare ordini;
+- la pausa dura finché il giocatore non preme di nuovo SPAZIO;
+- si può limitare la pausa (es. massimo 5 secondi ogni 10 secondi)
+  per evitare che la battaglia diventi troppo lenta.
+
+6. COMANDI DEL GIOCATORE
+Clic sinistro su un gruppo: selezione.
+Con gruppo selezionato:
+- clic destro su terreno: muovi in quel punto;
+- clic destro su nemico: attacca quel nemico;
+- tasto H: tieni posizione;
+- tasto R: ritirata verso il bordo della mappa;
+- tasto C (solo cavalleria/elefanti): carica verso il bersaglio;
+- tasto S (solo arcieri/balestrieri): mantieni distanza e spara.
+
+7. COMPORTAMENTO DELLE UNITÀ
+7.1 Ruoli
+- Fanteria: media velocità, buona difesa, corto raggio.
+- Arcieri/balestrieri: lenti, attacco a distanza, debole in mischia.
+- Cavalleria: veloce, buona carica, debole se ferma contro lance.
+- Elefanti: lenti, molta salute/danno, possono spaventarsi.
+- Artiglieria: molto lenta, danno a distanza, debole in mischia.
+7.2 Movimento base
+- ogni gruppo ha `unit_speed` preso dalle statistiche (`speed`);
+- il movimento usa `lerp` o `move_toward` verso `target_pos`;
+- gli arcieri cercano di mantenere una distanza di tiro ottimale;
+- la cavalleria accelera se ha bersaglio a distanza di carica.
+7.3 Attacco
+- ogni gruppo ha un cooldown (`attack_speed`) calcolato da `attack`;
+- il danno è: `attacco * bonus_tattica - difesa_bersaglio *
+  armatura_bersaglio * f_morale`;
+- se il bersaglio è un arciero in mischia, subisce danno maggiore;
+- se la cavalleria carica fanteria ferma, danno extra;
+- se elefanti vengono colpiti da arcieri incendiarili, possono
+  impazzire (chance basata su morale).
+7.4 Morale ed esperienza
+- morale iniziale = `base_morale` modificato da tattica e terreno;
+- esperienza accumulata durante la battaglia aumenta attacco e
+  difesa leggermente;
+- morale scende per perdite, comandante morto, carica nemica,
+  alleati in ritirata;
+- se morale < 30 il gruppo entra in "rotta" e fugge verso il bordo;
+- se morale < 0 l'intero esercito si ritira e la battaglia finisce.
+
+8. TATTICHE: BONUS E MALUS
+standard:
+  + nessun bonus/malus.
+charge:
+  + attacco +25% per cavalleria ed elefanti;
+  + velocità +30% per cavalleria ed elefanti;
+  + morale attaccante +10 all'inizio;
+  - difesa -15% per le unità in carica;
+  - se fermati da lancieri con `shield_wall`, danno doppio sui caricatori.
+skirmish:
+  + arcieri/balestrieri: raggio +20%, danno a distanza +15%;
+  + cavalleria leggera: può attaccare e ritirarsi;
+  - fanteria isolata: -10% difesa.
+shield_wall:
+  + difesa +30%, morale più stabile;
+  - velocità -40%;
+  - non può inseguire nemici in ritirata.
+elephant_charge:
+  + attacco +40%, danno area contro fanteria leggera;
+  + morale nemico -15 all'impatto;
+  - se elefanti perdono >30% salute, chance di panico.
+hold:
+  + difesa +20%, bonus terreno se in collina/foresta;
+  - nessun bonus offensivo;
+  - le unità non si muovono fino a nuovo ordine.
+
+9. IA AVVERSARIA
+9.1 Macro-tattica
+L'IA sceglie una tattica prima della battaglia usando i dati
+complessi (composizione, morale, numero, terreno). La scelta
+permane per tutta la battaglia, ma può cambiare se:
+- perde più del 30% delle truppe;
+- il comandante cade;
+- il giocatore cambia drasticamente posizione (es. carica improvvisa).
+9.2 Comportamento micro
+Per ogni gruppo avversario l'IA decide un obiettivo:
+- priorità massima: nemici vulnerabili (arcieri, artiglieria);
+- se `skirmish`, cavalleria e arcieri mantengono distanza;
+- se `charge`, cavalleria cerca il centro nemico;
+- se `shield_wall`, fanteria avanza lentamente e attende;
+- se in ritirata, torna verso il bordo se morale basso.
+
+10. STRUTTURA TECNICA PROPOSTA
+10.1 Classi
+- `BattleUnit`: estende `CharacterBody2D` o `Node2D`, contiene
+  `unit_type`, `side`, `hp`, `morale`, `experience`, `state`,
+  `target_unit`, `target_pos`, `role`.
+- `BattleSquad`: raggruppa più `BattleUnit` dello stesso tipo per
+  contarle come un singolo sprite con numero sopra.
+- `BattleController`: gestisce stato globale (pausa, vittoria,
+  punteggio morale, spawn proiettili).
+- `BattleAI`: calcola ordini per ogni gruppo IA.
+- `BattleHUD`: pannelli di controllo, elenco unità, log eventi.
+10.2 Scene
+- `battle_view.tscn` diventa la scena radice;
+- al suo interno `BattleField` (Node2D) contiene lo sfondo,
+  gli ostacoli e tutte le unità;
+- `DeploymentZone` (due aree colorate) per la fase di posizionamento;
+- `CursorLayer` per indicare ordini di movimento/attacco.
+10.3 Flusso
+1. Apertura scena → caricamento sfondo e unità.
+2. Fase `DEPLOYMENT`: giocatore posiziona, IA posiziona.
+3. Pulsante "Inizia battaglia" → passa a `COMBAT`.
+4. `COMBAT`: `_process(delta)` aggiorna movimento, attacchi, morale.
+5. Condizioni di fine: esercito in rotta, comandante catturato,
+   tempo limite (opzionale), resa.
+6. Ritorno alla mappa strategica con risultato.
+
+11. COSA TI CHIEDO DI CONFERMARE
+A. Il tempo è reale con pausa tattica, oppure preferisci a turni
+   continui (ogni 2-3 secondi si ferma automaticamente)?
+B. Il giocatore controlla ogni singolo gruppo, oppure solo ordini
+   generali (tattica + punti di rally) e l'IA esegue?
+C. Vuoi proiettili visibili per arcieri/artiglieria, oppure danno
+   istantaneo a distanza?
+D. Vuoi che il comandante sia un'unità speciale sulla mappa?
+E. Vuoi che il terreno dia bonus (foresta = difesa, collina =
+   attacco, fiume = rallentamento) anche in battaglia?
+F. Qual è la priorità: realizzare prima il posizionamento pre-
+   battaglia, oppure subito il combattimento in tempo reale?

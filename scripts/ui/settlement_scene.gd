@@ -101,11 +101,6 @@ func _translate_type(type_name: String) -> String:
 			return type_name
 
 
-func _get_region(province_name: String) -> String:
-	var pdata = WorldData.get_province(province_name)
-	var owner = pdata.get("owner", "")
-	return IconManager.region_for_faction(owner)
-
 
 func _on_back():
 	get_tree().change_scene_to_file("res://scenes/province_scene.tscn")
