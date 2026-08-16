@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://battle_group"]
+
+[ext_resource type="Script" path="res://scripts/game/battle_group.gd" id="1_bg"]
+
+[node name="BattleGroup" type="Node2D"]
+script = ExtResource("1_bg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="CountLabel" type="Label" parent="."]
+offset_left = -40.0
+offset_top = 16.0
+offset_right = 40.0
+offset_bottom = 40.0
+horizontal_alignment = 1
+vertical_alignment = 1
