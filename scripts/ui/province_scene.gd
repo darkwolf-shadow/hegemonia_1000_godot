@@ -92,18 +92,17 @@ func _draw_territory():
 	var terrain: String = data.get("terrain", "generic")
 	var terrain_lower: String = terrain.to_lower()
 
-	# Sfondo SVG del terreno - copre tutta la vista
-	var svg_path := _terrain_svg_path(terrain_lower)
-	if ResourceLoader.exists(svg_path):
-		var bg_tex = load(svg_path)
+	# Sfondo del terreno (PNG realistico se disponibile, altrimenti SVG)
+	var bg_path := _get_background_path(terrain_lower)
+	if ResourceLoader.exists(bg_path):
+		var bg_tex = load(bg_path)
 		if bg_tex:
 			var bg_rect := TextureRect.new()
 			bg_rect.texture = bg_tex
 			bg_rect.size = Vector2(2400, 1800)
 			bg_rect.position = Vector2(-1200, -1100)
 			bg_rect.z_index = -10
-			bg_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-			bg_rect.stretch_mode = TextureRect.STRETCH_SCALE
+			bg_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 			territory_view.add_child(bg_rect)
 
 	if not geometry.has("coordinates"):
@@ -225,28 +224,13 @@ func _draw_territory():
 			settlement_markers[s_name] = pos
 			idx += 1
 
-		# Strade tra agglomerati - stile medievale sterrate
+		# Strade tra agglomerati - sterrate o in pietra in base all'evoluzione
 		for i in range(positions.size()):
 			for j in range(i + 1, positions.size()):
-				# Strada base larga color terra
-				var road_base := Line2D.new()
-				road_base.add_point(positions[i])
-				road_base.add_point(positions[j])
-				road_base.width = 5.0
-				road_base.default_color = Color(0.35, 0.28, 0.18, 0.7)
-				road_base.antialiased = true
-				road_base.joint_mode = Line2D.LINE_JOINT_ROUND
-				territory_view.add_child(road_base)
-
-				# Strada interna piu' chiara
-				var road_inner := Line2D.new()
-				road_inner.add_point(positions[i])
-				road_inner.add_point(positions[j])
-				road_inner.width = 2.5
-				road_inner.default_color = Color(0.55, 0.45, 0.28, 0.8)
-				road_inner.antialiased = true
-				road_inner.joint_mode = Line2D.LINE_JOINT_ROUND
-				territory_view.add_child(road_inner)
+				var s_i = settlements[settlement_names[i]] if settlement_names.size() > i else {}
+				var s_j = settlements[settlement_names[j]] if settlement_names.size() > j else {}
+				var stone := _has_strade(s_i) or _has_strade(s_j)
+				_draw_road(positions[i], positions[j], stone)
 
 
 func _draw_settlement_marker(pos: Vector2, name: String, type_name: String, idx: int):
@@ -290,6 +274,41 @@ func _draw_settlement_marker(pos: Vector2, name: String, type_name: String, idx:
 	territory_view.add_child(label)
 
 
+func _has_strade(settlement: Dictionary) -> bool:
+	if settlement is Dictionary:
+		return "strade" in settlement.get("buildings", [])
+	return false
+
+
+func _draw_road(a: Vector2, b: Vector2, stone: bool):
+	var base_color := Color(0.35, 0.28, 0.18, 0.7)
+	var inner_color := Color(0.55, 0.45, 0.28, 0.8)
+	var width := 5.0
+	var inner_width := 2.5
+	if stone:
+		base_color = Color(0.45, 0.45, 0.48, 0.8)
+		inner_color = Color(0.70, 0.70, 0.74, 0.85)
+		width = 6.0
+		inner_width = 3.0
+	var road_base := Line2D.new()
+	road_base.add_point(a)
+	road_base.add_point(b)
+	road_base.width = width
+	road_base.default_color = base_color
+	road_base.antialiased = true
+	road_base.joint_mode = Line2D.LINE_JOINT_ROUND
+	territory_view.add_child(road_base)
+
+	var road_inner := Line2D.new()
+	road_inner.add_point(a)
+	road_inner.add_point(b)
+	road_inner.width = inner_width
+	road_inner.default_color = inner_color
+	road_inner.antialiased = true
+	road_inner.joint_mode = Line2D.LINE_JOINT_ROUND
+	territory_view.add_child(road_inner)
+
+
 func _settlement_icon(type_name: String) -> String:
 	# Icone originali di Medieval 2 Total War
 	match type_name:
@@ -303,6 +322,25 @@ func _settlement_icon(type_name: String) -> String:
 			return "res://assets/ui_textures/settlements/mines.png"
 		_:
 			return "res://assets/ui_textures/settlements/village.png"
+
+
+func _get_background_path(terrain_lower: String) -> String:
+	# Prova prima uno sfondo PNG realistico, altrimenti torna al SVG stilizzato
+	var png_name := _png_background_name(terrain_lower)
+	var png_path := "res://assets/backgrounds/1000/png/" + png_name + ".png"
+	if FileAccess.file_exists(png_path):
+		return png_path
+	return _terrain_svg_path(terrain_lower)
+
+
+func _png_background_name(terrain_lower: String) -> String:
+	if terrain_lower in ["forest", "foresta", "jungle", "giungla", "swamp", "palude"]:
+		return "forest"
+	if terrain_lower in ["mountain", "montagna", "mountains", "hills", "colline", "tundra"]:
+		return "mountains"
+	if terrain_lower in ["desert", "deserto", "savannah", "savana", "steppe", "steppa"]:
+		return "desert"
+	return "plains"
 
 
 func _terrain_svg_path(terrain_lower: String) -> String:

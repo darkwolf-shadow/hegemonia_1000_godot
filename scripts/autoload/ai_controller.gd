@@ -76,6 +76,76 @@ func defend(faction: Dictionary):
 	res["oro"] = res.get("oro", 0) + 10
 
 
-func choose_battle_tactic() -> String:
-	var t = ["standard", "charge", "shield_wall", "skirmish"]
-	return t[randi() % t.size()]
+func choose_battle_tactic(battle: Dictionary = {}, side: String = "") -> String:
+	if battle.is_empty() or side.is_empty():
+		var t = ["standard", "charge", "shield_wall", "skirmish"]
+		return t[randi() % t.size()]
+
+	var my_units = battle.attacker_units if side == "attacker" else battle.defender_units
+	var enemy_units = battle.defender_units if side == "attacker" else battle.attacker_units
+	var my_morale = battle.attacker_morale if side == "attacker" else battle.defender_morale
+	var enemy_morale = battle.defender_morale if side == "attacker" else battle.attacker_morale
+
+	var total := 0
+	var cavalry := 0
+	var ranged := 0
+	var infantry := 0
+	var elephants := 0
+	for unit_type in my_units.keys():
+		var count = my_units[unit_type]
+		total += count
+		if _is_cavalry(unit_type):
+			cavalry += count
+		elif _is_ranged(unit_type):
+			ranged += count
+		elif _is_elephant(unit_type):
+			elephants += count
+		else:
+			infantry += count
+
+	if total == 0:
+		return "standard"
+
+	var my_count: int = _count_units(my_units)
+	var enemy_count: int = _count_units(enemy_units)
+	var outnumbered: bool = enemy_count > int(my_count * 1.2)
+
+	# Cavalleria numerosa e morale alto: carica
+	if float(cavalry) / total >= 0.35 and my_morale >= enemy_morale * 0.9:
+		return "charge"
+
+	# Molti arcieri e nemico non troppo vicino: schermaglia
+	if float(ranged) / total >= 0.4 and enemy_morale > 0:
+		return "skirmish"
+
+	# Fanteria pesante e superato numericamente o morale basso: muro di scudi
+	if (outnumbered and side == "defender") or (float(infantry) / total >= 0.6 and my_morale < enemy_morale):
+		return "shield_wall"
+
+	# Elefanti
+	if float(elephants) / total >= 0.25:
+		return "elephant_charge"
+
+	return "standard"
+
+
+func _is_cavalry(unit_type: String) -> bool:
+	var key := unit_type.to_lower()
+	return key.contains("caval") or key.contains("cataphract") or key.contains("mamluk") or key.contains("ghilman") or key.contains("ghulam") or key.contains("lancer") or key.contains("drak") or key.contains("druzhina") or key.contains("jinete") or key.contains("magyar") or key.contains("horse") or key.contains("soninke")
+
+
+func _is_ranged(unit_type: String) -> bool:
+	var key := unit_type.to_lower()
+	return key.contains("arcier") or key.contains("archer") or key.contains("crossbow") or key.contains("balestri") or key.contains("toxot") or key.contains("shenbi") or key.contains("atlatl") or key.contains("javelin")
+
+
+func _is_elephant(unit_type: String) -> bool:
+	var key := unit_type.to_lower()
+	return key.contains("elephant") or key.contains("war_elephants") or key.contains("elephant_corps") or key.contains("khmer_elephants")
+
+
+func _count_units(units: Dictionary) -> int:
+	var n := 0
+	for k in units.keys():
+		n += units[k]
+	return n

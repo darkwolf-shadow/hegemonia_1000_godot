@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Script" path="res://scripts/ui/settlement_scene.gd" id="1_ss"]
 [ext_resource type="Texture2D" path="res://assets/ui_textures/southern_european/sharedpage_00.png" id="2_tex"]
+[ext_resource type="Script" path="res://scripts/ui/settlement_map.gd" id="3_sm"]
 
 [sub_resource type="StyleBoxFlat" id="sb_panel"]
 bg_color = Color(0.10, 0.08, 0.06, 0.97)
@@ -122,3 +123,17 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 15
 theme_override_colors/font_color = Color(0.95, 0.80, 0.45, 1.0)
 text = "Torna alla provincia"
+
+[node name="SettlementMap" type="Control" parent="Panel"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = 90.0
+offset_right = -20.0
+offset_bottom = -55.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("3_sm")
