@@ -18,6 +18,7 @@ BattleSystem="*res://scripts/autoload/battle_system.gd"
 SaveManager="*res://scripts/autoload/save_manager.gd"
 SettlementManager="*res://scripts/autoload/settlement_manager.gd"
 IconManager="*res://scripts/autoload/icon_manager.gd"
+UiHelper="*res://scripts/autoload/ui_helper.gd"
 
 [display]
 window/size/viewport_width=1920

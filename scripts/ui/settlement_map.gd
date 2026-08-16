@@ -21,6 +21,7 @@ const CENTER_SLOT := 12
 
 var _slot_building: Dictionary = {}
 var _building_slot: Dictionary = {}
+var _bg_texture: Texture2D = null
 
 var _building_colors: Dictionary = {
 	"centro_cittadino": Color(0.55, 0.40, 0.22),
@@ -64,6 +65,7 @@ func build_map(settlement: Dictionary, region: String, province: String, settlem
 	_zoom = 1.0
 	_pan = Vector2.ZERO
 	_selected_slot = -1
+	_bg_texture = _create_ground_texture()
 	_rebuild_slot_mapping()
 	queue_redraw()
 
@@ -133,39 +135,56 @@ func _screen_to_world(v: Vector2) -> Vector2:
 
 
 func _draw_ground():
-	# Colore di base che copre tutto il canvas
-	draw_rect(Rect2(Vector2(-2000, -2000), Vector2(4000, 4000)), Color(0.10, 0.09, 0.07, 1.0))
-
-	var type_name := str(_settlement.get("type", "civil"))
-	var tex: Texture2D = _load_background_texture(type_name)
-	if tex != null:
-		var grid_size := Vector2(
-			GRID_COLS * CELL_SIZE + (GRID_COLS - 1) * SPACING,
-			GRID_ROWS * CELL_SIZE + (GRID_ROWS - 1) * SPACING
-		)
-		var margin := 40.0
-		var bg_size: Vector2 = (grid_size + Vector2(margin * 2, margin * 2)) * _zoom
-		var bg_pos: Vector2 = _world_to_screen(-grid_size * 0.5 - Vector2(margin, margin))
-		draw_texture_rect(tex, Rect2(bg_pos, bg_size), false)
+	# Sfondo esteso con texture generata proceduralmente
+	if _bg_texture != null:
+		var bg_pos := _world_to_screen(Vector2(-1200, -1200))
+		var bg_size := Vector2(2400, 2400) * _zoom
+		draw_texture_rect(_bg_texture, Rect2(bg_pos, bg_size), false)
 	else:
-		draw_rect(Rect2(Vector2.ZERO, size), Color(0.12, 0.10, 0.08, 1.0))
+		draw_rect(Rect2(Vector2(-2000, -2000), Vector2(4000, 4000)), Color(0.10, 0.09, 0.07, 1.0))
+
+	# Velatura scura per non distrarre dagli edifici
+	draw_rect(Rect2(Vector2(-2000, -2000), Vector2(4000, 4000)), Color(0.0, 0.0, 0.0, 0.15))
 
 
-func _load_background_texture(type_name: String) -> Texture2D:
-	var svg_path := "res://assets/backgrounds/1000/" + type_name + ".svg"
-	if FileAccess.file_exists(svg_path):
-		return load(svg_path) as Texture2D
-	var png_path := "res://assets/backgrounds/1000/png/settlements/" + type_name + ".png"
-	if FileAccess.file_exists(png_path):
-		return load(png_path) as Texture2D
-	var generic_paths := [
-		"res://assets/backgrounds/1000/generic.svg",
-		"res://assets/backgrounds/1000/png/generic.png"
-	]
-	for p in generic_paths:
-		if FileAccess.file_exists(p):
-			return load(p) as Texture2D
-	return null
+func _create_ground_texture() -> Texture2D:
+	var type := str(_settlement.get("type", "civil"))
+	var base := _settlement_ground_color(type)
+	var terrain := "plains"
+	if not _province.is_empty():
+		var data = WorldData.get_province(_province)
+		terrain = str(data.get("terrain", "plains")).to_lower()
+	base = base.lerp(_terrain_ground_color(terrain), 0.35)
+	var seed_val := hash(_province + "_" + _settlement_name) if not _province.is_empty() and not _settlement_name.is_empty() else 0
+	return UiHelper.create_ground_texture(512, 512, base, seed_val)
+
+
+func _settlement_ground_color(type_name: String) -> Color:
+	match type_name.to_lower():
+		"military":
+			return Color(0.35, 0.30, 0.24)
+		"port", "industrial":
+			return Color(0.30, 0.33, 0.30)
+		"capital":
+			return Color(0.38, 0.35, 0.26)
+		_:
+			return Color(0.32, 0.38, 0.24)
+
+
+func _terrain_ground_color(terrain: String) -> Color:
+	match terrain:
+		"forest", "foresta", "jungle", "giungla":
+			return Color(0.20, 0.32, 0.16)
+		"desert", "deserto", "savannah", "savana":
+			return Color(0.58, 0.48, 0.28)
+		"mountain", "montagna", "hills", "colline", "tundra":
+			return Color(0.35, 0.32, 0.26)
+		"swamp", "palude":
+			return Color(0.22, 0.28, 0.20)
+		"coastal", "costiera", "river", "fiume":
+			return Color(0.28, 0.36, 0.30)
+		_:
+			return Color(0.30, 0.38, 0.22)
 
 
 func _draw_roads():

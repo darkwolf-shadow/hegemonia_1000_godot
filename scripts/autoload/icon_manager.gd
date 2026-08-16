@@ -184,6 +184,10 @@ func get_settlement_icon_masked(settlement_type: String, region: String = "europ
 	return _get_icon_masked("settlement", settlement_type, region, get_settlement_icon)
 
 
+func get_unit_icon_masked(unit_id: String, region: String = "european") -> Texture2D:
+	return _get_icon_masked("unit", unit_id, region, get_unit_icon)
+
+
 func _get_icon_masked(prefix: String, id: String, region: String, getter: Callable) -> Texture2D:
 	var key := "masked_" + prefix + "_" + region + "_" + id
 	if _mask_cache.has(key):

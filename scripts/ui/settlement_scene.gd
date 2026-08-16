@@ -23,6 +23,7 @@ var _selected_slot: int = -1
 
 func _ready():
 	back_button.pressed.connect(_on_back)
+	UiHelper.style_button(back_button)
 	_add_recruitment_button()
 	_instantiate_recruitment_view()
 	buildings_list.item_selected.connect(_on_building_list_selected)
@@ -64,6 +65,7 @@ func _configure_fullscreen_map():
 func _create_catalog_popup():
 	_catalog_popup = PopupPanel.new()
 	_catalog_popup.size = Vector2(520, 420)
+	_catalog_popup.add_theme_stylebox_override("panel", UiHelper.parchment_stylebox(Color(0.84, 0.75, 0.60, 0.97)))
 
 	var vbox := VBoxContainer.new()
 	vbox.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -111,7 +113,9 @@ func _create_catalog_popup():
 	close_button.pressed.connect(func(): _catalog_popup.hide())
 	right.add_child(close_button)
 
+	UiHelper.apply_parchment_theme(vbox)
 	add_child(_catalog_popup)
+
 
 
 func _open_settlement(province_name: String, settlement_name: String):
@@ -247,6 +251,7 @@ func _add_upgrade_button(building_id: String):
 	btn.offset_right = 170
 	btn.offset_bottom = -20
 	btn.z_index = 3
+	UiHelper.style_button(btn)
 	btn.pressed.connect(func():
 		_on_upgrade_building(building_id)
 		btn.queue_free()
@@ -349,6 +354,7 @@ func _add_recruitment_button():
 	recruit_button.offset_bottom = -15.0
 	recruit_button.pressed.connect(_on_recruit)
 	recruit_button.z_index = 3
+	UiHelper.style_button(recruit_button)
 	panel.add_child(recruit_button)
 
 

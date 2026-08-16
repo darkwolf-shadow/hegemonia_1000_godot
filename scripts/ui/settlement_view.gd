@@ -22,20 +22,18 @@ func _region() -> String:
 	return IconManager.region_for_faction(GameState.state.player_faction)
 
 
-func _load_background(settlement_type: String) -> Texture2D:
+func _parchment_for_type(settlement_type: String) -> Texture2D:
 	var type_key := settlement_type.to_lower()
-	var paths := [
-		"res://assets/backgrounds/1000/" + type_key + ".svg",
-		"res://assets/backgrounds/1000/generic.svg",
-		"res://assets/backgrounds/1000/png/" + type_key + ".png",
-		"res://assets/backgrounds/1000/png/generic.png"
-	]
-	for p in paths:
-		if ResourceLoader.exists(p):
-			var res = load(p)
-			if res is Texture2D:
-				return res
-	return null
+	var c1 := Color(0.88, 0.80, 0.65)
+	var c2 := Color(0.72, 0.62, 0.48)
+	match type_key:
+		"military":
+			c1 = Color(0.82, 0.75, 0.62)
+			c2 = Color(0.68, 0.58, 0.46)
+		"port", "industrial":
+			c1 = Color(0.85, 0.78, 0.63)
+			c2 = Color(0.70, 0.60, 0.47)
+	return UiHelper.create_parchment_texture(512, 512, c1, c2)
 
 
 func _ready():
@@ -48,6 +46,7 @@ func _ready():
 	background.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 	background.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	background.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	UiHelper.apply_parchment_theme(self)
 	visible = false
 
 
@@ -58,7 +57,7 @@ func open(province_name: String, settlement_name: String):
 	SettlementManager.ensure_settlement(province, settlement_name)
 	current_settlement = SettlementManager.get_settlement(province, settlement_name)
 	visible = true
-	background.texture = _load_background(current_settlement.get("type", "generic"))
+	background.texture = _parchment_for_type(current_settlement.get("type", "generic"))
 	_update_ui()
 
 
@@ -68,7 +67,7 @@ func _update_ui():
 
 	buildings_list.clear()
 	for b in current_settlement.get("buildings", []):
-		var icon := IconManager.get_building_icon(b, region)
+		var icon := IconManager.get_building_icon_masked(b, region)
 		buildings_list.add_item(WorldData.get_building(b).get("name", b), icon)
 
 	buildable_list.clear()
@@ -77,7 +76,7 @@ func _update_ui():
 	for b in WorldData.buildings.keys():
 		if SettlementManager.can_build_settlement_building(faction, current_settlement, b):
 			available_buildings.append(b)
-			var bicon := IconManager.get_building_icon(b, region)
+			var bicon := IconManager.get_building_icon_masked(b, region)
 			if bicon:
 				buildable_list.add_icon_item(bicon, WorldData.get_building(b).get("name", b))
 			else:
@@ -87,7 +86,7 @@ func _update_ui():
 	available_units = SettlementManager.get_recruitable_units(faction, current_settlement)
 	for u in available_units:
 		var data := WorldData.get_unit(u)
-		var icon := IconManager.get_unit_icon(u, region)
+		var icon := IconManager.get_unit_icon_masked(u, region)
 		units_list.add_item("%s (oro %d)" % [data.get("name", u), data.get("cost", 0)], icon)
 
 	info_label.text = "Risorse fazione: " + _resources_text(faction.get("resources", {}))
