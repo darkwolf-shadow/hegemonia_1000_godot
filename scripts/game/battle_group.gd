@@ -367,8 +367,4 @@ func _move_away(delta: float):
 		_visual.set_moving(true)
 
 
-func _draw():
-	# Solo barra salute; la figurina vera è disegnata da BattleUnitVisual
-	var hp_ratio: float = float(count) / float(max_count) if max_count > 0 else 1.0
-	draw_rect(Rect2(Vector2(-24, 32), Vector2(48 * hp_ratio, 6)), Color.DARK_RED)
-	draw_rect(Rect2(Vector2(-24, 32), Vector2(48, 6)), Color.WHITE, false, 1.0)
+

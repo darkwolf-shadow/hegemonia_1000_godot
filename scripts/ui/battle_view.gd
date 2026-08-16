@@ -13,7 +13,7 @@ var _time_scale: float = 1.0
 var _combat_active: bool = false
 var _ai_timer: float = 0.0
 var _battle: Dictionary = {}
-var _visual_mode: String = "vector_3d"
+var _visual_mode: String = "realistic"
 const BattleGroupClass = preload("res://scripts/game/battle_group.gd")
 
 var _top_bar: HBoxContainer
@@ -46,6 +46,8 @@ const ROLE_TACTICS := {
 
 func _ready():
 	set_process(true)
+	set_process_input(true)
+	mouse_filter = MOUSE_FILTER_PASS
 	_setup_ui()
 	background.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	background.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
@@ -99,13 +101,13 @@ func _get_background_path(terrain_lower: String) -> String:
 		png_name = "plains"
 	else:
 		png_name = "plains"
-	var svg_path := "res://assets/backgrounds/1000/" + png_name + ".svg"
-	if FileAccess.file_exists(svg_path):
-		return svg_path
 	var png_path := "res://assets/backgrounds/1000/png/" + png_name + ".png"
 	if FileAccess.file_exists(png_path):
 		return png_path
-	return "res://assets/backgrounds/1000/plains.svg"
+	var svg_path := "res://assets/backgrounds/1000/" + png_name + ".svg"
+	if FileAccess.file_exists(svg_path):
+		return svg_path
+	return ""
 
 
 func _spawn_groups():
@@ -119,9 +121,12 @@ func _spawn_groups():
 	var region_att := IconManager.region_for_faction(_battle.attacker)
 	var region_def := IconManager.region_for_faction(_battle.defender)
 
-	_player_side = _battle.attacker if _battle.attacker == GameState.state.player_faction else _battle.defender
-	if _player_side != _battle.attacker and _player_side != _battle.defender:
-		_player_side = _battle.attacker
+	if _battle.attacker == GameState.state.player_faction:
+		_player_side = "attacker"
+	elif _battle.defender == GameState.state.player_faction:
+		_player_side = "defender"
+	else:
+		_player_side = "attacker"
 
 	var terrain_mods: Dictionary = WorldData.terrain_modifiers.get(_battle.terrain, {})
 	var att_mod: float = terrain_mods.get("attack", 1.0)
@@ -177,11 +182,17 @@ func _process(delta: float):
 		_update_bottom_panel()
 
 
-func _gui_input(event: InputEvent):
+func _input(event: InputEvent):
 	if not (event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT):
 		return
+	if get_viewport().is_input_handled():
+		return
 
-	var mouse_pos := get_global_mouse_position()
+	var mouse_pos := get_viewport().get_mouse_position()
+	var hovered := get_viewport().gui_get_hovered_control()
+	if hovered != null and hovered != self:
+		return
+
 	var clicked_group := _group_at(mouse_pos)
 
 	if clicked_group != null:
@@ -204,7 +215,7 @@ func _gui_input(event: InputEvent):
 
 func _group_at(pos: Vector2) -> Node2D:
 	var best: Node2D = null
-	var best_dist: float = 40.0
+	var best_dist: float = 120.0
 	for g in _groups:
 		if not is_instance_valid(g):
 			continue
@@ -564,14 +575,14 @@ func _on_fast():
 
 
 func _on_toggle_visual():
-	_visual_mode = "sprite_2d" if _visual_mode == "vector_3d" else "vector_3d"
+	_visual_mode = "3d" if _visual_mode == "realistic" else "realistic"
 	BattleGroupClass.set_default_visual_mode(_visual_mode)
 	for g in _groups:
 		if is_instance_valid(g):
 			g.set_visual_mode(_visual_mode)
 	for child in _top_bar.get_children():
 		if child is Button and child.text.begins_with("Vista:"):
-			child.text = "Vista: 2D" if _visual_mode == "sprite_2d" else "Vista: 3D"
+			child.text = "Vista: 3D" if _visual_mode == "3d" else "Vista: Realistico"
 			break
 
 
