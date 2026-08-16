@@ -6,6 +6,7 @@ extends Control
 @onready var buildings_list: ItemList = $Panel/BuildingsList
 @onready var info_label: Label = $Panel/Info
 @onready var back_button: Button = $Panel/BackButton
+@onready var settlement_map: Control = $Panel/SettlementMap
 
 var current_province: String = ""
 var current_settlement: String = ""
@@ -52,6 +53,7 @@ func _open_settlement(province_name: String, settlement_name: String):
 			int(s.get("population", 0)),
 			s.get("buildings", []).size()
 		]
+		settlement_map.build_map(s, region, province_name, settlement_name)
 	else:
 		# Fallback: mostra info generiche
 		var data = WorldData.get_province(province_name)
@@ -59,6 +61,12 @@ func _open_settlement(province_name: String, settlement_name: String):
 		buildings_list.add_item("Centro urbano", IconManager.get_building_icon("centro_cittadino", region))
 		buildings_list.add_item("Mercato", IconManager.get_building_icon("mercato", region))
 		buildings_list.add_item("Caserma", IconManager.get_building_icon("caserma_i", region))
+		var fallback := {
+			"type": "civil",
+			"population": data.get("population", 0),
+			"buildings": ["centro_cittadino", "mercato", "caserma_i"]
+		}
+		settlement_map.build_map(fallback, region, province_name, settlement_name)
 		info_label.text = "Tipo: civile\nPopolazione: %d\nEdifici: 3 (predefiniti)" % [
 			int(data.get("population", 0))
 		]
