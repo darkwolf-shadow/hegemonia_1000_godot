@@ -79,6 +79,7 @@ func _create_visual(region: String, side_color: Color):
 	_visual.selected = is_selected
 	_visual.commander = has_commander
 	add_child(_visual)
+	_visual.set_tactic(tactic)
 
 func _ready():
 	var old_sprite = get_node_or_null("Sprite2D")
@@ -140,6 +141,8 @@ func take_damage(raw_damage: float):
 func set_tactic(new_tactic: String):
 	tactic = new_tactic
 	_set_tactic_modifiers()
+	if _visual != null and is_instance_valid(_visual):
+		_visual.set_tactic(tactic)
 
 
 func set_commander(value: bool):

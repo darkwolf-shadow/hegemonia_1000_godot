@@ -151,7 +151,9 @@
         "daylami_infantry": "res://assets/icons/1000/oriental/units/daylami_infantry.png",
         "war_elephants": "res://assets/icons/1000/oriental/units/war_elephants.png"
       },
-      "battle": {},
+      "battle": {
+        "cavalleria": "res://assets/icons/1000/oriental/battle/cavalleria.png"
+      },
       "ships": {
         "dromone": "res://assets/icons/1000/oriental/ships/dromone.png",
         "canoa": "res://assets/icons/1000/oriental/ships/canoa.png",
@@ -226,7 +228,9 @@
         "khmer_elephants": "res://assets/icons/1000/asian/units/khmer_elephants.png",
         "war_elephants": "res://assets/icons/1000/asian/units/war_elephants.png"
       },
-      "battle": {},
+      "battle": {
+        "cavalleria": "res://assets/icons/1000/asian/battle/cavalleria.png"
+      },
       "ships": {
         "canoa": "res://assets/icons/1000/asian/ships/canoa.png",
         "drakkar": "res://assets/icons/1000/asian/ships/drakkar.png",
@@ -287,7 +291,9 @@
         "tamil_infantry": "res://assets/icons/1000/indian/units/tamil_infantry.png",
         "elephant_corps": "res://assets/icons/1000/indian/units/elephant_corps.png"
       },
-      "battle": {},
+      "battle": {
+        "cavalleria": "res://assets/icons/1000/indian/battle/cavalleria.png"
+      },
       "ships": {
         "canoa": "res://assets/icons/1000/indian/ships/canoa.png",
         "drakkar": "res://assets/icons/1000/indian/ships/drakkar.png",
@@ -353,7 +359,9 @@
         "soninke_cavalry": "res://assets/icons/1000/african/units/soninke_cavalry.png",
         "sudani_spearmen": "res://assets/icons/1000/african/units/sudani_spearmen.png"
       },
-      "battle": {},
+      "battle": {
+        "cavalleria": "res://assets/icons/1000/african/battle/cavalleria.png"
+      },
       "ships": {
         "canoa": "res://assets/icons/1000/african/ships/canoa.png",
         "drakkar": "res://assets/icons/1000/african/ships/drakkar.png",
@@ -424,7 +432,9 @@
         "holcan": "res://assets/icons/1000/american/units/holcan.png",
         "atlatl": "res://assets/icons/1000/american/units/atlatl.png"
       },
-      "battle": {},
+      "battle": {
+        "cavalleria": "res://assets/icons/1000/american/battle/cavalleria.png"
+      },
       "ships": {
         "canoa": "res://assets/icons/1000/american/ships/canoa.png",
         "drakkar": "res://assets/icons/1000/american/ships/drakkar.png",

@@ -147,6 +147,9 @@ func _default_svg_path(category: String, id: String) -> String:
 			return "res://assets/icons/1000/resources/" + id + ".svg"
 		"settlements":
 			return "res://assets/icons/1000/settlements/" + id + ".svg"
+		"battle":
+			# Le icone battle sono sprite pre-renderizzati, non SVG generici
+			return ""
 		_:
 			return ""
 
