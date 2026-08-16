@@ -1,0 +1,530 @@
+Province cambiate: 529
+Ad Daqahliyah | Califfato Fatimide -> Impero Fatimide
+Afar | Califfato Fatimide -> Impero Fatimide
+Agadez | Califfato Fatimide -> Impero Fatimide
+Agnéby | Impero del Ghana -> Terra di Nessuno
+Aizkraukles | Vichinghi -> Terra di Nessuno
+Aizputes | Vichinghi -> Terra di Nessuno
+Ajdabiya | Califfato Fatimide -> Impero Fatimide
+Aknistes | Vichinghi -> Terra di Nessuno
+Al Bahah | Califfato Fatimide -> Impero Fatimide
+Al Bahr al Ahmar | Califfato Fatimide -> Impero Fatimide
+Al Buhayrah | Califfato Fatimide -> Impero Fatimide
+Al Butnan | Califfato Fatimide -> Impero Fatimide
+Al Dali' | Califfato Fatimide -> Impero Fatimide
+Al Fayyum | Califfato Fatimide -> Impero Fatimide
+Al Gharbiyah | Califfato Fatimide -> Impero Fatimide
+Al Hudaydah | Califfato Fatimide -> Impero Fatimide
+Al Hudud ash Shamaliyah | Califfato Fatimide -> Impero Fatimide
+Al Iskandariyah | Califfato Fatimide -> Impero Fatimide
+Al Isma`iliyah | Califfato Fatimide -> Impero Fatimide
+Al Jawf | Califfato Fatimide -> Impero Fatimide
+Al Jizah | Califfato Fatimide -> Impero Fatimide
+Al Jufrah | Califfato Fatimide -> Impero Fatimide
+Al Kufrah | Califfato Fatimide -> Impero Fatimide
+Al Madinah | Califfato Fatimide -> Impero Fatimide
+Al Mahwit | Califfato Fatimide -> Impero Fatimide
+Al Minufiyah | Califfato Fatimide -> Impero Fatimide
+Al Minya | Califfato Fatimide -> Impero Fatimide
+Al Qahirah | Califfato Fatimide -> Impero Fatimide
+Al Qalyubiyah | Califfato Fatimide -> Impero Fatimide
+Al Quassim | Califfato Fatimide -> Impero Fatimide
+Al Qubbah | Califfato Fatimide -> Impero Fatimide
+Al Wadi at Jadid | Califfato Fatimide -> Impero Fatimide
+Alojas | Vichinghi -> Terra di Nessuno
+Alsungas | Vichinghi -> Terra di Nessuno
+Amanat Al Asimah | Califfato Fatimide -> Impero Fatimide
+Amatas | Vichinghi -> Terra di Nessuno
+Amman | Califfato Fatimide -> Impero Fatimide
+Ampāra | Terra di Nessuno -> Impero Chola
+Amran | Califfato Fatimide -> Impero Fatimide
+Amur | Impero Khitan Liao -> Terra di Nessuno
+An-Najaf | Califfato Fatimide -> Impero Fatimide
+Anseba | Califfato Fatimide -> Impero Fatimide
+Apes | Vichinghi -> Terra di Nessuno
+Aqaba | Califfato Fatimide -> Impero Fatimide
+Arhangay | Terra di Nessuno -> Impero Khitan Liao
+As Suways | Califfato Fatimide -> Impero Fatimide
+Ash Shati' | Califfato Fatimide -> Impero Fatimide
+Ashanti | Impero del Ghana -> Terra di Nessuno
+Aswan | Califfato Fatimide -> Impero Fatimide
+Asyut | Califfato Fatimide -> Impero Fatimide
+Atlantique | Impero del Ghana -> Terra di Nessuno
+Auces | Vichinghi -> Terra di Nessuno
+Austurland | Terra di Nessuno -> Vichinghi
+Bab el Mandeb | Califfato Fatimide -> Terra di Nessuno
+Babites | Vichinghi -> Terra di Nessuno
+Badulla | Terra di Nessuno -> Impero Chola
+Bafing | Impero del Ghana -> Terra di Nessuno
+Bahía de Campeche | Toltechi -> Terra di Nessuno
+Baldones | Vichinghi -> Terra di Nessuno
+Balqa | Califfato Fatimide -> Impero Fatimide
+Bani Suwayf | Califfato Fatimide -> Impero Fatimide
+Barh El Gazel | Califfato Fatimide -> Impero Fatimide
+Bas-Sassandra | Impero del Ghana -> Terra di Nessuno
+Batha | Califfato Fatimide -> Impero Fatimide
+Bauska | Vichinghi -> Terra di Nessuno
+Bay of Biscay | Regno di Francia -> Terra di Nessuno
+Bayan-Ölgiy | Terra di Nessuno -> Impero Khitan Liao
+Bayanhongor | Terra di Nessuno -> Impero Khitan Liao
+Beijing | Dinastia Song -> Impero Khitan Liao
+Benghazi | Califfato Fatimide -> Impero Fatimide
+Beverinas | Vichinghi -> Terra di Nessuno
+Beyla | Impero del Ghana -> Terra di Nessuno
+Bight of Benin | Impero del Ghana -> Terra di Nessuno
+Bo Hai | Dinastia Song -> Terra di Nessuno
+Boknafjorden | Vichinghi -> Terra di Nessuno
+Bomi | Impero del Ghana -> Terra di Nessuno
+Bong | Impero del Ghana -> Terra di Nessuno
+Borgou | Impero del Ghana -> Terra di Nessuno
+Borkou | Califfato Fatimide -> Impero Fatimide
+Borno | Califfato Fatimide -> Impero Fatimide
+Bosporus | Impero Bizantino -> Terra di Nessuno
+Brocenu | Vichinghi -> Terra di Nessuno
+Brong Ahafo | Impero del Ghana -> Terra di Nessuno
+Brändö | Vichinghi -> Terra di Nessuno
+Bulgan | Terra di Nessuno -> Impero Khitan Liao
+Bur Sa`id | Califfato Fatimide -> Impero Fatimide
+Burtnieku | Vichinghi -> Terra di Nessuno
+Busan | Regno Heian -> Terra di Nessuno
+Cao Bằng | Dinastia Song -> Terra di Nessuno
+Carnikavas | Vichinghi -> Terra di Nessuno
+Cavally | Impero del Ghana -> Terra di Nessuno
+Central Darfur | Califfato Fatimide -> Impero Fatimide
+Central Finland | Vichinghi -> Terra di Nessuno
+Central Ostrobothnia | Vichinghi -> Terra di Nessuno
+Central and Western | Dinastia Song -> Terra di Nessuno
+Cesu | Vichinghi -> Terra di Nessuno
+Cesvaines | Vichinghi -> Terra di Nessuno
+Chagang-do | Impero Khitan Liao -> Terra di Nessuno
+Changhua | Dinastia Song -> Terra di Nessuno
+Chiayi | Dinastia Song -> Terra di Nessuno
+Chiayi City | Dinastia Song -> Terra di Nessuno
+City of St. Petersburg | Vichinghi -> Terra di Nessuno
+Collines | Impero del Ghana -> Terra di Nessuno
+Comoe | Impero del Ghana -> Terra di Nessuno
+Conakry | Impero del Ghana -> Terra di Nessuno
+Coyah | Impero del Ghana -> Terra di Nessuno
+Cèntre | Impero del Ghana -> Terra di Nessuno
+Cëntral | Impero del Ghana -> Terra di Nessuno
+Daegu | Regno Heian -> Terra di Nessuno
+Dakhlet Nouadhibou | Impero del Ghana -> Terra di Nessuno
+Dardanelles | Impero Bizantino -> Terra di Nessuno
+Darhan-Uul | Terra di Nessuno -> Impero Khitan Liao
+Daugavpils | Vichinghi -> Terra di Nessuno
+Debub | Califfato Fatimide -> Impero Fatimide
+Debubawi Keyih Bahri | Califfato Fatimide -> Impero Fatimide
+Denguélé | Impero del Ghana -> Terra di Nessuno
+Dhamar | Califfato Fatimide -> Impero Fatimide
+Diffa | Califfato Fatimide -> Impero Fatimide
+Dix-Huit Montagnes | Impero del Ghana -> Terra di Nessuno
+Dobele | Vichinghi -> Terra di Nessuno
+Donga | Impero del Ghana -> Terra di Nessuno
+Dornogovi | Terra di Nessuno -> Impero Khitan Liao
+Dumyat | Califfato Fatimide -> Impero Fatimide
+Dundagas | Vichinghi -> Terra di Nessuno
+Dundgovi | Terra di Nessuno -> Impero Khitan Liao
+Durbes | Vichinghi -> Terra di Nessuno
+Dzavhan | Terra di Nessuno -> Impero Khitan Liao
+Dàugavpils | Vichinghi -> Terra di Nessuno
+East Korea Bay | Impero Khitan Liao -> Terra di Nessuno
+Eastern_6 | Dinastia Song -> Terra di Nessuno
+Eastern_7 | Impero del Ghana -> Terra di Nessuno
+Eckerö | Vichinghi -> Terra di Nessuno
+English Channel | Regno di Francia -> Terra di Nessuno
+Engures | Vichinghi -> Terra di Nessuno
+Ennedi | Califfato Fatimide -> Impero Fatimide
+Erglu | Vichinghi -> Terra di Nessuno
+Eysturoyar | Terra di Nessuno -> Vichinghi
+Faranah | Impero del Ghana -> Terra di Nessuno
+Finland Proper | Vichinghi -> Terra di Nessuno
+Forécariah | Impero del Ghana -> Terra di Nessuno
+Fromager | Impero del Ghana -> Terra di Nessuno
+Föglö | Vichinghi -> Terra di Nessuno
+Gampaha | Terra di Nessuno -> Impero Chola
+Gangwon | Regno Heian -> Terra di Nessuno
+Gansu | Dinastia Song -> Terra di Nessuno
+Garkalnes | Vichinghi -> Terra di Nessuno
+Gash Barka | Califfato Fatimide -> Impero Fatimide
+Gaza Strip | Califfato Fatimide -> Impero Fatimide
+Gbapolu | Impero del Ghana -> Terra di Nessuno
+Gedarif | Califfato Fatimide -> Impero Fatimide
+Gezira | Califfato Fatimide -> Impero Fatimide
+Ghadamis | Califfato Fatimide -> Impero Fatimide
+Ghat | Califfato Fatimide -> Impero Fatimide
+Goa | Terra di Nessuno -> Impero Chola
+Golfe du Lion | Regno di Francia -> Terra di Nessuno
+Golfo de Tehuantepec | Toltechi -> Terra di Nessuno
+Govi-Altay | Terra di Nessuno -> Impero Khitan Liao
+Govĭ-Sümber | Terra di Nessuno -> Impero Khitan Liao
+Grand Bassa | Impero del Ghana -> Terra di Nessuno
+Grand Cape Mount | Impero del Ghana -> Terra di Nessuno
+Grand Gedeh | Impero del Ghana -> Terra di Nessuno
+Greater Accra | Impero del Ghana -> Terra di Nessuno
+Grobinas | Vichinghi -> Terra di Nessuno
+Gulbene | Vichinghi -> Terra di Nessuno
+Gulf of Aqaba | Califfato Fatimide -> Terra di Nessuno
+Gulf of Bothnia | Vichinghi -> Terra di Nessuno
+Gulf of Finland | Vichinghi -> Terra di Nessuno
+Gulf of Honduras | Regni Maya -> Terra di Nessuno
+Gulf of Mannar | Impero Chola -> Terra di Nessuno
+Gulf of Martaban | Regno Khmer -> Terra di Nessuno
+Gulf of Riga | Vichinghi -> Terra di Nessuno
+Gulf of Sidra | Califfato Fatimide -> Terra di Nessuno
+Gulf of Suez | Califfato Fatimide -> Terra di Nessuno
+Gulf of Thailand | Regno Khmer -> Terra di Nessuno
+Gulf of Tonkin | Regno Khmer -> Terra di Nessuno
+Guéckédou | Impero del Ghana -> Terra di Nessuno
+Gālla | Terra di Nessuno -> Impero Chola
+Ha'il | Califfato Fatimide -> Impero Fatimide
+HaDarom | Califfato Fatimide -> Impero Fatimide
+HaMerkaz | Califfato Fatimide -> Impero Fatimide
+Hadjer-Lamis | Califfato Fatimide -> Impero Fatimide
+Hainan | Regno Khmer -> Dinastia Song
+Hajjah | Califfato Fatimide -> Impero Fatimide
+Hambantŏṭa | Terra di Nessuno -> Impero Chola
+Hamgyŏng-bukto | Impero Khitan Liao -> Terra di Nessuno
+Hamgyŏng-namdo | Impero Khitan Liao -> Terra di Nessuno
+Hangzhou Bay | Dinastia Song -> Terra di Nessuno
+Harju | Vichinghi -> Terra di Nessuno
+Haut-Sassandra | Impero del Ghana -> Terra di Nessuno
+Hentiy | Terra di Nessuno -> Impero Khitan Liao
+Hiiu | Vichinghi -> Terra di Nessuno
+Hovd | Terra di Nessuno -> Impero Khitan Liao
+Hsinchu | Dinastia Song -> Terra di Nessuno
+Hsinchu City | Dinastia Song -> Terra di Nessuno
+Hualien | Dinastia Song -> Terra di Nessuno
+Hwanghae-bukto | Impero Khitan Liao -> Terra di Nessuno
+Hà Giang | Dinastia Song -> Terra di Nessuno
+Höfuðborgarsvæði | Terra di Nessuno -> Vichinghi
+Hövsgöl | Terra di Nessuno -> Impero Khitan Liao
+Ibb | Califfato Fatimide -> Impero Fatimide
+Ida-Viru | Vichinghi -> Terra di Nessuno
+Iecavas | Vichinghi -> Terra di Nessuno
+Ikskiles | Vichinghi -> Terra di Nessuno
+Ilukstes | Vichinghi -> Terra di Nessuno
+Inchiri | Impero del Ghana -> Terra di Nessuno
+Incukalna | Vichinghi -> Terra di Nessuno
+Inner Mongol | Dinastia Song -> Impero Khitan Liao
+Islands | Dinastia Song -> Terra di Nessuno
+Janub Sina' | Califfato Fatimide -> Impero Fatimide
+Jaunjelgavas | Vichinghi -> Terra di Nessuno
+Jaunpiebalgas | Vichinghi -> Terra di Nessuno
+Jaunpils | Vichinghi -> Terra di Nessuno
+Jekabpils | Vichinghi -> Terra di Nessuno
+Jelgava | Vichinghi -> Terra di Nessuno
+Jerusalem | Califfato Fatimide -> Impero Fatimide
+Jizan | Califfato Fatimide -> Impero Fatimide
+Jomala | Vichinghi -> Terra di Nessuno
+Jurmala | Vichinghi -> Terra di Nessuno
+Järva | Vichinghi -> Terra di Nessuno
+Jèkabpils | Vichinghi -> Terra di Nessuno
+Jèlgava | Vichinghi -> Terra di Nessuno
+Jõgeva | Vichinghi -> Terra di Nessuno
+Kafr ash Shaykh | Califfato Fatimide -> Impero Fatimide
+Kagoshima | Terra di Nessuno -> Regno Heian
+Kainuu | Vichinghi -> Terra di Nessuno
+Kandavas | Vichinghi -> Terra di Nessuno
+Kanem | Califfato Fatimide -> Impero Fatimide
+Kangwŏn-do | Impero Khitan Liao -> Terra di Nessuno
+Kaohsiung City | Dinastia Song -> Terra di Nessuno
+Kara | Impero del Ghana -> Terra di Nessuno
+Karak | Califfato Fatimide -> Impero Fatimide
+Karnataka | Terra di Nessuno -> Impero Chola
+Kassala | Califfato Fatimide -> Impero Fatimide
+Kattegat | Vichinghi -> Terra di Nessuno
+Kauno | Vichinghi -> Terra di Nessuno
+Kaḷutara | Terra di Nessuno -> Impero Chola
+Keelung City | Dinastia Song -> Terra di Nessuno
+Keguma | Vichinghi -> Terra di Nessuno
+Kekavas | Vichinghi -> Terra di Nessuno
+Khartoum | Califfato Fatimide -> Impero Fatimide
+Kinmen | Dinastia Song -> Terra di Nessuno
+Kissidougou | Impero del Ghana -> Terra di Nessuno
+Klaipedos | Vichinghi -> Terra di Nessuno
+Kocenu | Vichinghi -> Terra di Nessuno
+Kokneses | Vichinghi -> Terra di Nessuno
+Kommune Kujalleq | Terra di Nessuno -> Vichinghi
+Kommuneqarfik Sermersooq | Terra di Nessuno -> Vichinghi
+Korea Strait | Regno Heian -> Terra di Nessuno
+Kouffo | Impero del Ghana -> Terra di Nessuno
+Kowloon City | Dinastia Song -> Terra di Nessuno
+Krimuldas | Vichinghi -> Terra di Nessuno
+Krustpils | Vichinghi -> Terra di Nessuno
+Kuldigas | Vichinghi -> Terra di Nessuno
+Kumlinge | Vichinghi -> Terra di Nessuno
+Kuruṇægala | Terra di Nessuno -> Impero Chola
+Kwai Tsing | Dinastia Song -> Terra di Nessuno
+Kwara | Impero del Ghana -> Terra di Nessuno
+Kwun Tong | Dinastia Song -> Terra di Nessuno
+Kymenlaakso | Vichinghi -> Terra di Nessuno
+Kàliningrad | Vichinghi -> Terra di Nessuno
+Kægalla | Terra di Nessuno -> Impero Chola
+Kérouané | Impero del Ghana -> Terra di Nessuno
+Kökar | Vichinghi -> Terra di Nessuno
+Kŏḷamba | Terra di Nessuno -> Impero Chola
+La Perouse Strait | Regno Heian -> Terra di Nessuno
+Lac | Califfato Fatimide -> Impero Fatimide
+Lacs | Impero del Ghana -> Terra di Nessuno
+Lagos | Impero del Ghana -> Terra di Nessuno
+Lagunes | Impero del Ghana -> Terra di Nessuno
+Lahij | Califfato Fatimide -> Impero Fatimide
+Lai Chau | Dinastia Song -> Terra di Nessuno
+Lakshadweep | Terra di Nessuno -> Impero Chola
+Lapland | Vichinghi -> Terra di Nessuno
+Lemland | Vichinghi -> Terra di Nessuno
+Lielvardes | Vichinghi -> Terra di Nessuno
+Liepāja | Vichinghi -> Terra di Nessuno
+Ligatnes | Vichinghi -> Terra di Nessuno
+Limbaži | Vichinghi -> Terra di Nessuno
+Livanu | Vichinghi -> Terra di Nessuno
+Lofa | Impero del Ghana -> Terra di Nessuno
+Lola | Impero del Ghana -> Terra di Nessuno
+Lubanas | Vichinghi -> Terra di Nessuno
+Lumparland | Vichinghi -> Terra di Nessuno
+Luxor | Califfato Fatimide -> Impero Fatimide
+Luzon Strait | Dinastia Song -> Terra di Nessuno
+Lào Cai | Dinastia Song -> Terra di Nessuno
+Lääne | Vichinghi -> Terra di Nessuno
+Lääne-Viru | Vichinghi -> Terra di Nessuno
+Lìttoral | Impero del Ghana -> Terra di Nessuno
+Ma`an | Califfato Fatimide -> Impero Fatimide
+Macenta | Impero del Ghana -> Terra di Nessuno
+Madaba | Califfato Fatimide -> Impero Fatimide
+Madona | Vichinghi -> Terra di Nessuno
+Maekel | Califfato Fatimide -> Impero Fatimide
+Mahanuvara | Terra di Nessuno -> Impero Chola
+Maharashtra | Terra di Nessuno -> Impero Chola
+Makassar Strait | Regno di Srivijaya -> Terra di Nessuno
+Makkah | Califfato Fatimide -> Impero Fatimide
+Malpils | Vichinghi -> Terra di Nessuno
+Marahoué | Impero del Ghana -> Terra di Nessuno
+Margibi | Impero del Ghana -> Terra di Nessuno
+Mariehamn | Vichinghi -> Terra di Nessuno
+Maritime | Impero del Ghana -> Terra di Nessuno
+Marupes | Vichinghi -> Terra di Nessuno
+Matruh | Califfato Fatimide -> Impero Fatimide
+Mazsalacas | Vichinghi -> Terra di Nessuno
+Maḍakalapuva | Terra di Nessuno -> Impero Chola
+Mecklenburger Bucht | Sacro Romano Impero -> Terra di Nessuno
+Mersraga | Vichinghi -> Terra di Nessuno
+Miaoli | Dinastia Song -> Terra di Nessuno
+Mizdah | Califfato Fatimide -> Impero Fatimide
+Mono | Impero del Ghana -> Terra di Nessuno
+Montserrado | Impero del Ghana -> Terra di Nessuno
+Murzuq | Califfato Fatimide -> Impero Fatimide
+Mātale | Terra di Nessuno -> Impero Chola
+Mātara | Terra di Nessuno -> Impero Chola
+Mŏṇarāgala | Terra di Nessuno -> Impero Chola
+N'zi-Comoé | Impero del Ghana -> Terra di Nessuno
+Nagasaki | Regno Heian -> Terra di Nessuno
+Nantou | Dinastia Song -> Terra di Nessuno
+Nationalparken | Terra di Nessuno -> Vichinghi
+Nauksenu | Vichinghi -> Terra di Nessuno
+Neretas | Vichinghi -> Terra di Nessuno
+New Taipei City | Dinastia Song -> Terra di Nessuno
+Nicas | Vichinghi -> Terra di Nessuno
+Nimba | Impero del Ghana -> Terra di Nessuno
+Ningxia | Dinastia Song -> Terra di Nessuno
+North | Dinastia Song -> Terra di Nessuno
+North Darfur | Califfato Fatimide -> Impero Fatimide
+North Gyeongsang | Regno Heian -> Terra di Nessuno
+North Karelia | Vichinghi -> Terra di Nessuno
+North Kordufan | Califfato Fatimide -> Impero Fatimide
+Northern | Impero del Ghana -> Terra di Nessuno
+Northern Ostrobothnia | Vichinghi -> Terra di Nessuno
+Northern Savonia | Vichinghi -> Terra di Nessuno
+Norðurland eystra | Terra di Nessuno -> Vichinghi
+Norðurland vestra | Terra di Nessuno -> Vichinghi
+Nuvara Ĕliya | Terra di Nessuno -> Impero Chola
+Nzérékoré | Impero del Ghana -> Terra di Nessuno
+Nôrthern | Impero del Ghana -> Terra di Nessuno
+Nörthern | Califfato Fatimide -> Impero Fatimide
+Obock | Califfato Fatimide -> Impero Fatimide
+Ogre | Vichinghi -> Terra di Nessuno
+Ogun | Impero del Ghana -> Terra di Nessuno
+Olaines | Vichinghi -> Terra di Nessuno
+Orhon | Terra di Nessuno -> Impero Khitan Liao
+Ostrobothnia | Vichinghi -> Terra di Nessuno
+Osun | Impero del Ghana -> Terra di Nessuno
+Ouaddaï | Califfato Fatimide -> Impero Fatimide
+Ouémé | Impero del Ghana -> Terra di Nessuno
+Oyo | Impero del Ghana -> Terra di Nessuno
+Ozolnieku | Vichinghi -> Terra di Nessuno
+P'yŏngan-bukto | Impero Khitan Liao -> Terra di Nessuno
+P'yŏngan-namdo | Impero Khitan Liao -> Terra di Nessuno
+P'yŏngyang | Impero Khitan Liao -> Terra di Nessuno
+Palk Strait | Impero Chola -> Terra di Nessuno
+Panevezio | Vichinghi -> Terra di Nessuno
+Pargaujas | Vichinghi -> Terra di Nessuno
+Pavilostas | Vichinghi -> Terra di Nessuno
+Penghu | Dinastia Song -> Terra di Nessuno
+Pingtung | Dinastia Song -> Terra di Nessuno
+Pirkanmaa | Vichinghi -> Terra di Nessuno
+Plateau | Impero del Ghana -> Terra di Nessuno
+Plavinu | Vichinghi -> Terra di Nessuno
+Plàteaux | Impero del Ghana -> Terra di Nessuno
+Preilu | Vichinghi -> Terra di Nessuno
+Priekules | Vichinghi -> Terra di Nessuno
+Priekulu | Vichinghi -> Terra di Nessuno
+Primor'ye | Impero Khitan Liao -> Terra di Nessuno
+Provincia 4741 | Vichinghi -> Terra di Nessuno
+Puttalama | Terra di Nessuno -> Impero Chola
+Päijät-Häme | Vichinghi -> Terra di Nessuno
+Pärnu | Vichinghi -> Terra di Nessuno
+Põlva | Vichinghi -> Terra di Nessuno
+Pŏḷŏnnaruva | Terra di Nessuno -> Impero Chola
+Qaasuitsup Kommunia | Terra di Nessuno -> Vichinghi
+Qeqqata Kommunia | Terra di Nessuno -> Vichinghi
+Qina | Califfato Fatimide -> Impero Fatimide
+Rapla | Vichinghi -> Terra di Nessuno
+Rasŏn | Impero Khitan Liao -> Regno Heian
+Ratnapura | Terra di Nessuno -> Impero Chola
+Raunas | Vichinghi -> Terra di Nessuno
+Raymah | Califfato Fatimide -> Impero Fatimide
+Reykjavík | Terra di Nessuno -> Vichinghi
+Riebinu | Vichinghi -> Terra di Nessuno
+Riga | Vichinghi -> Terra di Nessuno
+River Cess | Impero del Ghana -> Terra di Nessuno
+River Gee | Impero del Ghana -> Terra di Nessuno
+River Nile | Califfato Fatimide -> Impero Fatimide
+Rojas | Vichinghi -> Terra di Nessuno
+Ropazu | Vichinghi -> Terra di Nessuno
+Rucavas | Vichinghi -> Terra di Nessuno
+Rujienas | Vichinghi -> Terra di Nessuno
+Rundales | Vichinghi -> Terra di Nessuno
+Ryanggang | Impero Khitan Liao -> Terra di Nessuno
+Sa`dah | Califfato Fatimide -> Impero Fatimide
+Saare | Vichinghi -> Terra di Nessuno
+Sabha | Califfato Fatimide -> Impero Fatimide
+Sai Kung | Dinastia Song -> Terra di Nessuno
+Salacgrivas | Vichinghi -> Terra di Nessuno
+Salas | Vichinghi -> Terra di Nessuno
+Salaspils | Vichinghi -> Terra di Nessuno
+Saldus | Vichinghi -> Terra di Nessuno
+Sana'a | Califfato Fatimide -> Impero Fatimide
+Satakunta | Vichinghi -> Terra di Nessuno
+Saulkrastu | Vichinghi -> Terra di Nessuno
+Sejas | Vichinghi -> Terra di Nessuno
+Selat Bali | Regno di Srivijaya -> Terra di Nessuno
+Selenge | Terra di Nessuno -> Impero Khitan Liao
+Semenawi Keyih Bahri | Califfato Fatimide -> Impero Fatimide
+Sennar | Califfato Fatimide -> Impero Fatimide
+Sha Tin | Dinastia Song -> Terra di Nessuno
+Sham Shui Po | Dinastia Song -> Terra di Nessuno
+Shamal Sina' | Califfato Fatimide -> Impero Fatimide
+Siguldas | Vichinghi -> Terra di Nessuno
+Sila | Califfato Fatimide -> Impero Fatimide
+Sinoe | Impero del Ghana -> Terra di Nessuno
+Skagerrak | Vichinghi -> Terra di Nessuno
+Skriveru | Vichinghi -> Terra di Nessuno
+Skrundas | Vichinghi -> Terra di Nessuno
+Smiltenes | Vichinghi -> Terra di Nessuno
+Sognefjorden | Vichinghi -> Terra di Nessuno
+Sottunga | Vichinghi -> Terra di Nessuno
+South Gyeongsang | Regno Heian -> Terra di Nessuno
+South Karelia | Vichinghi -> Terra di Nessuno
+Southern | Impero del Ghana -> Terra di Nessuno
+Southern Ostrobothnia | Vichinghi -> Terra di Nessuno
+Southern Savonia | Vichinghi -> Terra di Nessuno
+Stettiner Haff | Sacro Romano Impero -> Terra di Nessuno
+Stopinu | Vichinghi -> Terra di Nessuno
+Strait of Gibraltar | Califfato di Cordova -> Terra di Nessuno
+Strait of Malacca | Regno di Srivijaya -> Terra di Nessuno
+Strait of Singapore | Regno di Srivijaya -> Terra di Nessuno
+Strencu | Vichinghi -> Terra di Nessuno
+Sud-Bandama | Impero del Ghana -> Terra di Nessuno
+Sud-Comoé | Impero del Ghana -> Terra di Nessuno
+Suhaj | Califfato Fatimide -> Impero Fatimide
+Surt | Califfato Fatimide -> Impero Fatimide
+Suðurland | Terra di Nessuno -> Vichinghi
+Suðurnes | Terra di Nessuno -> Vichinghi
+Svalbard | Terra di Nessuno -> Vichinghi
+Sàvanes | Impero del Ghana -> Terra di Nessuno
+Söuthern | Dinastia Song -> Terra di Nessuno
+Ta`izz | Califfato Fatimide -> Impero Fatimide
+Tabuk | Califfato Fatimide -> Impero Fatimide
+Tafilah | Califfato Fatimide -> Impero Fatimide
+Tai Po | Dinastia Song -> Terra di Nessuno
+Taichung City | Dinastia Song -> Terra di Nessuno
+Tainan City | Dinastia Song -> Terra di Nessuno
+Taipei City | Dinastia Song -> Terra di Nessuno
+Taitung | Dinastia Song -> Terra di Nessuno
+Taiwan Strait | Dinastia Song -> Terra di Nessuno
+Talsi | Vichinghi -> Terra di Nessuno
+Taoyuan | Dinastia Song -> Terra di Nessuno
+Tartu | Vichinghi -> Terra di Nessuno
+Taurages | Vichinghi -> Terra di Nessuno
+Tavastia Proper | Vichinghi -> Terra di Nessuno
+Telšiai | Vichinghi -> Terra di Nessuno
+Tervetes | Vichinghi -> Terra di Nessuno
+Tianjin | Dinastia Song -> Impero Khitan Liao
+Tibesti | Califfato Fatimide -> Impero Fatimide
+Tigray | Califfato Fatimide -> Impero Fatimide
+Trondheimsfjorden | Vichinghi -> Terra di Nessuno
+Tsuen Wan | Dinastia Song -> Terra di Nessuno
+Tsugaru Strait | Regno Heian -> Terra di Nessuno
+Tuen Mun | Dinastia Song -> Terra di Nessuno
+Tukums | Vichinghi -> Terra di Nessuno
+Tuyên Quang | Dinastia Song -> Terra di Nessuno
+Töv | Terra di Nessuno -> Impero Khitan Liao
+Uchiura Bay | Regno Heian -> Terra di Nessuno
+Ulaanbaatar | Terra di Nessuno -> Impero Khitan Liao
+Ulsan | Regno Heian -> Terra di Nessuno
+Utenos | Vichinghi -> Terra di Nessuno
+Uusimaa | Vichinghi -> Terra di Nessuno
+Uvs | Terra di Nessuno -> Impero Khitan Liao
+Vainodes | Vichinghi -> Terra di Nessuno
+Valga | Vichinghi -> Terra di Nessuno
+Valkas | Vichinghi -> Terra di Nessuno
+Vallée du Bandama | Impero del Ghana -> Terra di Nessuno
+Valmiera | Vichinghi -> Terra di Nessuno
+Varaklanu | Vichinghi -> Terra di Nessuno
+Varkavas | Vichinghi -> Terra di Nessuno
+Vecpiebalgas | Vichinghi -> Terra di Nessuno
+Vecumnieku | Vichinghi -> Terra di Nessuno
+Ventspils | Vichinghi -> Terra di Nessuno
+Vestfirðir | Terra di Nessuno -> Vichinghi
+Vestfjorden | Vichinghi -> Terra di Nessuno
+Vesturland | Terra di Nessuno -> Vichinghi
+Viesites | Vichinghi -> Terra di Nessuno
+Vilanu | Vichinghi -> Terra di Nessuno
+Viljandi | Vichinghi -> Terra di Nessuno
+Ville de N'Djamena | Califfato Fatimide -> Impero Fatimide
+Volta | Impero del Ghana -> Terra di Nessuno
+Vårdö | Vichinghi -> Terra di Nessuno
+Vèntspils | Vichinghi -> Terra di Nessuno
+Võru | Vichinghi -> Terra di Nessuno
+Wadi Fira | Califfato Fatimide -> Impero Fatimide
+Wadi al Hayaa | Califfato Fatimide -> Impero Fatimide
+Wan Chai | Dinastia Song -> Terra di Nessuno
+Western Darfur | Califfato Fatimide -> Impero Fatimide
+Western_5 | Impero del Ghana -> Terra di Nessuno
+White Nile | Califfato Fatimide -> Impero Fatimide
+Wong Tai Sin | Dinastia Song -> Terra di Nessuno
+Worodougou | Impero del Ghana -> Terra di Nessuno
+Wèstern | Impero del Ghana -> Terra di Nessuno
+Yangtze River | Dinastia Song -> Terra di Nessuno
+Yau Tsim Mong | Dinastia Song -> Terra di Nessuno
+Yevrey | Impero Khitan Liao -> Terra di Nessuno
+Yilan | Dinastia Song -> Terra di Nessuno
+Yobe | Califfato Fatimide -> Impero Fatimide
+Yomou | Impero del Ghana -> Terra di Nessuno
+Yucatan Channel | Regni Maya -> Terra di Nessuno
+Yuen Long | Dinastia Song -> Terra di Nessuno
+Yunlin | Dinastia Song -> Terra di Nessuno
+Yunnan | Dinastia Song -> Terra di Nessuno
+Zanzan | Impero del Ghana -> Terra di Nessuno
+Zarqa | Califfato Fatimide -> Impero Fatimide
+Zou | Impero del Ghana -> Terra di Nessuno
+`Adan | Califfato Fatimide -> Impero Fatimide
+`Asir | Califfato Fatimide -> Impero Fatimide
+Àdrar | Impero del Ghana -> Terra di Nessuno
+Àsh Sharqiyah | Califfato Fatimide -> Impero Fatimide
+Èastern | Impero del Ghana -> Terra di Nessuno
+Ömnögovi | Terra di Nessuno -> Impero Khitan Liao
+Övörhangay | Terra di Nessuno -> Impero Khitan Liao
+Øresund | Vichinghi -> Terra di Nessuno
+Ādaži | Vichinghi -> Terra di Nessuno
+Đông Bắc | Dinastia Song -> Terra di Nessuno
+Šiauliai | Vichinghi -> Terra di Nessuno
