@@ -49,27 +49,56 @@ func _open_settlement(province_name: String, settlement_name: String):
 			buildings_list.add_item(bdata.get("name", b), icon)
 
 		info_label.text = "Tipo: %s\nPopolazione: %d\nEdifici: %d" % [
-			s.get("type", "civil"),
+			_translate_type(s.get("type", "civil")),
 			int(s.get("population", 0)),
 			s.get("buildings", []).size()
 		]
-		settlement_map.build_map(s, region, province_name, settlement_name)
+
+		# Mappa dell'agglomerato con strade ed edifici
+		if settlement_map and settlement_map.has_method("build_map"):
+			settlement_map.build_map(s, region, province_name, settlement_name)
 	else:
-		# Fallback: mostra info generiche
+		# Fallback: mostra info generiche con icone e mappa
 		var data = WorldData.get_province(province_name)
 		buildings_list.clear()
 		buildings_list.add_item("Centro urbano", IconManager.get_building_icon("centro_cittadino", region))
 		buildings_list.add_item("Mercato", IconManager.get_building_icon("mercato", region))
 		buildings_list.add_item("Caserma", IconManager.get_building_icon("caserma_i", region))
+		info_label.text = "Tipo: Civile\nPopolazione: %d\nEdifici: 3 (predefiniti)" % [
+			int(data.get("population", 0))
+		]
 		var fallback := {
 			"type": "civil",
 			"population": data.get("population", 0),
 			"buildings": ["centro_cittadino", "mercato", "caserma_i"]
 		}
-		settlement_map.build_map(fallback, region, province_name, settlement_name)
-		info_label.text = "Tipo: civile\nPopolazione: %d\nEdifici: 3 (predefiniti)" % [
-			int(data.get("population", 0))
-		]
+		if settlement_map and settlement_map.has_method("build_map"):
+			settlement_map.build_map(fallback, region, province_name, settlement_name)
+
+
+func _get_region(province_name: String) -> String:
+	var owner: String = GameState.state.provinces.get(province_name, {}).get("owner", "")
+	if owner.is_empty():
+		return "european"
+	if IconManager and IconManager.has_method("region_for_faction"):
+		return IconManager.region_for_faction(owner)
+	return "european"
+
+
+func _translate_type(type_name: String) -> String:
+	match type_name.to_lower():
+		"capital":
+			return "Capitale"
+		"military":
+			return "Militare"
+		"port":
+			return "Porto"
+		"industrial":
+			return "Industriale"
+		"civil":
+			return "Civile"
+		_:
+			return type_name
 
 
 func _get_region(province_name: String) -> String:
