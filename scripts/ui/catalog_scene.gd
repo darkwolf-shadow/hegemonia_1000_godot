@@ -2,21 +2,39 @@ extends Control
 
 @onready var tab_container: TabContainer = $TabContainer
 @onready var back_button: Button = $BackButton
+@onready var region_select: OptionButton = $RegionSelect
 
 var _icon_size := Vector2(64, 64)
+var _regions := ["", "european", "oriental", "asian", "indian", "african", "american"]
+var _region_labels := ["Automatica", "Europea", "Orientale", "Asiatica", "Indiana", "Africana", "Americana"]
 
 func _ready():
 	back_button.pressed.connect(_on_back)
+	for label in _region_labels:
+		region_select.add_item(label)
+	region_select.item_selected.connect(_on_region_changed)
 	_build_tabs()
+
+
+func _on_region_changed(_index: int):
+	_build_tabs()
+
+
+func _current_region() -> String:
+	var idx := region_select.selected
+	if idx < 0 or idx >= _regions.size():
+		idx = 0
+	return _regions[idx]
 
 
 func _build_tabs():
 	_clear_tabs()
-	_add_list_tab("Edifici", WorldData.buildings.keys(), "building")
-	_add_list_tab("Unità", WorldData.units.keys(), "unit")
-	_add_list_tab("Navi", WorldData.ships.keys(), "ship")
-	_add_list_tab("Risorse", WorldData.config.get("resources", []), "resource")
-	_add_list_tab("Aglomerati", WorldData.settlement_types.keys(), "settlement")
+	var region := _current_region()
+	_add_list_tab("Edifici", WorldData.buildings.keys(), "building", region)
+	_add_list_tab("Unità", WorldData.units.keys(), "unit", region)
+	_add_list_tab("Navi", WorldData.ships.keys(), "ship", region)
+	_add_list_tab("Risorse", WorldData.config.get("resources", []), "resource", region)
+	_add_list_tab("Aglomerati", WorldData.settlement_types.keys(), "settlement", region)
 
 
 func _clear_tabs():
@@ -26,7 +44,7 @@ func _clear_tabs():
 		child.queue_free()
 
 
-func _add_list_tab(title: String, ids: Array, category: String):
+func _add_list_tab(title: String, ids: Array, category: String, region: String):
 	var scroll := ScrollContainer.new()
 	scroll.name = title
 	scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -44,7 +62,7 @@ func _add_list_tab(title: String, ids: Array, category: String):
 		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		icon.custom_minimum_size = _icon_size
 		icon.size = _icon_size
-		icon.texture = _get_icon(category, id)
+		icon.texture = _get_icon(category, id, region)
 
 		var label := Label.new()
 		label.text = _get_name(category, id)
@@ -77,18 +95,18 @@ func _get_name(category: String, id: String) -> String:
 			return id.capitalize()
 
 
-func _get_icon(category: String, id: String) -> Texture2D:
+func _get_icon(category: String, id: String, region: String) -> Texture2D:
 	match category:
 		"building":
-			return IconManager.get_building_icon(id)
+			return IconManager.get_building_icon(id, region)
 		"unit":
-			return IconManager.get_unit_icon(id)
+			return IconManager.get_unit_icon(id, region)
 		"ship":
-			return IconManager.get_ship_icon(id)
+			return IconManager.get_ship_icon(id, region)
 		"resource":
-			return IconManager.get_resource_icon(id)
+			return IconManager.get_resource_icon(id, region)
 		"settlement":
-			return IconManager.get_settlement_icon(id)
+			return IconManager.get_settlement_icon(id, region)
 		_:
 			return null
 

@@ -17,7 +17,14 @@ var _pending_att_tactic: String = "standard"
 var _pending_def_tactic: String = "standard"
 var _round_count: int = 0
 
-class BattleUnit:
+var _display_to_key := {
+	"Standard": "standard",
+	"Carica": "charge",
+	"Muro di Scudi": "shield_wall",
+	"Schermaglia": "skirmish"
+}
+
+class UnitaDaBattaglia:
 	extends Node2D
 	var unit_type: String
 	var side: String
@@ -100,7 +107,7 @@ func _add_side_units(units: Dictionary, side: String, color: Color, region: Stri
 		var count: int = units[unit_type]
 		var visual_count: int = min(count, 10)
 		for i in range(visual_count):
-			var u := BattleUnit.new(unit_type, side, region, color)
+			var u := UnitaDaBattaglia.new(unit_type, side, region, color)
 			var col: int = idx / 6
 			var row: int = idx % 6
 			var x: float = base_x + col * 35.0 + randf_range(-6.0, 6.0)
@@ -119,7 +126,7 @@ func _cull_dead():
 		return
 	var kept: Dictionary = {}
 	for u in _unit_nodes.duplicate():
-		var unit := u as BattleUnit
+		var unit := u as UnitaDaBattaglia
 		var counts: Dictionary = b.attacker_units if unit.side == "attacker" else b.defender_units
 		var count: int = min(counts.get(unit.unit_type, 0), 10)
 		var key: String = unit.side + "_" + unit.unit_type
@@ -136,12 +143,12 @@ func _update_unit_positions(tactic_att: String, tactic_def: String):
 	if b.is_empty():
 		return
 	for u in _unit_nodes:
-		var unit := u as BattleUnit
+		var unit := u as UnitaDaBattaglia
 		var tactic: String = tactic_att if unit.side == "attacker" else tactic_def
 		unit.target_pos = _target_for_unit(unit, tactic)
 
 
-func _target_for_unit(unit: BattleUnit, tactic: String) -> Vector2:
+func _target_for_unit(unit: UnitaDaBattaglia, tactic: String) -> Vector2:
 	var role: String = _unit_role(unit.unit_type)
 	var base: Vector2 = unit.base_pos
 	var advance: float = 0.0
@@ -186,7 +193,7 @@ func _unit_role(unit_type: String) -> String:
 
 func _process(delta: float):
 	for u in _unit_nodes:
-		var unit := u as BattleUnit
+		var unit := u as UnitaDaBattaglia
 		unit.position = unit.position.lerp(unit.target_pos, delta * 3.0)
 		if unit.side == "attacker":
 			unit.sprite.flip_h = false
@@ -195,7 +202,7 @@ func _process(delta: float):
 
 
 func _on_next_round():
-	var tactic: String = tactic_option.get_item_text(tactic_option.selected)
+	var tactic: String = _display_to_key.get(tactic_option.get_item_text(tactic_option.selected), "standard")
 	var ai_tactic: String = AIController.choose_battle_tactic(BattleSystem.current_battle, "defender")
 	_pending_att_tactic = tactic
 	_pending_def_tactic = ai_tactic
@@ -216,7 +223,7 @@ func _on_battle_ended(result):
 
 func _on_auto():
 	while not BattleSystem.current_battle.is_empty():
-		var tactic: String = tactic_option.get_item_text(tactic_option.selected)
+		var tactic: String = _display_to_key.get(tactic_option.get_item_text(tactic_option.selected), "standard")
 		var ai_tactic: String = AIController.choose_battle_tactic(BattleSystem.current_battle, "defender")
 		_pending_att_tactic = tactic
 		_pending_def_tactic = ai_tactic

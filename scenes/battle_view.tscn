@@ -116,10 +116,10 @@ theme_override_constants/separation = 10
 [node name="TacticOption" type="OptionButton" parent="CenterPanel"]
 layout_mode = 2
 item_count = 4
-popup/item_0/text = "standard"
-popup/item_1/text = "charge"
-popup/item_2/text = "shield_wall"
-popup/item_3/text = "skirmish"
+popup/item_0/text = "Standard"
+popup/item_1/text = "Carica"
+popup/item_2/text = "Muro di Scudi"
+popup/item_3/text = "Schermaglia"
 
 [node name="NextRoundButton" type="Button" parent="CenterPanel"]
 layout_mode = 2

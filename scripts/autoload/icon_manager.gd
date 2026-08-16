@@ -86,19 +86,38 @@ func _get_icon(category: String, id: String, region: String) -> Texture2D:
 
 
 func _resolve_path(category: String, id: String, region: String) -> String:
-	var regions = _data.get("regions", {})
-	var region_data = regions.get(region, {})
-	var cat = region_data.get(category, {})
-	if cat.has(id):
-		return cat[id]
+	var regions: Dictionary = _data.get("regions", {})
+	var default: String = _data.get("default_region", "european")
 
-	# Fallback alla regione di default
-	var default = _data.get("default_region", "european")
-	if region != default:
-		region_data = regions.get(default, {})
-		cat = region_data.get(category, {})
+	# Se la regione e' vuota, cerca in tutte le regioni (modalita' automatica)
+	if region.is_empty():
+		for any_region in regions.keys():
+			var region_data = regions.get(any_region, {})
+			var cat = region_data.get(category, {})
+			if cat.has(id):
+				return cat[id]
+	else:
+		# Regione richiesta
+		var region_data = regions.get(region, {})
+		var cat = region_data.get(category, {})
 		if cat.has(id):
 			return cat[id]
+
+		# Fallback alla regione di default
+		if region != default:
+			region_data = regions.get(default, {})
+			cat = region_data.get(category, {})
+			if cat.has(id):
+				return cat[id]
+
+		# Poi cerca in tutte le altre regioni (le icone sono spesso condivise)
+		for other in regions.keys():
+			if other == region or other == default:
+				continue
+			region_data = regions.get(other, {})
+			cat = region_data.get(category, {})
+			if cat.has(id):
+				return cat[id]
 
 	# Se non c'e' un'icona regionale, prova lo stile base SVG dell'anno 1000
 	var base := _default_svg_path(category, id)
