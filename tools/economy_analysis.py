@@ -33,8 +33,14 @@ def calc_food_consumption(faction):
 	return total
 
 rows = []
+# Mapping per nomi discordanti tra factions_1000.json e province owners
+OWNER_ALIASES = {
+	"Impero Fatimide": "Califfato Fatimide"
+}
+
 for fname, f in factions.items():
-	provs = [p for p in provinces.values() if p.get("owner") == fname]
+	owner_name = OWNER_ALIASES.get(fname, f.get("name", fname))
+	provs = [p for p in provinces.values() if p.get("owner") == owner_name]
 	bbox = {
 		"min_lat": min(p["latitude"] for p in provs) if provs else None,
 		"max_lat": max(p["latitude"] for p in provs) if provs else None,

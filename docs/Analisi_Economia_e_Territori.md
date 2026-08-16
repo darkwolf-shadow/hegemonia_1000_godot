@@ -5,7 +5,13 @@
 Le risorse definite in `data/config/game_config.json` sono:
 oro, legname, pietra, ferro, argento, armi, cibo, prestigio
 
-## Problema 1: `denaro` vs `oro`
+## Problema 1: `denaro` vs `oro` e nomi fazione discordanti
+
+In `data/world/factions_1000.json` la fazione e' chiamata **Impero Fatimide**, mentre in
+`data/world/provinces_1000.json` le province associate sono intestate a **Califfato Fatimide**.
+Questo fa si' che, senza alias, l'Impero Fatimide risulti con 0 province. E' un'anomalia
+da correggere nella mappa o nel file fazioni.
+
 
 `data/world/provinces_1000.json` assegna ai possedimenti una risorsa chiamata `denaro`,
 ma il codice (`EconomyEngine`, `SettlementManager`, costi unità/edifici) usa esclusivamente `oro`.
@@ -34,6 +40,7 @@ strategico di edifici e produzione base.
 | Vichinghi | 214 | 192013 | 9000 | 12000 | 209 | 118 | 0 | 5837742 | 1318 | 141 | 5837883 |
 | Impero del Ghana | 202 | 71857 | 11000 | 12000 | 110 | 92 | 61 | 2325572 | 707 | 451 | 2326023 |
 | Regno Khmer | 179 | 129043 | 8000 | 16000 | 89 | 71 | 0 | 3428806 | 754 | 211 | 3429017 |
+| Impero Fatimide | 119 | 74081 | 15000 | 25000 | 246 | 144 | 0 | 2046472 | 466 | 354 | 2046826 |
 | Regno di Francia | 112 | 77490 | 11000 | 18000 | 125 | 91 | 0 | 1622030 | 417 | 325 | 1622355 |
 | Sacro Romano Impero | 98 | 211145 | 14000 | 22000 | 188 | 122 | 7 | 6838154 | 1604 | 369 | 6838523 |
 | Regno d'Ungheria | 84 | 59964 | 7000 | 12000 | 104 | 87 | 29 | 1881855 | 539 | 225 | 1882080 |
@@ -49,7 +56,6 @@ strategico di edifici e produzione base.
 | Regno di Polonia | 23 | 18001 | 6500 | 14000 | 101 | 80 | 0 | 623975 | 145 | 179 | 624154 |
 | Impero Khitan Liao | 20 | 160513 | 11000 | 18000 | 214 | 158 | 2 | 5145609 | 150 | 188 | 5145797 |
 | Impero Chola | 14 | 4188 | 12000 | 22000 | 190 | 108 | 0 | 64811 | 25 | 310 | 65121 |
-| Impero Fatimide | 0 | 0 | 15000 | 25000 | 246 | 144 | 0 | 0 | 0 | 354 | 354 |
 
 ## Osservazioni sul territorio
 
