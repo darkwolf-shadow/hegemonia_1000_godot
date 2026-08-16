@@ -25,11 +25,10 @@ func _region() -> String:
 func _load_background(settlement_type: String) -> Texture2D:
 	var type_key := settlement_type.to_lower()
 	var paths := [
+		"res://assets/backgrounds/1000/" + type_key + ".svg",
+		"res://assets/backgrounds/1000/generic.svg",
 		"res://assets/backgrounds/1000/png/" + type_key + ".png",
-		"res://assets/backgrounds/1000/svg/" + type_key + ".svg",
-		"res://assets/backgrounds/1000/png/generic.png",
-		"res://assets/backgrounds/1000/svg/generic.svg",
-		"res://assets/ui_textures/southern_european/sharedpage_00.png"
+		"res://assets/backgrounds/1000/png/generic.png"
 	]
 	for p in paths:
 		if ResourceLoader.exists(p):
@@ -47,6 +46,8 @@ func _ready():
 	units_list.item_selected.connect(_on_unit_selected)
 	background.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	background.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	background.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	background.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	visible = false
 
 

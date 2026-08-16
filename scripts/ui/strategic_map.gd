@@ -101,6 +101,10 @@ func _check_province_click():
 			continue
 		if not bounds.has_point(world_pos):
 			continue
+		# Salta i mari: non devono essere cliccabili
+		var data: Dictionary = WorldData.get_province(p)
+		if _is_sea(data):
+			continue
 		var all_polys: Array = province_all_polygons[p]
 		for poly in all_polys:
 			if _point_in_polygon(world_pos, poly):

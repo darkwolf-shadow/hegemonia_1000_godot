@@ -75,7 +75,7 @@ func _get_icon(category: String, id: String, region: String) -> Texture2D:
 
 	var path := _resolve_path(category, id, region)
 	var tex: Texture2D
-	if ResourceLoader.exists(path):
+	if not path.is_empty() and FileAccess.file_exists(path) and ResourceLoader.exists(path):
 		tex = load(path) as Texture2D
 
 	if tex == null:
@@ -95,20 +95,26 @@ func _resolve_path(category: String, id: String, region: String) -> String:
 			var region_data = regions.get(any_region, {})
 			var cat = region_data.get(category, {})
 			if cat.has(id):
-				return cat[id]
+				var candidate: String = cat[id]
+				if FileAccess.file_exists(candidate):
+					return candidate
 	else:
 		# Regione richiesta
 		var region_data = regions.get(region, {})
 		var cat = region_data.get(category, {})
 		if cat.has(id):
-			return cat[id]
+			var candidate: String = cat[id]
+			if FileAccess.file_exists(candidate):
+				return candidate
 
 		# Fallback alla regione di default
 		if region != default:
 			region_data = regions.get(default, {})
 			cat = region_data.get(category, {})
 			if cat.has(id):
-				return cat[id]
+				var candidate: String = cat[id]
+				if FileAccess.file_exists(candidate):
+					return candidate
 
 		# Poi cerca in tutte le altre regioni (le icone sono spesso condivise)
 		for other in regions.keys():
@@ -117,11 +123,13 @@ func _resolve_path(category: String, id: String, region: String) -> String:
 			region_data = regions.get(other, {})
 			cat = region_data.get(category, {})
 			if cat.has(id):
-				return cat[id]
+				var candidate: String = cat[id]
+				if FileAccess.file_exists(candidate):
+					return candidate
 
 	# Se non c'e' un'icona regionale, prova lo stile base SVG dell'anno 1000
 	var base := _default_svg_path(category, id)
-	if not base.is_empty():
+	if not base.is_empty() and FileAccess.file_exists(base):
 		return base
 
 	return ""
@@ -161,3 +169,43 @@ func _load_or_null(path: String) -> Texture2D:
 
 func region_for_faction(faction_name: String) -> String:
 	return _faction_regions.get(faction_name, "european")
+
+
+var _mask_cache: Dictionary = {}
+
+func get_building_icon_masked(building_id: String, region: String = "european") -> Texture2D:
+	return _get_icon_masked("building", building_id, region, get_building_icon)
+
+
+func get_settlement_icon_masked(settlement_type: String, region: String = "european") -> Texture2D:
+	return _get_icon_masked("settlement", settlement_type, region, get_settlement_icon)
+
+
+func _get_icon_masked(prefix: String, id: String, region: String, getter: Callable) -> Texture2D:
+	var key := "masked_" + prefix + "_" + region + "_" + id
+	if _mask_cache.has(key):
+		return _mask_cache[key]
+	var tex: Texture2D = getter.call(id, region)
+	if tex == null:
+		return null
+	var masked := _remove_white_background(tex)
+	_mask_cache[key] = masked
+	return masked
+
+
+func _remove_white_background(tex: Texture2D) -> Texture2D:
+	var img := tex.get_image()
+	if img == null:
+		return tex
+	img = img.duplicate()
+	img.convert(Image.FORMAT_RGBA8)
+	var w := img.get_width()
+	var h := img.get_height()
+	var thr := 0.92
+	for y in range(h):
+		for x in range(w):
+			var c := img.get_pixel(x, y)
+			if c.r > thr and c.g > thr and c.b > thr and c.a > 0.5:
+				c.a = 0.0
+				img.set_pixel(x, y, c)
+	return ImageTexture.create_from_image(img)

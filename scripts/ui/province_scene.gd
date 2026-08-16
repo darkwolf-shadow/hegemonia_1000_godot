@@ -102,7 +102,10 @@ func _draw_territory():
 			bg_rect.size = Vector2(2400, 1800)
 			bg_rect.position = Vector2(-1200, -1100)
 			bg_rect.z_index = -10
+			bg_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 			bg_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+			bg_rect.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+			bg_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
 			territory_view.add_child(bg_rect)
 
 	if not geometry.has("coordinates"):
@@ -202,12 +205,14 @@ func _draw_territory():
 	var settlements = prov.get("settlements", {})
 	var settlement_names = settlements.keys() if settlements is Dictionary else []
 	var count: int = settlement_names.size()
+	var owner: String = prov.get("owner", "")
+	var region: String = IconManager.region_for_faction(owner)
 
 	if count == 0:
 		# Se non ci sono agglomerati, genera un agglomerato principale
 		# basato sul nome della provincia
 		var marker_pos := poly_center
-		_draw_settlement_marker(marker_pos, current_province, "civil", 0)
+		_draw_settlement_marker(marker_pos, current_province, "civil", 0, region)
 		settlement_markers[current_province] = marker_pos
 	else:
 		var radius: float = 100.0
@@ -220,7 +225,7 @@ func _draw_territory():
 			var pos: Vector2 = poly_center + Vector2(cos(angle), sin(angle)) * radius
 			positions.append(pos)
 
-			_draw_settlement_marker(pos, s_name, s.get("type", "civil"), idx)
+			_draw_settlement_marker(pos, s_name, s.get("type", "civil"), idx, region)
 			settlement_markers[s_name] = pos
 			idx += 1
 
@@ -233,15 +238,19 @@ func _draw_territory():
 				_draw_road(positions[i], positions[j], stone)
 
 
-func _draw_settlement_marker(pos: Vector2, name: String, type_name: String, idx: int):
-	# Icona reale di Medieval 2 in base al tipo
-	var icon_path := _settlement_icon(type_name)
-	var tex = load(icon_path)
+func _draw_settlement_marker(pos: Vector2, name: String, type_name: String, idx: int, region: String = "european"):
+	# Icona della settlement senza sfondo bianco e con dimensioni moderate
+	if type_name == "capital":
+		type_name = "civil"
+	var tex = IconManager.get_settlement_icon_masked(type_name, region)
+	if tex == null:
+		tex = IconManager.get_settlement_icon(type_name, region)
 	var sprite := Sprite2D.new()
 	sprite.texture = tex
 	sprite.position = pos
-	sprite.scale = Vector2(2.5, 2.5)
+	sprite.scale = Vector2(1.2, 1.2)
 	sprite.z_index = 5
+	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	territory_view.add_child(sprite)
 
 	# Ombra sotto l'icona per profondita
@@ -320,12 +329,15 @@ func _settlement_icon(type_name: String) -> String:
 
 
 func _get_background_path(terrain_lower: String) -> String:
-	# Prova prima uno sfondo PNG realistico, altrimenti torna al SVG stilizzato
+	# Usa subito lo SVG vettoriale ad alta risoluzione; il PNG a 256x256 appare pixelato
+	var svg_path := _terrain_svg_path(terrain_lower)
+	if FileAccess.file_exists(svg_path):
+		return svg_path
 	var png_name := _png_background_name(terrain_lower)
 	var png_path := "res://assets/backgrounds/1000/png/" + png_name + ".png"
 	if FileAccess.file_exists(png_path):
 		return png_path
-	return _terrain_svg_path(terrain_lower)
+	return "res://assets/backgrounds/1000/generic.svg"
 
 
 func _png_background_name(terrain_lower: String) -> String:

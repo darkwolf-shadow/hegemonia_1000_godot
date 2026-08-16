@@ -1,8 +1,11 @@
+class_name BattleGroup
 extends Node2D
 
 signal selected(group)
 signal died(group)
 signal commander_died(side)
+
+static var _visual_mode: String = "vector_3d"
 
 var unit_type: String = ""
 var side: String = ""
@@ -32,10 +35,22 @@ var _data: Dictionary = {}
 var _terrain_attack_mod: float = 1.0
 var _terrain_defense_mod: float = 1.0
 
-@onready var sprite: Sprite2D = $Sprite2D
+const BattleUnitVisualGD = preload("res://scripts/game/battle_unit_visual.gd")
+
+var _visual = null
 @onready var count_label: Label = $CountLabel
 
-func init(type_name: String, side_name: String, unit_count: int, region: String, player_side: bool, terrain_attack: float = 1.0, terrain_defense: float = 1.0):
+
+static func set_default_visual_mode(mode: String):
+	_visual_mode = mode
+
+
+func set_visual_mode(mode: String):
+	if _visual != null and is_instance_valid(_visual):
+		_visual.set_visual_mode(mode)
+
+
+func init(type_name: String, side_name: String, unit_count: int, region: String, player_side: bool, terrain_attack: float = 1.0, terrain_defense: float = 1.0, side_color: Color = Color.WHITE):
 	unit_type = type_name
 	side = side_name
 	count = unit_count
@@ -51,14 +66,25 @@ func init(type_name: String, side_name: String, unit_count: int, region: String,
 	_set_role_stats()
 	_set_tactic_modifiers()
 
-	sprite.texture = IconManager.get_battle_sprite(type_name, region)
-	if sprite.texture == null:
-		sprite.texture = IconManager.get_unit_icon(type_name, region)
-	if sprite.texture == null:
-		sprite.texture = _default_texture()
-
+	_create_visual(region, side_color)
 	_update_label()
 	set_process(false)
+
+
+func _create_visual(region: String, side_color: Color):
+	if _visual != null and is_instance_valid(_visual):
+		_visual.queue_free()
+	_visual = BattleUnitVisualGD.new()
+	_visual.setup(unit_type, region, role, side_color, count, max_count, _visual_mode)
+	_visual.selected = is_selected
+	_visual.commander = has_commander
+	add_child(_visual)
+
+func _ready():
+	var old_sprite = get_node_or_null("Sprite2D")
+	if old_sprite != null:
+		old_sprite.visible = false
+
 
 func update(delta: float):
 	if not is_instance_valid(self):
@@ -88,6 +114,11 @@ func update(delta: float):
 		_try_attack()
 
 	_update_label()
+	if _visual != null:
+		_visual.count = count
+		_visual.max_count = max_count
+		_visual.queue_redraw()
+
 
 func take_damage(raw_damage: float):
 	if count <= 0:
@@ -105,17 +136,27 @@ func take_damage(raw_damage: float):
 		count = 0
 		_queue_die()
 
+
 func set_tactic(new_tactic: String):
 	tactic = new_tactic
 	_set_tactic_modifiers()
 
+
 func set_commander(value: bool):
 	has_commander = value
+	if _visual != null:
+		_visual.commander = value
+		_visual.queue_redraw()
 	queue_redraw()
+
 
 func set_selected(value: bool):
 	is_selected = value
+	if _visual != null:
+		_visual.selected = value
+		_visual.queue_redraw()
 	queue_redraw()
+
 
 func get_attack_damage(target: Node2D) -> float:
 	var base: float = _data.get("attack", 0.1)
@@ -126,11 +167,13 @@ func get_attack_damage(target: Node2D) -> float:
 	var dmg: float = n * base * morale_factor * tactic_mod * commander_bonus * _terrain_attack_mod
 	return maxf(1.0, dmg)
 
+
 func _queue_die():
 	if has_commander:
 		commander_died.emit(side)
 	died.emit(self)
 	queue_free()
+
 
 func _set_role_stats():
 	var sp: float = _data.get("speed", 2.0)
@@ -155,6 +198,12 @@ func _set_role_stats():
 			speed = sp * 25.0
 			attack_range = 40.0
 			attack_interval = 1.5
+
+
+var _tactic_speed_mod: float = 1.0
+var _tactic_attack_mod: float = 1.0
+var _tactic_defense_mod: float = 1.0
+
 
 func _set_tactic_modifiers():
 	_tactic_speed_mod = 1.0
@@ -182,15 +231,13 @@ func _set_tactic_modifiers():
 			else:
 				_tactic_attack_mod = 0.85
 
-var _tactic_speed_mod: float = 1.0
-var _tactic_attack_mod: float = 1.0
-var _tactic_defense_mod: float = 1.0
 
 func _resolve_target():
 	if is_instance_valid(attack_target):
 		target_pos = attack_target.global_position
 	elif attack_target != null:
 		attack_target = null
+
 
 func _move(delta: float):
 	var dir := Vector2.ZERO
@@ -221,15 +268,17 @@ func _move(delta: float):
 	elif target_pos != Vector2.ZERO and global_position.distance_to(target_pos) > 5.0:
 		dir = (target_pos - global_position).normalized()
 
+	if _visual != null:
+		_visual.set_moving(dir != Vector2.ZERO)
+
 	if dir != Vector2.ZERO:
 		var move_speed: float = speed * _tactic_speed_mod
 		if is_routing:
 			move_speed *= 1.3
 		global_position += dir * move_speed * delta
-		if dir.x < -0.1:
-			sprite.flip_h = true
-		elif dir.x > 0.1:
-			sprite.flip_h = false
+		if _visual != null:
+			_visual.set_facing_right(dir.x >= -0.1)
+
 
 func _try_attack():
 	if attack_cooldown > 0.0:
@@ -246,6 +295,7 @@ func _try_attack():
 	else:
 		attack_target.take_damage(dmg)
 
+
 func _spawn_projectile(target: Node2D, damage: float):
 	var proj_scene := preload("res://scenes/projectile.tscn")
 	var proj: Node2D = proj_scene.instantiate()
@@ -253,11 +303,13 @@ func _spawn_projectile(target: Node2D, damage: float):
 	proj.global_position = global_position
 	get_parent().add_child(proj)
 
+
 func _flee_direction() -> Vector2:
 	var nearest: Node2D = _nearest_enemy()
 	if nearest == null:
 		return Vector2.RIGHT
 	return (global_position - nearest.global_position).normalized()
+
 
 func _nearest_enemy() -> Node2D:
 	var best: Node2D = null
@@ -277,6 +329,7 @@ func _nearest_enemy() -> Node2D:
 			best = child
 	return best
 
+
 func _regen_morale(delta: float):
 	if morale < max_morale:
 		var regen: float = 2.0 * delta
@@ -284,8 +337,10 @@ func _regen_morale(delta: float):
 			regen *= 1.5
 		morale = minf(max_morale, morale + regen)
 
+
 func _update_label():
 	count_label.text = "%d" % count
+
 
 func _unit_role(unit_type_name: String) -> String:
 	var key: String = unit_type_name.to_lower()
@@ -299,15 +354,6 @@ func _unit_role(unit_type_name: String) -> String:
 		return "artillery"
 	return "infantry"
 
-func _default_texture() -> Texture2D:
-	var tex := GradientTexture2D.new()
-	tex.width = 32
-	tex.height = 32
-	var grad := Gradient.new()
-	grad.set_color(0, Color.GRAY)
-	grad.set_color(1, Color.DARK_GRAY)
-	tex.gradient = grad
-	return tex
 
 func _move_away(delta: float):
 	var nearest: Node2D = _nearest_enemy()
@@ -316,16 +362,13 @@ func _move_away(delta: float):
 		dir = (global_position - nearest.global_position).normalized()
 	var move_speed: float = speed * 1.3 * _tactic_speed_mod
 	global_position += dir * move_speed * delta
-	if dir.x < -0.1:
-		sprite.flip_h = true
-	elif dir.x > 0.1:
-		sprite.flip_h = false
+	if _visual != null:
+		_visual.set_facing_right(dir.x >= -0.1)
+		_visual.set_moving(true)
+
 
 func _draw():
-	if is_selected:
-		draw_rect(Rect2(Vector2(-24, -24), Vector2(48, 48)), Color.YELLOW, false, 2.0)
-	if has_commander:
-		draw_circle(Vector2(0, -28), 6.0, Color.GOLD)
+	# Solo barra salute; la figurina vera è disegnata da BattleUnitVisual
 	var hp_ratio: float = float(count) / float(max_count) if max_count > 0 else 1.0
-	draw_rect(Rect2(Vector2(-24, 28), Vector2(48 * hp_ratio, 6)), Color.DARK_RED)
-	draw_rect(Rect2(Vector2(-24, 28), Vector2(48, 6)), Color.WHITE, false, 1.0)
+	draw_rect(Rect2(Vector2(-24, 32), Vector2(48 * hp_ratio, 6)), Color.DARK_RED)
+	draw_rect(Rect2(Vector2(-24, 32), Vector2(48, 6)), Color.WHITE, false, 1.0)

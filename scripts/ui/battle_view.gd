@@ -13,6 +13,8 @@ var _time_scale: float = 1.0
 var _combat_active: bool = false
 var _ai_timer: float = 0.0
 var _battle: Dictionary = {}
+var _visual_mode: String = "vector_3d"
+const BattleGroupClass = preload("res://scripts/game/battle_group.gd")
 
 var _top_bar: HBoxContainer
 var _phase_label: Label
@@ -45,6 +47,10 @@ const ROLE_TACTICS := {
 func _ready():
 	set_process(true)
 	_setup_ui()
+	background.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	background.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	background.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	background.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	BattleSystem.battle_started.connect(_on_battle_started)
 	BattleSystem.battle_ended.connect(_on_battle_ended)
 
@@ -59,7 +65,7 @@ func _on_battle_started(battle):
 	_battle = battle
 	_phase = "deploy"
 	_combat_active = false
-	_paused = true
+	_paused = false
 	_time_scale = 1.0
 	_ai_timer = 0.0
 	_setup_background(battle.province)
@@ -93,13 +99,13 @@ func _get_background_path(terrain_lower: String) -> String:
 		png_name = "plains"
 	else:
 		png_name = "plains"
+	var svg_path := "res://assets/backgrounds/1000/" + png_name + ".svg"
+	if FileAccess.file_exists(svg_path):
+		return svg_path
 	var png_path := "res://assets/backgrounds/1000/png/" + png_name + ".png"
 	if FileAccess.file_exists(png_path):
 		return png_path
-	var svg_path := "res://assets/backgrounds/1000/svg/" + png_name + ".svg"
-	if FileAccess.file_exists(svg_path):
-		return svg_path
-	return "res://assets/backgrounds/1000/svg/plains.svg"
+	return "res://assets/backgrounds/1000/plains.svg"
 
 
 func _spawn_groups():
@@ -127,6 +133,9 @@ func _spawn_groups():
 
 func _spawn_side(units: Dictionary, side: String, region: String, left_side: bool, attack_mod: float, defense_mod: float):
 	var is_player := (side == _player_side)
+	var faction_name: String = _battle.attacker if side == "attacker" else _battle.defender
+	var faction := WorldData.get_faction(faction_name)
+	var side_color := Color(faction.get("color", "#ffffff"))
 	var start_x: float = -600.0 if left_side else 600.0
 	var idx: int = 0
 	var total := units.size()
@@ -139,7 +148,7 @@ func _spawn_side(units: Dictionary, side: String, region: String, left_side: boo
 		var y: float = (idx - total / 2.0) * 90.0 + randf_range(-20.0, 20.0)
 		var x: float = start_x + randf_range(-60.0, 60.0)
 		group.position = Vector2(x, y)
-		group.init(unit_type, side, count, region, is_player, attack_mod, defense_mod)
+		group.init(unit_type, side, count, region, is_player, attack_mod, defense_mod, side_color)
 		group.selected.connect(_on_group_selected)
 		group.died.connect(_on_group_died)
 		group.commander_died.connect(_on_commander_died)
@@ -168,7 +177,7 @@ func _process(delta: float):
 		_update_bottom_panel()
 
 
-func _unhandled_input(event: InputEvent):
+func _gui_input(event: InputEvent):
 	if not (event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT):
 		return
 
@@ -178,15 +187,19 @@ func _unhandled_input(event: InputEvent):
 	if clicked_group != null:
 		if clicked_group.side == _player_side:
 			_select_group(clicked_group)
+			accept_event()
 			return
 		elif _selected_group != null and is_instance_valid(_selected_group) and _selected_group.side == _player_side:
-			_selected_group.attack_target = clicked_group
+			if _phase == "combat":
+				_selected_group.attack_target = clicked_group
 			_selected_group.target_pos = clicked_group.global_position
+			accept_event()
 			return
 
 	if _selected_group != null and is_instance_valid(_selected_group) and _selected_group.side == _player_side:
 		_selected_group.attack_target = null
 		_selected_group.target_pos = mouse_pos
+		accept_event()
 
 
 func _group_at(pos: Vector2) -> Node2D:
@@ -389,6 +402,11 @@ func _setup_ui():
 	start_btn.pressed.connect(_on_start_combat)
 	_top_bar.add_child(start_btn)
 
+	var toggle_btn := Button.new()
+	toggle_btn.text = "Vista: 3D"
+	toggle_btn.pressed.connect(_on_toggle_visual)
+	_top_bar.add_child(toggle_btn)
+
 	var return_btn := Button.new()
 	return_btn.text = "Torna alla Mappa"
 	return_btn.pressed.connect(_on_return)
@@ -543,6 +561,18 @@ func _on_fast():
 		_on_start_combat()
 	_paused = false
 	_time_scale = 3.0
+
+
+func _on_toggle_visual():
+	_visual_mode = "sprite_2d" if _visual_mode == "vector_3d" else "vector_3d"
+	BattleGroupClass.set_default_visual_mode(_visual_mode)
+	for g in _groups:
+		if is_instance_valid(g):
+			g.set_visual_mode(_visual_mode)
+	for child in _top_bar.get_children():
+		if child is Button and child.text.begins_with("Vista:"):
+			child.text = "Vista: 2D" if _visual_mode == "sprite_2d" else "Vista: 3D"
+			break
 
 
 func _on_start_combat():

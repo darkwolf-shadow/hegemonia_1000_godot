@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://scripts/ui/settlement_scene.gd" id="1_ss"]
-[ext_resource type="Texture2D" path="res://assets/ui_textures/southern_european/sharedpage_00.png" id="2_tex"]
 [ext_resource type="Script" path="res://scripts/ui/settlement_map.gd" id="3_sm"]
 
 [sub_resource type="StyleBoxFlat" id="sb_panel"]
@@ -36,30 +35,28 @@ color = Color(0.08, 0.06, 0.04, 1.0)
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -360.0
-offset_top = -260.0
-offset_right = 360.0
-offset_bottom = 260.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("sb_panel")
-
-[node name="ParchmentBG" type="TextureRect" parent="Panel"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_tex")
-expand_mode = 1
-stretch_mode = 6
-modulate = Color(1, 1, 1, 0.15)
+theme_override_styles/panel = SubResource("sb_panel")
+
+[node name="SettlementMap" type="Control" parent="Panel"]
+layout_mode = 1
+anchors_preset = 0
+anchor_left = 0.35
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+z_index = -1
+script = ExtResource("3_sm")
 
 [node name="Title" type="Label" parent="Panel"]
 layout_mode = 1
@@ -124,16 +121,4 @@ theme_override_font_sizes/font_size = 15
 theme_override_colors/font_color = Color(0.95, 0.80, 0.45, 1.0)
 text = "Torna alla provincia"
 
-[node name="SettlementMap" type="Control" parent="Panel"]
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -360.0
-offset_top = 90.0
-offset_right = -20.0
-offset_bottom = -55.0
-grow_horizontal = 0
-grow_vertical = 2
-script = ExtResource("3_sm")
+
