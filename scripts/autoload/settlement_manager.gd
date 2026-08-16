@@ -13,6 +13,22 @@ func get_settlement(province: Dictionary, settlement_name: String) -> Dictionary
 	return province.get("settlements", {}).get(settlement_name, {})
 
 
+func ensure_settlement(province: Dictionary, settlement_name: String, type_name: String = "civil"):
+	if not province.has("settlements") or province["settlements"] == null:
+		province["settlements"] = {}
+	if not province["settlements"].has(settlement_name):
+		var pop = int(province.get("population", 0) / 10)
+		if pop <= 0:
+			pop = 1000
+		province["settlements"][settlement_name] = {
+			"name": settlement_name,
+			"type": type_name,
+			"population": pop,
+			"buildings": ["centro_cittadino"],
+			"building_levels": {"centro_cittadino": 1}
+		}
+
+
 func list_faction_settlements(faction_name: String) -> Array:
 	var out := []
 	for prov_name in GameState.state.provinces.keys():
@@ -67,8 +83,58 @@ func build_settlement_building(faction: Dictionary, province: Dictionary, settle
 	for r in building.get("cost", {}).keys():
 		res[r] = res.get(r, 0) - building["cost"][r]
 
+	if not settlement.has("buildings"):
+		settlement["buildings"] = []
+	if not settlement.has("building_levels"):
+		settlement["building_levels"] = {}
 	settlement["buildings"].append(building_type)
+	settlement["building_levels"][building_type] = 1
 	return true
+
+
+func get_building_level(settlement: Dictionary, building_type: String) -> int:
+	return settlement.get("building_levels", {}).get(building_type, 1)
+
+
+func can_upgrade_settlement_building(faction: Dictionary, settlement: Dictionary, building_type: String) -> bool:
+	var building = WorldData.get_building(building_type)
+	if building.is_empty():
+		return false
+	if building_type not in settlement.get("buildings", []):
+		return false
+	var level = get_building_level(settlement, building_type)
+	if level >= 4:
+		return false
+	var next_cost = _upgrade_cost(building, level + 1)
+	var res = faction.get("resources", {})
+	for r in next_cost.keys():
+		if res.get(r, 0) < next_cost[r]:
+			return false
+	return true
+
+
+func upgrade_settlement_building(faction: Dictionary, province: Dictionary, settlement_name: String, building_type: String) -> bool:
+	var settlement = get_settlement(province, settlement_name)
+	if settlement.is_empty():
+		return false
+	if not can_upgrade_settlement_building(faction, settlement, building_type):
+		return false
+	var building = WorldData.get_building(building_type)
+	var level = get_building_level(settlement, building_type)
+	var next_cost = _upgrade_cost(building, level + 1)
+	var res = faction.get("resources", {})
+	for r in next_cost.keys():
+		res[r] = res.get(r, 0) - next_cost[r]
+	settlement["building_levels"][building_type] = level + 1
+	return true
+
+
+func _upgrade_cost(building: Dictionary, target_level: int) -> Dictionary:
+	var base = building.get("cost", {})
+	var out := {}
+	for r in base.keys():
+		out[r] = base[r] * target_level
+	return out
 
 
 func can_recruit_in_settlement(faction: Dictionary, settlement: Dictionary, unit_type: String, amount: int = 1) -> bool:
@@ -150,7 +216,8 @@ func production_for_faction(faction_name: String) -> Dictionary:
 			var s = prov["settlements"][s_name]
 			for b in s.get("buildings", []):
 				var data = WorldData.get_building(b)
+				var level = s.get("building_levels", {}).get(b, 1)
 				for eff in data.get("effects", {}).keys():
 					if eff in WorldData.config.get("resources", []):
-						prod[eff] = prod.get(eff, 0) + data["effects"][eff]
+						prod[eff] = prod.get(eff, 0) + data["effects"][eff] * level
 	return prod

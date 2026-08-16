@@ -54,10 +54,9 @@ func _ready():
 func open(province_name: String, settlement_name: String):
 	current_province = province_name
 	current_settlement_name = settlement_name
-	current_settlement = SettlementManager.get_settlement(
-		GameState.state.provinces.get(province_name, {}),
-		settlement_name
-	)
+	var province = GameState.state.provinces.get(province_name, {})
+	SettlementManager.ensure_settlement(province, settlement_name)
+	current_settlement = SettlementManager.get_settlement(province, settlement_name)
 	visible = true
 	background.texture = _load_background(current_settlement.get("type", "generic"))
 	_update_ui()

@@ -1,17 +1,26 @@
 extends Control
 
 signal building_selected(building_id: String)
+signal slot_selected(slot_index: int, building_id: String)
 
 var _settlement: Dictionary = {}
 var _region: String = "european"
 var _province: String = ""
 var _settlement_name: String = ""
-var _building_positions: Dictionary = {}
 
 var _zoom: float = 1.0
 var _pan: Vector2 = Vector2.ZERO
 var _dragging: bool = false
-var _selected_building: String = ""
+var _selected_slot: int = -1
+
+const GRID_COLS := 5
+const GRID_ROWS := 5
+const CELL_SIZE := 80.0
+const SPACING := 14.0
+const CENTER_SLOT := 12
+
+var _slot_building: Dictionary = {}
+var _building_slot: Dictionary = {}
 
 var _building_colors: Dictionary = {
 	"centro_cittadino": Color(0.55, 0.40, 0.22),
@@ -52,22 +61,67 @@ func build_map(settlement: Dictionary, region: String, province: String, settlem
 	_region = region
 	_province = province
 	_settlement_name = settlement_name
-	_building_positions.clear()
 	_zoom = 1.0
 	_pan = Vector2.ZERO
-	_selected_building = ""
+	_selected_slot = -1
+	_rebuild_slot_mapping()
 	queue_redraw()
 
 
 func select_building(building_id: String):
-	_selected_building = building_id
+	_selected_slot = _building_slot.get(building_id, -1)
 	queue_redraw()
+
+
+func _rebuild_slot_mapping():
+	_slot_building.clear()
+	_building_slot.clear()
+	var peripheral := _peripheral_slots()
+	var peripheral_idx := 0
+	var center_used := false
+	var buildings: Array = _settlement.get("buildings", [])
+	for b in buildings:
+		var id: String = str(b)
+		if id == "centro_cittadino" and not center_used:
+			_slot_building[CENTER_SLOT] = id
+			_building_slot[id] = CENTER_SLOT
+			center_used = true
+		elif peripheral_idx < peripheral.size():
+			var slot: int = peripheral[peripheral_idx]
+			peripheral_idx += 1
+			_slot_building[slot] = id
+			_building_slot[id] = slot
+
+
+func _peripheral_slots() -> Array:
+	var center := Vector2(CENTER_SLOT % GRID_COLS, CENTER_SLOT / GRID_COLS)
+	var slots := []
+	for i in range(GRID_COLS * GRID_ROWS):
+		if i == CENTER_SLOT:
+			continue
+		var p := Vector2(i % GRID_COLS, i / GRID_COLS)
+		slots.append({"slot": i, "dist": center.distance_squared_to(p)})
+	slots.sort_custom(func(a, b): return a["dist"] < b["dist"])
+	return slots.map(func(x): return x["slot"])
 
 
 func _draw():
 	_draw_ground()
 	_draw_roads()
-	_draw_buildings()
+	_draw_slots()
+
+
+func _grid_origin() -> Vector2:
+	var grid_w := GRID_COLS * CELL_SIZE + (GRID_COLS - 1) * SPACING
+	var grid_h := GRID_ROWS * CELL_SIZE + (GRID_ROWS - 1) * SPACING
+	return -Vector2(grid_w, grid_h) * 0.5
+
+
+func _slot_position(slot_index: int) -> Vector2:
+	var origin := _grid_origin()
+	var col := slot_index % GRID_COLS
+	var row := slot_index / GRID_COLS
+	return origin + Vector2(col, row) * (CELL_SIZE + SPACING) + Vector2(CELL_SIZE, CELL_SIZE) * 0.5
 
 
 func _world_to_screen(v: Vector2) -> Vector2:
@@ -85,8 +139,13 @@ func _draw_ground():
 	var type_name := str(_settlement.get("type", "civil"))
 	var tex: Texture2D = _load_background_texture(type_name)
 	if tex != null:
-		var bg_size: Vector2 = size * _zoom
-		var bg_pos: Vector2 = _world_to_screen(-size * 0.5)
+		var grid_size := Vector2(
+			GRID_COLS * CELL_SIZE + (GRID_COLS - 1) * SPACING,
+			GRID_ROWS * CELL_SIZE + (GRID_ROWS - 1) * SPACING
+		)
+		var margin := 40.0
+		var bg_size: Vector2 = (grid_size + Vector2(margin * 2, margin * 2)) * _zoom
+		var bg_pos: Vector2 = _world_to_screen(-grid_size * 0.5 - Vector2(margin, margin))
 		draw_texture_rect(tex, Rect2(bg_pos, bg_size), false)
 	else:
 		draw_rect(Rect2(Vector2.ZERO, size), Color(0.12, 0.10, 0.08, 1.0))
@@ -110,34 +169,15 @@ func _load_background_texture(type_name: String) -> Texture2D:
 
 
 func _draw_roads():
-	var center := Vector2.ZERO
+	var center_pos := _slot_position(CENTER_SLOT)
 	var buildings: Array = _settlement.get("buildings", [])
 	var stone := buildings.has("strade")
-	for i in range(buildings.size()):
-		var pos := _building_position(i)
-		_draw_road(center, pos, stone)
-
-
-func _building_position(index: int) -> Vector2:
-	var buildings: Array = _settlement.get("buildings", [])
-	if index >= buildings.size():
-		return Vector2.ZERO
-	var b := str(buildings[index])
-	var key := _settlement_name + "_" + b + "_" + str(index)
-	if _building_positions.has(key):
-		return _building_positions[key]
-
-	var rng := RandomNumberGenerator.new()
-	rng.seed = hash(key)
-	# Spirale dorata per evitare sovrapposizioni
-	var golden_angle := 2.399963229728653
-	var ring := index / 6
-	var idx_in_ring := index % 6
-	var angle := ring * golden_angle + idx_in_ring * (TAU / 6.0) + rng.randf_range(-0.15, 0.15)
-	var radius := 90.0 + ring * 55.0 + rng.randf_range(-12.0, 12.0)
-	var pos := Vector2(cos(angle), sin(angle)) * radius
-	_building_positions[key] = pos
-	return pos
+	for slot_key in _slot_building.keys():
+		var slot: int = slot_key
+		if slot == CENTER_SLOT:
+			continue
+		var pos := _slot_position(slot)
+		_draw_road(center_pos, pos, stone)
 
 
 func _draw_road(a: Vector2, b: Vector2, stone: bool):
@@ -154,46 +194,89 @@ func _draw_road(a: Vector2, b: Vector2, stone: bool):
 	draw_line(screen_a, screen_b, inner_color, width * 0.45, true)
 
 
-func _draw_buildings():
-	var buildings: Array = _settlement.get("buildings", [])
-	for i in range(buildings.size()):
-		var b := str(buildings[i])
-		var pos := _building_position(i)
+func _draw_slots():
+	var total_slots := GRID_COLS * GRID_ROWS
+	for slot in range(total_slots):
+		var pos := _slot_position(slot)
 		var screen_pos := _world_to_screen(pos)
-		_draw_vector_building(screen_pos, b, b == _selected_building)
-		_draw_building_icon(screen_pos, b)
+		var is_empty := not _slot_building.has(slot)
+		var selected := slot == _selected_slot
+		if is_empty:
+			_draw_empty_slot(screen_pos, selected)
+		else:
+			var b: String = str(_slot_building[slot])
+			_draw_building_slot(screen_pos, b, selected)
 
 
-func _draw_vector_building(screen_pos: Vector2, building_id: String, selected: bool):
+func _draw_empty_slot(screen_pos: Vector2, selected: bool):
+	var half := CELL_SIZE * 0.5 * _zoom
+	var rect := Rect2(screen_pos - Vector2(half, half), Vector2(half * 2, half * 2))
+	var fill := Color(0.18, 0.15, 0.12, 0.65)
+	var border := Color(0.45, 0.38, 0.28, 0.35)
+	if selected:
+		fill = Color(0.28, 0.22, 0.15, 0.75)
+		border = Color(0.85, 0.70, 0.40, 0.85)
+	draw_rect(rect, fill, true)
+	draw_rect(rect, border, false, 2.0 * _zoom)
+
+
+func _draw_building_slot(screen_pos: Vector2, building_id: String, selected: bool):
+	var half := CELL_SIZE * 0.5 * _zoom
+	var rect := Rect2(screen_pos - Vector2(half, half), Vector2(half * 2, half * 2))
+	draw_rect(rect, Color(0.08, 0.07, 0.06, 0.4), true)
+	if selected:
+		draw_rect(rect, Color(0.95, 0.80, 0.45, 0.85), false, 3.0 * _zoom)
+	else:
+		draw_rect(rect, Color(0.45, 0.38, 0.28, 0.45), false, 2.0 * _zoom)
+
+	_draw_vector_building(screen_pos, building_id)
+	_draw_building_icon(screen_pos, building_id)
+
+	var level := _get_building_level(building_id)
+	if level > 1:
+		_draw_level_pips(screen_pos, level)
+
+
+func _get_building_level(building_id: String) -> int:
+	return _settlement.get("building_levels", {}).get(building_id, 1)
+
+
+func _draw_level_pips(screen_pos: Vector2, level: int):
+	var radius := 3.5 * _zoom
+	var offset := CELL_SIZE * 0.35 * _zoom
+	var color := Color(0.95, 0.80, 0.45, 0.95)
+	for i in range(level - 1):
+		draw_circle(screen_pos + Vector2(offset - i * (radius * 2.8), -offset), radius, color)
+
+
+func _draw_vector_building(screen_pos: Vector2, building_id: String):
 	var color: Color = _building_colors.get(building_id, Color(0.45, 0.38, 0.30))
-	var base := 24.0 * _zoom
+	var base := (CELL_SIZE * 0.30) * _zoom
 	var body := PackedVector2Array([
 		screen_pos + Vector2(-base, base * 0.4),
 		screen_pos + Vector2(base, base * 0.4),
-		screen_pos + Vector2(base, -base * 0.6),
-		screen_pos + Vector2(-base, -base * 0.6)
+		screen_pos + Vector2(base * 0.7, -base * 0.6),
+		screen_pos + Vector2(-base * 0.7, -base * 0.6)
 	])
 	var roof := PackedVector2Array([
-		screen_pos + Vector2(-base * 1.15, -base * 0.6),
+		screen_pos + Vector2(-base * 0.85, -base * 0.6),
 		screen_pos + Vector2(0.0, -base * 1.1),
-		screen_pos + Vector2(base * 1.15, -base * 0.6),
-		screen_pos + Vector2(-base * 1.15, -base * 0.6)
+		screen_pos + Vector2(base * 0.85, -base * 0.6),
+		screen_pos + Vector2(-base * 0.85, -base * 0.6)
 	])
 	var dark: Color = color.darkened(0.3)
 	var light1: Color = color.lightened(0.2)
 	var light2: Color = color.lightened(0.4)
 	draw_polygon(body, PackedColorArray([dark, color, color, dark]))
 	draw_polygon(roof, PackedColorArray([light1, light2, light1, light1]))
-	if selected:
-		draw_circle(screen_pos, base * 1.25, Color(0.95, 0.80, 0.45, 0.35))
 
 
 func _draw_building_icon(screen_pos: Vector2, building_id: String):
 	var tex := IconManager.get_building_icon_masked(building_id, _region)
 	if tex == null:
 		return
-	var icon_size: Vector2 = tex.get_size() * 0.45 * _zoom
-	draw_texture_rect(tex, Rect2(screen_pos - icon_size * 0.5 - Vector2(0.0, 8.0 * _zoom), icon_size), false)
+	var icon_size: Vector2 = tex.get_size() * 0.35 * _zoom
+	draw_texture_rect(tex, Rect2(screen_pos - icon_size * 0.5 - Vector2(0.0, 6.0 * _zoom), icon_size), false)
 
 
 func _gui_input(event):
@@ -205,7 +288,7 @@ func _gui_input(event):
 			_zoom_at(event.position, 1.0 / 1.1)
 			accept_event()
 		elif event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			_select_building_at(event.position)
+			_select_slot_at(event.position)
 		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			_dragging = true
 			accept_event()
@@ -227,19 +310,22 @@ func _zoom_at(screen_pos: Vector2, factor: float):
 	queue_redraw()
 
 
-func _select_building_at(screen_pos: Vector2):
+func _select_slot_at(screen_pos: Vector2):
 	var world_pos := _screen_to_world(screen_pos)
-	var buildings: Array = _settlement.get("buildings", [])
-	var best := ""
+	var total_slots := GRID_COLS * GRID_ROWS
+	var best := -1
 	var best_dist := INF
-	for i in range(buildings.size()):
-		var b := str(buildings[i])
-		var pos := _building_position(i)
+	for slot in range(total_slots):
+		var pos := _slot_position(slot)
 		var dist := world_pos.distance_to(pos)
 		if dist < best_dist:
 			best_dist = dist
-			best = b
-	if best_dist <= 30.0:
-		_selected_building = best
+			best = slot
+	if best_dist <= CELL_SIZE * 0.6:
+		_selected_slot = best
 		queue_redraw()
-		building_selected.emit(best)
+		var building_id := ""
+		if _slot_building.has(best):
+			building_id = str(_slot_building[best])
+			building_selected.emit(building_id)
+		slot_selected.emit(best, building_id)
