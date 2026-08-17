@@ -925,5 +925,5737 @@
     "name": "Terra di Nessuno",
     "is_neutral": true,
     "color": "#AAAAAA"
+  },
+  "Tribù Guarani": {
+    "name": "Tribù Guarani",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#4251d6",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Kilwa": {
+    "name": "Regno di Kilwa",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#d8634b",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Kamarupa": {
+    "name": "Regno di Kamarupa",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c1d64d",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Tuareg": {
+    "name": "Tribù Tuareg",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#83e05e",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Mapuche": {
+    "name": "Tribù Mapuche",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#4962c6",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Aymara": {
+    "name": "Tribù Aymara",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#34c963",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Baganda": {
+    "name": "Tribù Baganda",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#e0539e",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Oghuz": {
+    "name": "Tribù Oghuz",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#d3604e",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Contea di Tolosa": {
+    "name": "Contea di Tolosa",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#56d88c",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Duklja": {
+    "name": "Regno di Duklja",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#3de23b",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Arawak": {
+    "name": "Tribù Arawak",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#d53edd",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Tehuelche": {
+    "name": "Tribù Tehuelche",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#74d13a",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno d'Inghilterra": {
+    "name": "Regno d'Inghilterra",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#db654a",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Bantu Orientali": {
+    "name": "Tribù Bantu Orientali",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#5755c1",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Bunyoro-Kitara": {
+    "name": "Regno di Bunyoro-Kitara",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#81bf42",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Armenia": {
+    "name": "Regno di Armenia",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#a24cbf",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Georgia": {
+    "name": "Regno di Georgia",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#d18559",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Croazia": {
+    "name": "Regno di Croazia",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#d13a74",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Ngäbe": {
+    "name": "Tribù Ngäbe",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#ddb75f",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Lucayane": {
+    "name": "Tribù Lucayane",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#52c95a",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Chamorro": {
+    "name": "Tribù Chamorro",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#5bcc81",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 8,
+      "arcieri": 5,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {
+      "canoa": 2
+    },
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Arabe del Golfo": {
+    "name": "Tribù Arabe del Golfo",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#54d343",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Principato di Novgorod": {
+    "name": "Principato di Novgorod",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#e2519c",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Diaguita": {
+    "name": "Tribù Diaguita",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#4dd841",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Mare Aperto": {
+    "name": "Mare Aperto",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#369cc4",
+    "capital": "",
+    "resources": {
+      "oro": 0,
+      "cibo": 0
+    },
+    "units": {},
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 0,
+      "cibo": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000.",
+    "is_neutral": true
+  },
+  "Tribù Akan": {
+    "name": "Tribù Akan",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#a64bc1",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Cebu": {
+    "name": "Regno di Cebu",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c0dd49",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Berberi del Maghreb": {
+    "name": "Tribù Berberi del Maghreb",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#56d88c",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Curoni": {
+    "name": "Tribù Curoni",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#933bce",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Taino": {
+    "name": "Tribù Taino",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#47ccb5",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Micronesiani": {
+    "name": "Micronesiani",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#d358a4",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 8,
+      "arcieri": 5,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {
+      "canoa": 2
+    },
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Nri": {
+    "name": "Regno di Nri",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#e23b3d",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Maltese": {
+    "name": "Tribù Maltese",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#dbd03f",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno d'Etiopia": {
+    "name": "Regno d'Etiopia",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#ba46ce",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Papuane": {
+    "name": "Tribù Papuane",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#ce933b",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 8,
+      "arcieri": 5,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {
+      "canoa": 2
+    },
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Papato di Roma": {
+    "name": "Papato di Roma",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#8341c1",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Rwanda": {
+    "name": "Regno di Rwanda",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#cc475d",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Caraibiche": {
+    "name": "Tribù Caraibiche",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c1c952",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Sanhaja": {
+    "name": "Tribù Sanhaja",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#3dcc90",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Ndongo": {
+    "name": "Regno di Ndongo",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#9bc635",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Cultura Bahia": {
+    "name": "Cultura Bahia",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#be45d1",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Mapungubwe": {
+    "name": "Regno di Mapungubwe",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#5e83e0",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Prime Nazioni del Canada": {
+    "name": "Prime Nazioni del Canada",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#50c1ce",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regni Irlandesi": {
+    "name": "Regni Irlandesi",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#58d387",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Tondo": {
+    "name": "Regno di Tondo",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c4407e",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Ife": {
+    "name": "Regno di Ife",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#37d69e",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Somale": {
+    "name": "Tribù Somale",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#4bd863",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Xia Occidentale": {
+    "name": "Regno di Xia Occidentale",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#4557d1",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Baltiche": {
+    "name": "Tribù Baltiche",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#5c38c1",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno Tairona": {
+    "name": "Regno Tairona",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#38c15c",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Khoisan": {
+    "name": "Tribù Khoisan",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#35c661",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Emirato Ziride": {
+    "name": "Emirato Ziride",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#475dcc",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Ladakh": {
+    "name": "Regno di Ladakh",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#54c0c4",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Ovimbundu": {
+    "name": "Tribù Ovimbundu",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#76ce3b",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Contea delle Fiandre": {
+    "name": "Contea delle Fiandre",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#d13a74",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Andamane": {
+    "name": "Tribù Andamane",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#b161d8",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Algonchine": {
+    "name": "Tribù Algonchine",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#dd3e46",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Polinesiani": {
+    "name": "Polinesiani",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#42bf81",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 8,
+      "arcieri": 5,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {
+      "canoa": 2
+    },
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Contea d'Olanda": {
+    "name": "Contea d'Olanda",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#d69e37",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Pagan": {
+    "name": "Regno di Pagan",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#ce5aa6",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Wehali": {
+    "name": "Regno di Wehali",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#48c9b1",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 8,
+      "arcieri": 5,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {
+      "canoa": 2
+    },
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Afar": {
+    "name": "Tribù Afar",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#59a5d1",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Sulawesi": {
+    "name": "Regno di Sulawesi",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#e06847",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Nanhan": {
+    "name": "Regno di Nanhan",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#d14557",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Terra Incognita": {
+    "name": "Terra Incognita",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#d68a57",
+    "capital": "",
+    "resources": {
+      "oro": 0,
+      "cibo": 0
+    },
+    "units": {},
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 0,
+      "cibo": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000.",
+    "is_neutral": true
+  },
+  "Tribù Arabe del Levante": {
+    "name": "Tribù Arabe del Levante",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#a5d159",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Sindh": {
+    "name": "Regno di Sindh",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#cc815b",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Tibetane": {
+    "name": "Tribù Tibetane",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c1d64d",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Principato di Galizia-Volinia": {
+    "name": "Principato di Galizia-Volinia",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c15755",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Benin": {
+    "name": "Regno di Benin",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#4962c6",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Maravi": {
+    "name": "Regno di Maravi",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#a94ac4",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Shirvan": {
+    "name": "Regno di Shirvan",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#e05e83",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Cusco": {
+    "name": "Regno di Cusco",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#5bcc81",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno del Kongo": {
+    "name": "Regno del Kongo",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c454c0",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Aborigene di Taiwan": {
+    "name": "Tribù Aborigene di Taiwan",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c45854",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Stati Hausa": {
+    "name": "Stati Hausa",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#d1973a",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Quimbaya": {
+    "name": "Tribù Quimbaya",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#9751e2",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Cultura Wari": {
+    "name": "Cultura Wari",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#bee246",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Principato di Polotsk": {
+    "name": "Principato di Polotsk",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#d18559",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Shariffato della Mecca": {
+    "name": "Shariffato della Mecca",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#8559d1",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Norvegia": {
+    "name": "Regno di Norvegia",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#54c458",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Nguni": {
+    "name": "Tribù Nguni",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#56bfbf",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Bantu Centrali": {
+    "name": "Tribù Bantu Centrali",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c1ce50",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Confederazione Muisca": {
+    "name": "Confederazione Muisca",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#cc5b51",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Bamileke": {
+    "name": "Tribù Bamileke",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c63f7c",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Maldive": {
+    "name": "Regno di Maldive",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#47e068",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Principati Armeni": {
+    "name": "Principati Armeni",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#74d13a",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Tupi": {
+    "name": "Tribù Tupi",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#4dd661",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Qocho": {
+    "name": "Regno di Qocho",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#d3c243",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Kannauj": {
+    "name": "Regno di Kannauj",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#87db60",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Bhutan": {
+    "name": "Regno di Bhutan",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c9b148",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Swahili": {
+    "name": "Tribù Swahili",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#e0da3c",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Siberiane": {
+    "name": "Tribù Siberiane",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#69bf4c",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Malgascio": {
+    "name": "Tribù Malgascio",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c1ce50",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Imamato di Oman": {
+    "name": "Imamato di Oman",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#53e095",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Natchez": {
+    "name": "Tribù Natchez",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#5b51cc",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Bribri": {
+    "name": "Tribù Bribri",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c1389d",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Cumane": {
+    "name": "Tribù Cumane",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#5dcc47",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Nepal": {
+    "name": "Regno di Nepal",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c1417f",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù delle Pianure": {
+    "name": "Tribù delle Pianure",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#e2bf5d",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Finniche": {
+    "name": "Tribù Finniche",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#5fddb7",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Sarda": {
+    "name": "Tribù Sarda",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#ddd53e",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Yemen": {
+    "name": "Regno di Yemen",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c15755",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Khanato Qarakhanide": {
+    "name": "Khanato Qarakhanide",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#359bc6",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Dali": {
+    "name": "Regno di Dali",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#5a39bf",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Aborigeni Australiani": {
+    "name": "Aborigeni Australiani",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#4557d1",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 8,
+      "arcieri": 5,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {
+      "canoa": 2
+    },
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Kru": {
+    "name": "Tribù Kru",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#6189d8",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Kashmir": {
+    "name": "Regno di Kashmir",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#349ac9",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Melanesiane": {
+    "name": "Tribù Melanesiane",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#5ba6cc",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 8,
+      "arcieri": 5,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {
+      "canoa": 2
+    },
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Principato di Galles": {
+    "name": "Principato di Galles",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c9b148",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Isole Disabitate": {
+    "name": "Isole Disabitate",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#d68a57",
+    "capital": "",
+    "resources": {
+      "oro": 0,
+      "cibo": 0
+    },
+    "units": {},
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 0,
+      "cibo": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000.",
+    "is_neutral": true
+  },
+  "Tribù Ancestrali Pueblo": {
+    "name": "Tribù Ancestrali Pueblo",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#7cc63f",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Burundi": {
+    "name": "Regno di Burundi",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#5d80e2",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Dai Viet": {
+    "name": "Dai Viet",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#4557d1",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Sotho": {
+    "name": "Tribù Sotho",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#417fc1",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Scozia": {
+    "name": "Regno di Scozia",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#4a64c4",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Charrua": {
+    "name": "Tribù Charrua",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#3b3de2",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Impero Pala": {
+    "name": "Impero Pala",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#39bf5a",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Kanem-Bornu": {
+    "name": "Regno di Kanem-Bornu",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#8341c1",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Letgalli": {
+    "name": "Tribù Letgalli",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#6189d8",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Irochesi": {
+    "name": "Tribù Irochesi",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#5de2bf",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Goryeo": {
+    "name": "Regno di Goryeo",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#61d8b1",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Impero Chimu": {
+    "name": "Impero Chimu",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c98d3e",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Contea di Normandia": {
+    "name": "Contea di Normandia",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#47e068",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Inuit": {
+    "name": "Tribù Inuit",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#5854c4",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Maguindanao": {
+    "name": "Regno di Maguindanao",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#85dd5f",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Selonici": {
+    "name": "Tribù Selonici",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#ce50c1",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 3,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Cultura Tiwanaku": {
+    "name": "Cultura Tiwanaku",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#dd6649",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Dahomey": {
+    "name": "Regno di Dahomey",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#3e7ac9",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Quito": {
+    "name": "Regno di Quito",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#ddb75f",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Pacifico Nord-ovest": {
+    "name": "Tribù Pacifico Nord-ovest",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c96334",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 10,
+      "arcieri": 6,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Alodia": {
+    "name": "Regno di Alodia",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#48c9b1",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Mende": {
+    "name": "Tribù Mende",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#e0da3c",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Mandinka": {
+    "name": "Tribù Mandinka",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#c742d6",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Regno di Makuria": {
+    "name": "Regno di Makuria",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#ce835a",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 15,
+      "arcieri": 3,
+      "cavalleria": 0,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Tribù Curde": {
+    "name": "Tribù Curde",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#42d6c7",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
+  },
+  "Emirato Ziyaride": {
+    "name": "Emirato Ziyaride",
+    "leader": "Capo",
+    "attitude": "balanced",
+    "color": "#8142bf",
+    "capital": "",
+    "resources": {
+      "oro": 1200,
+      "legname": 40,
+      "pietra": 30,
+      "ferro": 15,
+      "argento": 10,
+      "armi": 10,
+      "cibo": 6000,
+      "prestigio": 15
+    },
+    "units": {
+      "fanteria": 12,
+      "arcieri": 5,
+      "cavalleria": 4,
+      "artiglieria": 0
+    },
+    "ships": {},
+    "buildings": [
+      "mulino",
+      "fucina",
+      "mercato"
+    ],
+    "production": {
+      "oro": 40,
+      "cibo": 80,
+      "armi": 0,
+      "prestigio": 0
+    },
+    "modifiers": {
+      "oro": 1.0,
+      "cibo": 1.0,
+      "armi": 1.0,
+      "prestigio": 1.0
+    },
+    "description": "Fazione locale dell'anno 1000."
   }
 }
