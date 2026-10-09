@@ -15,3 +15,6 @@ export_presets.cfg
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Chiavi API locali: mai pubblicare su GitHub
+config_api.json

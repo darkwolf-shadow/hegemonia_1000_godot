@@ -57,7 +57,7 @@ func _load_background(path: String) -> Texture2D:
 		var res = load(path)
 		if res is Texture2D:
 			return res
-	return _load_icon("res://assets/backgrounds/1000/generic.svg")
+	return _load_icon("res://risorse/sfondi/1000/generic.svg")
 
 
 func _update_list():

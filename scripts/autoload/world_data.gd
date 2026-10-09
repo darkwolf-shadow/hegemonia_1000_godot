@@ -10,10 +10,10 @@ var settlement_types: Dictionary = {}
 var terrain_modifiers: Dictionary = {}
 var tactics: Dictionary = {}
 
-const CONFIG_PATH := "res://data/config/game_config.json"
-const FACTIONS_PATH := "res://data/world/factions_1000.json"
-const PROVINCES_PATH := "res://data/world/provinces_1000.json"
-const MAP_PATH := "res://data/world/mappa_anno_1000.geojson"
+const CONFIG_PATH := "res://dati/config/game_config.json"
+const FACTIONS_PATH := "res://dati/world/factions_1000.json"
+const PROVINCES_PATH := "res://dati/world/provinces_1000.json"
+const MAP_PATH := "res://dati/world/mappa_anno_1000.geojson"
 
 
 func _ready():

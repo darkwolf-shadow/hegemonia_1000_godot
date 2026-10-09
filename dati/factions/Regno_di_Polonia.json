@@ -1,0 +1,76 @@
+{
+  "comportamento": "emergente",
+  "obiettivi_storici": [
+    "Consolidare la cristianizzazione della Polonia",
+    "Contenere l'espansione del Sacro Romano Impero",
+    "Rafforzare le frontiere contro i Pruzzi e i Pecheneghi",
+    "Sviluppare l'agricoltura lungo la Vistola",
+    "Mantenere l'alleanza con Roma"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 300,
+      "edifici": [
+        "mercato",
+        "strade"
+      ],
+      "priorita": "alta"
+    },
+    "cibo": {
+      "target_mensile": 300,
+      "edifici": [
+        "mulino",
+        "magazzino"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 3,
+      "edifici": [
+        "fucina"
+      ],
+      "priorita": "media",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "prestigio": {
+      "target_mensile": 5,
+      "edifici": [
+        "monastero"
+      ],
+      "priorita": "media"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 12,
+    "cavalleria_min": 8,
+    "arcieri_min": 8,
+    "artiglieria_min": 0,
+    "navi_min": 0,
+    "scaling": {
+      "modalita": "difensiva",
+      "rivali": [
+        "Sacro Romano Impero",
+        "Principato di Kiev"
+      ],
+      "regola": "mantieni fanteria >= rivali * 0.7"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mulino",
+    "mercato",
+    "monastero",
+    "capanna_boscaioli",
+    "segheria",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "campo_tiro_i",
+    "scuderia_i",
+    "fortezza_frontiera",
+    "caserma_ii",
+    "scuderia_ii"
+  ]
+}

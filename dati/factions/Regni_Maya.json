@@ -1,0 +1,74 @@
+{
+  "comportamento": "regionale",
+  "obiettivi_storici": [
+    "Mantenere l'indipendenza delle citta'-stato maya",
+    "Contenere l'espansione tolteca",
+    "Preservare la cultura maya e il calendario",
+    "Sviluppare l'agricoltura del milpa",
+    "Rafforzare le difese delle citta'-stato"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 250,
+      "edifici": [
+        "mercato",
+        "strade"
+      ],
+      "priorita": "alta"
+    },
+    "cibo": {
+      "target_mensile": 250,
+      "edifici": [
+        "mulino",
+        "magazzino"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 2,
+      "edifici": [
+        "fucina"
+      ],
+      "priorita": "media",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "prestigio": {
+      "target_mensile": 5,
+      "edifici": [
+        "monastero"
+      ],
+      "priorita": "media"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 10,
+    "cavalleria_min": 0,
+    "arcieri_min": 8,
+    "artiglieria_min": 0,
+    "navi_min": 0,
+    "scaling": {
+      "modalita": "difensiva",
+      "rivali": [
+        "Toltechi"
+      ],
+      "regola": "mantieni fanteria >= rivali * 0.8"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mulino",
+    "mercato",
+    "magazzino",
+    "monastero",
+    "capanna_boscaioli",
+    "segheria",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "campo_tiro_i",
+    "fortezza_frontiera",
+    "caserma_ii"
+  ]
+}

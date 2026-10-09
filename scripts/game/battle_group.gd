@@ -4,6 +4,7 @@ extends Node2D
 signal selected(group)
 signal died(group)
 signal commander_died(side)
+signal formation_changed(group)
 
 static var _visual_mode: String = "vector_3d"
 
@@ -17,6 +18,11 @@ var is_player: bool = false
 var has_commander: bool = false
 var tactic: String = "standard"
 var role: String = "infantry"
+
+# Sistema formazioni - Dark Corporation / Stev
+var formation: int = 0  # FormationSystem.FormationType.LINE
+var _formation_reform_time: float = 0.0
+var _formation_slots_visual: Array = []
 
 var target_pos: Vector2 = Vector2.ZERO
 var attack_target: Node2D = null
@@ -35,6 +41,14 @@ var _data: Dictionary = {}
 var _terrain_attack_mod: float = 1.0
 var _terrain_defense_mod: float = 1.0
 
+# Modificatori formazione (aggiornati quando cambia)
+var _formation_attack_mod: float = 1.0
+var _formation_defense_mod: float = 1.0
+var _formation_speed_mod: float = 1.0
+var _formation_morale_mod: float = 1.0
+var _formation_range_mod: float = 1.0
+
+const FormationSystemGD = preload("res://scripts/game/formation_system.gd")
 const BattleUnitVisualGD = preload("res://scripts/game/battle_unit_visual.gd")
 
 var _visual = null
@@ -66,9 +80,64 @@ func init(type_name: String, side_name: String, unit_count: int, region: String,
 	_set_role_stats()
 	_set_tactic_modifiers()
 
+	# Formazione iniziale in base al ruolo
+	_set_default_formation()
+
 	_create_visual(region, side_color)
 	_update_label()
 	set_process(false)
+
+
+func _set_default_formation():
+	match role:
+		"ranged":
+			formation = FormationSystemGD.FormationType.SPREAD
+		"cavalry":
+			formation = FormationSystemGD.FormationType.WEDGE
+		"elephant":
+			formation = FormationSystemGD.FormationType.WEDGE
+		"infantry":
+			formation = FormationSystemGD.FormationType.LINE
+		"artillery":
+			formation = FormationSystemGD.FormationType.LINE
+		_:
+			formation = FormationSystemGD.FormationType.LINE
+	_apply_formation_modifiers()
+
+
+func set_formation(new_formation: int):
+	if formation == new_formation:
+		return
+	formation = new_formation
+	_formation_reform_time = 2.0  # tempo per riformare
+	_apply_formation_modifiers()
+	formation_changed.emit(self)
+	if _visual != null and is_instance_valid(_visual):
+		_visual.set_formation(new_formation)
+
+
+func _apply_formation_modifiers():
+	var mods := FormationSystemGD.get_modifiers(formation)
+	_formation_attack_mod = mods.get("attack", 1.0)
+	_formation_defense_mod = mods.get("defense", 1.0)
+	_formation_speed_mod = mods.get("speed", 1.0)
+	_formation_morale_mod = mods.get("morale", 1.0)
+	_formation_range_mod = mods.get("range", 1.0)
+
+
+func get_formation_radius() -> float:
+	return FormationSystemGD.get_formation_radius(formation)
+
+
+func get_formation_width() -> float:
+	return FormationSystemGD.get_formation_width(formation)
+
+
+func overlaps_with(other: Node2D) -> bool:
+	if other == null or not other.has_method("get_formation_radius"):
+		return false
+	var dist := global_position.distance_to(other.global_position)
+	return dist < (get_formation_radius() + other.get_formation_radius()) * 0.7
 
 
 func _create_visual(region: String, side_color: Color):
@@ -78,6 +147,7 @@ func _create_visual(region: String, side_color: Color):
 	_visual.setup(unit_type, region, role, side_color, count, max_count, _visual_mode)
 	_visual.selected = is_selected
 	_visual.commander = has_commander
+	_visual.formation = formation
 	add_child(_visual)
 	_visual.set_tactic(tactic)
 
@@ -95,6 +165,10 @@ func update(delta: float):
 		return
 
 	attack_cooldown -= delta
+
+	# Tempo di riformazione: durante il riformamento velocita' ridotta
+	if _formation_reform_time > 0:
+		_formation_reform_time -= delta
 
 	if is_routing:
 		routing_time += delta
@@ -124,13 +198,13 @@ func update(delta: float):
 func take_damage(raw_damage: float):
 	if count <= 0:
 		return
-	var actual_damage: float = raw_damage / maxf(0.1, _terrain_defense_mod * _tactic_defense_mod)
+	var actual_damage: float = raw_damage / maxf(0.1, _terrain_defense_mod * _tactic_defense_mod * _formation_defense_mod)
 	var hp_per_unit: float = (_data.get("defense", 0.1) + _data.get("armor", 0.0)) * 10.0 + 10.0
 	var kills: int = int(actual_damage / hp_per_unit)
 	if kills < 1 and actual_damage > 0.0:
 		kills = 1
 	count = max(0, count - kills)
-	morale -= actual_damage * 0.3
+	morale -= actual_damage * 0.3 * _formation_morale_mod
 	if morale <= 0:
 		is_routing = true
 	if count <= 0:
@@ -167,7 +241,7 @@ func get_attack_damage(target: Node2D) -> float:
 	var morale_factor: float = clampf(morale / max_morale, 0.2, 1.3)
 	var tactic_mod: float = _tactic_attack_mod
 	var commander_bonus: float = 1.25 if has_commander else 1.0
-	var dmg: float = n * base * morale_factor * tactic_mod * commander_bonus * _terrain_attack_mod
+	var dmg: float = n * base * morale_factor * tactic_mod * commander_bonus * _terrain_attack_mod * _formation_attack_mod
 	return maxf(1.0, dmg)
 
 
@@ -275,10 +349,22 @@ func _move(delta: float):
 		_visual.set_moving(dir != Vector2.ZERO)
 
 	if dir != Vector2.ZERO:
-		var move_speed: float = speed * _tactic_speed_mod
+		var move_speed: float = speed * _tactic_speed_mod * _formation_speed_mod
 		if is_routing:
 			move_speed *= 1.3
-		global_position += dir * move_speed * delta
+		# Durante il riformamento velocita' ridotta
+		if _formation_reform_time > 0:
+			move_speed *= 0.5
+		# Controllo collisioni con altri gruppi
+		var new_pos := global_position + dir * move_speed * delta
+		if not _check_collision(new_pos):
+			global_position = new_pos
+		else:
+			# Se collisione, prova a scivolare lateralmente
+			var perp := Vector2(-dir.y, dir.x).normalized()
+			var slide_pos := global_position + perp * move_speed * delta * 0.5
+			if not _check_collision(slide_pos):
+				global_position = slide_pos
 		if _visual != null:
 			_visual.set_facing_right(dir.x >= -0.1)
 
@@ -288,8 +374,9 @@ func _try_attack():
 		return
 	if not is_instance_valid(attack_target):
 		return
+	var effective_range: float = attack_range * _formation_range_mod
 	var dist := global_position.distance_to(attack_target.global_position)
-	if dist > attack_range:
+	if dist > effective_range:
 		return
 	attack_cooldown = attack_interval
 	var dmg := get_attack_damage(attack_target)
@@ -368,6 +455,27 @@ func _move_away(delta: float):
 	if _visual != null:
 		_visual.set_facing_right(dir.x >= -0.1)
 		_visual.set_moving(true)
+
+
+# Controllo collisioni tra formazioni - Dark Corporation / Stev
+func _check_collision(new_pos: Vector2) -> bool:
+	var parent := get_parent()
+	if parent == null:
+		return false
+	for child in parent.get_children():
+		if child == self:
+			continue
+		if not child.has_method("get_formation_radius"):
+			continue
+		if not is_instance_valid(child):
+			continue
+		if child.count <= 0:
+			continue
+		var dist := new_pos.distance_to(child.global_position)
+		var min_dist: float = (get_formation_radius() + child.get_formation_radius()) * 0.6
+		if dist < min_dist:
+			return true
+	return false
 
 
 

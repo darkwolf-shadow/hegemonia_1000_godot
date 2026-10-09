@@ -381,4 +381,4 @@ func _input(event):
 		if _catalog_popup != null and _catalog_popup.visible:
 			_catalog_popup.hide()
 		else:
-			_on_back()
+			get_tree().change_scene_to_file("res://scenes/prova_egemonia_1000.tscn")

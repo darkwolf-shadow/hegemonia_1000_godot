@@ -1,0 +1,77 @@
+{
+  "comportamento": "emergente",
+  "obiettivi_storici": [
+    "Consolidare il potere reale contro i grandi feudatari",
+    "Contenere l'espansione vichinga in Normandia",
+    "Riconquistare i territori della Loira",
+    "Sviluppare l'agricoltura nella pianura francese",
+    "Rafforzare le difese contro il Sacro Romano Impero"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 500,
+      "edifici": [
+        "mercato",
+        "strade"
+      ],
+      "priorita": "alta"
+    },
+    "cibo": {
+      "target_mensile": 500,
+      "edifici": [
+        "mulino",
+        "magazzino"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 5,
+      "edifici": [
+        "fucina"
+      ],
+      "priorita": "media",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "legname": {
+      "target_mensile": 20,
+      "edifici": [
+        "capanna_boscaioli",
+        "segheria"
+      ],
+      "priorita": "media"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 20,
+    "cavalleria_min": 15,
+    "arcieri_min": 10,
+    "artiglieria_min": 2,
+    "navi_min": 5,
+    "scaling": {
+      "modalita": "bilanciata",
+      "rivali": [
+        "Vichinghi",
+        "Sacro Romano Impero"
+      ],
+      "regola": "mantieni fanteria >= rivali * 0.9"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mulino",
+    "mercato",
+    "capanna_boscaioli",
+    "segheria",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "campo_tiro_i",
+    "scuderia_i",
+    "fortezza_frontiera",
+    "molo_i",
+    "caserma_ii",
+    "scuderia_ii"
+  ]
+}

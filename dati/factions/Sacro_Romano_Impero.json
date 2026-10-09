@@ -1,0 +1,77 @@
+{
+  "comportamento": "imperiale",
+  "obiettivi_storici": [
+    "Consolidare il controllo sull'Italia e sul Papato",
+    "Contenere l'espansione ungherese verso occidente",
+    "Rafforzare le frontiere orientali contro gli Slavi",
+    "Mantenere la supremazia militare in Europa centrale",
+    "Sviluppare il commercio lungo le rotte del Reno e del Danubio"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 600,
+      "edifici": [
+        "mercato",
+        "strade"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 6,
+      "edifici": [
+        "fucina",
+        "officina_armi"
+      ],
+      "priorita": "alta",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "cibo": {
+      "target_mensile": 400,
+      "edifici": [
+        "mulino",
+        "magazzino"
+      ],
+      "priorita": "media"
+    },
+    "pietra": {
+      "target_mensile": 30,
+      "edifici": [
+        "miniera"
+      ],
+      "priorita": "media"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 25,
+    "cavalleria_min": 15,
+    "arcieri_min": 15,
+    "artiglieria_min": 3,
+    "navi_min": 0,
+    "scaling": {
+      "modalita": "difensiva",
+      "rivali": [
+        "Regno di Francia",
+        "Regno d'Ungheria"
+      ],
+      "regola": "mantieni fanteria >= rivali * 0.8"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mercato",
+    "mulino",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "campo_tiro_i",
+    "scuderia_i",
+    "fortezza_frontiera",
+    "officina_armi",
+    "caserma_ii",
+    "scuderia_ii",
+    "caserma_iii",
+    "scuderia_iii"
+  ]
+}

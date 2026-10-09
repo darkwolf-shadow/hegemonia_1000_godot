@@ -1,0 +1,75 @@
+{
+  "comportamento": "marinaro",
+  "obiettivi_storici": [
+    "Controllare lo Stretto di Malacca",
+    "Mantenere il monopolio del commercio di spezie",
+    "Rafforzare la flotta contro i pirati",
+    "Sviluppare il commercio con Cina, India e mondo islamico",
+    "Contenere l'espansione dei Chola"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 450,
+      "edifici": [
+        "mercato",
+        "mercato_marittimo"
+      ],
+      "priorita": "alta"
+    },
+    "legname": {
+      "target_mensile": 30,
+      "edifici": [
+        "capanna_boscaioli",
+        "segheria"
+      ],
+      "priorita": "alta"
+    },
+    "cibo": {
+      "target_mensile": 250,
+      "edifici": [
+        "mulino"
+      ],
+      "priorita": "media"
+    },
+    "armi": {
+      "target_mensile": 3,
+      "edifici": [
+        "fucina"
+      ],
+      "priorita": "media",
+      "dipende": [
+        "ferro"
+      ]
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 10,
+    "cavalleria_min": 3,
+    "arcieri_min": 8,
+    "artiglieria_min": 0,
+    "navi_min": 12,
+    "scaling": {
+      "modalita": "difensiva",
+      "rivali": [
+        "Impero Chola"
+      ],
+      "regola": "mantieni navi >= rivali * 1.0"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mercato",
+    "mulino",
+    "capanna_boscaioli",
+    "segheria",
+    "molo_i",
+    "mercato_marittimo",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "campo_tiro_i",
+    "molo_ii",
+    "arsenale_i",
+    "arsenale_ii"
+  ]
+}

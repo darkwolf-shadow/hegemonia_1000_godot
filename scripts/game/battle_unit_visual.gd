@@ -12,6 +12,7 @@ var facing_right: bool = true
 var moving: bool = false
 var visual_mode: String = "realistic"
 var tactic: String = "standard"
+var formation: int = 0  # FormationSystem.FormationType.LINE
 
 var _anim_time: float = 0.0
 var _sprite: Sprite2D
@@ -22,7 +23,12 @@ var _base_y: float = 0.0
 var _base_scale: Vector2 = Vector2(0.18, 0.18)
 var _region: String = "european"
 
+# Slot di formazione: piccoli blocchi che mostrano la disposizione
+var _formation_slots: Array = []
+var _formation_reform_progress: float = 1.0
+
 const CHARGE_TACTICS := ["charge", "elephant_charge"]
+const FormationSystemGD = preload("res://scripts/game/formation_system.gd")
 
 
 func setup(type_name: String, region: String, p_role: String, p_side_color: Color, p_count: int, p_max_count: int, p_mode: String = "realistic"):
@@ -91,6 +97,23 @@ func set_tactic(p_tactic: String):
 	tactic = p_tactic
 	_update_texture()
 	_update_dust()
+
+
+func set_formation(p_formation: int):
+	if formation == p_formation:
+		return
+	formation = p_formation
+	_formation_reform_progress = 0.0
+	_rebuild_formation_slots()
+	queue_redraw()
+
+
+func _rebuild_formation_slots():
+	_formation_slots = FormationSystemGD.get_slots(formation)
+
+
+func get_formation_radius() -> float:
+	return FormationSystemGD.get_formation_radius(formation)
 
 
 func set_moving(p_moving: bool):
@@ -171,12 +194,41 @@ func _process(delta: float):
 	else:
 		_anim_time = 0.0
 		position.y = _base_y
+	# Progresso riformazione
+	if _formation_reform_progress < 1.0:
+		_formation_reform_progress = minf(1.0, _formation_reform_progress + delta * 0.5)
 	queue_redraw()
 
 
 func _draw():
+	# Disegna gli slot di formazione come blocchi
+	# Ogni blocco rappresenta una posizione nella formazione
+	# Dark Corporation / Stev
+	if _formation_slots.is_empty():
+		_formation_slots = FormationSystemGD.get_slots(formation)
+
+	var slot_color := side_color
+	slot_color.a = 0.35
+	var slot_border := side_color
+	slot_border.a = 0.6
+	var block_size := 12.0
+
+	# Raggio di occupazione della formazione
+	var radius := FormationSystemGD.get_formation_radius(formation)
 	if selected:
-		draw_arc(Vector2.ZERO, 70.0, 0.0, TAU, 32, Color.GOLD, 4.0, true)
+		# Cerchio selezione piu' grande per mostrare l'area occupata
+		draw_arc(Vector2.ZERO, radius, 0.0, TAU, 32, Color.GOLD, 2.0, true)
+	else:
+		draw_arc(Vector2.ZERO, radius, 0.0, TAU, 32, slot_border, 1.0, true)
+
+	# Disegna i blocchi della formazione
+	var visible_slots := mini(_formation_slots.size(), max(1, count / 10))
+	for i in range(visible_slots):
+		var slot: Vector2 = _formation_slots[i]
+		# Durante il riformamento, i blocchi si muovono verso la nuova posizione
+		draw_rect(Rect2(slot - Vector2(block_size / 2, block_size / 2), Vector2(block_size, block_size)), slot_color)
+		draw_rect(Rect2(slot - Vector2(block_size / 2, block_size / 2), Vector2(block_size, block_size)), slot_border, false, 1.0)
+
 	if commander:
 		var star: PackedVector2Array = _star_points(Vector2(0, -95), 16.0, 8.0)
 		draw_colored_polygon(star, Color.GOLD)

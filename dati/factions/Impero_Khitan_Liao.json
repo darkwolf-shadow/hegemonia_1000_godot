@@ -1,0 +1,79 @@
+{
+  "comportamento": "imperiale",
+  "obiettivi_storici": [
+    "Mantenere il dominio sulla Cina settentrionale",
+    "Riscuotere il tributo dalla Dinastia Song",
+    "Rafforzare la cavalleria nomade delle steppe",
+    "Controllare le rotte commerciali della Manciuria",
+    "Contenere l'espansione dei Jurchen"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 500,
+      "edifici": [
+        "mercato",
+        "strade"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 6,
+      "edifici": [
+        "fucina",
+        "officina_armi"
+      ],
+      "priorita": "alta",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "cibo": {
+      "target_mensile": 300,
+      "edifici": [
+        "mulino"
+      ],
+      "priorita": "media"
+    },
+    "legname": {
+      "target_mensile": 20,
+      "edifici": [
+        "capanna_boscaioli",
+        "segheria"
+      ],
+      "priorita": "media"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 15,
+    "cavalleria_min": 25,
+    "arcieri_min": 15,
+    "artiglieria_min": 3,
+    "navi_min": 0,
+    "scaling": {
+      "modalita": "aggressiva",
+      "rivali": [
+        "Dinastia Song"
+      ],
+      "regola": "mantieni cavalleria >= rivali * 1.5"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mercato",
+    "mulino",
+    "capanna_boscaioli",
+    "segheria",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "scuderia_i",
+    "campo_tiro_i",
+    "officina_armi",
+    "scuderia_ii",
+    "caserma_ii",
+    "scuderia_iii",
+    "cortile_cavaliere",
+    "officina_assedio_i",
+    "officina_assedio_ii"
+  ]
+}

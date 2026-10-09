@@ -1,0 +1,77 @@
+{
+  "comportamento": "imperiale",
+  "obiettivi_storici": [
+    "Mantenere il controllo di al-Andalus contro i regni cristiani",
+    "Sviluppare il commercio nel Mediterraneo occidentale",
+    "Rafforzare la flotta nello Stretto di Gibilterra",
+    "Preservare la supremazia culturale e scientifica di Cordova",
+    "Contenere l'avanzata dei regni di Leon e Navarra"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 500,
+      "edifici": [
+        "mercato",
+        "mercato_marittimo"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 6,
+      "edifici": [
+        "fucina",
+        "officina_armi"
+      ],
+      "priorita": "alta",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "cibo": {
+      "target_mensile": 300,
+      "edifici": [
+        "mulino"
+      ],
+      "priorita": "media"
+    },
+    "prestigio": {
+      "target_mensile": 8,
+      "edifici": [
+        "monastero"
+      ],
+      "priorita": "media"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 20,
+    "cavalleria_min": 15,
+    "arcieri_min": 15,
+    "artiglieria_min": 3,
+    "navi_min": 8,
+    "scaling": {
+      "modalita": "aggressiva",
+      "rivali": [
+        "Regno di Francia",
+        "Regno d'Inghilterra"
+      ],
+      "regola": "mantieni cavalleria >= rivali * 1.0"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mercato",
+    "mulino",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "campo_tiro_i",
+    "scuderia_i",
+    "molo_i",
+    "arsenale_i",
+    "officina_armi",
+    "caserma_ii",
+    "scuderia_ii",
+    "molo_ii",
+    "arsenale_ii"
+  ]
+}

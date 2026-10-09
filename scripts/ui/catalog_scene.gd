@@ -131,9 +131,9 @@ func _get_icon_masked(category: String, id: String, region: String) -> Texture2D
 
 
 func _on_back():
-	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/prova_egemonia_1000.tscn")
 
 
 func _input(event):
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
-		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+		get_tree().change_scene_to_file("res://scenes/prova_egemonia_1000.tscn")

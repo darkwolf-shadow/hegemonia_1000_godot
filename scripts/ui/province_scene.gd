@@ -330,9 +330,9 @@ func _settlement_icon(type_name: String) -> String:
 	# Usa le icone SVG base del progetto (non quelle originali di Medieval 2)
 	if type_name == "capital":
 		type_name = "civil"
-	var path := "res://assets/icons/1000/settlements/" + type_name + ".svg"
+	var path := "res://risorse/icone/1000/settlements/" + type_name + ".svg"
 	if not ResourceLoader.exists(path):
-		path = "res://assets/icons/1000/settlements/civil.svg"
+		path = "res://risorse/icone/1000/settlements/civil.svg"
 	return path
 
 
@@ -342,10 +342,10 @@ func _get_background_path(terrain_lower: String) -> String:
 	if FileAccess.file_exists(svg_path):
 		return svg_path
 	var png_name := _png_background_name(terrain_lower)
-	var png_path := "res://assets/backgrounds/1000/png/" + png_name + ".png"
+	var png_path := "res://risorse/sfondi/1000/png/" + png_name + ".png"
 	if FileAccess.file_exists(png_path):
 		return png_path
-	return "res://assets/backgrounds/1000/generic.svg"
+	return "res://risorse/sfondi/1000/generic.svg"
 
 
 func _png_background_name(terrain_lower: String) -> String:
@@ -362,37 +362,37 @@ func _terrain_svg_path(terrain_lower: String) -> String:
 	# Path allo SVG di sfondo per ogni tipo di terreno
 	match terrain_lower:
 		"forest", "foresta":
-			return "res://assets/backgrounds/1000/forest.svg"
+			return "res://risorse/sfondi/1000/forest.svg"
 		"mountain", "montagna", "mountains":
-			return "res://assets/backgrounds/1000/mountains.svg"
+			return "res://risorse/sfondi/1000/mountains.svg"
 		"desert", "deserto":
-			return "res://assets/backgrounds/1000/desert.svg"
+			return "res://risorse/sfondi/1000/desert.svg"
 		"plains", "pianura":
-			return "res://assets/backgrounds/1000/plains.svg"
+			return "res://risorse/sfondi/1000/plains.svg"
 		"coastal", "costiera", "coast":
-			return "res://assets/backgrounds/1000/coast.svg"
+			return "res://risorse/sfondi/1000/coast.svg"
 		"tundra":
-			return "res://assets/backgrounds/1000/tundra.svg"
+			return "res://risorse/sfondi/1000/tundra.svg"
 		"hills", "colline":
-			return "res://assets/backgrounds/1000/hills.svg"
+			return "res://risorse/sfondi/1000/hills.svg"
 		"swamp", "palude":
-			return "res://assets/backgrounds/1000/swamp.svg"
+			return "res://risorse/sfondi/1000/swamp.svg"
 		"jungle", "giungla":
-			return "res://assets/backgrounds/1000/jungle.svg"
+			return "res://risorse/sfondi/1000/jungle.svg"
 		"steppe", "steppa":
-			return "res://assets/backgrounds/1000/steppe.svg"
+			return "res://risorse/sfondi/1000/steppe.svg"
 		"savannah", "savana":
-			return "res://assets/backgrounds/1000/savannah.svg"
+			return "res://risorse/sfondi/1000/savannah.svg"
 		"river", "fiume":
-			return "res://assets/backgrounds/1000/river.svg"
+			return "res://risorse/sfondi/1000/river.svg"
 		"industrial", "industriale":
-			return "res://assets/backgrounds/1000/industrial.svg"
+			return "res://risorse/sfondi/1000/industrial.svg"
 		"military", "militare":
-			return "res://assets/backgrounds/1000/military.svg"
+			return "res://risorse/sfondi/1000/military.svg"
 		"port", "porto":
-			return "res://assets/backgrounds/1000/port.svg"
+			return "res://risorse/sfondi/1000/port.svg"
 		_:
-			return "res://assets/backgrounds/1000/generic.svg"
+			return "res://risorse/sfondi/1000/generic.svg"
 
 
 func _terrain_color(terrain: String) -> Color:

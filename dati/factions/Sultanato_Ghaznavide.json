@@ -1,0 +1,79 @@
+{
+  "comportamento": "imperiale",
+  "obiettivi_storici": [
+    "Espandere il dominio turco-musulmano in India settentrionale",
+    "Razziare i templi indiani per tesori e prestigio",
+    "Controllare le rotte commerciali dell'Afghanistan",
+    "Contenere l'espansione dei Qarakhanidi",
+    "Mantenere la supremazia militare turca"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 400,
+      "edifici": [
+        "mercato",
+        "strade"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 6,
+      "edifici": [
+        "fucina",
+        "officina_armi"
+      ],
+      "priorita": "alta",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "cibo": {
+      "target_mensile": 250,
+      "edifici": [
+        "mulino"
+      ],
+      "priorita": "media"
+    },
+    "legname": {
+      "target_mensile": 15,
+      "edifici": [
+        "capanna_boscaioli",
+        "segheria"
+      ],
+      "priorita": "media"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 15,
+    "cavalleria_min": 20,
+    "arcieri_min": 15,
+    "artiglieria_min": 3,
+    "navi_min": 0,
+    "scaling": {
+      "modalita": "aggressiva",
+      "rivali": [
+        "Califfato Abbaside",
+        "Dinastia Song"
+      ],
+      "regola": "mantieni cavalleria >= rivali * 1.2"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mercato",
+    "mulino",
+    "capanna_boscaioli",
+    "segheria",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "scuderia_i",
+    "campo_tiro_i",
+    "officina_armi",
+    "scuderia_ii",
+    "caserma_ii",
+    "cortile_cavaliere",
+    "officina_assedio_i",
+    "officina_assedio_ii"
+  ]
+}

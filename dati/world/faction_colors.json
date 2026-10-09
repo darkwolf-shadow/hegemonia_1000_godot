@@ -1,0 +1,792 @@
+{
+  "Impero Bizantino": {
+    "r": 189,
+    "g": 40,
+    "b": 40
+  },
+  "Sacro Romano Impero": {
+    "r": 31,
+    "g": 223,
+    "b": 87
+  },
+  "Vichinghi": {
+    "r": 156,
+    "g": 42,
+    "b": 237
+  },
+  "Regno di Francia": {
+    "r": 219,
+    "g": 202,
+    "b": 86
+  },
+  "Califfato di Cordova": {
+    "r": 98,
+    "g": 210,
+    "b": 232
+  },
+  "Impero Fatimide": {
+    "r": 212,
+    "g": 17,
+    "b": 122
+  },
+  "Regno d'Ungheria": {
+    "r": 85,
+    "g": 210,
+    "b": 44
+  },
+  "Principato di Kiev": {
+    "r": 61,
+    "g": 54,
+    "b": 226
+  },
+  "Regno di Polonia": {
+    "r": 239,
+    "g": 124,
+    "b": 66
+  },
+  "Califfato Abbaside": {
+    "r": 107,
+    "g": 223,
+    "b": 180
+  },
+  "Sultanato Ghaznavide": {
+    "r": 186,
+    "g": 28,
+    "b": 200
+  },
+  "Dinastia Song": {
+    "r": 190,
+    "g": 235,
+    "b": 19
+  },
+  "Impero Khitan Liao": {
+    "r": 65,
+    "g": 140,
+    "b": 214
+  },
+  "Impero Chola": {
+    "r": 229,
+    "g": 76,
+    "b": 108
+  },
+  "Regno Khmer": {
+    "r": 89,
+    "g": 241,
+    "b": 102
+  },
+  "Regno Heian": {
+    "r": 96,
+    "g": 40,
+    "b": 189
+  },
+  "Regno di Srivijaya": {
+    "r": 223,
+    "g": 159,
+    "b": 31
+  },
+  "Impero del Ghana": {
+    "r": 42,
+    "g": 237,
+    "b": 230
+  },
+  "Toltechi": {
+    "r": 219,
+    "g": 86,
+    "b": 185
+  },
+  "Regni Maya": {
+    "r": 159,
+    "g": 232,
+    "b": 98
+  },
+  "Terra di Nessuno": {
+    "r": 17,
+    "g": 49,
+    "b": 212
+  },
+  "Tribù Guarani": {
+    "r": 210,
+    "g": 65,
+    "b": 44
+  },
+  "Regno di Kilwa": {
+    "r": 54,
+    "g": 226,
+    "b": 126
+  },
+  "Regno di Kamarupa": {
+    "r": 189,
+    "g": 66,
+    "b": 239
+  },
+  "Tribù Tuareg": {
+    "r": 223,
+    "g": 223,
+    "b": 107
+  },
+  "Tribù Mapuche": {
+    "r": 28,
+    "g": 150,
+    "b": 200
+  },
+  "Tribù Aymara": {
+    "r": 235,
+    "g": 19,
+    "b": 108
+  },
+  "Tribù Baganda": {
+    "r": 83,
+    "g": 214,
+    "b": 65
+  },
+  "Tribù Oghuz": {
+    "r": 102,
+    "g": 76,
+    "b": 229
+  },
+  "Contea di Tolosa": {
+    "r": 241,
+    "g": 160,
+    "b": 89
+  },
+  "Regno di Duklja": {
+    "r": 40,
+    "g": 189,
+    "b": 152
+  },
+  "Tribù Arawak": {
+    "r": 223,
+    "g": 31,
+    "b": 214
+  },
+  "Tribù Tehuelche": {
+    "r": 171,
+    "g": 237,
+    "b": 42
+  },
+  "Regno d'Inghilterra": {
+    "r": 86,
+    "g": 135,
+    "b": 219
+  },
+  "Tribù Bantu Orientali": {
+    "r": 232,
+    "g": 98,
+    "b": 109
+  },
+  "Regno di Bunyoro-Kitara": {
+    "r": 17,
+    "g": 212,
+    "b": 58
+  },
+  "Regno di Armenia": {
+    "r": 128,
+    "g": 44,
+    "b": 210
+  },
+  "Regno di Georgia": {
+    "r": 226,
+    "g": 191,
+    "b": 54
+  },
+  "Regno di Croazia": {
+    "r": 66,
+    "g": 224,
+    "b": 239
+  },
+  "Tribù Ngäbe": {
+    "r": 223,
+    "g": 107,
+    "b": 179
+  },
+  "Tribù Lucayane": {
+    "r": 85,
+    "g": 200,
+    "b": 28
+  },
+  "Tribù Chamorro": {
+    "r": 19,
+    "g": 26,
+    "b": 235
+  },
+  "Tribù Arabe del Golfo": {
+    "r": 214,
+    "g": 103,
+    "b": 65
+  },
+  "Principato di Novgorod": {
+    "r": 76,
+    "g": 229,
+    "b": 160
+  },
+  "Tribù Diaguita": {
+    "r": 217,
+    "g": 89,
+    "b": 241
+  },
+  "Mare Aperto": {
+    "r": 169,
+    "g": 189,
+    "b": 40
+  },
+  "Tribù Akan": {
+    "r": 31,
+    "g": 142,
+    "b": 223
+  },
+  "Regno di Cebu": {
+    "r": 237,
+    "g": 42,
+    "b": 98
+  },
+  "Tribù Berberi del Maghreb": {
+    "r": 86,
+    "g": 219,
+    "b": 87
+  },
+  "Tribù Curoni": {
+    "r": 138,
+    "g": 98,
+    "b": 232
+  },
+  "Tribù Taino": {
+    "r": 212,
+    "g": 132,
+    "b": 17
+  },
+  "Micronesiani": {
+    "r": 44,
+    "g": 210,
+    "b": 190
+  },
+  "Regno di Nri": {
+    "r": 226,
+    "g": 54,
+    "b": 196
+  },
+  "Tribù Maltese": {
+    "r": 158,
+    "g": 239,
+    "b": 66
+  },
+  "Regno d'Etiopia": {
+    "r": 107,
+    "g": 135,
+    "b": 223
+  },
+  "Tribù Papuane": {
+    "r": 200,
+    "g": 37,
+    "b": 28
+  },
+  "Papato di Roma": {
+    "r": 19,
+    "g": 235,
+    "b": 92
+  },
+  "Regno di Rwanda": {
+    "r": 160,
+    "g": 65,
+    "b": 214
+  },
+  "Tribù Caraibiche": {
+    "r": 229,
+    "g": 217,
+    "b": 76
+  },
+  "Tribù Sanhaja": {
+    "r": 89,
+    "g": 208,
+    "b": 241
+  },
+  "Regno di Ndongo": {
+    "r": 189,
+    "g": 40,
+    "b": 113
+  },
+  "Cultura Bahia": {
+    "r": 70,
+    "g": 223,
+    "b": 31
+  },
+  "Regno di Mapungubwe": {
+    "r": 60,
+    "g": 42,
+    "b": 237
+  },
+  "Prime Nazioni del Canada": {
+    "r": 219,
+    "g": 137,
+    "b": 86
+  },
+  "Regni Irlandesi": {
+    "r": 98,
+    "g": 232,
+    "b": 189
+  },
+  "Regno di Tondo": {
+    "r": 205,
+    "g": 17,
+    "b": 212
+  },
+  "Regno di Ife": {
+    "r": 167,
+    "g": 210,
+    "b": 44
+  },
+  "Tribù Somale": {
+    "r": 54,
+    "g": 131,
+    "b": 226
+  },
+  "Regno di Xia Occidentale": {
+    "r": 239,
+    "g": 66,
+    "b": 93
+  },
+  "Tribù Baltiche": {
+    "r": 107,
+    "g": 223,
+    "b": 123
+  },
+  "Regno Tairona": {
+    "r": 102,
+    "g": 28,
+    "b": 200
+  },
+  "Tribù Khoisan": {
+    "r": 235,
+    "g": 174,
+    "b": 19
+  },
+  "Emirato Ziride": {
+    "r": 65,
+    "g": 213,
+    "b": 214
+  },
+  "Regno di Ladakh": {
+    "r": 229,
+    "g": 76,
+    "b": 183
+  },
+  "Tribù Ovimbundu": {
+    "r": 151,
+    "g": 241,
+    "b": 89
+  },
+  "Contea delle Fiandre": {
+    "r": 40,
+    "g": 57,
+    "b": 189
+  },
+  "Tribù Andamane": {
+    "r": 223,
+    "g": 65,
+    "b": 31
+  },
+  "Tribù Algonchine": {
+    "r": 42,
+    "g": 237,
+    "b": 134
+  },
+  "Polinesiani": {
+    "r": 187,
+    "g": 86,
+    "b": 219
+  },
+  "Contea d'Olanda": {
+    "r": 225,
+    "g": 232,
+    "b": 98
+  },
+  "Regno di Pagan": {
+    "r": 17,
+    "g": 145,
+    "b": 212
+  },
+  "Regno di Wehali": {
+    "r": 210,
+    "g": 44,
+    "b": 104
+  },
+  "Tribù Afar": {
+    "r": 66,
+    "g": 226,
+    "b": 54
+  },
+  "Regno di Sulawesi": {
+    "r": 104,
+    "g": 66,
+    "b": 239
+  },
+  "Regno di Nanhan": {
+    "r": 223,
+    "g": 167,
+    "b": 107
+  },
+  "Terra Incognita": {
+    "r": 28,
+    "g": 200,
+    "b": 166
+  },
+  "Tribù Arabe del Levante": {
+    "r": 235,
+    "g": 19,
+    "b": 215
+  },
+  "Regno di Sindh": {
+    "r": 157,
+    "g": 214,
+    "b": 65
+  },
+  "Tribù Tibetane": {
+    "r": 76,
+    "g": 125,
+    "b": 229
+  },
+  "Principato di Galizia-Volinia": {
+    "r": 241,
+    "g": 89,
+    "b": 94
+  },
+  "Regno di Benin": {
+    "r": 40,
+    "g": 189,
+    "b": 79
+  },
+  "Regno di Maravi": {
+    "r": 137,
+    "g": 31,
+    "b": 223
+  },
+  "Regno di Shirvan": {
+    "r": 237,
+    "g": 207,
+    "b": 42
+  },
+  "Regno di Cusco": {
+    "r": 86,
+    "g": 201,
+    "b": 219
+  },
+  "Regno del Kongo": {
+    "r": 232,
+    "g": 98,
+    "b": 175
+  },
+  "Tribù Aborigene di Taiwan": {
+    "r": 71,
+    "g": 212,
+    "b": 17
+  },
+  "Stati Hausa": {
+    "r": 46,
+    "g": 44,
+    "b": 210
+  },
+  "Tribù Quimbaya": {
+    "r": 226,
+    "g": 106,
+    "b": 54
+  },
+  "Cultura Wari": {
+    "r": 66,
+    "g": 239,
+    "b": 169
+  },
+  "Principato di Polotsk": {
+    "r": 210,
+    "g": 107,
+    "b": 223
+  },
+  "Shariffato della Mecca": {
+    "r": 169,
+    "g": 200,
+    "b": 28
+  },
+  "Regno di Norvegia": {
+    "r": 19,
+    "g": 133,
+    "b": 235
+  },
+  "Tribù Nguni": {
+    "r": 214,
+    "g": 65,
+    "b": 100
+  },
+  "Tribù Bantu Centrali": {
+    "r": 76,
+    "g": 229,
+    "b": 84
+  },
+  "Confederazione Muisca": {
+    "r": 142,
+    "g": 89,
+    "b": 241
+  },
+  "Tribù Bamileke": {
+    "r": 189,
+    "g": 135,
+    "b": 40
+  },
+  "Regno di Maldive": {
+    "r": 31,
+    "g": 223,
+    "b": 209
+  },
+  "Principati Armeni": {
+    "r": 237,
+    "g": 42,
+    "b": 194
+  },
+  "Tribù Tupi": {
+    "r": 151,
+    "g": 219,
+    "b": 86
+  },
+  "Regno di Qocho": {
+    "r": 98,
+    "g": 124,
+    "b": 232
+  },
+  "Regno di Kannauj": {
+    "r": 212,
+    "g": 36,
+    "b": 17
+  },
+  "Regno di Bhutan": {
+    "r": 44,
+    "g": 210,
+    "b": 109
+  },
+  "Tribù Swahili": {
+    "r": 171,
+    "g": 54,
+    "b": 226
+  },
+  "Tribù Siberiane": {
+    "r": 239,
+    "g": 235,
+    "b": 66
+  },
+  "Tribù Malgascio": {
+    "r": 107,
+    "g": 192,
+    "b": 223
+  },
+  "Imamato di Oman": {
+    "r": 200,
+    "g": 28,
+    "b": 104
+  },
+  "Tribù Natchez": {
+    "r": 51,
+    "g": 235,
+    "b": 19
+  },
+  "Tribù Bribri": {
+    "r": 86,
+    "g": 65,
+    "b": 214
+  },
+  "Tribù Cumane": {
+    "r": 229,
+    "g": 142,
+    "b": 76
+  },
+  "Regno di Nepal": {
+    "r": 89,
+    "g": 241,
+    "b": 199
+  },
+  "Tribù delle Pianure": {
+    "r": 189,
+    "g": 40,
+    "b": 186
+  },
+  "Tribù Finniche": {
+    "r": 164,
+    "g": 223,
+    "b": 31
+  },
+  "Tribù Sarda": {
+    "r": 42,
+    "g": 120,
+    "b": 237
+  },
+  "Regno di Yemen": {
+    "r": 219,
+    "g": 86,
+    "b": 101
+  },
+  "Khanato Qarakhanide": {
+    "r": 98,
+    "g": 232,
+    "b": 123
+  },
+  "Regno di Dali": {
+    "r": 109,
+    "g": 17,
+    "b": 212
+  },
+  "Aborigeni Australiani": {
+    "r": 210,
+    "g": 171,
+    "b": 44
+  },
+  "Tribù Kru": {
+    "r": 54,
+    "g": 216,
+    "b": 226
+  },
+  "Regno di Kashmir": {
+    "r": 239,
+    "g": 66,
+    "b": 178
+  },
+  "Tribù Melanesiane": {
+    "r": 149,
+    "g": 223,
+    "b": 107
+  },
+  "Principato di Galles": {
+    "r": 28,
+    "g": 40,
+    "b": 200
+  },
+  "Isole Disabitate": {
+    "r": 235,
+    "g": 68,
+    "b": 19
+  },
+  "Tribù Ancestrali Pueblo": {
+    "r": 65,
+    "g": 214,
+    "b": 142
+  },
+  "Regno di Burundi": {
+    "r": 200,
+    "g": 76,
+    "b": 229
+  },
+  "Dai Viet": {
+    "r": 226,
+    "g": 241,
+    "b": 89
+  },
+  "Tribù Sotho": {
+    "r": 40,
+    "g": 130,
+    "b": 189
+  },
+  "Regno di Scozia": {
+    "r": 223,
+    "g": 31,
+    "b": 92
+  },
+  "Tribù Charrua": {
+    "r": 47,
+    "g": 237,
+    "b": 42
+  },
+  "Impero Pala": {
+    "r": 122,
+    "g": 86,
+    "b": 219
+  },
+  "Regno di Kanem-Bornu": {
+    "r": 232,
+    "g": 173,
+    "b": 98
+  },
+  "Tribù Letgalli": {
+    "r": 17,
+    "g": 212,
+    "b": 183
+  },
+  "Tribù Irochesi": {
+    "r": 210,
+    "g": 44,
+    "b": 186
+  },
+  "Regno di Goryeo": {
+    "r": 151,
+    "g": 226,
+    "b": 54
+  },
+  "Impero Chimu": {
+    "r": 66,
+    "g": 113,
+    "b": 239
+  },
+  "Contea di Normandia": {
+    "r": 223,
+    "g": 109,
+    "b": 107
+  },
+  "Tribù Inuit": {
+    "r": 28,
+    "g": 200,
+    "b": 82
+  },
+  "Regno di Maguindanao": {
+    "r": 149,
+    "g": 19,
+    "b": 235
+  },
+  "Tribù Selonici": {
+    "r": 214,
+    "g": 199,
+    "b": 65
+  },
+  "Cultura Tiwanaku": {
+    "r": 76,
+    "g": 200,
+    "b": 229
+  },
+  "Regno di Dahomey": {
+    "r": 241,
+    "g": 89,
+    "b": 169
+  },
+  "Regno di Quito": {
+    "r": 74,
+    "g": 189,
+    "b": 40
+  },
+  "Tribù Pacifico Nord-ovest": {
+    "r": 43,
+    "g": 31,
+    "b": 223
+  },
+  "Regno di Alodia": {
+    "r": 237,
+    "g": 111,
+    "b": 42
+  },
+  "Tribù Mende": {
+    "r": 86,
+    "g": 219,
+    "b": 172
+  },
+  "Tribù Mandinka": {
+    "r": 224,
+    "g": 98,
+    "b": 232
+  },
+  "Regno di Makuria": {
+    "r": 167,
+    "g": 212,
+    "b": 17
+  },
+  "Tribù Curde": {
+    "r": 44,
+    "g": 124,
+    "b": 210
+  },
+  "Emirato Ziyaride": {
+    "r": 226,
+    "g": 54,
+    "b": 86
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "comportamento": "marinaro",
+  "obiettivi_storici": [
+    "Dominare il commercio nell'Oceano Indiano",
+    "Espandere l'influenza nel Sud-est asiatico",
+    "Mantenere il controllo di Sri Lanka",
+    "Sviluppare la marina da guerra",
+    "Rafforzare il commercio con Cina e mondo islamico"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 400,
+      "edifici": [
+        "mercato",
+        "mercato_marittimo"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 4,
+      "edifici": [
+        "fucina"
+      ],
+      "priorita": "media",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "cibo": {
+      "target_mensile": 300,
+      "edifici": [
+        "mulino"
+      ],
+      "priorita": "media"
+    },
+    "legname": {
+      "target_mensile": 25,
+      "edifici": [
+        "capanna_boscaioli",
+        "segheria"
+      ],
+      "priorita": "alta"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 12,
+    "cavalleria_min": 5,
+    "arcieri_min": 10,
+    "artiglieria_min": 2,
+    "navi_min": 15,
+    "scaling": {
+      "modalita": "aggressiva",
+      "rivali": [
+        "Regno di Srivijaya"
+      ],
+      "regola": "mantieni navi >= rivali * 1.3"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mercato",
+    "mulino",
+    "capanna_boscaioli",
+    "segheria",
+    "molo_i",
+    "mercato_marittimo",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "campo_tiro_i",
+    "molo_ii",
+    "arsenale_i",
+    "arsenale_ii",
+    "officina_assedio_i",
+    "officina_assedio_ii"
+  ]
+}

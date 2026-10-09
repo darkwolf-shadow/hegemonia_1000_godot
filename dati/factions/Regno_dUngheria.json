@@ -1,0 +1,76 @@
+{
+  "comportamento": "emergente",
+  "obiettivi_storici": [
+    "Consolidare il dominio magiaro nel bacino dei Carpazi",
+    "Razziare l'Europa centrale e bizantina",
+    "Mantenere la pressione militare sul Sacro Romano Impero",
+    "Sviluppare l'allevamento di cavalli nella Pannonia",
+    "Contenere l'espansione bizantina nei Balcani"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 400,
+      "edifici": [
+        "mercato",
+        "strade"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 5,
+      "edifici": [
+        "fucina"
+      ],
+      "priorita": "alta",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "cibo": {
+      "target_mensile": 300,
+      "edifici": [
+        "mulino"
+      ],
+      "priorita": "media"
+    },
+    "legname": {
+      "target_mensile": 20,
+      "edifici": [
+        "capanna_boscaioli",
+        "segheria"
+      ],
+      "priorita": "media"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 15,
+    "cavalleria_min": 20,
+    "arcieri_min": 10,
+    "artiglieria_min": 2,
+    "navi_min": 0,
+    "scaling": {
+      "modalita": "aggressiva",
+      "rivali": [
+        "Sacro Romano Impero",
+        "Impero Bizantino"
+      ],
+      "regola": "mantieni cavalleria >= rivali * 1.1"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mercato",
+    "mulino",
+    "capanna_boscaioli",
+    "segheria",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "scuderia_i",
+    "campo_tiro_i",
+    "fortezza_frontiera",
+    "scuderia_ii",
+    "caserma_ii",
+    "cortile_cavaliere"
+  ]
+}

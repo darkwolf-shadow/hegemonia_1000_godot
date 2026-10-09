@@ -1,0 +1,77 @@
+{
+  "comportamento": "razziatore",
+  "obiettivi_storici": [
+    "Controllare le rotte commerciali dal Baltico al Mar Nero",
+    "Razziare l'Impero Bizantino via fiume",
+    "Mantenere il dominio sulle tribu' slave orientali",
+    "Sviluppare il commercio di pellicce, ambra e miele",
+    "Rafforzare la flotta fluviale sul Dnepr"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 350,
+      "edifici": [
+        "mercato",
+        "strade"
+      ],
+      "priorita": "alta"
+    },
+    "legname": {
+      "target_mensile": 30,
+      "edifici": [
+        "capanna_boscaioli",
+        "segheria"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 4,
+      "edifici": [
+        "fucina"
+      ],
+      "priorita": "media",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "cibo": {
+      "target_mensile": 300,
+      "edifici": [
+        "mulino"
+      ],
+      "priorita": "media"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 15,
+    "cavalleria_min": 15,
+    "arcieri_min": 10,
+    "artiglieria_min": 0,
+    "navi_min": 8,
+    "scaling": {
+      "modalita": "aggressiva",
+      "rivali": [
+        "Impero Bizantino",
+        "Regno di Polonia"
+      ],
+      "regola": "mantieni cavalleria >= rivali * 0.9"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "capanna_boscaioli",
+    "segheria",
+    "mercato",
+    "mulino",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "scuderia_i",
+    "campo_tiro_i",
+    "molo_i",
+    "arsenale_i",
+    "scuderia_ii",
+    "caserma_ii",
+    "cortile_cavaliere"
+  ]
+}

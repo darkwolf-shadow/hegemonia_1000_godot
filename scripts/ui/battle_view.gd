@@ -15,6 +15,7 @@ var _ai_timer: float = 0.0
 var _battle: Dictionary = {}
 var _visual_mode: String = "realistic"
 const BattleGroupClass = preload("res://scripts/game/battle_group.gd")
+const FormationSystemGD = preload("res://scripts/game/formation_system.gd")
 
 var _top_bar: HBoxContainer
 var _phase_label: Label
@@ -24,6 +25,7 @@ var _group_name: Label
 var _group_info: Label
 var _group_morale: ProgressBar
 var _tactic_buttons: Dictionary = {}
+var _formation_buttons: Dictionary = {}
 var _commander_check: CheckBox
 var _end_panel: Panel
 
@@ -41,6 +43,15 @@ const ROLE_TACTICS := {
 	"ranged": ["standard", "skirmish"],
 	"artillery": ["standard", "skirmish"],
 	"elephant": ["standard", "charge", "elephant_charge"]
+}
+
+const FORMATION_LABELS := {
+	0: "Linea",       # FormationSystem.FormationType.LINE
+	1: "Quadrato",    # SQUARE
+	2: "Cuneo",       # WEDGE
+	3: "Ala",         # WING
+	4: "Sparsa",      # SPREAD
+	5: "Colonna"      # COLUMN
 }
 
 
@@ -72,8 +83,57 @@ func _on_battle_started(battle):
 	_ai_timer = 0.0
 	_setup_background(battle.province)
 	_spawn_groups()
+	_setup_deploy_zones()
 	_update_top_bar()
 	_deselect_group()
+
+
+# Griglia di deploy con slot prestabiliti - Dark Corporation / Stev
+func _setup_deploy_zones():
+	# Disegna aree di deploy per attaccante (sinistra) e difensore (destra)
+	var deploy_layer := Node2D.new()
+	deploy_layer.name = "DeployZones"
+	battlefield.add_child(deploy_layer)
+
+	# Zona attaccante (sinistra)
+	var att_zone := ColorRect.new()
+	att_zone.color = Color(0.2, 0.4, 0.8, 0.15)
+	att_zone.size = Vector2(400, 800)
+	att_zone.position = Vector2(-700, -400)
+	att_zone.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	deploy_layer.add_child(att_zone)
+
+	# Zona difensore (destra)
+	var def_zone := ColorRect.new()
+	def_zone.color = Color(0.8, 0.3, 0.2, 0.15)
+	def_zone.size = Vector2(400, 800)
+	def_zone.position = Vector2(300, -400)
+	def_zone.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	deploy_layer.add_child(def_zone)
+
+	# Slot di deploy per il giocatore (se attaccante o difensore)
+	var slots_layer := Node2D.new()
+	slots_layer.name = "DeploySlots"
+	deploy_layer.add_child(slots_layer)
+	var player_is_attacker := _player_side == "attacker"
+	var base_x := -550.0 if player_is_attacker else 550.0
+	var slot_count := 8
+	for i in range(slot_count):
+		var y := (i - slot_count / 2.0) * 100.0
+		var slot_pos := Vector2(base_x, y)
+		# Disegna cerchio slot
+		var slot_draw := _DeploySlotDrawer.new()
+		slot_draw.position = slot_pos
+		slot_draw.slot_index = i
+		slots_layer.add_child(slot_draw)
+
+
+# Drawer personalizzato per slot deploy
+class _DeploySlotDrawer extends Node2D:
+	var slot_index: int = 0
+	func _draw():
+		draw_arc(Vector2.ZERO, 40.0, 0.0, TAU, 24, Color(1, 1, 1, 0.3), 2.0, true)
+		draw_string(ThemeDB.fallback_font, Vector2(-10, 5), str(slot_index + 1), HORIZONTAL_ALIGNMENT_CENTER, -1, 14, Color(1, 1, 1, 0.5))
 
 
 func _setup_background(province_name: String):
@@ -101,10 +161,10 @@ func _get_background_path(terrain_lower: String) -> String:
 		png_name = "plains"
 	else:
 		png_name = "plains"
-	var png_path := "res://assets/backgrounds/1000/png/" + png_name + ".png"
+	var png_path := "res://risorse/sfondi/1000/png/" + png_name + ".png"
 	if FileAccess.file_exists(png_path):
 		return png_path
-	var svg_path := "res://assets/backgrounds/1000/" + png_name + ".svg"
+	var svg_path := "res://risorse/sfondi/1000/" + png_name + ".svg"
 	if FileAccess.file_exists(svg_path):
 		return svg_path
 	return ""
@@ -495,6 +555,22 @@ func _setup_ui():
 		_tactic_buttons[key] = btn
 		tactics_vbox.add_child(btn)
 
+	# Pulsanti formazione - Dark Corporation / Stev
+	var formation_vbox := VBoxContainer.new()
+	formation_vbox.add_theme_constant_override("separation", 6)
+	bottom_hbox.add_child(formation_vbox)
+
+	var formation_label := Label.new()
+	formation_label.text = "Formazione"
+	formation_vbox.add_child(formation_label)
+
+	for fkey in [0, 1, 2, 3, 4, 5]:
+		var fbtn := Button.new()
+		fbtn.text = FORMATION_LABELS[fkey]
+		fbtn.pressed.connect(_on_formation_pressed.bind(fkey))
+		_formation_buttons[fkey] = fbtn
+		formation_vbox.add_child(fbtn)
+
 	_end_panel = Panel.new()
 	_end_panel.set_anchors_preset(Control.PRESET_CENTER)
 	_end_panel.custom_minimum_size = Vector2(400, 200)
@@ -545,10 +621,11 @@ func _update_bottom_panel():
 	var region := IconManager.region_for_faction(_player_side if _selected_group.side == _player_side else _battle.defender if _selected_group.side == "defender" else _battle.attacker)
 	_group_icon.texture = IconManager.get_unit_icon(_selected_group.unit_type, region)
 	_group_name.text = data.get("name", _selected_group.unit_type)
-	_group_info.text = "Lato: %s\nTruppe: %d / %d\nAttacco: %.2f\nDifesa: %.2f\nVelocità: %.1f" % [
+	_group_info.text = "Lato: %s\nTruppe: %d / %d\nFormazione: %s\nAttacco: %.2f\nDifesa: %.2f\nVelocità: %.1f" % [
 		_selected_group.side,
 		_selected_group.count,
 		_selected_group.max_count,
+		FormationSystemGD.get_name(_selected_group.formation),
 		data.get("attack", 0.0),
 		data.get("defense", 0.0) + data.get("armor", 0.0),
 		data.get("speed", 0.0)
@@ -568,6 +645,17 @@ func _update_bottom_panel():
 			btn.add_theme_color_override("font_color", Color.GOLD)
 		else:
 			btn.remove_theme_color_override("font_color")
+
+	# Aggiorna pulsanti formazione - Dark Corporation / Stev
+	var allowed_formations := FormationSystemGD.get_allowed_formations(_selected_group.role)
+	for fkey in _formation_buttons.keys():
+		var fbtn: Button = _formation_buttons[fkey]
+		fbtn.visible = fkey in allowed_formations
+		fbtn.disabled = not (fkey in allowed_formations)
+		if _selected_group.formation == fkey:
+			fbtn.add_theme_color_override("font_color", Color.GOLD)
+		else:
+			fbtn.remove_theme_color_override("font_color")
 
 
 func _on_play():
@@ -607,6 +695,10 @@ func _on_start_combat():
 	_combat_active = true
 	_paused = false
 	_time_scale = 1.0
+	# Rimuovi zone di deploy
+	var deploy := battlefield.get_node_or_null("DeployZones")
+	if deploy != null:
+		deploy.queue_free()
 	for g in _groups:
 		if is_instance_valid(g):
 			g.combat_active = true
@@ -616,6 +708,12 @@ func _on_start_combat():
 func _on_tactic_pressed(key: String):
 	if _selected_group != null and is_instance_valid(_selected_group):
 		_selected_group.set_tactic(key)
+		_update_bottom_panel()
+
+
+func _on_formation_pressed(fkey: int):
+	if _selected_group != null and is_instance_valid(_selected_group):
+		_selected_group.set_formation(fkey)
 		_update_bottom_panel()
 
 

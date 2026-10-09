@@ -45,7 +45,7 @@ func _ready():
 
 func _input(event):
 	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://scenes/prova_egemonia_1000.tscn")
 	elif event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP and event.pressed:
 			_zoom_camera(1)

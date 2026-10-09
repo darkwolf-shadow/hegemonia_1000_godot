@@ -1,0 +1,74 @@
+{
+  "comportamento": "razziatore",
+  "obiettivi_storici": [
+    "Razziare le coste dell'Inghilterra e della Francia",
+    "Mantenere il controllo del Mare del Nord e del Baltico",
+    "Stabilire colonie in Islanda, Groenlandia e Vinland",
+    "Sviluppare il commercio di ambra, pellicce e schiavi",
+    "Rafforzare la flotta da guerra drakkar"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 400,
+      "edifici": [
+        "mercato",
+        "molo_i"
+      ],
+      "priorita": "alta"
+    },
+    "legname": {
+      "target_mensile": 40,
+      "edifici": [
+        "capanna_boscaioli",
+        "segheria"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 4,
+      "edifici": [
+        "fucina"
+      ],
+      "priorita": "media",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "cibo": {
+      "target_mensile": 300,
+      "edifici": [
+        "mulino"
+      ],
+      "priorita": "media"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 15,
+    "cavalleria_min": 5,
+    "arcieri_min": 10,
+    "artiglieria_min": 0,
+    "navi_min": 15,
+    "scaling": {
+      "modalita": "aggressiva",
+      "rivali": [
+        "Regno d'Inghilterra",
+        "Regno di Francia"
+      ],
+      "regola": "mantieni navi >= rivali * 1.2"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "capanna_boscaioli",
+    "segheria",
+    "molo_i",
+    "mercato",
+    "caserma_i",
+    "campo_tiro_i",
+    "scuderia_i",
+    "molo_ii",
+    "arsenale_i",
+    "fucina",
+    "scuderia_ii"
+  ]
+}

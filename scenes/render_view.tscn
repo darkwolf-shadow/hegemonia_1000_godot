@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://renderegem1000"]
+
+[ext_resource type="Script" path="res://scripts/ui/render_view.gd" id="1_render"]
+
+[node name="RenderView" type="Node3D"]
+script = ExtResource("1_render")
+
+[node name="CameraPivot" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 0.9397, 0.342, 0, -0.342, 0.9397, 0, 0, 18)
+fov = 60

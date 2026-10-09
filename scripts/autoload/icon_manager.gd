@@ -1,6 +1,6 @@
 extends Node
 
-const ICONS_PATH := "res://data/config/icons_1000.json"
+const ICONS_PATH := "res://dati/config/icons_1000.json"
 
 var _data: Dictionary = {}
 var _cache: Dictionary = {}
@@ -106,6 +106,9 @@ func _resolve_path(category: String, id: String, region: String) -> String:
 			var candidate: String = cat[id]
 			if FileAccess.file_exists(candidate):
 				return candidate
+			var corrected := candidate.replace("res://assets/icons/1000/", "res://risorse/icone/1000/")
+			if FileAccess.file_exists(corrected):
+				return corrected
 
 		# Fallback alla regione di default
 		if region != default:
@@ -115,6 +118,9 @@ func _resolve_path(category: String, id: String, region: String) -> String:
 				var candidate: String = cat[id]
 				if FileAccess.file_exists(candidate):
 					return candidate
+				var corrected := candidate.replace("res://assets/icons/1000/", "res://risorse/icone/1000/")
+				if FileAccess.file_exists(corrected):
+					return corrected
 
 		# Poi cerca in tutte le altre regioni (le icone sono spesso condivise)
 		for other in regions.keys():
@@ -138,15 +144,15 @@ func _resolve_path(category: String, id: String, region: String) -> String:
 func _default_svg_path(category: String, id: String) -> String:
 	match category:
 		"buildings":
-			return "res://assets/icons/1000/buildings/" + id + ".svg"
+			return "res://risorse/icone/1000/buildings/" + id + ".svg"
 		"units":
-			return "res://assets/icons/1000/units/" + id + ".svg"
+			return "res://risorse/icone/1000/units/" + id + ".svg"
 		"ships":
-			return "res://assets/icons/1000/ships/" + id + ".svg"
+			return "res://risorse/icone/1000/ships/" + id + ".svg"
 		"resources":
-			return "res://assets/icons/1000/resources/" + id + ".svg"
+			return "res://risorse/icone/1000/resources/" + id + ".svg"
 		"settlements":
-			return "res://assets/icons/1000/settlements/" + id + ".svg"
+			return "res://risorse/icone/1000/settlements/" + id + ".svg"
 		"battle":
 			# Le icone battle sono sprite pre-renderizzati, non SVG generici
 			return ""
@@ -157,11 +163,11 @@ func _default_svg_path(category: String, id: String) -> String:
 func _fallback(category: String) -> Texture2D:
 	match category:
 		"buildings", "settlements":
-			return _load_or_null(_data.get("fallback_building", "res://assets/ui_textures/generic/generic_building.png"))
+			return _load_or_null(_data.get("fallback_building", "res://risorse/texture_interfaccia/generic/generic_building.png"))
 		"battle":
-			return _load_or_null(_data.get("fallback_battle", "res://assets/ui_textures/generic/generic_unit_card.png"))
+			return _load_or_null(_data.get("fallback_battle", "res://risorse/texture_interfaccia/generic/generic_unit_card.png"))
 		_:
-			return _load_or_null(_data.get("fallback_unit", "res://assets/ui_textures/generic/generic_unit_card.png"))
+			return _load_or_null(_data.get("fallback_unit", "res://risorse/texture_interfaccia/generic/generic_unit_card.png"))
 
 
 func _load_or_null(path: String) -> Texture2D:

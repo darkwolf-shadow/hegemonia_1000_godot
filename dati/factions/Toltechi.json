@@ -1,0 +1,75 @@
+{
+  "comportamento": "imperiale",
+  "obiettivi_storici": [
+    "Mantenere il dominio sull'altopiano centrale messicano",
+    "Rafforzare il culto di Quetzalcoatl",
+    "Contenere l'espansione dei Maya a sud",
+    "Sviluppare l'agricoltura con le chinampas",
+    "Mantenere il commercio di ossidiana e giada"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 300,
+      "edifici": [
+        "mercato",
+        "strade"
+      ],
+      "priorita": "alta"
+    },
+    "cibo": {
+      "target_mensile": 300,
+      "edifici": [
+        "mulino",
+        "magazzino"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 3,
+      "edifici": [
+        "fucina"
+      ],
+      "priorita": "media",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "prestigio": {
+      "target_mensile": 6,
+      "edifici": [
+        "monastero"
+      ],
+      "priorita": "media"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 12,
+    "cavalleria_min": 0,
+    "arcieri_min": 10,
+    "artiglieria_min": 0,
+    "navi_min": 0,
+    "scaling": {
+      "modalita": "aggressiva",
+      "rivali": [
+        "Regni Maya"
+      ],
+      "regola": "mantieni fanteria >= rivali * 1.1"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mulino",
+    "mercato",
+    "magazzino",
+    "monastero",
+    "capanna_boscaioli",
+    "segheria",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "campo_tiro_i",
+    "fortezza_frontiera",
+    "caserma_ii",
+    "campo_tiro_ii"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "comportamento": "egemone_asia",
+  "obiettivi_storici": [
+    "Difendersi dagli attacchi dell'Impero Khitan Liao",
+    "Sviluppare l'economia e il commercio marittimo",
+    "Innovare la tecnologia (polvere da sparo, stampa, bussola)",
+    "Mantenere il controllo della Cina meridionale",
+    "Rafforzare la marina fluviale e costiera"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 600,
+      "edifici": [
+        "mercato",
+        "mercato_marittimo"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 8,
+      "edifici": [
+        "fucina",
+        "officina_armi"
+      ],
+      "priorita": "alta",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "cibo": {
+      "target_mensile": 400,
+      "edifici": [
+        "mulino",
+        "magazzino"
+      ],
+      "priorita": "alta"
+    },
+    "legname": {
+      "target_mensile": 30,
+      "edifici": [
+        "capanna_boscaioli",
+        "segheria"
+      ],
+      "priorita": "media"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 20,
+    "cavalleria_min": 10,
+    "arcieri_min": 20,
+    "artiglieria_min": 5,
+    "navi_min": 10,
+    "scaling": {
+      "modalita": "difensiva",
+      "rivali": [
+        "Impero Khitan Liao"
+      ],
+      "regola": "mantieni fanteria >= rivali * 1.0"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mercato",
+    "mulino",
+    "magazzino",
+    "capanna_boscaioli",
+    "segheria",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "campo_tiro_i",
+    "scuderia_i",
+    "molo_i",
+    "officina_armi",
+    "campo_tiro_ii",
+    "caserma_ii",
+    "molo_ii",
+    "arsenale_i",
+    "officina_assedio_i",
+    "officina_assedio_ii",
+    "officina_assedio_iii"
+  ]
+}

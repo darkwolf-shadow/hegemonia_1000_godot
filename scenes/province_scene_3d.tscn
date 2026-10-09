@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://province3d1000"]
+
+[ext_resource type="Script" path="res://scripts/ui/province_scene_3d.gd" id="1_script"]
+
+[node name="ProvinceScene3D" type="Node3D"]
+script = ExtResource("1_script")

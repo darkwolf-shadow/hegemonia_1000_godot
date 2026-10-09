@@ -1,0 +1,79 @@
+{
+  "comportamento": "imperiale",
+  "obiettivi_storici": [
+    "Riconquistare i territori perduti dell'Impero Romano d'Oriente",
+    "Contenere l'espansione del Califfato Fatimide in Siria",
+    "Mantenere il controllo del Bosforo e del commercio nel Mar Nero",
+    "Rafforzare le difese dei Balcani contro Slavi e Bulgari",
+    "Preservare l'eredita' culturale e religiosa ortodossa",
+    "Sviluppare la marina da guerra nel Mediterraneo orientale"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 800,
+      "edifici": [
+        "mercato",
+        "mercato_marittimo"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 8,
+      "edifici": [
+        "fucina",
+        "officina_armi"
+      ],
+      "priorita": "alta",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "cibo": {
+      "target_mensile": 600,
+      "edifici": [
+        "mulino",
+        "magazzino"
+      ],
+      "priorita": "media"
+    },
+    "prestigio": {
+      "target_mensile": 10,
+      "edifici": [
+        "monastero"
+      ],
+      "priorita": "media"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 30,
+    "cavalleria_min": 25,
+    "arcieri_min": 20,
+    "artiglieria_min": 5,
+    "navi_min": 12,
+    "scaling": {
+      "modalita": "difensiva",
+      "rivali": [
+        "Impero Fatimide",
+        "Sacro Romano Impero"
+      ],
+      "regola": "mantieni fanteria >= rivali * 0.8"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mercato",
+    "mulino",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "campo_tiro_i",
+    "scuderia_i",
+    "arsenale_i",
+    "officina_armi",
+    "caserma_ii",
+    "scuderia_ii",
+    "arsenale_ii",
+    "caserma_iii",
+    "scuderia_iii"
+  ]
+}

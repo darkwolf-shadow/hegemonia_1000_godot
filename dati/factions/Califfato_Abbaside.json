@@ -1,0 +1,77 @@
+{
+  "comportamento": "religioso",
+  "obiettivi_storici": [
+    "Mantenere il califfato spirituale dell'Islam",
+    "Contenere l'espansione dei Buyidi e dei Ghaznavidi",
+    "Preservare Baghdad come centro culturale e scientifico",
+    "Sviluppare il commercio lungo la Via della Seta",
+    "Rafforzare le difese contro le tribu' turche"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 400,
+      "edifici": [
+        "mercato",
+        "strade"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 5,
+      "edifici": [
+        "fucina",
+        "officina_armi"
+      ],
+      "priorita": "alta",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "cibo": {
+      "target_mensile": 300,
+      "edifici": [
+        "mulino",
+        "magazzino"
+      ],
+      "priorita": "media"
+    },
+    "prestigio": {
+      "target_mensile": 8,
+      "edifici": [
+        "monastero"
+      ],
+      "priorita": "alta"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 15,
+    "cavalleria_min": 15,
+    "arcieri_min": 10,
+    "artiglieria_min": 3,
+    "navi_min": 0,
+    "scaling": {
+      "modalita": "difensiva",
+      "rivali": [
+        "Sultanato Ghaznavide",
+        "Impero Fatimide"
+      ],
+      "regola": "mantieni fanteria >= rivali * 0.8"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mercato",
+    "mulino",
+    "monastero",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "campo_tiro_i",
+    "scuderia_i",
+    "fortezza_frontiera",
+    "officina_armi",
+    "caserma_ii",
+    "scuderia_ii",
+    "cortile_cavaliere"
+  ]
+}

@@ -1,0 +1,240 @@
+[gd_scene load_steps=11 format=3 uid="uid://battleview_marsh"]
+
+[ext_resource type="Script" path="res://scripts/ui/battle_view_3d.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/game/rts_camera.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/game/formation_manager_3d.gd" id="3"]
+[ext_resource type="Script" path="res://scripts/game/grass_generator.gd" id="4"]
+[ext_resource type="Script" path="res://scripts/game/terrain_generator.gd" id="5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_terrain"]
+albedo_color = Color(0.4, 0.55, 0.3, 1)
+roughness = 0.95
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_terrain"]
+size = Vector2(200, 200)
+subdivide_width = 50
+subdivide_depth = 50
+
+[sub_resource type="ProceduralSkyMaterial" id="SkyMat"]
+sky_top_color = Color(0.25, 0.55, 0.85, 1)
+sky_horizon_color = Color(0.75, 0.8, 0.9, 1)
+sun_angle_max = 45.0
+sun_curve = 0.15
+ground_bottom_color = Color(0.2, 0.25, 0.15, 1)
+ground_horizon_color = Color(0.5, 0.55, 0.4, 1)
+ground_curve = 0.1
+use_noise = true
+noise_scale = 8.0
+
+[sub_resource type="Sky" id="Sky_battle"]
+sky_material = SubResource("SkyMat")
+
+[sub_resource type="Environment" id="Env_battle3d"]
+background_mode = 1
+background_color = Color(0.5, 0.7, 0.9, 1)
+sky = SubResource("Sky_battle")
+ambient_light_source = 3
+ambient_light_color = Color(0.6, 0.7, 0.8, 1)
+ambient_light_energy = 0.6
+tonemap_mode = 3
+tonemap_white = 1.0
+ssao_enabled = true
+ssao_radius = 1.5
+ssao_intensity = 2.0
+ssao_power = 1.5
+glow_enabled = true
+glow_intensity = 0.8
+glow_strength = 0.9
+glow_normalized = true
+fog_enabled = true
+fog_light_color = Color(0.7, 0.8, 0.9, 1)
+fog_density = 0.008
+fog_aerial_perspective = 0.5
+fog_sky_affect = 0.3
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+volumetric_fog_length = 64.0
+volumetric_fog_albedo = Color(0.7, 0.8, 0.9, 1)
+volumetric_fog_emission = Color(0.5, 0.6, 0.7, 1)
+volumetric_fog_emission_energy = 0.2
+[sub_resource type="PlaneMesh" id="PlaneMesh_grass"]
+size = Vector2(0.05, 0.4)
+
+[node name="BattleField3D" type="Node3D"]
+script = ExtResource("1")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Env_battle3d")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.5736, 0.4096, 0.7114, 0, 0.8660, -0.5, -0.8192, 0.2868, 0.4967, 0, 50, 0)
+light_color = Color(1, 0.957, 0.839, 1)
+light_energy = 2.5
+shadow_enabled = true
+shadow_bias = 0.02
+shadow_transparency_overlap = 0.0
+directional_shadow_mode = 2
+directional_shadow_max_distance = 200.0
+directional_shadow_pancake_size = 200.0
+directional_shadow_blend_splits = true
+[node name="Terrain" type="MeshInstance3D" parent="."]
+script = ExtResource("5")
+map_size = Vector2(300, 300)
+subdivisions = Vector2i(150, 150)
+hill_height = 12.0
+noise_seed = 1000
+terrain_type = "marsh"
+
+[node name="GrassGenerator" type="Node3D" parent="."]
+script = ExtResource("4")
+grass_count = 2000
+area_size = 180.0
+blade_height = 0.4
+
+[node name="RTSCamera" type="Node3D" parent="."]
+script = ExtResource("2")
+move_speed = 30.0
+zoom_speed = 2.0
+min_zoom = 3.0
+max_zoom = 80.0
+
+[node name="Camera3D" type="Camera3D" parent="RTSCamera"]
+fov = 55.0
+
+[node name="AttackerSwordsmen" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 0)
+script = ExtResource("3")
+total_units = 15
+columns = 5
+spacing = 1.5
+formation_type = "line"
+side_color = Color(0.8, 0.2, 0.2, 1)
+unit_type = "spadaccini"
+face_direction = -1.5708
+
+[node name="AttackerPikemen" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 8)
+script = ExtResource("3")
+total_units = 15
+columns = 5
+spacing = 1.5
+formation_type = "line"
+side_color = Color(0.7, 0.25, 0.15, 1)
+unit_type = "lancieri"
+face_direction = -1.5708
+
+[node name="AttackerAxemen" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -8)
+script = ExtResource("3")
+total_units = 10
+columns = 5
+spacing = 1.5
+formation_type = "line"
+side_color = Color(0.6, 0.2, 0.2, 1)
+unit_type = "asceri"
+face_direction = -1.5708
+
+[node name="AttackerArchers" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 0)
+script = ExtResource("3")
+total_units = 12
+columns = 6
+spacing = 1.5
+formation_type = "line"
+side_color = Color(0.2, 0.5, 0.2, 1)
+unit_type = "arciere"
+face_direction = -1.5708
+
+[node name="AttackerCavalry" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, -12)
+script = ExtResource("3")
+total_units = 8
+columns = 4
+spacing = 2.0
+formation_type = "line"
+side_color = Color(0.6, 0.1, 0.1, 1)
+unit_type = "cavalleria"
+face_direction = -1.5708
+
+[node name="DefenderSwordsmen" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
+script = ExtResource("3")
+total_units = 15
+columns = 5
+spacing = 1.5
+formation_type = "line"
+side_color = Color(0.2, 0.3, 0.8, 1)
+unit_type = "spadaccini"
+face_direction = 1.5708
+
+[node name="DefenderPikemen" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 8)
+script = ExtResource("3")
+total_units = 15
+columns = 5
+spacing = 1.5
+formation_type = "line"
+side_color = Color(0.15, 0.25, 0.7, 1)
+unit_type = "lancieri"
+face_direction = 1.5708
+
+[node name="DefenderAxemen" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -8)
+script = ExtResource("3")
+total_units = 10
+columns = 5
+spacing = 1.5
+formation_type = "line"
+side_color = Color(0.2, 0.2, 0.6, 1)
+unit_type = "asceri"
+face_direction = 1.5708
+
+[node name="DefenderArchers" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 0, 0)
+script = ExtResource("3")
+total_units = 12
+columns = 6
+spacing = 1.5
+formation_type = "line"
+side_color = Color(0.1, 0.3, 0.6, 1)
+unit_type = "arciere"
+face_direction = 1.5708
+
+[node name="DefenderCavalry" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 12)
+script = ExtResource("3")
+total_units = 8
+columns = 4
+spacing = 2.0
+formation_type = "line"
+side_color = Color(0.1, 0.2, 0.5, 1)
+unit_type = "cavalleria"
+face_direction = 1.5708
+
+[node name="DefenderArtillery" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 0, -12)
+script = ExtResource("3")
+total_units = 2
+columns = 2
+spacing = 5.0
+formation_type = "line"
+side_color = Color(0.4, 0.4, 0.3, 1)
+unit_type = "artiglieria"
+face_direction = 1.5708
+
+[node name="AttackerArtillery" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 12)
+script = ExtResource("3")
+total_units = 2
+columns = 2
+spacing = 5.0
+formation_type = "line"
+side_color = Color(0.5, 0.4, 0.2, 1)
+unit_type = "artiglieria"
+face_direction = -1.5708
+
+[node name="DustParticles" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+emitting = false
+amount = 50
+lifetime = 1.5

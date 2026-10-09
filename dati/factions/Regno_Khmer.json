@@ -1,0 +1,79 @@
+{
+  "comportamento": "egemone_asia",
+  "obiettivi_storici": [
+    "Mantenere il dominio sull'Indocina",
+    "Sviluppare il sistema di irrigazione del Tonle Sap",
+    "Costruire templi monumentali (Angkor)",
+    "Contenere l'espansione dei Cham",
+    "Sviluppare il commercio fluviale del Mekong"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 500,
+      "edifici": [
+        "mercato",
+        "strade"
+      ],
+      "priorita": "alta"
+    },
+    "cibo": {
+      "target_mensile": 400,
+      "edifici": [
+        "mulino",
+        "magazzino"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 4,
+      "edifici": [
+        "fucina"
+      ],
+      "priorita": "media",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "prestigio": {
+      "target_mensile": 8,
+      "edifici": [
+        "monastero"
+      ],
+      "priorita": "alta"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 20,
+    "cavalleria_min": 10,
+    "arcieri_min": 10,
+    "artiglieria_min": 3,
+    "navi_min": 5,
+    "scaling": {
+      "modalita": "difensiva",
+      "rivali": [
+        "Dai Viet",
+        "Regno di Srivijaya"
+      ],
+      "regola": "mantieni fanteria >= rivali * 1.0"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mulino",
+    "mercato",
+    "magazzino",
+    "monastero",
+    "capanna_boscaioli",
+    "segheria",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "campo_tiro_i",
+    "scuderia_i",
+    "molo_i",
+    "officina_assedio_i",
+    "officina_assedio_ii",
+    "caserma_ii",
+    "scuderia_ii"
+  ]
+}

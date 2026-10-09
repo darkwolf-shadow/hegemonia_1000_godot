@@ -1,0 +1,79 @@
+{
+  "comportamento": "imperiale",
+  "obiettivi_storici": [
+    "Mantenere il controllo dell'Egitto e del Mar Rosso",
+    "Contestare la supremazia bizantina in Siria",
+    "Controllare le rotte commerciali dell'Oceano Indiano",
+    "Sviluppare il commercio di spezie e oro lungo il Nilo",
+    "Rafforzare la marina nel Mediterraneo orientale"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 700,
+      "edifici": [
+        "mercato",
+        "mercato_marittimo"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 7,
+      "edifici": [
+        "fucina",
+        "officina_armi"
+      ],
+      "priorita": "alta",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "cibo": {
+      "target_mensile": 500,
+      "edifici": [
+        "mulino",
+        "magazzino"
+      ],
+      "priorita": "alta"
+    },
+    "prestigio": {
+      "target_mensile": 10,
+      "edifici": [
+        "monastero"
+      ],
+      "priorita": "media"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 25,
+    "cavalleria_min": 20,
+    "arcieri_min": 15,
+    "artiglieria_min": 5,
+    "navi_min": 10,
+    "scaling": {
+      "modalita": "aggressiva",
+      "rivali": [
+        "Impero Bizantino",
+        "Califfato Abbaside"
+      ],
+      "regola": "mantieni fanteria >= rivali * 1.0"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mercato",
+    "mulino",
+    "magazzino",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "campo_tiro_i",
+    "scuderia_i",
+    "molo_i",
+    "arsenale_i",
+    "officina_armi",
+    "caserma_ii",
+    "scuderia_ii",
+    "cortile_cavaliere",
+    "arsenale_ii"
+  ]
+}

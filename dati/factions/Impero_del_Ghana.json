@@ -1,0 +1,77 @@
+{
+  "comportamento": "commerciale",
+  "obiettivi_storici": [
+    "Controllare il commercio dell'oro trans-sahariano",
+    "Mantenere il monopolio del sale",
+    "Rafforzare le rotte commerciali verso il Nord Africa",
+    "Contenere le tribu' berbere nomadi",
+    "Sviluppare l'agricoltura lungo il Niger"
+  ],
+  "obiettivi_produttivi": {
+    "oro": {
+      "target_mensile": 600,
+      "edifici": [
+        "mercato",
+        "strade"
+      ],
+      "priorita": "alta"
+    },
+    "cibo": {
+      "target_mensile": 300,
+      "edifici": [
+        "mulino",
+        "magazzino"
+      ],
+      "priorita": "alta"
+    },
+    "armi": {
+      "target_mensile": 3,
+      "edifici": [
+        "fucina"
+      ],
+      "priorita": "media",
+      "dipende": [
+        "ferro"
+      ]
+    },
+    "legname": {
+      "target_mensile": 15,
+      "edifici": [
+        "capanna_boscaioli",
+        "segheria"
+      ],
+      "priorita": "media"
+    }
+  },
+  "obiettivi_militari": {
+    "fanteria_min": 15,
+    "cavalleria_min": 10,
+    "arcieri_min": 8,
+    "artiglieria_min": 0,
+    "navi_min": 0,
+    "scaling": {
+      "modalita": "difensiva",
+      "rivali": [
+        "Tribù Berberi del Maghreb"
+      ],
+      "regola": "mantieni cavalleria >= rivali * 0.8"
+    }
+  },
+  "catena_priorita": [
+    "centro_cittadino",
+    "mercato",
+    "mulino",
+    "magazzino",
+    "strade",
+    "capanna_boscaioli",
+    "segheria",
+    "miniera",
+    "fucina",
+    "caserma_i",
+    "campo_tiro_i",
+    "scuderia_i",
+    "fortezza_frontiera",
+    "caserma_ii",
+    "scuderia_ii"
+  ]
+}

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://settlement_3d"]
+
+[ext_resource type="Script" path="res://scripts/ui/settlement_scene_3d.gd" id="1_script"]
+
+[sub_resource type="StandardMaterial3D" id="sun_mat"]
+albedo_color = Color(1, 0.95, 0.8, 1)
+
+[node name="Settlement3D" type="Node3D"]
+script = ExtResource("1_script")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866, 0.25, -0.433, 0, 0.866, 0.5, 0.5, -0.433, 0.75, 30, 40, 20)
+light_color = Color(1, 0.95, 0.8, 1)
+light_energy = 1.2
+shadow_enabled = true
+
+[node name="CameraPivot" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 0.866, 0.5, 0, -0.5, 0.866, 0, 20, 35)
+fov = 50
+
+[node name="SettlementRoot" type="Node3D" parent="."]
