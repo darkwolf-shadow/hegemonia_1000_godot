@@ -3,6 +3,7 @@
 .import/
 *.tmp
 *.uid
+*.bak
 
 # Esportazioni
 export.cfg
@@ -15,3 +16,6 @@ export_presets.cfg
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Summer Engine local-only state (SummerGit, caches, locks)
+.summer/local/

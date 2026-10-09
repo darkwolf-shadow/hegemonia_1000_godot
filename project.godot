@@ -1,7 +1,15 @@
-; Engine Configuration File
-; Godot version: 4.3
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
 
 [application]
+
 config/name="Hegemonia 1000"
 config/description="Strategico storico ambientato nell'anno 1000"
 run/main_scene="res://scenes/main_menu.tscn"
@@ -10,6 +18,7 @@ boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 config/icon="res://icon.svg"
 
 [autoload]
+
 GameState="*res://scripts/autoload/game_state.gd"
 WorldData="*res://scripts/autoload/world_data.gd"
 EconomyEngine="*res://scripts/autoload/economy_engine.gd"
@@ -21,16 +30,22 @@ IconManager="*res://scripts/autoload/icon_manager.gd"
 UiHelper="*res://scripts/autoload/ui_helper.gd"
 
 [display]
+
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[dotnet]
+
+project/assembly_name="Hegemonia 1000"
+
 [rendering]
-renderer/rendering_method="forward_plus"
-textures/canvas_textures/default_texture_filter=1
-environment/defaults/default_clear_color=Color(0.141176, 0.141176, 0.141176, 1)
+
 anti_aliasing/quality/msaa_2d=3
 anti_aliasing/quality/msaa_3d=3
-2d/snap/snap_2d_transforms_to_pixel=false
-2d/snap/snap_2d_vertices_to_pixel=false
+environment/defaults/default_clear_color=Color(0.141176, 0.141176, 0.141176, 1)
+
+[summer]
+
+version="0.7.0"

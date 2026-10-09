@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://main_menu"]
+[gd_scene format=3 uid="uid://c50ejbejuona0"]
 
-[ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_abc"]
+[ext_resource type="Script" uid="uid://c6ucc8ywmip0a" path="res://scripts/ui/main_menu.gd" id="1_abc"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=1610874446]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_abc")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=697071613]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,7 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.141176, 0.141176, 0.141176, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=739721161]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -35,41 +35,44 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="Title" type="Label" parent="VBoxContainer"]
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=563447503]
 layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "Hegemonia 1000"
 horizontal_alignment = 1
 
-[node name="Subtitle" type="Label" parent="VBoxContainer"]
+[node name="Subtitle" type="Label" parent="VBoxContainer" unique_id=1520997677]
 layout_mode = 2
 text = "Strategico storico - Anno 1000"
 horizontal_alignment = 1
 
-[node name="FactionLabel" type="Label" parent="VBoxContainer"]
+[node name="FactionLabel" type="Label" parent="VBoxContainer" unique_id=1694903941]
 layout_mode = 2
 text = "Scegli la fazione giocabile:"
 horizontal_alignment = 1
 
-[node name="FactionOption" type="OptionButton" parent="VBoxContainer"]
+[node name="FactionOption" type="OptionButton" parent="VBoxContainer" unique_id=452381947]
 layout_mode = 2
 item_count = 3
 popup/item_0/text = "Impero Bizantino"
+popup/item_0/id = 0
 popup/item_1/text = "Sacro Romano Impero"
+popup/item_1/id = 1
 popup/item_2/text = "Vichinghi"
+popup/item_2/id = 2
 
-[node name="StartButton" type="Button" parent="VBoxContainer"]
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=247546201]
 layout_mode = 2
 text = "Inizia Partita"
 
-[node name="LoadButton" type="Button" parent="VBoxContainer"]
+[node name="LoadButton" type="Button" parent="VBoxContainer" unique_id=160213144]
 layout_mode = 2
 text = "Carica Partita"
 
-[node name="CatalogButton" type="Button" parent="VBoxContainer"]
+[node name="CatalogButton" type="Button" parent="VBoxContainer" unique_id=126855431]
 layout_mode = 2
 text = "Catalogo Icone"
 
-[node name="ExitButton" type="Button" parent="VBoxContainer"]
+[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=407830722]
 layout_mode = 2
 text = "Esci"
