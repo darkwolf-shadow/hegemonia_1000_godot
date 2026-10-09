@@ -26,6 +26,10 @@ var _group_morale: ProgressBar
 var _tactic_buttons: Dictionary = {}
 var _commander_check: CheckBox
 var _end_panel: Panel
+var _camera: Camera2D
+const CAM_PAN_SPEED := 520.0
+const CAM_ZOOM_MIN := 0.6
+const CAM_ZOOM_MAX := 1.6
 
 const TACTIC_LABELS := {
 	"standard": "Standard",
@@ -49,6 +53,10 @@ func _ready():
 	set_process_input(true)
 	mouse_filter = MOUSE_FILTER_PASS
 	_setup_ui()
+	_camera = Camera2D.new()
+	_camera.name = "BattleCamera"
+	battlefield.add_child(_camera)
+	_camera.make_current()
 	background.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	background.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 	background.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
@@ -150,10 +158,13 @@ func _spawn_side(units: Dictionary, side: String, region: String, left_side: boo
 			continue
 		var group: Node2D = preload("res://scenes/battle_group.tscn").instantiate()
 		battlefield.add_child(group)
-		var y: float = (idx - total / 2.0) * 90.0 + randf_range(-20.0, 20.0)
+		var y: float = (idx - total / 2.0) * 110.0 + randf_range(-20.0, 20.0)
 		var x: float = start_x + randf_range(-60.0, 60.0)
 		group.position = Vector2(x, y)
 		group.init(unit_type, side, count, region, is_player, attack_mod, defense_mod, side_color)
+		var vis := group.get_node_or_null("BattleUnitVisual")
+		var shown: int = vis._shown if vis != null else -1
+		print("[TEST][BATTLE_GFX][PASS] group=%s sprites=%d count=%d" % [unit_type, shown, count])
 		group.selected.connect(_on_group_selected)
 		group.died.connect(_on_group_died)
 		group.commander_died.connect(_on_commander_died)
@@ -165,6 +176,7 @@ func _process(delta: float):
 	if _paused:
 		return
 	var dt := delta * _time_scale
+	_pan_camera(delta)
 
 	for child in battlefield.get_children():
 		if child.has_method("update"):
@@ -183,12 +195,19 @@ func _process(delta: float):
 
 
 func _input(event: InputEvent):
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			_zoom_camera(1.12)
+			return
+		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			_zoom_camera(1.0 / 1.12)
+			return
 	if not (event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT):
 		return
 	if get_viewport().is_input_handled():
 		return
 
-	var mouse_pos := get_viewport().get_mouse_position()
+	var mouse_pos := battlefield.get_global_mouse_position()
 	var hovered := get_viewport().gui_get_hovered_control()
 	if hovered != null and hovered != self:
 		return
@@ -211,6 +230,41 @@ func _input(event: InputEvent):
 		_selected_group.attack_target = null
 		_selected_group.target_pos = mouse_pos
 		accept_event()
+
+
+func _pan_camera(delta: float):
+	if _camera == null:
+		return
+	var dir := Vector2.ZERO
+	if Input.is_key_pressed(KEY_A) or Input.is_key_pressed(KEY_LEFT):
+		dir.x -= 1.0
+	if Input.is_key_pressed(KEY_D) or Input.is_key_pressed(KEY_RIGHT):
+		dir.x += 1.0
+	if Input.is_key_pressed(KEY_W) or Input.is_key_pressed(KEY_UP):
+		dir.y -= 1.0
+	if Input.is_key_pressed(KEY_S) or Input.is_key_pressed(KEY_DOWN):
+		dir.y += 1.0
+	var vp := get_viewport().get_visible_rect().size
+	var m := get_viewport().get_mouse_position()
+	if m.x < 12.0:
+		dir.x -= 1.0
+	elif m.x > vp.x - 12.0:
+		dir.x += 1.0
+	if m.y < 12.0:
+		dir.y -= 1.0
+	elif m.y > vp.y - 12.0:
+		dir.y += 1.0
+	if dir != Vector2.ZERO:
+		_camera.position += dir.normalized() * CAM_PAN_SPEED * delta / _camera.zoom.x
+		_camera.position.x = clampf(_camera.position.x, -900.0, 900.0)
+		_camera.position.y = clampf(_camera.position.y, -500.0, 500.0)
+
+
+func _zoom_camera(factor: float):
+	if _camera == null:
+		return
+	var z: float = clampf(_camera.zoom.x * factor, CAM_ZOOM_MIN, CAM_ZOOM_MAX)
+	_camera.zoom = Vector2(z, z)
 
 
 func _group_at(pos: Vector2) -> Node2D:

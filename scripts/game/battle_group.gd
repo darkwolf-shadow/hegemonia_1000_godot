@@ -281,6 +281,8 @@ func _move(delta: float):
 		global_position += dir * move_speed * delta
 		if _visual != null:
 			_visual.set_facing_right(dir.x >= -0.1)
+	# profondita' 2.5D: chi e' piu' in basso copre chi sta sopra
+	z_index = int(global_position.y)
 
 
 func _try_attack():
@@ -292,6 +294,8 @@ func _try_attack():
 	if dist > attack_range:
 		return
 	attack_cooldown = attack_interval
+	if _visual != null and is_instance_valid(_visual):
+		_visual.play_attack()
 	var dmg := get_attack_damage(attack_target)
 	if role in ["ranged", "artillery"]:
 		_spawn_projectile(attack_target, dmg)

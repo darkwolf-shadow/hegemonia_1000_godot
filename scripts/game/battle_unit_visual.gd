@@ -1,6 +1,9 @@
 class_name BattleUnitVisual
 extends Node2D
 
+## Rappresentazione 2.5D stile Age of Empires: ogni gruppo e' una
+## formazione di soldati individuali con pose, profondita' e morti visibili.
+
 var unit_type: String = "fanteria"
 var role: String = "infantry"
 var side_color: Color = Color.WHITE
@@ -14,15 +17,22 @@ var visual_mode: String = "realistic"
 var tactic: String = "standard"
 
 var _anim_time: float = 0.0
-var _sprite: Sprite2D
 var _idle_texture: Texture2D = null
 var _charge_texture: Texture2D = null
 var _dust: CPUParticles2D
-var _base_y: float = 0.0
-var _base_scale: Vector2 = Vector2(0.18, 0.18)
 var _region: String = "european"
 
+var _soldiers: Array = []            # Sprite2D visibili, in formazione
+var _soldier_phase: PackedFloat32Array = PackedFloat32Array()
+var _soldier_base: PackedVector2Array = PackedVector2Array()
+var _dying: Array = []               # {sprite, t}
+var _lunge_t: float = 0.0
+var _shown: int = 0
+
 const CHARGE_TACTICS := ["charge", "elephant_charge"]
+const MAX_SOLDIERS := 15
+const MIN_SOLDIERS := 3
+const BASE_SCALE := 0.105            # icona 256px -> ~27px a scala 1.0
 
 
 func setup(type_name: String, region: String, p_role: String, p_side_color: Color, p_count: int, p_max_count: int, p_mode: String = "realistic"):
@@ -34,51 +44,123 @@ func setup(type_name: String, region: String, p_role: String, p_side_color: Colo
 	visual_mode = p_mode
 	_region = region
 
-	if _sprite == null:
-		_sprite = Sprite2D.new()
-		_sprite.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
-		_sprite.centered = true
-		add_child(_sprite)
-
 	_idle_texture = IconManager.get_unit_icon(unit_type, region)
 	_charge_texture = IconManager.get_battle_sprite(unit_type, region)
 
-	_update_texture()
-	_apply_mode()
-	set_facing_right(true)
-	_base_y = position.y
+	_sync_soldiers(true)
+	_update_textures()
 
 
-func _update_texture():
-	if _sprite == null:
-		return
-	if moving and tactic in CHARGE_TACTICS and _charge_texture != null:
-		_sprite.texture = _charge_texture
-	else:
-		_sprite.texture = _idle_texture if _idle_texture != null else _charge_texture
+func _soldiers_target() -> int:
+	if count <= 0:
+		return 0
+	return clampi(int(ceil(float(count) / maxf(1.0, float(max_count)) * MAX_SOLDIERS)), MIN_SOLDIERS, MAX_SOLDIERS)
 
 
-func _apply_mode():
-	# "realistic" e "3D" condividono lo stesso sprite pre-renderizzato;
-	# la scala varia leggermente per dare profondita'
-	var s: float = _base_scale.x
-	if visual_mode == "3d":
-		s *= 1.08
-	if _sprite != null:
-		_sprite.scale = Vector2(s, s)
+func _formation_offsets(n: int) -> PackedVector2Array:
+	var pts := PackedVector2Array()
+	match role:
+		"cavalry", "elephant":
+			# cuneo: vertice avanti, file crescenti
+			var spacing: float = 34.0 if role == "elephant" else 26.0
+			var dir: float = 1.0 if facing_right else -1.0
+			var row := 0
+			while pts.size() < n:
+				for i in range(row + 1):
+					if pts.size() >= n:
+						break
+					pts.append(Vector2(dir * -row * spacing * 0.8, (i - row / 2.0) * spacing))
+				row += 1
+		"ranged":
+			# linea larga e rada
+			var cols := mini(n, 8)
+			for i in range(n):
+				var r: int = i / cols
+				var c: int = i % cols
+				pts.append(Vector2(-30.0 - r * 30.0, (c - (cols - 1) / 2.0) * 32.0))
+		"artillery":
+			# fila singola retrocessa
+			for i in range(n):
+				pts.append(Vector2(-60.0 - (i % 3) * 42.0, (i / 3 - 1) * 55.0))
+		_:
+			# fanteria: blocco serrato
+			var cols := mini(n, 5)
+			for i in range(n):
+				var r: int = i / cols
+				var c: int = i % cols
+				pts.append(Vector2(r * 24.0 - 24.0, (c - (cols - 1) / 2.0) * 24.0))
+	return pts
+
+
+func _sync_soldiers(instant: bool = false):
+	var target := _soldiers_target()
+	while _soldiers.size() < target:
+		_add_soldier(_soldiers.size())
+	while _soldiers.size() > target:
+		var s: Sprite2D = _soldiers.pop_back()
+		if instant:
+			s.queue_free()
+		else:
+			_start_death(s)
+	_rebuild_offsets()
+	_shown = _soldiers.size()
+
+
+func _add_soldier(idx: int):
+	var s := Sprite2D.new()
+	s.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	s.centered = true
+	s.texture = _idle_texture if _idle_texture != null else _charge_texture
+	add_child(s)
+	_soldiers.append(s)
+	_soldier_phase.append(randf() * TAU)
+	_soldier_base.append(Vector2.ZERO)
+	_rebuild_offsets()
+
+
+func _rebuild_offsets():
+	var pts := _formation_offsets(_soldiers.size())
+	for i in range(_soldiers.size()):
+		var p: Vector2 = pts[i] if i < pts.size() else Vector2.ZERO
+		_soldier_base[i] = p
+		var s: Sprite2D = _soldiers[i]
+		s.position = p
+		s.z_index = int(p.y)
+
+
+func _update_textures():
+	for s in _soldiers:
+		if moving and tactic in CHARGE_TACTICS and _charge_texture != null:
+			s.texture = _charge_texture
+		else:
+			s.texture = _idle_texture if _idle_texture != null else _charge_texture
+
+
+func _apply_depth():
+	# scala prospettica: chi e' piu' in basso (y globale) e' piu' grande
+	for i in range(_soldiers.size()):
+		var s: Sprite2D = _soldiers[i]
+		var gy: float = s.global_position.y
+		var f: float = clampf(0.85 + (gy / 1080.0) * 0.35, 0.8, 1.2)
+		var sc: float = BASE_SCALE * f * (1.08 if visual_mode == "3d" else 1.0)
+		s.scale = Vector2(sc * (1.0 if facing_right else -1.0), sc)
+
+
+func play_attack():
+	_lunge_t = 0.18
 
 
 func set_visual_mode(p_mode: String):
 	if visual_mode == p_mode:
 		return
 	visual_mode = p_mode
-	_apply_mode()
 
 
 func set_facing_right(p_right: bool):
+	if facing_right == p_right:
+		return
 	facing_right = p_right
-	if _sprite != null:
-		_sprite.scale.x = abs(_sprite.scale.x) * (1.0 if p_right else -1.0)
+	_rebuild_offsets()
 	if _dust != null:
 		var offset := Vector2(-70.0, 25.0)
 		_dust.position = offset if p_right else Vector2(-offset.x, offset.y)
@@ -89,15 +171,17 @@ func set_tactic(p_tactic: String):
 	if tactic == p_tactic:
 		return
 	tactic = p_tactic
-	_update_texture()
+	_update_textures()
 	_update_dust()
 
 
 func set_moving(p_moving: bool):
 	moving = p_moving
 	if not moving:
-		position.y = _base_y
-	_update_texture()
+		for i in range(_soldiers.size()):
+			_soldiers[i].position.y = _soldier_base[i].y
+			_soldiers[i].rotation_degrees = 0.0
+	_update_textures()
 	_update_dust()
 
 
@@ -128,6 +212,11 @@ func set_selected(p_selected: bool):
 func set_commander(p_commander: bool):
 	commander = p_commander
 	queue_redraw()
+
+
+func _start_death(s: Sprite2D):
+	s.z_index = -100
+	_dying.append({"sprite": s, "t": 0.0})
 
 
 func _ready():
@@ -164,25 +253,64 @@ func _create_dust():
 
 
 func _process(delta: float):
+	_sync_soldiers()
+
+	# pose di marcia / carica / attacco
+	var bob_amp := 3.0 if tactic in CHARGE_TACTICS else 1.5
 	if moving:
-		_anim_time += delta * 12.0
-		var amp := 4.0 if tactic in CHARGE_TACTICS else 2.0
-		position.y = _base_y + sin(_anim_time) * amp
+		_anim_time += delta * 10.0
 	else:
 		_anim_time = 0.0
-		position.y = _base_y
+
+	var charging := moving and tactic in CHARGE_TACTICS
+	for i in range(_soldiers.size()):
+		var s: Sprite2D = _soldiers[i]
+		var base: Vector2 = _soldier_base[i]
+		if moving:
+			s.position = base + Vector2(0, sin(_anim_time + _soldier_phase[i]) * bob_amp)
+			s.rotation_degrees = 10.0 if charging else 0.0
+		elif _lunge_t > 0.0:
+			var dir: float = 1.0 if facing_right else -1.0
+			var k: float = _lunge_t / 0.18
+			s.position = base + Vector2(dir * 12.0 * k, 0)
+			s.rotation_degrees = 0.0
+		else:
+			s.position = base
+			s.rotation_degrees = 0.0
+
+	if _lunge_t > 0.0:
+		_lunge_t = maxf(0.0, _lunge_t - delta)
+
+	# morti: caduta + dissolvenza
+	for i in range(_dying.size() - 1, -1, -1):
+		var d: Dictionary = _dying[i]
+		var s: Sprite2D = d.sprite
+		d.t += delta
+		var t: float = d.t / 0.45
+		if is_instance_valid(s):
+			s.rotation_degrees = 90.0 * t
+			s.modulate.a = 1.0 - t
+			if t >= 1.0:
+				s.queue_free()
+				_dying.remove_at(i)
+		else:
+			_dying.remove_at(i)
+
+	_apply_depth()
 	queue_redraw()
 
 
 func _draw():
 	if selected:
-		draw_arc(Vector2.ZERO, 70.0, 0.0, TAU, 32, Color.GOLD, 4.0, true)
+		draw_arc(Vector2.ZERO, 90.0, 0.0, TAU, 32, Color.GOLD, 4.0, true)
 	if commander:
-		var star: PackedVector2Array = _star_points(Vector2(0, -95), 16.0, 8.0)
+		var star: PackedVector2Array = _star_points(Vector2(0, -110), 16.0, 8.0)
 		draw_colored_polygon(star, Color.GOLD)
+	# ombra ellittica della formazione
+	draw_ellipse(Vector2(0, 41), 120.0, 14.0, Color(0, 0, 0, 0.22))
 	var ratio := float(count) / float(max_count) if max_count > 0 else 1.0
-	draw_rect(Rect2(Vector2(-28, 70), Vector2(56 * ratio, 6)), Color.DARK_RED)
-	draw_rect(Rect2(Vector2(-28, 70), Vector2(56, 6)), Color.WHITE, false, 1.0)
+	draw_rect(Rect2(Vector2(-28, 52), Vector2(56 * ratio, 6)), Color.DARK_RED)
+	draw_rect(Rect2(Vector2(-28, 52), Vector2(56, 6)), Color.WHITE, false, 1.0)
 
 
 func _star_points(center: Vector2, outer: float, inner: float) -> PackedVector2Array:
