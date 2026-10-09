@@ -30,9 +30,11 @@ var _lunge_t: float = 0.0
 var _shown: int = 0
 
 const CHARGE_TACTICS := ["charge", "elephant_charge"]
-const MAX_SOLDIERS := 15
-const MIN_SOLDIERS := 3
-const BASE_SCALE := 0.105            # icona 256px -> ~27px a scala 1.0
+# le icone units/ raffigurano gia' una squadra (~9 figure): poche tessere
+# grandi danno decine di soldati visibili senza perdere leggibilita'
+const MAX_SOLDIERS := 6
+const MIN_SOLDIERS := 2
+const BASE_SCALE := 0.26             # icona 256px -> ~66px a scala 1.0
 
 
 func setup(type_name: String, region: String, p_role: String, p_side_color: Color, p_count: int, p_max_count: int, p_mode: String = "realistic"):
@@ -62,7 +64,7 @@ func _formation_offsets(n: int) -> PackedVector2Array:
 	match role:
 		"cavalry", "elephant":
 			# cuneo: vertice avanti, file crescenti
-			var spacing: float = 34.0 if role == "elephant" else 26.0
+			var spacing: float = 52.0 if role == "elephant" else 44.0
 			var dir: float = 1.0 if facing_right else -1.0
 			var row := 0
 			while pts.size() < n:
@@ -73,22 +75,22 @@ func _formation_offsets(n: int) -> PackedVector2Array:
 				row += 1
 		"ranged":
 			# linea larga e rada
-			var cols := mini(n, 8)
+			var cols := mini(n, 3)
 			for i in range(n):
 				var r: int = i / cols
 				var c: int = i % cols
-				pts.append(Vector2(-30.0 - r * 30.0, (c - (cols - 1) / 2.0) * 32.0))
+				pts.append(Vector2(-50.0 - r * 48.0, (c - (cols - 1) / 2.0) * 52.0))
 		"artillery":
 			# fila singola retrocessa
 			for i in range(n):
-				pts.append(Vector2(-60.0 - (i % 3) * 42.0, (i / 3 - 1) * 55.0))
+				pts.append(Vector2(-70.0 - (i % 2) * 60.0, (i / 2 - 1) * 70.0))
 		_:
-			# fanteria: blocco serrato
-			var cols := mini(n, 5)
+			# fanteria: blocco serrato 2x3
+			var cols := mini(n, 3)
 			for i in range(n):
 				var r: int = i / cols
 				var c: int = i % cols
-				pts.append(Vector2(r * 24.0 - 24.0, (c - (cols - 1) / 2.0) * 24.0))
+				pts.append(Vector2(r * 46.0 - 23.0, (c - (cols - 1) / 2.0) * 46.0))
 	return pts
 
 
@@ -302,15 +304,15 @@ func _process(delta: float):
 
 func _draw():
 	if selected:
-		draw_arc(Vector2.ZERO, 90.0, 0.0, TAU, 32, Color.GOLD, 4.0, true)
+		draw_arc(Vector2.ZERO, 110.0, 0.0, TAU, 40, Color.GOLD, 4.0, true)
 	if commander:
-		var star: PackedVector2Array = _star_points(Vector2(0, -110), 16.0, 8.0)
+		var star: PackedVector2Array = _star_points(Vector2(0, -130), 16.0, 8.0)
 		draw_colored_polygon(star, Color.GOLD)
 	# ombra ellittica della formazione
-	draw_ellipse(Vector2(0, 41), 120.0, 14.0, Color(0, 0, 0, 0.22))
+	draw_ellipse(Vector2(0, 46), 190.0, 20.0, Color(0, 0, 0, 0.22))
 	var ratio := float(count) / float(max_count) if max_count > 0 else 1.0
-	draw_rect(Rect2(Vector2(-28, 52), Vector2(56 * ratio, 6)), Color.DARK_RED)
-	draw_rect(Rect2(Vector2(-28, 52), Vector2(56, 6)), Color.WHITE, false, 1.0)
+	draw_rect(Rect2(Vector2(-34, 58), Vector2(68 * ratio, 7)), Color.DARK_RED)
+	draw_rect(Rect2(Vector2(-34, 58), Vector2(68, 7)), Color.WHITE, false, 1.0)
 
 
 func _star_points(center: Vector2, outer: float, inner: float) -> PackedVector2Array:
