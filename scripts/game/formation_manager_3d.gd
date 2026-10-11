@@ -78,7 +78,7 @@ func _setup_formation():
 	_selected_index = -1
 	
 	for i in range(total_units):
-		var pos := _formation_position(i)
+		var pos := _formation_position(i).rotated(Vector3.UP, _face_direction)
 		var unit: Node3D = preload("res://scripts/game/unit_factory.gd").create_unit(unit_type, side_color)
 		unit.position = pos
 		unit.rotation.y = _face_direction
@@ -138,6 +138,8 @@ func _terrain_height_local(local_pos: Vector3) -> float:
 	var g := _get_terrain_height(local_pos)
 	return g - global_position.y
 
+# Geometrie formazioni: il fronte e' sempre verso -Z locale
+# (gli slot vengono ruotati di _face_direction all'assegnazione)
 func _formation_position(index: int) -> Vector3:
 	var sp := spacing
 	if unit_type == "cavalleria":
@@ -146,25 +148,32 @@ func _formation_position(index: int) -> Vector3:
 		sp = spacing * 3.0
 	match formation_type:
 		"line":
-			var row := index / columns
-			var col := index % columns
-			return Vector3(col * sp - columns * sp / 2.0, 0, row * sp)
+			# Fronte largo: due file sole
+			var cols: int = maxi(1, int(ceil(total_units / 2.0)))
+			var row: int = index / cols
+			var col: int = index % cols
+			return Vector3(col * sp - (cols - 1) * sp / 2.0, 0, row * sp)
 		"square":
-			var side := int(sqrt(float(total_units)))
+			# Blocco compatto quadrato (lati uguali)
+			var side := int(ceil(sqrt(float(total_units))))
 			var row := index / side
 			var col := index % side
-			return Vector3(col * sp - side * sp / 2.0, 0, row * sp - side * sp / 2.0)
+			return Vector3(col * sp - (side - 1) * sp / 2.0, 0,
+				row * sp - (side - 1) * sp / 2.0)
 		"wedge":
-			var row := index / columns
-			var col := index % columns
-			var offset := float(row) * sp * 0.5
-			return Vector3(col * sp - columns * sp / 2.0 + offset, 0, row * sp)
+			# Cuneo triangolare vero: punta di 1 uomo davanti,
+			# ogni fila dietro ha un uomo in piu'
+			var r := 0
+			var idx := index
+			while idx >= r + 1:
+				idx -= r + 1
+				r += 1
+			return Vector3((float(idx) - float(r) / 2.0) * sp, 0, float(r) * sp)
 		"column":
-			return Vector3(0, 0, index * sp)
+			# Colonna a due file: marcia
+			return Vector3((index % 2) * sp - sp / 2.0, 0, float(index / 2) * sp)
 		_:
-			var row := index / columns
-			var col := index % columns
-			return Vector3(col * sp, 0, row * sp)
+			return Vector3(0, 0, index * sp)
 
 # Legge l'altezza del terreno alle coordinate globali (x, z)
 func _get_terrain_height(local_pos: Vector3) -> float:
@@ -354,14 +363,30 @@ func select_unit_at(point_global: Vector3) -> int:
 	var best_idx := -1
 	var best_dist := 9999.0
 	for i in range(_soldiers.size()):
-		if not is_instance_valid(_soldiers[i]):
+		if not is_instance_valid(_soldiers[i]) or is_dead(i):
 			continue
-		var d := _soldiers[i].position.distance_to(local_point)
+		var p: Vector3 = _soldiers[i].position
+		# Distanza 2D: ignora la quota del terreno
+		var d := Vector2(p.x - local_point.x, p.z - local_point.z).length()
 		if d < best_dist and d < 3.0:
 			best_dist = d
 			best_idx = i
 	_selected_index = best_idx
 	return best_idx
+
+# Raggio dell'impronta della formazione: distanza massima di un soldato
+# vivo dal centro. Usata dalla vista per la selezione al click.
+func footprint_radius() -> float:
+	var center := get_center_global()
+	var r := 4.0
+	for i in range(_soldiers.size()):
+		if is_dead(i) or not is_instance_valid(_soldiers[i]):
+			continue
+		var d := Vector2(_soldiers[i].global_position.x - center.x,
+			_soldiers[i].global_position.z - center.z).length()
+		if d > r:
+			r = d
+	return r + 2.0
 
 func get_selected_index() -> int:
 	return _selected_index
@@ -376,9 +401,66 @@ func get_soldier(index: int) -> Node3D:
 func get_unit_count() -> int:
 	return _soldiers.size()
 
+# Cambia formazione riassegnando i posti attorno al centro ATTUALE.
+# I soldati non vengono ricreati: marcio solo verso il nuovo slot,
+# quindi funziona anche mentre la formazione e' in movimento.
 func set_formation(type: String):
 	formation_type = type
-	_setup_formation()
+	if _soldiers.is_empty():
+		_setup_formation()
+		return
+	# Centroide degli slot della nuova formazione (ruotati verso il fronte)
+	var centroid := Vector3.ZERO
+	for i in range(_soldiers.size()):
+		centroid += _formation_position(i).rotated(Vector3.UP, _face_direction)
+	centroid /= max(_soldiers.size(), 1)
+	# Sposta gli slot affinche' il centroide coincida col centro attuale
+	var offset := _local_center() - centroid
+	for i in range(_soldiers.size()):
+		if i < _dead.size() and _dead[i]:
+			continue
+		_targets[i] = _formation_position(i).rotated(Vector3.UP, _face_direction) + offset
+
+# Centro della formazione in coordinate locali (soldati vivi)
+func _local_center() -> Vector3:
+	var center := Vector3.ZERO
+	var count := 0
+	for i in range(_soldiers.size()):
+		if i < _dead.size() and _dead[i]:
+			continue
+		if is_instance_valid(_soldiers[i]):
+			center += _soldiers[i].position
+			count += 1
+	return center / count if count > 0 else Vector3.ZERO
+
+# Ordine FERMO: tiene la posizione, niente avanzata automatica
+func hold_position():
+	auto_advance = false
+	_has_order = false
+	for i in range(_soldiers.size()):
+		if is_instance_valid(_soldiers[i]):
+			_targets[i] = _soldiers[i].position
+
+# Ordine AVANZA: riprende l'avanzata autonoma verso il nemico
+func resume_advance():
+	if unit_type in ["arciere", "artiglieria"]:
+		auto_advance = false
+	else:
+		auto_advance = true
+	_has_order = false
+	set_paused(false)
+
+# Ordine RITIRATA: indietreggia di ~40m lontano dal nemico, poi tiene
+func retreat():
+	var my_center := get_center_global()
+	var away := Vector3(-sin(_face_direction), 0, -cos(_face_direction))
+	var enemy := _nearest_enemy_center()
+	if enemy != Vector3.INF:
+		var from_enemy := Vector3(my_center.x - enemy.x, 0, my_center.z - enemy.z)
+		if from_enemy.length() > 0.5:
+			away = from_enemy.normalized()
+	move_formation(my_center + away * 40.0)
+	auto_advance = false
 
 func take_damage(index: int, damage: float):
 	if index < 0 or index >= _soldiers.size():

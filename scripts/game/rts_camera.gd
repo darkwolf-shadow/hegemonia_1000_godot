@@ -38,6 +38,13 @@ func _process(delta: float):
 		var right := Vector3.RIGHT.rotated(Vector3.UP, _yaw)
 		var motion := (forward * -input_dir.z + right * input_dir.x).normalized()
 		global_translate(motion * move_speed * delta)
+	# Zoom da tastiera: +/PagSu avvicina, -/PagGiu' allontana
+	if Input.is_key_pressed(KEY_EQUAL) or Input.is_key_pressed(KEY_KP_ADD) or Input.is_key_pressed(KEY_PAGEUP):
+		_current_zoom = clamp(_current_zoom - zoom_speed * delta * 10.0, min_zoom, max_zoom)
+		_update_camera_transform()
+	if Input.is_key_pressed(KEY_MINUS) or Input.is_key_pressed(KEY_KP_SUBTRACT) or Input.is_key_pressed(KEY_PAGEDOWN):
+		_current_zoom = clamp(_current_zoom + zoom_speed * delta * 10.0, min_zoom, max_zoom)
+		_update_camera_transform()
 
 func _unhandled_input(event: InputEvent):
 	if event is InputEventMouseButton:

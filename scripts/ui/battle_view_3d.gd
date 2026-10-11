@@ -396,19 +396,17 @@ func _handle_left_click():
 	if t <= 0 or t > 500:
 		return
 	var point := from + dir * t
-	# Prima prova a selezionare una singola unita' (plotone) nello schieramento
-	# del giocatore: click preciso su un soldato -> ordini a quella sola unita'
-	for fi in range(_attackers.size()):
-		var f: Node3D = _attackers[fi]
-		if f == null or not is_instance_valid(f):
-			continue
-		var ui: int = f.select_unit_at(point)
-		if ui >= 0:
-			_selected_formation = fi
-			_selected_unit = ui
-			_close_menu()
-			_update_phase_label("Plotone selezionato in %s - click dx per muoverlo" % _formation_name(fi))
-			return
+	# Se una formazione e' gia' selezionata e il click cade su un suo
+	# soldato preciso, seleziona quel plotone: il click dx muovera' solo lui.
+	# Altrimenti il click seleziona sempre la formazione intera.
+	if _selected_formation >= 0 and _selected_formation < _attackers.size():
+		var f: Node3D = _attackers[_selected_formation]
+		if f and is_instance_valid(f):
+			var ui: int = f.select_unit_at(point)
+			if ui >= 0:
+				_selected_unit = ui
+				_update_phase_label("Plotone selezionato in %s - click dx per muoverlo" % _formation_name(_selected_formation))
+				return
 	_selected_unit = -1
 	# Altrimenti cerca la formazione piu' vicina al click (distanza 2D, raggio 8m)
 	var best_form := -1
@@ -417,21 +415,17 @@ func _handle_left_click():
 		var f: Node3D = _all_formations[fi]
 		if f == null or not is_instance_valid(f):
 			continue
-		# Centro della formazione (media posizioni globali)
-		var center := Vector3.ZERO
-		var count := 0
-		for i in range(f.get_unit_count()):
-			var s: Node3D = f.get_soldier(i)
-			if s and is_instance_valid(s):
-				center += s.global_position
-				count += 1
-		if count > 0:
-			center /= count
-			# Distanza 2D (solo x, z) - ignora l'altezza
-			var d2d := sqrt(pow(center.x - point.x, 2) + pow(center.z - point.z, 2))
-			if d2d < best_dist and d2d < 8.0:
-				best_dist = d2d
-				best_form = fi
+		# Centro della formazione (solo soldati vivi)
+		var center: Vector3 = f.get_center_global()
+		if f.living_count() == 0:
+			continue
+		# Distanza 2D dal centro: il raggio segue l'impronta reale della
+		# formazione (una linea larga si puo' cliccare anche sui fianchi)
+		var d2d := sqrt(pow(center.x - point.x, 2) + pow(center.z - point.z, 2))
+		var radius: float = f.footprint_radius()
+		if d2d < best_dist and d2d < radius:
+			best_dist = d2d
+			best_form = fi
 	if best_form >= 0:
 		_selected_formation = best_form
 		_show_formation_menu(mouse_pos)
@@ -540,9 +534,10 @@ func _set_formation(ftype: String):
 	var f: Node3D = _all_formations[_selected_formation]
 	if f and is_instance_valid(f):
 		f.set_formation(ftype)
+		f.set_paused(false)
 		var fname := _formation_name(_selected_formation)
 		_update_phase_label("%s: formazione %s" % [fname, ftype])
-	_close_menu()
+	# Il menu resta aperto: la selezione non si perde
 
 func _set_behavior(btype: String):
 	if _selected_formation < 0:
@@ -551,23 +546,21 @@ func _set_behavior(btype: String):
 	if f and is_instance_valid(f):
 		match btype:
 			"fermo":
-				f.set_paused(true)
-			"avanza":
+				f.hold_position()
 				f.set_paused(false)
+			"avanza":
+				f.resume_advance()
 				f.set_speed(1.0)
 			"carica":
-				f.set_paused(false)
-				f.set_speed(5.0)
 				f.set_formation("wedge")
+				f.set_speed(3.0)
+				f.resume_advance()
 			"ritirata":
-				f.set_paused(false)
 				f.set_speed(2.0)
-				# Inverte la direzione
-				var curr: float = f.face_direction
-				f.set_face_direction(curr + PI)
+				f.retreat()
 		var fname := _formation_name(_selected_formation)
 		_update_phase_label("%s: %s" % [fname, btype])
-	_close_menu()
+	# Il menu resta aperto: la selezione non si perde
 
 func _close_menu():
 	var menu := get_node_or_null("HUDCanvas/FormationMenu")
