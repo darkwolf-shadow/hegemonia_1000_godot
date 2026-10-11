@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6mjs8stylf2v"
-path="res://.godot/imported/soninke_cavalry.svg-88172986804583033b555d574be0ccba.ctex"
+path="res://.godot/imported/soninke_cavalry.svg-369534b8a518655fe00d3e6c8a22a7ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/soninke_cavalry.svg"
-dest_files=["res://.godot/imported/soninke_cavalry.svg-88172986804583033b555d574be0ccba.ctex"]
+source_file="res://risorse/icone/1000/units/soninke_cavalry.svg"
+dest_files=["res://.godot/imported/soninke_cavalry.svg-369534b8a518655fe00d3e6c8a22a7ad.ctex"]
 
 [params]
 

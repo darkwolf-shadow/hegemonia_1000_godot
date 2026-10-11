@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi2jafwdh5qdv"
-path="res://.godot/imported/druzhina.svg-98ab944e038c69599709f61d6cb20894.ctex"
+path="res://.godot/imported/druzhina.svg-f7b70a1f4b5dbd3f91214dcde90c6476.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/druzhina.svg"
-dest_files=["res://.godot/imported/druzhina.svg-98ab944e038c69599709f61d6cb20894.ctex"]
+source_file="res://risorse/icone/1000/units/druzhina.svg"
+dest_files=["res://.godot/imported/druzhina.svg-f7b70a1f4b5dbd3f91214dcde90c6476.ctex"]
 
 [params]
 

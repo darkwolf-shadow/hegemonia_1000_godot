@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cj1uwutcbtxe5"
-path="res://.godot/imported/monastero.png-f50d45aa6690e48745a71fbf0d7af558.ctex"
+path="res://.godot/imported/monastero.png-79bf27a570c2cee1f3672973753271b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/oriental/buildings/monastero.png"
-dest_files=["res://.godot/imported/monastero.png-f50d45aa6690e48745a71fbf0d7af558.ctex"]
+source_file="res://risorse/icone/1000/oriental/buildings/monastero.png"
+dest_files=["res://.godot/imported/monastero.png-79bf27a570c2cee1f3672973753271b4.ctex"]
 
 [params]
 

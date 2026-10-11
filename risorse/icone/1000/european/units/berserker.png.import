@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1c66a3p3j5oj"
-path="res://.godot/imported/berserker.png-a568f7c9774468244fb1b71086908b33.ctex"
+path="res://.godot/imported/berserker.png-bfcc31643c4fedbbd12bfcaa47b1d173.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/european/units/berserker.png"
-dest_files=["res://.godot/imported/berserker.png-a568f7c9774468244fb1b71086908b33.ctex"]
+source_file="res://risorse/icone/1000/european/units/berserker.png"
+dest_files=["res://.godot/imported/berserker.png-bfcc31643c4fedbbd12bfcaa47b1d173.ctex"]
 
 [params]
 

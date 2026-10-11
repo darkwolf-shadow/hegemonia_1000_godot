@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yxb3lg5pr3eb"
-path="res://.godot/imported/huskarl.svg-86ea19b395a75f704f5fe6ca0a2c40f1.ctex"
+path="res://.godot/imported/huskarl.svg-16acb8803f6b150b29b9adff46a6de6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/huskarl.svg"
-dest_files=["res://.godot/imported/huskarl.svg-86ea19b395a75f704f5fe6ca0a2c40f1.ctex"]
+source_file="res://risorse/icone/1000/units/huskarl.svg"
+dest_files=["res://.godot/imported/huskarl.svg-16acb8803f6b150b29b9adff46a6de6a.ctex"]
 
 [params]
 

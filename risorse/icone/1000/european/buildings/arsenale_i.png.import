@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnpekc4eslmmh"
-path="res://.godot/imported/arsenale_i.png-0807103a126adb38ddd4570aab273f2d.ctex"
+path="res://.godot/imported/arsenale_i.png-a94250b6eff2a797d5aa01bed866dd6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/european/buildings/arsenale_i.png"
-dest_files=["res://.godot/imported/arsenale_i.png-0807103a126adb38ddd4570aab273f2d.ctex"]
+source_file="res://risorse/icone/1000/european/buildings/arsenale_i.png"
+dest_files=["res://.godot/imported/arsenale_i.png-a94250b6eff2a797d5aa01bed866dd6b.ctex"]
 
 [params]
 

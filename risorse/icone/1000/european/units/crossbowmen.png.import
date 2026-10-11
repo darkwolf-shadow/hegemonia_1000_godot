@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hwpyaa8r1sjo"
-path="res://.godot/imported/crossbowmen.png-f0dbaf04fbc1ca7c10743c384314c4c0.ctex"
+path="res://.godot/imported/crossbowmen.png-4c2ed4883b4db4e026cffb839c0fc3c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/european/units/crossbowmen.png"
-dest_files=["res://.godot/imported/crossbowmen.png-f0dbaf04fbc1ca7c10743c384314c4c0.ctex"]
+source_file="res://risorse/icone/1000/european/units/crossbowmen.png"
+dest_files=["res://.godot/imported/crossbowmen.png-4c2ed4883b4db4e026cffb839c0fc3c7.ctex"]
 
 [params]
 

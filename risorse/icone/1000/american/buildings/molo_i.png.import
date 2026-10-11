@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyvql3qypc3pd"
-path="res://.godot/imported/molo_i.png-5e81f327756dd9e103d55126fd20be3d.ctex"
+path="res://.godot/imported/molo_i.png-9e76113b00128a5d8fc0e1bf6afdecd5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/american/buildings/molo_i.png"
-dest_files=["res://.godot/imported/molo_i.png-5e81f327756dd9e103d55126fd20be3d.ctex"]
+source_file="res://risorse/icone/1000/american/buildings/molo_i.png"
+dest_files=["res://.godot/imported/molo_i.png-9e76113b00128a5d8fc0e1bf6afdecd5.ctex"]
 
 [params]
 

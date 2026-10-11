@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0avjct1p68xj"
-path="res://.godot/imported/yamato_infantry.svg-2b04c284ef4aedb4d7b5fe954074d5c6.ctex"
+path="res://.godot/imported/yamato_infantry.svg-ae328fd88ba84d0b4ff5489b25438d85.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/yamato_infantry.svg"
-dest_files=["res://.godot/imported/yamato_infantry.svg-2b04c284ef4aedb4d7b5fe954074d5c6.ctex"]
+source_file="res://risorse/icone/1000/units/yamato_infantry.svg"
+dest_files=["res://.godot/imported/yamato_infantry.svg-ae328fd88ba84d0b4ff5489b25438d85.ctex"]
 
 [params]
 

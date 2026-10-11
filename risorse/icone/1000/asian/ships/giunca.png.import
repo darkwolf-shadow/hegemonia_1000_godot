@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://by7geacdje0a7"
-path="res://.godot/imported/giunca.png-82145580e5a8cefe1d192a386ae27c0a.ctex"
+path="res://.godot/imported/giunca.png-f028cff4267139b0dcd892f7b2368124.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/asian/ships/giunca.png"
-dest_files=["res://.godot/imported/giunca.png-82145580e5a8cefe1d192a386ae27c0a.ctex"]
+source_file="res://risorse/icone/1000/asian/ships/giunca.png"
+dest_files=["res://.godot/imported/giunca.png-f028cff4267139b0dcd892f7b2368124.ctex"]
 
 [params]
 

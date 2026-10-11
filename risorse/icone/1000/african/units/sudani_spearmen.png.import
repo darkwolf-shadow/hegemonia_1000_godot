@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhiwafily65bt"
-path="res://.godot/imported/sudani_spearmen.png-458910708980748882352aa9a3b48cb4.ctex"
+path="res://.godot/imported/sudani_spearmen.png-d7b7d878f0991535af2c99f23e0942ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/african/units/sudani_spearmen.png"
-dest_files=["res://.godot/imported/sudani_spearmen.png-458910708980748882352aa9a3b48cb4.ctex"]
+source_file="res://risorse/icone/1000/african/units/sudani_spearmen.png"
+dest_files=["res://.godot/imported/sudani_spearmen.png-d7b7d878f0991535af2c99f23e0942ef.ctex"]
 
 [params]
 

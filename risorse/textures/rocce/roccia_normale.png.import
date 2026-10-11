@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://co4f2h6reh4k1"
-path="res://.godot/imported/rock_normal.png-51b00826554bc51221b7b705962fd972.ctex"
+path="res://.godot/imported/roccia_normale.png-5bc7f1e5ea7c72ab530ee792520cbbab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/rocks/rock_normal.png"
-dest_files=["res://.godot/imported/rock_normal.png-51b00826554bc51221b7b705962fd972.ctex"]
+source_file="res://risorse/textures/rocce/roccia_normale.png"
+dest_files=["res://.godot/imported/roccia_normale.png-5bc7f1e5ea7c72ab530ee792520cbbab.ctex"]
 
 [params]
 

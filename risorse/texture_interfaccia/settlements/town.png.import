@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dta0egqkkauuc"
-path="res://.godot/imported/town.png-fcd8580a9c5fca9c86fcb00f5c78ef85.ctex"
+path="res://.godot/imported/town.png-63fffac2b26478b5f2154f4bc7cd1f19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/settlements/town.png"
-dest_files=["res://.godot/imported/town.png-fcd8580a9c5fca9c86fcb00f5c78ef85.ctex"]
+source_file="res://risorse/texture_interfaccia/settlements/town.png"
+dest_files=["res://.godot/imported/town.png-63fffac2b26478b5f2154f4bc7cd1f19.ctex"]
 
 [params]
 

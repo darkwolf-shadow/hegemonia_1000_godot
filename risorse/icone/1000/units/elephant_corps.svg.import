@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c57c3gk07pete"
-path="res://.godot/imported/elephant_corps.svg-1d2a79fee290a8b5eb81a5c521e2b3d9.ctex"
+path="res://.godot/imported/elephant_corps.svg-9a4d1a0f8157a288b9a387a73f0bfb83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/elephant_corps.svg"
-dest_files=["res://.godot/imported/elephant_corps.svg-1d2a79fee290a8b5eb81a5c521e2b3d9.ctex"]
+source_file="res://risorse/icone/1000/units/elephant_corps.svg"
+dest_files=["res://.godot/imported/elephant_corps.svg-9a4d1a0f8157a288b9a387a73f0bfb83.ctex"]
 
 [params]
 

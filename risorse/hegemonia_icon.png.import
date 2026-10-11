@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pf8mttwnqc21"
-path="res://.godot/imported/hegemonia_icon.png-ba46ff9d4ce20692d184e1abe4be7394.ctex"
+path="res://.godot/imported/hegemonia_icon.png-0537d0df0628a3e3d9e7e6b9a5471cf4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/hegemonia_icon.png"
-dest_files=["res://.godot/imported/hegemonia_icon.png-ba46ff9d4ce20692d184e1abe4be7394.ctex"]
+source_file="res://risorse/hegemonia_icon.png"
+dest_files=["res://.godot/imported/hegemonia_icon.png-0537d0df0628a3e3d9e7e6b9a5471cf4.ctex"]
 
 [params]
 

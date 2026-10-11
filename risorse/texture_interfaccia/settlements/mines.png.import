@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvsat2sgsyhtn"
-path="res://.godot/imported/mines.png-b0af3cae32ff55b02599e5cdff77e408.ctex"
+path="res://.godot/imported/mines.png-e4ba693303b9d4e33923aeb80c253a8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/settlements/mines.png"
-dest_files=["res://.godot/imported/mines.png-b0af3cae32ff55b02599e5cdff77e408.ctex"]
+source_file="res://risorse/texture_interfaccia/settlements/mines.png"
+dest_files=["res://.godot/imported/mines.png-e4ba693303b9d4e33923aeb80c253a8a.ctex"]
 
 [params]
 

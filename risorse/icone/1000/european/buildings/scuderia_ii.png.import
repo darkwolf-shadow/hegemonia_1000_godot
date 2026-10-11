@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csb0xaov43tp0"
-path="res://.godot/imported/scuderia_ii.png-0ad832771810b47f9b8fb1e9fd5bc070.ctex"
+path="res://.godot/imported/scuderia_ii.png-e1eed025800521b228743b24321e8b08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/european/buildings/scuderia_ii.png"
-dest_files=["res://.godot/imported/scuderia_ii.png-0ad832771810b47f9b8fb1e9fd5bc070.ctex"]
+source_file="res://risorse/icone/1000/european/buildings/scuderia_ii.png"
+dest_files=["res://.godot/imported/scuderia_ii.png-e1eed025800521b228743b24321e8b08.ctex"]
 
 [params]
 

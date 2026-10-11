@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d15mecgpjh75j"
-path="res://.godot/imported/mamluk_cavalry.svg-8385521585f46fe3c334daa188370c2d.ctex"
+path="res://.godot/imported/mamluk_cavalry.svg-ab98c7dcaccf89102274089d58f0e985.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/mamluk_cavalry.svg"
-dest_files=["res://.godot/imported/mamluk_cavalry.svg-8385521585f46fe3c334daa188370c2d.ctex"]
+source_file="res://risorse/icone/1000/units/mamluk_cavalry.svg"
+dest_files=["res://.godot/imported/mamluk_cavalry.svg-ab98c7dcaccf89102274089d58f0e985.ctex"]
 
 [params]
 

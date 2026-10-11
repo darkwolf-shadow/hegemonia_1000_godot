@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qwjkx5002pjy"
-path="res://.godot/imported/liao_lancers.svg-a884b4f0845470dd48897777090fa25a.ctex"
+path="res://.godot/imported/liao_lancers.svg-01b2bac93e2bffc05e3200d797be9c86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/liao_lancers.svg"
-dest_files=["res://.godot/imported/liao_lancers.svg-a884b4f0845470dd48897777090fa25a.ctex"]
+source_file="res://risorse/icone/1000/units/liao_lancers.svg"
+dest_files=["res://.godot/imported/liao_lancers.svg-01b2bac93e2bffc05e3200d797be9c86.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjdk2bud2te8l"
-path="res://.godot/imported/cathedral.png-c93ae947e93b6ff7193a31ada873c274.ctex"
+path="res://.godot/imported/cathedral.png-c7f19865c8553d1a94ce8b5afb23790a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/settlements/cathedral.png"
-dest_files=["res://.godot/imported/cathedral.png-c93ae947e93b6ff7193a31ada873c274.ctex"]
+source_file="res://risorse/texture_interfaccia/settlements/cathedral.png"
+dest_files=["res://.godot/imported/cathedral.png-c7f19865c8553d1a94ce8b5afb23790a.ctex"]
 
 [params]
 

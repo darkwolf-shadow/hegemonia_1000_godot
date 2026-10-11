@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6pqom8plx546"
-path="res://.godot/imported/generic_fort.png-c259187efd77b7bf3056ddbef5cff672.ctex"
+path="res://.godot/imported/generic_fort.png-1602130f142f5aa7f60c85098b61dbdc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/generic/generic_fort.png"
-dest_files=["res://.godot/imported/generic_fort.png-c259187efd77b7bf3056ddbef5cff672.ctex"]
+source_file="res://risorse/texture_interfaccia/generic/generic_fort.png"
+dest_files=["res://.godot/imported/generic_fort.png-1602130f142f5aa7f60c85098b61dbdc.ctex"]
 
 [params]
 

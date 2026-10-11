@@ -29,11 +29,24 @@ var _paused: bool = true
 var _battle_started: bool = false
 var _speed: float = 1.0
 
+var _attackers: Array[Node3D] = []
+var _defenders: Array[Node3D] = []
+var _battle_over: bool = false
+var _victory_timer: float = 0.0
+
 func _ready():
 	# Carica la configurazione dello scenario dal terrain_type della scena
 	var terrain_type: String = _terrain.terrain_type if _terrain.has_method("get_config") else "plains"
 	_scenario_config = preload("res://scripts/game/battle_scenario.gd").get_config(terrain_type)
+	# Popola gli array PRIMA di configurare le formazioni:
+	# _setup_formations li usa per assegnare terreno e nemici
+	_attackers = [_attacker_swordsmen, _attacker_pikemen, _attacker_axemen,
+		_attacker_archers, _attacker_cavalry, _attacker_artillery]
+	_defenders = [_defender_swordsmen, _defender_pikemen, _defender_axemen,
+		_defender_archers, _defender_cavalry, _defender_artillery]
+	_all_formations = _attackers + _defenders
 	_setup_formations()
+	_setup_enemies()
 	_setup_trees()
 	_setup_castles()
 	_setup_hud()
@@ -42,10 +55,6 @@ func _ready():
 	_projectile_system.name = "Projectiles"
 	_projectile_system.set_script(preload("res://scripts/game/projectile_system.gd"))
 	add_child(_projectile_system)
-	_all_formations = [_attacker_swordsmen, _attacker_pikemen, _attacker_axemen,
-		_attacker_archers, _attacker_cavalry, _attacker_artillery,
-		_defender_swordsmen, _defender_pikemen, _defender_axemen,
-		_defender_archers, _defender_cavalry, _defender_artillery]
 	# Applica colori di fazione
 	_apply_faction_colors()
 	print("Battaglia 3D pronta. Scenario: %s. Premi Play per iniziare." % terrain_type)
@@ -74,6 +83,13 @@ func _setup_formations():
 		if f:
 			f.set_terrain(_terrain)
 			f.set_formation("line")
+
+# Collega ogni formazione alle formazioni dello schieramento avverso
+func _setup_enemies():
+	for f in _attackers:
+		f.set_enemies(_defenders)
+	for f in _defenders:
+		f.set_enemies(_attackers)
 
 func _setup_trees():
 	# Alberi in base al tipo di terreno dello scenario
@@ -312,14 +328,39 @@ func _on_fast():
 	for f in _all_formations:
 		if f and is_instance_valid(f):
 			f.set_paused(false)
-			f.set_speed(5.0)
+			f.set_speed(3.0)
 	_update_phase_label("Battaglia veloce x3 - click dx per muovere")
 
 func _on_charge():
+	# Carica verso il centro della formazione nemica piu' vicina
+	var target := _nearest_living_center(_attacker_swordsmen, _defenders)
 	_attacker_swordsmen.set_formation("wedge")
-	_attacker_swordsmen.move_formation(Vector3(0, 0, 0))
-	_attacker_cavalry.move_formation(Vector3(0, 0, 5))
+	if target != Vector3.INF:
+		_attacker_swordsmen.move_formation(target)
+		var cav_target := _nearest_living_center(_attacker_cavalry, _defenders)
+		if cav_target != Vector3.INF:
+			_attacker_cavalry.set_formation("wedge")
+			_attacker_cavalry.move_formation(cav_target)
 	_dust_particles.emitting = true
+
+# Centro della formazione nemica viva piu' vicina a from_fm
+func _nearest_living_center(from_fm: Node3D, foes: Array) -> Vector3:
+	if from_fm == null or not is_instance_valid(from_fm):
+		return Vector3.INF
+	var my_center: Vector3 = from_fm.get_center_global()
+	var best := Vector3.INF
+	var best_d := INF
+	for ef in foes:
+		if ef == null or not is_instance_valid(ef):
+			continue
+		if ef.living_count() == 0:
+			continue
+		var c: Vector3 = ef.get_center_global()
+		var d := Vector2(my_center.x - c.x, my_center.z - c.z).length()
+		if d < best_d:
+			best_d = d
+			best = c
+	return best
 
 func _on_shield_wall():
 	_attacker_swordsmen.set_formation("square")
@@ -355,7 +396,21 @@ func _handle_left_click():
 	if t <= 0 or t > 500:
 		return
 	var point := from + dir * t
-	# Cerca la formazione piu' vicina al click (distanza 2D, raggio 8m)
+	# Prima prova a selezionare una singola unita' (plotone) nello schieramento
+	# del giocatore: click preciso su un soldato -> ordini a quella sola unita'
+	for fi in range(_attackers.size()):
+		var f: Node3D = _attackers[fi]
+		if f == null or not is_instance_valid(f):
+			continue
+		var ui: int = f.select_unit_at(point)
+		if ui >= 0:
+			_selected_formation = fi
+			_selected_unit = ui
+			_close_menu()
+			_update_phase_label("Plotone selezionato in %s - click dx per muoverlo" % _formation_name(fi))
+			return
+	_selected_unit = -1
+	# Altrimenti cerca la formazione piu' vicina al click (distanza 2D, raggio 8m)
 	var best_form := -1
 	var best_dist := 9999.0
 	for fi in range(_all_formations.size()):
@@ -404,11 +459,19 @@ func _handle_right_click():
 		return
 	var point := from + dir * t
 	var f: Node3D = _all_formations[_selected_formation]
-	if f and is_instance_valid(f):
-		f.move_formation(point)
+	if f == null or not is_instance_valid(f):
+		return
+	# Con un plotone selezionato muove solo quello, altrimenti tutta la formazione
+	if _selected_unit >= 0:
+		f.move_unit(_selected_unit, point)
 		f.set_paused(false)
-		var fname := _formation_name(_selected_formation)
-		_update_phase_label("%s -> (%.0f, %.0f)" % [fname, point.x, point.z])
+		_update_phase_label("Plotone di %s -> (%.0f, %.0f)" % [_formation_name(_selected_formation), point.x, point.z])
+		_selected_unit = -1
+		return
+	f.move_formation(point)
+	f.set_paused(false)
+	var fname := _formation_name(_selected_formation)
+	_update_phase_label("%s -> (%.0f, %.0f)" % [fname, point.x, point.z])
 
 # Pannello fisso per la formazione selezionata (non blocca i click sulla mappa)
 func _show_formation_menu(mouse_pos: Vector2):
@@ -422,8 +485,9 @@ func _show_formation_menu(mouse_pos: Vector2):
 	# Pannello fisso in basso a destra (non intercetta i click sulla mappa)
 	var panel := Panel.new()
 	panel.name = "FormationMenu"
-	panel.position = Vector2(970, 200)
 	panel.size = Vector2(220, 300)
+	var vp := get_viewport().get_visible_rect().size
+	panel.position = Vector2(vp.x - panel.size.x - 16, max(60.0, vp.y - panel.size.y - 16))
 	var style := StyleBoxFlat.new()
 	style.bg_color = Color(0.12, 0.08, 0.04, 0.92)
 	style.border_width_left = 2
@@ -530,12 +594,41 @@ func _update_phase_label(text: String):
 func _process(delta: float):
 	# Non chiamare move_formation ogni frame: i target sono fissi
 	# impostati quando si preme Play. I soldati avanzano da soli.
-	# Gestione volute di frecce e artiglieria
 	if _battle_started and not _paused:
 		_volley_timer += delta
 		if _volley_timer >= 2.0:
 			_volley_timer = 0.0
 			_fire_volley()
+		# Controllo esito battaglia una volta al secondo
+		_victory_timer += delta
+		if _victory_timer >= 1.0:
+			_victory_timer = 0.0
+			_check_battle_end()
+
+func _check_battle_end():
+	if _battle_over:
+		return
+	var att := _side_living(_attackers)
+	var dfn := _side_living(_defenders)
+	if att > 0 and dfn > 0:
+		return
+	_battle_over = true
+	for f in _all_formations:
+		if f and is_instance_valid(f):
+			f.set_paused(true)
+	if att <= 0 and dfn <= 0:
+		_update_phase_label("Battaglia finita: annientamento reciproco")
+	elif dfn <= 0:
+		_update_phase_label("VITTORIA DEGLI ATTACCANTI - i difensori sono annientati")
+	else:
+		_update_phase_label("VITTORIA DEI DIFENSORI - gli attaccanti sono annientati")
+
+func _side_living(side: Array) -> int:
+	var n := 0
+	for f in side:
+		if f and is_instance_valid(f):
+			n += f.living_count()
+	return n
 
 func _fire_volley():
 	# Arcieri attaccanti sparano verso i difensori e viceversa
@@ -550,25 +643,37 @@ func _archer_volley(archers: Node3D, targets: Node3D, attacker: bool):
 		return
 	if targets == null or not is_instance_valid(targets):
 		return
-	# Solo alcuni arcieri sparano per volta (5 per voluta)
-	var count: int = min(5, archers.get_unit_count())
-	for i in range(count):
-		var archer: Node3D = archers.get_soldier(i * 3)
+	# Solo alcuni arcieri vivi sparano per volta (5 per voluta)
+	var total: int = archers.get_unit_count()
+	var shots := 0
+	for i in range(total):
+		if shots >= 5:
+			break
+		if archers.is_dead(i):
+			continue
+		var archer: Node3D = archers.get_soldier(i)
 		if archer == null:
 			continue
-		# Bersaglio: un soldato casuale nella formazione nemica
+		# Bersaglio: un soldato vivo casuale nella formazione nemica
 		var target_count: int = targets.get_unit_count()
-		if target_count == 0:
-			continue
-		var target_idx: int = randi() % target_count
-		var target_soldier: Node3D = targets.get_soldier(target_idx)
+		if target_count == 0 or targets.living_count() == 0:
+			break
+		var target_soldier: Node3D = null
+		var vi: int = -1
+		for attempt in range(8):
+			var ti: int = randi() % target_count
+			if not targets.is_dead(ti):
+				target_soldier = targets.get_soldier(ti)
+				vi = ti
+				break
 		if target_soldier == null:
 			continue
 		# Origine: posizione dell'arciere + altezza del braccio (1.3m)
 		var origin := archer.global_position + Vector3(0, 1.3, 0)
 		# Bersaglio: posizione del soldato nemico
 		var target_pos := target_soldier.global_position
-		_projectile_system.spawn_arrow(origin, target_pos)
+		_projectile_system.spawn_arrow(origin, target_pos, targets, vi, 0.25)
+		shots += 1
 
 func _artillery_volley(artillery: Node3D, targets: Node3D, attacker: bool):
 	if artillery == null or not is_instance_valid(artillery):
@@ -577,16 +682,24 @@ func _artillery_volley(artillery: Node3D, targets: Node3D, attacker: bool):
 		return
 	var count: int = artillery.get_unit_count()
 	for i in range(count):
+		if artillery.is_dead(i):
+			continue
 		var engine: Node3D = artillery.get_soldier(i)
 		if engine == null:
 			continue
 		var target_count: int = targets.get_unit_count()
-		if target_count == 0:
-			continue
-		var target_idx: int = randi() % target_count
-		var target_soldier: Node3D = targets.get_soldier(target_idx)
+		if target_count == 0 or targets.living_count() == 0:
+			break
+		var target_soldier: Node3D = null
+		var vi: int = -1
+		for attempt in range(8):
+			var ti: int = randi() % target_count
+			if not targets.is_dead(ti):
+				target_soldier = targets.get_soldier(ti)
+				vi = ti
+				break
 		if target_soldier == null:
 			continue
 		var origin := engine.global_position + Vector3(0, 1.0, 0)
 		var target_pos := target_soldier.global_position
-		_projectile_system.spawn_artillery_projectile(origin, target_pos)
+		_projectile_system.spawn_artillery_projectile(origin, target_pos, targets, vi, 0.6)

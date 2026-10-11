@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pddmt61xfyuc"
-path="res://.godot/imported/milizia.png-d644af104df3529aa434130517e3799c.ctex"
+path="res://.godot/imported/milizia.png-2921bcf529df9fef0db6eb3171dac7ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/european/units/milizia.png"
-dest_files=["res://.godot/imported/milizia.png-d644af104df3529aa434130517e3799c.ctex"]
+source_file="res://risorse/icone/1000/european/units/milizia.png"
+dest_files=["res://.godot/imported/milizia.png-2921bcf529df9fef0db6eb3171dac7ff.ctex"]
 
 [params]
 

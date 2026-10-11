@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jw3020su3001"
-path="res://.godot/imported/milites.png-54e9f27840175cec0edf155003b887ad.ctex"
+path="res://.godot/imported/milites.png-576db9a1f8337e9db8ea74dfb7fecc26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/european/units/milites.png"
-dest_files=["res://.godot/imported/milites.png-54e9f27840175cec0edf155003b887ad.ctex"]
+source_file="res://risorse/icone/1000/european/units/milites.png"
+dest_files=["res://.godot/imported/milites.png-576db9a1f8337e9db8ea74dfb7fecc26.ctex"]
 
 [params]
 

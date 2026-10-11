@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://peqejaireomj"
-path="res://.godot/imported/toxotai.svg-8de3c84ee3954d646c3beefe1d4d33c7.ctex"
+path="res://.godot/imported/toxotai.svg-e96dd2b8a965c9c0d62c8e363da2ef29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/toxotai.svg"
-dest_files=["res://.godot/imported/toxotai.svg-8de3c84ee3954d646c3beefe1d4d33c7.ctex"]
+source_file="res://risorse/icone/1000/units/toxotai.svg"
+dest_files=["res://.godot/imported/toxotai.svg-e96dd2b8a965c9c0d62c8e363da2ef29.ctex"]
 
 [params]
 

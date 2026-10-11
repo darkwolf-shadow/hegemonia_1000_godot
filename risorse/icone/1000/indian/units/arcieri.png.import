@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8g24vo7qkcxs"
-path="res://.godot/imported/arcieri.png-a449dd3a7e4c61cb8926fdb2dd4a9b22.ctex"
+path="res://.godot/imported/arcieri.png-a025c99c985823d154dc40bdf49682be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/indian/units/arcieri.png"
-dest_files=["res://.godot/imported/arcieri.png-a449dd3a7e4c61cb8926fdb2dd4a9b22.ctex"]
+source_file="res://risorse/icone/1000/indian/units/arcieri.png"
+dest_files=["res://.godot/imported/arcieri.png-a025c99c985823d154dc40bdf49682be.ctex"]
 
 [params]
 

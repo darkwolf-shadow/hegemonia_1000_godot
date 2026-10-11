@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chqrki2mlemgg"
-path="res://.godot/imported/molo_i.png-3a0536235f153b6265edc94cbb6f34ea.ctex"
+path="res://.godot/imported/molo_i.png-1708ec055476f35f5edad0ace4c74412.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/oriental/buildings/molo_i.png"
-dest_files=["res://.godot/imported/molo_i.png-3a0536235f153b6265edc94cbb6f34ea.ctex"]
+source_file="res://risorse/icone/1000/oriental/buildings/molo_i.png"
+dest_files=["res://.godot/imported/molo_i.png-1708ec055476f35f5edad0ace4c74412.ctex"]
 
 [params]
 

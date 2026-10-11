@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://deo8ksury7fyi"
-path="res://.godot/imported/armenian_archers.png-17e62df5afee80a734e5d8e0a6c8dbae.ctex"
+path="res://.godot/imported/armenian_archers.png-4649e6565fa0738ca2e4472de176b07c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/oriental/units/armenian_archers.png"
-dest_files=["res://.godot/imported/armenian_archers.png-17e62df5afee80a734e5d8e0a6c8dbae.ctex"]
+source_file="res://risorse/icone/1000/oriental/units/armenian_archers.png"
+dest_files=["res://.godot/imported/armenian_archers.png-4649e6565fa0738ca2e4472de176b07c.ctex"]
 
 [params]
 

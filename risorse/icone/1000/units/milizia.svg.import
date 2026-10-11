@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhrg4v0ic5xsx"
-path="res://.godot/imported/milizia.svg-37c4d44a24a63ad0fc52af7861591fe1.ctex"
+path="res://.godot/imported/milizia.svg-9ef886d52a029a993887e2723a9f3853.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/milizia.svg"
-dest_files=["res://.godot/imported/milizia.svg-37c4d44a24a63ad0fc52af7861591fe1.ctex"]
+source_file="res://risorse/icone/1000/units/milizia.svg"
+dest_files=["res://.godot/imported/milizia.svg-9ef886d52a029a993887e2723a9f3853.ctex"]
 
 [params]
 

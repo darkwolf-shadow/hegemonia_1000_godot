@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://j3x5ngqylpwl"
-path="res://.godot/imported/segheria.png-523908ceda6acac4bca1664a726741c1.ctex"
+path="res://.godot/imported/segheria.png-55ce04aa019ff565580da4b5501d55d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/american/buildings/segheria.png"
-dest_files=["res://.godot/imported/segheria.png-523908ceda6acac4bca1664a726741c1.ctex"]
+source_file="res://risorse/icone/1000/american/buildings/segheria.png"
+dest_files=["res://.godot/imported/segheria.png-55ce04aa019ff565580da4b5501d55d0.ctex"]
 
 [params]
 

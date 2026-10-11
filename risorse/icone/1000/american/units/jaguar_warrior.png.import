@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cai4owsxl3tue"
-path="res://.godot/imported/jaguar_warrior.png-67c88173e6feb1b8961cd1ebbdb50a73.ctex"
+path="res://.godot/imported/jaguar_warrior.png-e9569273d07bc7791c038a8f5327bfd3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/american/units/jaguar_warrior.png"
-dest_files=["res://.godot/imported/jaguar_warrior.png-67c88173e6feb1b8961cd1ebbdb50a73.ctex"]
+source_file="res://risorse/icone/1000/american/units/jaguar_warrior.png"
+dest_files=["res://.godot/imported/jaguar_warrior.png-e9569273d07bc7791c038a8f5327bfd3.ctex"]
 
 [params]
 

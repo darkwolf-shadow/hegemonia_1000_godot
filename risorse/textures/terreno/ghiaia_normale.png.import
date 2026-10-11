@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://binaqwpbtud4j"
-path="res://.godot/imported/gravel_normal.png-3dee9e5b3ad695323205144f57eb7021.ctex"
+path="res://.godot/imported/ghiaia_normale.png-a603522eeda34a79d5fe275b3829423f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/terrain/gravel_normal.png"
-dest_files=["res://.godot/imported/gravel_normal.png-3dee9e5b3ad695323205144f57eb7021.ctex"]
+source_file="res://risorse/textures/terreno/ghiaia_normale.png"
+dest_files=["res://.godot/imported/ghiaia_normale.png-a603522eeda34a79d5fe275b3829423f.ctex"]
 
 [params]
 

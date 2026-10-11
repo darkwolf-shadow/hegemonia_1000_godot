@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2qj51mtbmlc1"
-path="res://.godot/imported/miniera.svg-54334bb8fea524d5d379019d0913f1c4.ctex"
+path="res://.godot/imported/miniera.svg-20387a4583698ac41586bdf3991471de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/buildings/miniera.svg"
-dest_files=["res://.godot/imported/miniera.svg-54334bb8fea524d5d379019d0913f1c4.ctex"]
+source_file="res://risorse/icone/1000/buildings/miniera.svg"
+dest_files=["res://.godot/imported/miniera.svg-20387a4583698ac41586bdf3991471de.ctex"]
 
 [params]
 

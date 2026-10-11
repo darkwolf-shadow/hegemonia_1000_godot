@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://co3eiem4rs4ah"
-path="res://.godot/imported/fortezza_frontiera.svg-049ffa6d6dbe19571fcb2ea864cdb533.ctex"
+path="res://.godot/imported/fortezza_frontiera.svg-7ac9dc5178289d967899a2b1abe12343.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/buildings/fortezza_frontiera.svg"
-dest_files=["res://.godot/imported/fortezza_frontiera.svg-049ffa6d6dbe19571fcb2ea864cdb533.ctex"]
+source_file="res://risorse/icone/1000/buildings/fortezza_frontiera.svg"
+dest_files=["res://.godot/imported/fortezza_frontiera.svg-7ac9dc5178289d967899a2b1abe12343.ctex"]
 
 [params]
 

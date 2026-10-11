@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh44fxodd4d3a"
-path="res://.godot/imported/lancieri.png-787ca2434ae82f8bff183f87dfe6d3df.ctex"
+path="res://.godot/imported/lancieri.png-05a6207019bfb6f7c9a1021a80a6e462.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/oriental/units/lancieri.png"
-dest_files=["res://.godot/imported/lancieri.png-787ca2434ae82f8bff183f87dfe6d3df.ctex"]
+source_file="res://risorse/icone/1000/oriental/units/lancieri.png"
+dest_files=["res://.godot/imported/lancieri.png-05a6207019bfb6f7c9a1021a80a6e462.ctex"]
 
 [params]
 

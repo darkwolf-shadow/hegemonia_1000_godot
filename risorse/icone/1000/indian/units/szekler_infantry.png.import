@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://81gd5t57iw8a"
-path="res://.godot/imported/szekler_infantry.png-64e53cbda55b8ea214265d81e209ef18.ctex"
+path="res://.godot/imported/szekler_infantry.png-6ae291ff40fc67aec7a48763e0b9face.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/indian/units/szekler_infantry.png"
-dest_files=["res://.godot/imported/szekler_infantry.png-64e53cbda55b8ea214265d81e209ef18.ctex"]
+source_file="res://risorse/icone/1000/indian/units/szekler_infantry.png"
+dest_files=["res://.godot/imported/szekler_infantry.png-6ae291ff40fc67aec7a48763e0b9face.ctex"]
 
 [params]
 

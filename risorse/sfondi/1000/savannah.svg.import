@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://sa7xwvtugy0n"
-path="res://.godot/imported/savannah.svg-6aef84e72e6ef8189203226e5bd99eff.ctex"
+path="res://.godot/imported/savannah.svg-23fbb7d29e56bb2a71494f57ecb865cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/1000/savannah.svg"
-dest_files=["res://.godot/imported/savannah.svg-6aef84e72e6ef8189203226e5bd99eff.ctex"]
+source_file="res://risorse/sfondi/1000/savannah.svg"
+dest_files=["res://.godot/imported/savannah.svg-23fbb7d29e56bb2a71494f57ecb865cf.ctex"]
 
 [params]
 

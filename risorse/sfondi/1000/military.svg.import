@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bof6jjmweu6pw"
-path="res://.godot/imported/military.svg-be6624c943230f6233e02b4cd401f124.ctex"
+path="res://.godot/imported/military.svg-a1f59db02428c831e5779f8bfc6c968d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/1000/military.svg"
-dest_files=["res://.godot/imported/military.svg-be6624c943230f6233e02b4cd401f124.ctex"]
+source_file="res://risorse/sfondi/1000/military.svg"
+dest_files=["res://.godot/imported/military.svg-a1f59db02428c831e5779f8bfc6c968d.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgw4ys0loslmn"
-path="res://.godot/imported/caserma_iii.png-9d38946b442816be8022262f2dac45ac.ctex"
+path="res://.godot/imported/caserma_iii.png-38178aadc50b775b1309193ca64e2ff5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/asian/buildings/caserma_iii.png"
-dest_files=["res://.godot/imported/caserma_iii.png-9d38946b442816be8022262f2dac45ac.ctex"]
+source_file="res://risorse/icone/1000/asian/buildings/caserma_iii.png"
+dest_files=["res://.godot/imported/caserma_iii.png-38178aadc50b775b1309193ca64e2ff5.ctex"]
 
 [params]
 

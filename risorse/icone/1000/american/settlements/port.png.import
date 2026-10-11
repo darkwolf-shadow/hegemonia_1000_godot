@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://y6yr4nyc6cmx"
-path="res://.godot/imported/port.png-988325b3554f20e6d60a101dacf1b904.ctex"
+path="res://.godot/imported/port.png-73f2553d8aa0256e82983c0d27732ee8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/american/settlements/port.png"
-dest_files=["res://.godot/imported/port.png-988325b3554f20e6d60a101dacf1b904.ctex"]
+source_file="res://risorse/icone/1000/american/settlements/port.png"
+dest_files=["res://.godot/imported/port.png-73f2553d8aa0256e82983c0d27732ee8.ctex"]
 
 [params]
 

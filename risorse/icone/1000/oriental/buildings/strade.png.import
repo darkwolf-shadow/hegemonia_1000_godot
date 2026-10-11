@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwrj1qcb21efk"
-path="res://.godot/imported/strade.png-79ff73249e5f9e5e3fc48a332bae2b8f.ctex"
+path="res://.godot/imported/strade.png-a032fa457bb5beea6f442abb5e4c4240.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/oriental/buildings/strade.png"
-dest_files=["res://.godot/imported/strade.png-79ff73249e5f9e5e3fc48a332bae2b8f.ctex"]
+source_file="res://risorse/icone/1000/oriental/buildings/strade.png"
+dest_files=["res://.godot/imported/strade.png-a032fa457bb5beea6f442abb5e4c4240.ctex"]
 
 [params]
 

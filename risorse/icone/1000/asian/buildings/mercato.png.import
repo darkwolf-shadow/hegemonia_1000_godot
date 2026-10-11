@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmx6w7enwjn0"
-path="res://.godot/imported/mercato.png-df538aa8fbf5895acba7fc58aaf1c48f.ctex"
+path="res://.godot/imported/mercato.png-29217b1c5479e65363225cfa0588db51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/asian/buildings/mercato.png"
-dest_files=["res://.godot/imported/mercato.png-df538aa8fbf5895acba7fc58aaf1c48f.ctex"]
+source_file="res://risorse/icone/1000/asian/buildings/mercato.png"
+dest_files=["res://.godot/imported/mercato.png-29217b1c5479e65363225cfa0588db51.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://baen3srjswgjx"
-path="res://.godot/imported/bribed_portrait.png-e6b7cde8de8f438ee80ef311b0c56640.ctex"
+path="res://.godot/imported/bribed_portrait.png-3fd427969cebb50c58bd4ce9d9ac416f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/generic/bribed_portrait.png"
-dest_files=["res://.godot/imported/bribed_portrait.png-e6b7cde8de8f438ee80ef311b0c56640.ctex"]
+source_file="res://risorse/texture_interfaccia/generic/bribed_portrait.png"
+dest_files=["res://.godot/imported/bribed_portrait.png-3fd427969cebb50c58bd4ce9d9ac416f.ctex"]
 
 [params]
 

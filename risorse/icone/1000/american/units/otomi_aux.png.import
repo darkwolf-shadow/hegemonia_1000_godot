@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brpuc2w4ee33o"
-path="res://.godot/imported/otomi_aux.png-0ab49530f7aedc7431a7f64bd8053672.ctex"
+path="res://.godot/imported/otomi_aux.png-0f0c2e89e82ff621670ecd243ea717f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/american/units/otomi_aux.png"
-dest_files=["res://.godot/imported/otomi_aux.png-0ab49530f7aedc7431a7f64bd8053672.ctex"]
+source_file="res://risorse/icone/1000/american/units/otomi_aux.png"
+dest_files=["res://.godot/imported/otomi_aux.png-0f0c2e89e82ff621670ecd243ea717f3.ctex"]
 
 [params]
 

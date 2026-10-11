@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pb78372k710i"
-path="res://.godot/imported/balestrieri.png-777c15f76cb49926f9197cbc0ee78bb1.ctex"
+path="res://.godot/imported/balestrieri.png-d3c77a538d0c72b2ad6f9cc325334816.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/asian/units/balestrieri.png"
-dest_files=["res://.godot/imported/balestrieri.png-777c15f76cb49926f9197cbc0ee78bb1.ctex"]
+source_file="res://risorse/icone/1000/asian/units/balestrieri.png"
+dest_files=["res://.godot/imported/balestrieri.png-d3c77a538d0c72b2ad6f9cc325334816.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c085gohf45o8w"
-path="res://.godot/imported/tower_ship.png-ce82735e17551043c20cde4c5d499c90.ctex"
+path="res://.godot/imported/tower_ship.png-50fcceef8e8b4a8f99ec609a0cf5f722.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/asian/ships/tower_ship.png"
-dest_files=["res://.godot/imported/tower_ship.png-ce82735e17551043c20cde4c5d499c90.ctex"]
+source_file="res://risorse/icone/1000/asian/ships/tower_ship.png"
+dest_files=["res://.godot/imported/tower_ship.png-50fcceef8e8b4a8f99ec609a0cf5f722.ctex"]
 
 [params]
 

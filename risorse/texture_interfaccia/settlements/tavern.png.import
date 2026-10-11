@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cy2xwusc1l03j"
-path="res://.godot/imported/tavern.png-7b641d2c4f212cea2d284ca24c6a4f01.ctex"
+path="res://.godot/imported/tavern.png-838d489f1e5e4ca67fcf8502187ee883.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/settlements/tavern.png"
-dest_files=["res://.godot/imported/tavern.png-7b641d2c4f212cea2d284ca24c6a4f01.ctex"]
+source_file="res://risorse/texture_interfaccia/settlements/tavern.png"
+dest_files=["res://.godot/imported/tavern.png-838d489f1e5e4ca67fcf8502187ee883.ctex"]
 
 [params]
 

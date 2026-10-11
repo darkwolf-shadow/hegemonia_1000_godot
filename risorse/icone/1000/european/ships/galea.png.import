@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh63i5emiic6n"
-path="res://.godot/imported/galea.png-4fbfef3fe3aea1b4613dbf90bcb830d3.ctex"
+path="res://.godot/imported/galea.png-efa9f1f88826f1285d82f35200a45751.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/european/ships/galea.png"
-dest_files=["res://.godot/imported/galea.png-4fbfef3fe3aea1b4613dbf90bcb830d3.ctex"]
+source_file="res://risorse/icone/1000/european/ships/galea.png"
+dest_files=["res://.godot/imported/galea.png-efa9f1f88826f1285d82f35200a45751.ctex"]
 
 [params]
 

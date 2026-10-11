@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtmbbr7hsdtpn"
-path="res://.godot/imported/drakkar.png-8d5789395667a682829695820d248d1d.ctex"
+path="res://.godot/imported/drakkar.png-d4e1a14f24e20fc6b6ffca5637a7faf0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/indian/ships/drakkar.png"
-dest_files=["res://.godot/imported/drakkar.png-8d5789395667a682829695820d248d1d.ctex"]
+source_file="res://risorse/icone/1000/indian/ships/drakkar.png"
+dest_files=["res://.godot/imported/drakkar.png-d4e1a14f24e20fc6b6ffca5637a7faf0.ctex"]
 
 [params]
 

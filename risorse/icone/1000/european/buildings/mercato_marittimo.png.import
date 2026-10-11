@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cesxai1ecxc14"
-path="res://.godot/imported/mercato_marittimo.png-a3bd66564cabe4123f825be8f29c3a93.ctex"
+path="res://.godot/imported/mercato_marittimo.png-90034e187ed0068bc98290a164c94dc0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/european/buildings/mercato_marittimo.png"
-dest_files=["res://.godot/imported/mercato_marittimo.png-a3bd66564cabe4123f825be8f29c3a93.ctex"]
+source_file="res://risorse/icone/1000/european/buildings/mercato_marittimo.png"
+dest_files=["res://.godot/imported/mercato_marittimo.png-90034e187ed0068bc98290a164c94dc0.ctex"]
 
 [params]
 

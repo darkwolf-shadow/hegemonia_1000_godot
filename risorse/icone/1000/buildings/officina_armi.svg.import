@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://10k152ec2b5g"
-path="res://.godot/imported/officina_armi.svg-b61c54e32e28231ca5b6433d8d31dd04.ctex"
+path="res://.godot/imported/officina_armi.svg-65f3abec5afa91e20886e0599feac74f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/buildings/officina_armi.svg"
-dest_files=["res://.godot/imported/officina_armi.svg-b61c54e32e28231ca5b6433d8d31dd04.ctex"]
+source_file="res://risorse/icone/1000/buildings/officina_armi.svg"
+dest_files=["res://.godot/imported/officina_armi.svg-65f3abec5afa91e20886e0599feac74f.ctex"]
 
 [params]
 

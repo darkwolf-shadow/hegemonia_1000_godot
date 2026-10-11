@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5w2brodksmox"
-path="res://.godot/imported/port.png-02969d43af2c68b1757cd8b2d121a0a7.ctex"
+path="res://.godot/imported/port.png-b1838002e1525cef8c7d8269ec065970.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/african/settlements/port.png"
-dest_files=["res://.godot/imported/port.png-02969d43af2c68b1757cd8b2d121a0a7.ctex"]
+source_file="res://risorse/icone/1000/african/settlements/port.png"
+dest_files=["res://.godot/imported/port.png-b1838002e1525cef8c7d8269ec065970.ctex"]
 
 [params]
 

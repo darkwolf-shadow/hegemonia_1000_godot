@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://x16jcmx5oygw"
-path="res://.godot/imported/river.svg-8926dd140a12adc728810e0f59fe2873.ctex"
+path="res://.godot/imported/river.svg-097ea119b6725e376472b0474ca30efa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/1000/river.svg"
-dest_files=["res://.godot/imported/river.svg-8926dd140a12adc728810e0f59fe2873.ctex"]
+source_file="res://risorse/sfondi/1000/river.svg"
+dest_files=["res://.godot/imported/river.svg-097ea119b6725e376472b0474ca30efa.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxd2nw0titn5j"
-path="res://.godot/imported/cavalleria_pesante.png-d063666739c53e72c23bd44082df7b04.ctex"
+path="res://.godot/imported/cavalleria_pesante.png-620a968199c92d27eb92f290df886128.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/indian/units/cavalleria_pesante.png"
-dest_files=["res://.godot/imported/cavalleria_pesante.png-d063666739c53e72c23bd44082df7b04.ctex"]
+source_file="res://risorse/icone/1000/indian/units/cavalleria_pesante.png"
+dest_files=["res://.godot/imported/cavalleria_pesante.png-620a968199c92d27eb92f290df886128.ctex"]
 
 [params]
 

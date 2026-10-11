@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4r1sw7kdeqi8"
-path="res://.godot/imported/maya_spearmen.png-ca92576d9d7e85e46191d49f9170527e.ctex"
+path="res://.godot/imported/maya_spearmen.png-3bd064bf85fa6c2a5eb7667ba5340995.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/american/units/maya_spearmen.png"
-dest_files=["res://.godot/imported/maya_spearmen.png-ca92576d9d7e85e46191d49f9170527e.ctex"]
+source_file="res://risorse/icone/1000/american/units/maya_spearmen.png"
+dest_files=["res://.godot/imported/maya_spearmen.png-3bd064bf85fa6c2a5eb7667ba5340995.ctex"]
 
 [params]
 

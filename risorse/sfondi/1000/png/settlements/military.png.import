@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b11ats8f1si1f"
-path="res://.godot/imported/military.png-aa447f8618afe79a4bc005769281f199.ctex"
+path="res://.godot/imported/military.png-eb08a4a2c16cb03439b91e2f6439bf90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/1000/png/settlements/military.png"
-dest_files=["res://.godot/imported/military.png-aa447f8618afe79a4bc005769281f199.ctex"]
+source_file="res://risorse/sfondi/1000/png/settlements/military.png"
+dest_files=["res://.godot/imported/military.png-eb08a4a2c16cb03439b91e2f6439bf90.ctex"]
 
 [params]
 

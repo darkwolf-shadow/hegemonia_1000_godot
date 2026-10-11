@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlspewld4opya"
-path="res://.godot/imported/sharedpage_01.png-91f5c627038f5bcdefdfdd20ea8e2f1b.ctex"
+path="res://.godot/imported/sharedpage_01.png-6c169074a233227724d126dd4648c8df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/middle_eastern/sharedpage_01.png"
-dest_files=["res://.godot/imported/sharedpage_01.png-91f5c627038f5bcdefdfdd20ea8e2f1b.ctex"]
+source_file="res://risorse/texture_interfaccia/middle_eastern/sharedpage_01.png"
+dest_files=["res://.godot/imported/sharedpage_01.png-6c169074a233227724d126dd4648c8df.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ci0dixqwny7y"
-path="res://.godot/imported/arsenale_i.png-9e43197488b88af9b04f91f95b68cf37.ctex"
+path="res://.godot/imported/arsenale_i.png-d3ad7645ca89f8985854b6d5c813ccb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/indian/buildings/arsenale_i.png"
-dest_files=["res://.godot/imported/arsenale_i.png-9e43197488b88af9b04f91f95b68cf37.ctex"]
+source_file="res://risorse/icone/1000/indian/buildings/arsenale_i.png"
+dest_files=["res://.godot/imported/arsenale_i.png-d3ad7645ca89f8985854b6d5c813ccb2.ctex"]
 
 [params]
 

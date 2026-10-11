@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmmsbngfjcky5"
-path="res://.godot/imported/rock_ao.png-54229f46c8cc9ebc55dbb25239f4b4f6.ctex"
+path="res://.godot/imported/roccia_ao.png-0a622bd016fec3b10eb71a0444184576.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/rocks/rock_ao.png"
-dest_files=["res://.godot/imported/rock_ao.png-54229f46c8cc9ebc55dbb25239f4b4f6.ctex"]
+source_file="res://risorse/textures/rocce/roccia_ao.png"
+dest_files=["res://.godot/imported/roccia_ao.png-0a622bd016fec3b10eb71a0444184576.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbg6tgs5q0ocu"
-path="res://.godot/imported/szekler_infantry.svg-b60e042e94a0220ed32084fbb7e4fd2c.ctex"
+path="res://.godot/imported/szekler_infantry.svg-e559625c98333726fc2691f91f2ab16b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/szekler_infantry.svg"
-dest_files=["res://.godot/imported/szekler_infantry.svg-b60e042e94a0220ed32084fbb7e4fd2c.ctex"]
+source_file="res://risorse/icone/1000/units/szekler_infantry.svg"
+dest_files=["res://.godot/imported/szekler_infantry.svg-e559625c98333726fc2691f91f2ab16b.ctex"]
 
 [params]
 

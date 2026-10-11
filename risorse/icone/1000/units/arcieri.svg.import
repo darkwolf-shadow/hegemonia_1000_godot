@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cchcjgervhbrn"
-path="res://.godot/imported/arcieri.svg-148b979ab1d694c2214071d6399dc1f4.ctex"
+path="res://.godot/imported/arcieri.svg-c533874c7e5909bc5d595d3159fdf5cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/arcieri.svg"
-dest_files=["res://.godot/imported/arcieri.svg-148b979ab1d694c2214071d6399dc1f4.ctex"]
+source_file="res://risorse/icone/1000/units/arcieri.svg"
+dest_files=["res://.godot/imported/arcieri.svg-c533874c7e5909bc5d595d3159fdf5cb.ctex"]
 
 [params]
 

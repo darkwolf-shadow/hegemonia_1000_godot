@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://p0bc0fdevvtn"
-path="res://.godot/imported/eagle_warrior.png-2d8c129e9a5edb86ea0f4aa043ebb285.ctex"
+path="res://.godot/imported/eagle_warrior.png-519e5bb31757f90bf0d08d00f46a9d69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/american/units/eagle_warrior.png"
-dest_files=["res://.godot/imported/eagle_warrior.png-2d8c129e9a5edb86ea0f4aa043ebb285.ctex"]
+source_file="res://risorse/icone/1000/american/units/eagle_warrior.png"
+dest_files=["res://.godot/imported/eagle_warrior.png-519e5bb31757f90bf0d08d00f46a9d69.ctex"]
 
 [params]
 

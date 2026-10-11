@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm2rjxxhhpcfl"
-path="res://.godot/imported/artiglieria.png-2efecb8725c4f305c59b1646e4350a16.ctex"
+path="res://.godot/imported/artiglieria.png-4e2f5589797693647f8670b4da42c9ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/indian/units/artiglieria.png"
-dest_files=["res://.godot/imported/artiglieria.png-2efecb8725c4f305c59b1646e4350a16.ctex"]
+source_file="res://risorse/icone/1000/indian/units/artiglieria.png"
+dest_files=["res://.godot/imported/artiglieria.png-4e2f5589797693647f8670b4da42c9ee.ctex"]
 
 [params]
 

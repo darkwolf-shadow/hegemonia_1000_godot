@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bt7u3cerawb2k"
-path="res://.godot/imported/forest.svg-e6349b4998741fb2a18d61501c890bdd.ctex"
+path="res://.godot/imported/forest.svg-3e0953308b3cab30118e3aaa5cd559c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/1000/forest.svg"
-dest_files=["res://.godot/imported/forest.svg-e6349b4998741fb2a18d61501c890bdd.ctex"]
+source_file="res://risorse/sfondi/1000/forest.svg"
+dest_files=["res://.godot/imported/forest.svg-3e0953308b3cab30118e3aaa5cd559c0.ctex"]
 
 [params]
 

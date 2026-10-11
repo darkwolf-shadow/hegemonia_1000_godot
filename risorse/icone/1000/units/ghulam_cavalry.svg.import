@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6twut6vtjiud"
-path="res://.godot/imported/ghulam_cavalry.svg-2c65ae0964364055af26a1bb720ac658.ctex"
+path="res://.godot/imported/ghulam_cavalry.svg-bfe19f5193d651ea238beec2425aec63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/ghulam_cavalry.svg"
-dest_files=["res://.godot/imported/ghulam_cavalry.svg-2c65ae0964364055af26a1bb720ac658.ctex"]
+source_file="res://risorse/icone/1000/units/ghulam_cavalry.svg"
+dest_files=["res://.godot/imported/ghulam_cavalry.svg-bfe19f5193d651ea238beec2425aec63.ctex"]
 
 [params]
 

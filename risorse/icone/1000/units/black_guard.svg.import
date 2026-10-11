@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bstc3hhnd3v6t"
-path="res://.godot/imported/black_guard.svg-6a5b5a5d0bf4f950ec6b5728ec1777d7.ctex"
+path="res://.godot/imported/black_guard.svg-cbaf2919125365af15d1a09b9ad5176c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/black_guard.svg"
-dest_files=["res://.godot/imported/black_guard.svg-6a5b5a5d0bf4f950ec6b5728ec1777d7.ctex"]
+source_file="res://risorse/icone/1000/units/black_guard.svg"
+dest_files=["res://.godot/imported/black_guard.svg-cbaf2919125365af15d1a09b9ad5176c.ctex"]
 
 [params]
 

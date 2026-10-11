@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yvafnht6es11"
-path="res://.godot/imported/sudanese_spearmen.svg-9d3fe92d87b8f2b968638bfb67c7e557.ctex"
+path="res://.godot/imported/sudanese_spearmen.svg-c3c66f2b58859787a4a75d147a4d6476.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/sudanese_spearmen.svg"
-dest_files=["res://.godot/imported/sudanese_spearmen.svg-9d3fe92d87b8f2b968638bfb67c7e557.ctex"]
+source_file="res://risorse/icone/1000/units/sudanese_spearmen.svg"
+dest_files=["res://.godot/imported/sudanese_spearmen.svg-c3c66f2b58859787a4a75d147a4d6476.ctex"]
 
 [params]
 

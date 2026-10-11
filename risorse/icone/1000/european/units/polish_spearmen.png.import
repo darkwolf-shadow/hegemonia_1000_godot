@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bc0fu6fuveidq"
-path="res://.godot/imported/polish_spearmen.png-f521542eada67aea907884062d33c892.ctex"
+path="res://.godot/imported/polish_spearmen.png-7e515fd709ab0e455682a34b80636ba5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/european/units/polish_spearmen.png"
-dest_files=["res://.godot/imported/polish_spearmen.png-f521542eada67aea907884062d33c892.ctex"]
+source_file="res://risorse/icone/1000/european/units/polish_spearmen.png"
+dest_files=["res://.godot/imported/polish_spearmen.png-7e515fd709ab0e455682a34b80636ba5.ctex"]
 
 [params]
 

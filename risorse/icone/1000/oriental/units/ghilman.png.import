@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvvcovnk718x"
-path="res://.godot/imported/ghilman.png-8058485ce55eb5c33489e72767281bec.ctex"
+path="res://.godot/imported/ghilman.png-8c0929ee09132d2fe6eb67d74efa48fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/oriental/units/ghilman.png"
-dest_files=["res://.godot/imported/ghilman.png-8058485ce55eb5c33489e72767281bec.ctex"]
+source_file="res://risorse/icone/1000/oriental/units/ghilman.png"
+dest_files=["res://.godot/imported/ghilman.png-8c0929ee09132d2fe6eb67d74efa48fc.ctex"]
 
 [params]
 

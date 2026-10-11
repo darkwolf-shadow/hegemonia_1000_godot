@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d26ypwwcnu20c"
-path="res://.godot/imported/mulino.png-4e3bfb14ab8532ce7c917e925d846463.ctex"
+path="res://.godot/imported/mulino.png-43f8cde2aebc9fd99552c180de5cf106.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/oriental/buildings/mulino.png"
-dest_files=["res://.godot/imported/mulino.png-4e3bfb14ab8532ce7c917e925d846463.ctex"]
+source_file="res://risorse/icone/1000/oriental/buildings/mulino.png"
+dest_files=["res://.godot/imported/mulino.png-43f8cde2aebc9fd99552c180de5cf106.ctex"]
 
 [params]
 

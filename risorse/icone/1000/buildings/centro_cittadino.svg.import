@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpu8df8nr35ia"
-path="res://.godot/imported/centro_cittadino.svg-773cd81d0cf256ad9f03ef3af147ca9b.ctex"
+path="res://.godot/imported/centro_cittadino.svg-f6f218f8326efc53009a5ca214523f0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/buildings/centro_cittadino.svg"
-dest_files=["res://.godot/imported/centro_cittadino.svg-773cd81d0cf256ad9f03ef3af147ca9b.ctex"]
+source_file="res://risorse/icone/1000/buildings/centro_cittadino.svg"
+dest_files=["res://.godot/imported/centro_cittadino.svg-f6f218f8326efc53009a5ca214523f0a.ctex"]
 
 [params]
 

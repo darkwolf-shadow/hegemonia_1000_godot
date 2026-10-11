@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbvd5ac1ioq1q"
-path="res://.godot/imported/army_barracks.png-67e2f74f8c08aa761553398d84cc9537.ctex"
+path="res://.godot/imported/army_barracks.png-0f192304a2123669e9a70803768cafb8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/settlements/army_barracks.png"
-dest_files=["res://.godot/imported/army_barracks.png-67e2f74f8c08aa761553398d84cc9537.ctex"]
+source_file="res://risorse/texture_interfaccia/settlements/army_barracks.png"
+dest_files=["res://.godot/imported/army_barracks.png-0f192304a2123669e9a70803768cafb8.ctex"]
 
 [params]
 

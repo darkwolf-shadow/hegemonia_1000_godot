@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b37xho5m65ybm"
-path="res://.godot/imported/civil.png-21d4f64d3be542f92493e0945cc11a1a.ctex"
+path="res://.godot/imported/civil.png-44ecfe45892b06719253fc3f6c385456.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/oriental/settlements/civil.png"
-dest_files=["res://.godot/imported/civil.png-21d4f64d3be542f92493e0945cc11a1a.ctex"]
+source_file="res://risorse/icone/1000/oriental/settlements/civil.png"
+dest_files=["res://.godot/imported/civil.png-44ecfe45892b06719253fc3f6c385456.ctex"]
 
 [params]
 

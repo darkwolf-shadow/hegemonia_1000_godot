@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drm5fsbmmoo7d"
-path="res://.godot/imported/officina_assedio_i.png-b671f0ffebd9553f7ccafdd37b5b94cc.ctex"
+path="res://.godot/imported/officina_assedio_i.png-1af487a01b6f312bc116f4ce006ba0ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/indian/buildings/officina_assedio_i.png"
-dest_files=["res://.godot/imported/officina_assedio_i.png-b671f0ffebd9553f7ccafdd37b5b94cc.ctex"]
+source_file="res://risorse/icone/1000/indian/buildings/officina_assedio_i.png"
+dest_files=["res://.godot/imported/officina_assedio_i.png-1af487a01b6f312bc116f4ce006ba0ce.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djom4qx4tiauv"
-path="res://.godot/imported/fucina.png-159475df197bd45266283a563d3f9a3c.ctex"
+path="res://.godot/imported/fucina.png-56f37f3df1b08ce3a3616633002dfa98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/american/buildings/fucina.png"
-dest_files=["res://.godot/imported/fucina.png-159475df197bd45266283a563d3f9a3c.ctex"]
+source_file="res://risorse/icone/1000/american/buildings/fucina.png"
+dest_files=["res://.godot/imported/fucina.png-56f37f3df1b08ce3a3616633002dfa98.ctex"]
 
 [params]
 

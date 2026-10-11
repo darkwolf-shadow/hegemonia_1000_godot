@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://q7qfyedlxor6"
-path="res://.godot/imported/capanna_boscaioli.svg-b8a7085c56969bd22640285046b1ac38.ctex"
+path="res://.godot/imported/capanna_boscaioli.svg-c91b89328039fc34d82cf78d951a2f8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/buildings/capanna_boscaioli.svg"
-dest_files=["res://.godot/imported/capanna_boscaioli.svg-b8a7085c56969bd22640285046b1ac38.ctex"]
+source_file="res://risorse/icone/1000/buildings/capanna_boscaioli.svg"
+dest_files=["res://.godot/imported/capanna_boscaioli.svg-c91b89328039fc34d82cf78d951a2f8d.ctex"]
 
 [params]
 

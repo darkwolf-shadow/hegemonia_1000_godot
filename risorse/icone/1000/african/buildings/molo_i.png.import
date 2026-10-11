@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://q8crf8f8sf0u"
-path="res://.godot/imported/molo_i.png-a806b3f95f406dcca7094d9893652712.ctex"
+path="res://.godot/imported/molo_i.png-3c59b7bb5f797563410e4359fcdc69f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/african/buildings/molo_i.png"
-dest_files=["res://.godot/imported/molo_i.png-a806b3f95f406dcca7094d9893652712.ctex"]
+source_file="res://risorse/icone/1000/african/buildings/molo_i.png"
+dest_files=["res://.godot/imported/molo_i.png-3c59b7bb5f797563410e4359fcdc69f3.ctex"]
 
 [params]
 

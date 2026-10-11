@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://030cy7l62tl3"
-path="res://.godot/imported/varangian_guard.svg-6c6b2d0bdbc6bf6538f0a330bbc16fba.ctex"
+path="res://.godot/imported/varangian_guard.svg-21bf9912f04801dcb352df0dc7775430.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/varangian_guard.svg"
-dest_files=["res://.godot/imported/varangian_guard.svg-6c6b2d0bdbc6bf6538f0a330bbc16fba.ctex"]
+source_file="res://risorse/icone/1000/units/varangian_guard.svg"
+dest_files=["res://.godot/imported/varangian_guard.svg-21bf9912f04801dcb352df0dc7775430.ctex"]
 
 [params]
 

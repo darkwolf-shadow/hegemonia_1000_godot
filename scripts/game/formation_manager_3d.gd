@@ -24,6 +24,18 @@ var _paused: bool = true
 var _selected_index: int = -1
 var _face_direction: float = 0.0
 var _terrain: Node3D
+var _enemies: Array = []
+var _has_order: bool = false
+var _engage_timer: float = 0.0
+var _melee_timer: float = 0.0
+
+const ENGAGE_DISTANCE := 10.0
+const MELEE_RANGE := 1.6
+const MELEE_RANGE_CAVALRY := 2.4
+const ENGAGE_TICK := 0.5
+const MELEE_TICK := 0.4
+const KILL_CHANCE_INFANTRY := 0.18
+const KILL_CHANCE_CAVALRY := 0.28
 
 func set_paused(paused: bool):
 	_paused = paused
@@ -43,6 +55,10 @@ func set_face_direction(angle: float):
 # Imposta il riferimento al terreno per leggere l'altezza
 func set_terrain(terrain: Node3D):
 	_terrain = terrain
+
+# Registra le formazioni nemiche per ingaggio automatico e melee
+func set_enemies(enemies: Array):
+	_enemies = enemies
 
 func _ready():
 	_face_direction = face_direction
@@ -114,7 +130,13 @@ func _setup_formation():
 func _align_to_terrain():
 	for s in _soldiers:
 		if is_instance_valid(s):
-			s.position.y = _get_terrain_height(s.position)
+			s.position.y = _terrain_height_local(s.position)
+
+# Altezza terreno alla posizione locale, convertita in spazio locale
+# (get_height_at restituisce Y globale: tolgo la Y globale di questo nodo)
+func _terrain_height_local(local_pos: Vector3) -> float:
+	var g := _get_terrain_height(local_pos)
+	return g - global_position.y
 
 func _formation_position(index: int) -> Vector3:
 	var sp := spacing
@@ -156,6 +178,7 @@ func _get_terrain_height(local_pos: Vector3) -> float:
 func _process(delta: float):
 	if _paused:
 		return
+	var any_moving := false
 	for i in range(_soldiers.size()):
 		if not is_instance_valid(_soldiers[i]):
 			continue
@@ -163,16 +186,23 @@ func _process(delta: float):
 		if i < _dead.size() and _dead[i]:
 			continue
 		var soldier: Node3D = _soldiers[i]
+		# In contatto melee: il soldato tiene la posizione e combatte
+		if _is_engaged(soldier):
+			if i < _animations.size() and is_instance_valid(_animations[i]):
+				_animations[i].set_walking(false)
+			soldier.rotation.y = _face_direction
+			continue
 		# Ignora la componente Y per il calcolo della distanza orizzontale
 		var flat_target := Vector3(_targets[i].x, 0, _targets[i].z)
 		var flat_pos := Vector3(soldier.position.x, 0, soldier.position.z)
 		var flat_dist := flat_target.distance_to(flat_pos)
 		if flat_dist > 0.1:
+			any_moving = true
 			var dir := (flat_target - flat_pos).normalized()
 			soldier.position.x += dir.x * _move_speed * delta
 			soldier.position.z += dir.z * _move_speed * delta
 			# Segui l'altezza del terreno (terreno solido)
-			soldier.position.y = _get_terrain_height(soldier.position)
+			soldier.position.y = _terrain_height_local(soldier.position)
 			# Orienta il soldato verso la direzione di movimento
 			# Il davanti del soldato e' -Z (standard Godot)
 			# atan2(-dir.x, -dir.z) allinea -Z alla direzione di movimento
@@ -182,26 +212,142 @@ func _process(delta: float):
 				_animations[i].set_speed(_move_speed)
 		else:
 			# Arrivato: allinea al terreno e guarda la direzione della formazione
-			soldier.position.y = _get_terrain_height(soldier.position)
+			soldier.position.y = _terrain_height_local(soldier.position)
 			soldier.rotation.y = _face_direction
 			if i < _animations.size() and is_instance_valid(_animations[i]):
 				_animations[i].set_walking(false)
+	# Ordine completato: riprende il comportamento automatico
+	if _has_order and not any_moving:
+		_has_order = false
+	# Tick strategico: ingaggio automatico e risoluzione corpo a corpo
+	_update_engagement(delta)
+	_update_melee(delta)
 
-func move_formation(new_center_global: Vector3):
-	var local_target := to_local(new_center_global)
-	var current_center := Vector3.ZERO
-	for s in _soldiers:
-		if is_instance_valid(s):
-			current_center += s.position
-	current_center /= max(_soldiers.size(), 1)
-	var offset := local_target - current_center
+# true se il soldato ha un nemico vivo entro la gittata di mischia
+func _is_engaged(soldier: Node3D) -> bool:
+	var rng := _melee_range()
+	var gp := soldier.global_position
+	for ef in _enemies:
+		if ef == null or not is_instance_valid(ef):
+			continue
+		for j in range(ef.get_unit_count()):
+			if ef.is_dead(j):
+				continue
+			var es: Node3D = ef.get_soldier(j)
+			if es and gp.distance_squared_to(es.global_position) < rng * rng:
+				return true
+	return false
+
+func _melee_range() -> float:
+	return MELEE_RANGE_CAVALRY if unit_type == "cavalleria" else MELEE_RANGE
+
+# Avanzata automatica verso la formazione nemica piu' vicina
+func _update_engagement(delta: float):
+	_engage_timer += delta
+	if _engage_timer < ENGAGE_TICK:
+		return
+	_engage_timer = 0.0
+	if not auto_advance or _has_order:
+		return
+	var target := _nearest_enemy_center()
+	if target == Vector3.INF:
+		return
+	var my_center := get_center_global()
+	var flat := Vector3(target.x - my_center.x, 0, target.z - my_center.z)
+	# Ferma l'avanzata quando la prima linea e' a contatto
+	if flat.length() > ENGAGE_DISTANCE:
+		move_formation(target, false)
+	else:
+		set_face_direction(atan2(-flat.x, -flat.z))
+
+func _nearest_enemy_center() -> Vector3:
+	var my_center := get_center_global()
+	var best := Vector3.INF
+	var best_d := INF
+	for ef in _enemies:
+		if ef == null or not is_instance_valid(ef):
+			continue
+		if ef.living_count() == 0:
+			continue
+		var c: Vector3 = ef.get_center_global()
+		var d := Vector2(my_center.x - c.x, my_center.z - c.z).length()
+		if d < best_d:
+			best_d = d
+			best = c
+	return best
+
+# Risoluzione corpo a corpo: i soldati a contatto tirano per uccidere
+func _update_melee(delta: float):
+	_melee_timer += delta
+	if _melee_timer < MELEE_TICK:
+		return
+	_melee_timer = 0.0
+	if _enemies.is_empty():
+		return
+	var rng := _melee_range()
+	var kill_chance := KILL_CHANCE_CAVALRY if unit_type == "cavalleria" else KILL_CHANCE_INFANTRY
+	for i in range(_soldiers.size()):
+		if _dead[i] or not is_instance_valid(_soldiers[i]):
+			continue
+		var gp: Vector3 = _soldiers[i].global_position
+		for ef in _enemies:
+			if ef == null or not is_instance_valid(ef):
+				continue
+			for j in range(ef.get_unit_count()):
+				if ef.is_dead(j):
+					continue
+				var es: Node3D = ef.get_soldier(j)
+				if es == null:
+					continue
+				if gp.distance_squared_to(es.global_position) < rng * rng:
+					if randf() < kill_chance:
+						ef.take_damage(j, 1.0)
+					break
+
+# Muove l'intera formazione conservando la forma relativa.
+# La direzione della formazione si aggiorna verso la meta.
+# player_order=false quando il movimento e' l'avanzata automatica.
+func move_formation(new_center_global: Vector3, player_order: bool = true):
+	var current_center := get_center_global()
+	var flat_dir := Vector3(new_center_global.x - current_center.x, 0,
+		new_center_global.z - current_center.z)
+	if flat_dir.length() > 0.5:
+		_face_direction = atan2(-flat_dir.x, -flat_dir.z)
+	# Offset solo orizzontale: la Y arriva sempre dal terreno
+	var offset := Vector3(flat_dir.x, 0, flat_dir.z)
 	for i in range(_soldiers.size()):
 		_targets[i] = _soldiers[i].position + offset
+	if player_order:
+		_has_order = true
 
 func move_unit(index: int, target_global: Vector3):
 	if index < 0 or index >= _soldiers.size():
 		return
-	_targets[index] = to_local(target_global)
+	var lt := to_local(target_global)
+	_targets[index] = Vector3(lt.x, 0, lt.z)
+
+# Centro globale della formazione (media dei soldati vivi)
+func get_center_global() -> Vector3:
+	var center := Vector3.ZERO
+	var count := 0
+	for i in range(_soldiers.size()):
+		if _dead[i] or not is_instance_valid(_soldiers[i]):
+			continue
+		center += _soldiers[i].global_position
+		count += 1
+	if count > 0:
+		return center / count
+	return global_position
+
+func living_count() -> int:
+	var n := 0
+	for d in _dead:
+		if not d:
+			n += 1
+	return n
+
+func is_dead(index: int) -> bool:
+	return index < 0 or index >= _dead.size() or _dead[index]
 
 func select_unit_at(point_global: Vector3) -> int:
 	var local_point := to_local(point_global)
@@ -247,9 +393,7 @@ func take_damage(index: int, damage: float):
 		_animations[index].set_walking(false)
 	# Fa cadere il soldato a terra: rotazione di 90 gradi (supino)
 	# Disgiunto dalla formazione: non riceve piu' ordini di movimento
-	var terrain_y := _get_terrain_height(soldier.position)
+	var terrain_y := _terrain_height_local(soldier.position)
 	soldier.position.y = terrain_y
 	# Ruota il corpo a terra (caduto su un fianco)
 	soldier.rotation.z = PI / 2.0
-	# Abbassa leggermente per non penetrare nel terreno
-	soldier.position.y -= 0.3

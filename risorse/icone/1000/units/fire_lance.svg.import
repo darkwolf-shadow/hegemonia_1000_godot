@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7eanrd1vphu1"
-path="res://.godot/imported/fire_lance.svg-be25cf08b2181273569452d9962cff62.ctex"
+path="res://.godot/imported/fire_lance.svg-8dd8227f12d2dc9e9f9ef5723735fc68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/fire_lance.svg"
-dest_files=["res://.godot/imported/fire_lance.svg-be25cf08b2181273569452d9962cff62.ctex"]
+source_file="res://risorse/icone/1000/units/fire_lance.svg"
+dest_files=["res://.godot/imported/fire_lance.svg-8dd8227f12d2dc9e9f9ef5723735fc68.ctex"]
 
 [params]
 

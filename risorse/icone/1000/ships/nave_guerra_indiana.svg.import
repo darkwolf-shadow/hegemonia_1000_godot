@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bli5sflj13lij"
-path="res://.godot/imported/nave_guerra_indiana.svg-ccf6b371205dbc65a37f2f65940abefe.ctex"
+path="res://.godot/imported/nave_guerra_indiana.svg-fd472379548e5912bcfb3801dd8d7031.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/ships/nave_guerra_indiana.svg"
-dest_files=["res://.godot/imported/nave_guerra_indiana.svg-ccf6b371205dbc65a37f2f65940abefe.ctex"]
+source_file="res://risorse/icone/1000/ships/nave_guerra_indiana.svg"
+dest_files=["res://.godot/imported/nave_guerra_indiana.svg-fd472379548e5912bcfb3801dd8d7031.ctex"]
 
 [params]
 

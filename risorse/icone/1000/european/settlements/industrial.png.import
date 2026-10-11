@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn48g0mcsa7mn"
-path="res://.godot/imported/industrial.png-178c4d33057581ce4597e59d1e1e23a1.ctex"
+path="res://.godot/imported/industrial.png-b9cd94e6d49c508a8232ead048c79202.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/european/settlements/industrial.png"
-dest_files=["res://.godot/imported/industrial.png-178c4d33057581ce4597e59d1e1e23a1.ctex"]
+source_file="res://risorse/icone/1000/european/settlements/industrial.png"
+dest_files=["res://.godot/imported/industrial.png-b9cd94e6d49c508a8232ead048c79202.ctex"]
 
 [params]
 

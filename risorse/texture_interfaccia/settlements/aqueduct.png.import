@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bc7i1wwcwjef6"
-path="res://.godot/imported/aqueduct.png-2bd5efd14dee3354a37ca815a896be7d.ctex"
+path="res://.godot/imported/aqueduct.png-2ad7d4cd1515a826d351c79a0c6f1e01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/settlements/aqueduct.png"
-dest_files=["res://.godot/imported/aqueduct.png-2bd5efd14dee3354a37ca815a896be7d.ctex"]
+source_file="res://risorse/texture_interfaccia/settlements/aqueduct.png"
+dest_files=["res://.godot/imported/aqueduct.png-2ad7d4cd1515a826d351c79a0c6f1e01.ctex"]
 
 [params]
 

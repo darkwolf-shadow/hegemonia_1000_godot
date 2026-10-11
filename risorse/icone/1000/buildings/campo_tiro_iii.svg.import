@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cy25bgupfcsdx"
-path="res://.godot/imported/campo_tiro_iii.svg-26c14ea15ac6b7bba8844d8c5732d2cb.ctex"
+path="res://.godot/imported/campo_tiro_iii.svg-0a47b91f0bd5cd66ec7f8a5e5e9f7f3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/buildings/campo_tiro_iii.svg"
-dest_files=["res://.godot/imported/campo_tiro_iii.svg-26c14ea15ac6b7bba8844d8c5732d2cb.ctex"]
+source_file="res://risorse/icone/1000/buildings/campo_tiro_iii.svg"
+dest_files=["res://.godot/imported/campo_tiro_iii.svg-0a47b91f0bd5cd66ec7f8a5e5e9f7f3b.ctex"]
 
 [params]
 

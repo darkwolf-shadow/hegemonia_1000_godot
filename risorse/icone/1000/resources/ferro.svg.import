@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r3i0c74xt2iy"
-path="res://.godot/imported/ferro.svg-d80ed645fbff9e8c37a4553ad4c04753.ctex"
+path="res://.godot/imported/ferro.svg-fdb4741e30647e183aae3f89445dbb45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/resources/ferro.svg"
-dest_files=["res://.godot/imported/ferro.svg-d80ed645fbff9e8c37a4553ad4c04753.ctex"]
+source_file="res://risorse/icone/1000/resources/ferro.svg"
+dest_files=["res://.godot/imported/ferro.svg-fdb4741e30647e183aae3f89445dbb45.ctex"]
 
 [params]
 

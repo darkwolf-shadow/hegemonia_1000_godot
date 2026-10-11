@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://corf8dpujhr1c"
-path="res://.godot/imported/village.png-047182873f26020dd523e90cd101f7a5.ctex"
+path="res://.godot/imported/village.png-34354c15155ec8b1935954a3aded52ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/settlements/village.png"
-dest_files=["res://.godot/imported/village.png-047182873f26020dd523e90cd101f7a5.ctex"]
+source_file="res://risorse/texture_interfaccia/settlements/village.png"
+dest_files=["res://.godot/imported/village.png-34354c15155ec8b1935954a3aded52ac.ctex"]
 
 [params]
 

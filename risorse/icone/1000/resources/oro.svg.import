@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dif5ncheng8d2"
-path="res://.godot/imported/oro.svg-47ade74d90d7ab78acabf67b5cc7ef40.ctex"
+path="res://.godot/imported/oro.svg-989fb74b8f6d4e6cded712ceb5ae0495.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/resources/oro.svg"
-dest_files=["res://.godot/imported/oro.svg-47ade74d90d7ab78acabf67b5cc7ef40.ctex"]
+source_file="res://risorse/icone/1000/resources/oro.svg"
+dest_files=["res://.godot/imported/oro.svg-989fb74b8f6d4e6cded712ceb5ae0495.ctex"]
 
 [params]
 

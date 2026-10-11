@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5fnfv5e8hvk5"
-path="res://.godot/imported/cavalleria.png-60b9bea743b825840107f1f6fd333b96.ctex"
+path="res://.godot/imported/cavalleria.png-cf7a76e0c9ab7bad443916857541cd3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/oriental/units/cavalleria.png"
-dest_files=["res://.godot/imported/cavalleria.png-60b9bea743b825840107f1f6fd333b96.ctex"]
+source_file="res://risorse/icone/1000/oriental/units/cavalleria.png"
+dest_files=["res://.godot/imported/cavalleria.png-cf7a76e0c9ab7bad443916857541cd3d.ctex"]
 
 [params]
 

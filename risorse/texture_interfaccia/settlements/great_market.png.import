@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1jnrm02g0wre"
-path="res://.godot/imported/great_market.png-7ece21b9ebefcd8dcf97628bb06e53c0.ctex"
+path="res://.godot/imported/great_market.png-db6f7ec29cb2bdebdf730678b473ccbf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/settlements/great_market.png"
-dest_files=["res://.godot/imported/great_market.png-7ece21b9ebefcd8dcf97628bb06e53c0.ctex"]
+source_file="res://risorse/texture_interfaccia/settlements/great_market.png"
+dest_files=["res://.godot/imported/great_market.png-db6f7ec29cb2bdebdf730678b473ccbf.ctex"]
 
 [params]
 

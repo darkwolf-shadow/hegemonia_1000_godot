@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bu7yspa2q73le"
-path="res://.godot/imported/arcieri_evoluti.png-38f88cb815329a83276aa1391e7f65d2.ctex"
+path="res://.godot/imported/arcieri_evoluti.png-b9b4db58264cbb0d13ac2d160bee8aac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/african/units/arcieri_evoluti.png"
-dest_files=["res://.godot/imported/arcieri_evoluti.png-38f88cb815329a83276aa1391e7f65d2.ctex"]
+source_file="res://risorse/icone/1000/african/units/arcieri_evoluti.png"
+dest_files=["res://.godot/imported/arcieri_evoluti.png-b9b4db58264cbb0d13ac2d160bee8aac.ctex"]
 
 [params]
 

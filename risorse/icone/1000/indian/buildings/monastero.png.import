@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0amatgpfols5"
-path="res://.godot/imported/monastero.png-fca50852e006695dab7835902de05468.ctex"
+path="res://.godot/imported/monastero.png-cbcfd6632631ec6f44887cf5dcde4dba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/indian/buildings/monastero.png"
-dest_files=["res://.godot/imported/monastero.png-fca50852e006695dab7835902de05468.ctex"]
+source_file="res://risorse/icone/1000/indian/buildings/monastero.png"
+dest_files=["res://.godot/imported/monastero.png-cbcfd6632631ec6f44887cf5dcde4dba.ctex"]
 
 [params]
 

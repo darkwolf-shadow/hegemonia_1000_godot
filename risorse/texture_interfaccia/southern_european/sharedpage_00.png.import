@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pj43n67xpvqh"
-path="res://.godot/imported/sharedpage_00.png-b8cfcb131def0ca2fa8c1e9e68f71c58.ctex"
+path="res://.godot/imported/sharedpage_00.png-5804e1755f73003ec90307e7696448b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/southern_european/sharedpage_00.png"
-dest_files=["res://.godot/imported/sharedpage_00.png-b8cfcb131def0ca2fa8c1e9e68f71c58.ctex"]
+source_file="res://risorse/texture_interfaccia/southern_european/sharedpage_00.png"
+dest_files=["res://.godot/imported/sharedpage_00.png-5804e1755f73003ec90307e7696448b2.ctex"]
 
 [params]
 

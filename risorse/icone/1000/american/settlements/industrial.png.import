@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5733oaj76by"
-path="res://.godot/imported/industrial.png-f6ea2205fadb7c1811456bfa5e574679.ctex"
+path="res://.godot/imported/industrial.png-3678d1227ca8fa3e233550d8aa041c3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/american/settlements/industrial.png"
-dest_files=["res://.godot/imported/industrial.png-f6ea2205fadb7c1811456bfa5e574679.ctex"]
+source_file="res://risorse/icone/1000/american/settlements/industrial.png"
+dest_files=["res://.godot/imported/industrial.png-3678d1227ca8fa3e233550d8aa041c3a.ctex"]
 
 [params]
 

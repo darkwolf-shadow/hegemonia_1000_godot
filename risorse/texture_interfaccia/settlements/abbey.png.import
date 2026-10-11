@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://olpuiqi5pvfh"
-path="res://.godot/imported/abbey.png-8a152b9ca9a71677cacb26b36de4d5cb.ctex"
+path="res://.godot/imported/abbey.png-29ff06a9fb5e83affc4fb3a93fe173c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/settlements/abbey.png"
-dest_files=["res://.godot/imported/abbey.png-8a152b9ca9a71677cacb26b36de4d5cb.ctex"]
+source_file="res://risorse/texture_interfaccia/settlements/abbey.png"
+dest_files=["res://.godot/imported/abbey.png-29ff06a9fb5e83affc4fb3a93fe173c3.ctex"]
 
 [params]
 

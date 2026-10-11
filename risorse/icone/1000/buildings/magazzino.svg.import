@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm1dyh2uetdkc"
-path="res://.godot/imported/magazzino.svg-08bf7a4d2f27ab47cdde0a673cdcfe03.ctex"
+path="res://.godot/imported/magazzino.svg-accfb478420fba06f88f4c7eb1a8210f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/buildings/magazzino.svg"
-dest_files=["res://.godot/imported/magazzino.svg-08bf7a4d2f27ab47cdde0a673cdcfe03.ctex"]
+source_file="res://risorse/icone/1000/buildings/magazzino.svg"
+dest_files=["res://.godot/imported/magazzino.svg-accfb478420fba06f88f4c7eb1a8210f.ctex"]
 
 [params]
 

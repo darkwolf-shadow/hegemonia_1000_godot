@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbvies8i2ukbf"
-path="res://.godot/imported/ground_color.png-e4b3c6ce97a4a93454f804196866297a.ctex"
+path="res://.godot/imported/terreno_colore.png-46285908b5031c31008d3e81323b023b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/terrain/ground_color.png"
-dest_files=["res://.godot/imported/ground_color.png-e4b3c6ce97a4a93454f804196866297a.ctex"]
+source_file="res://risorse/textures/terreno/terreno_colore.png"
+dest_files=["res://.godot/imported/terreno_colore.png-46285908b5031c31008d3e81323b023b.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://i0yq01qhxlrr"
-path="res://.godot/imported/cortile_cavaliere.png-3448f953d318f401f59c807f36327815.ctex"
+path="res://.godot/imported/cortile_cavaliere.png-c05a1e2415bb737dc6d10e2ad2371cad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/oriental/buildings/cortile_cavaliere.png"
-dest_files=["res://.godot/imported/cortile_cavaliere.png-3448f953d318f401f59c807f36327815.ctex"]
+source_file="res://risorse/icone/1000/oriental/buildings/cortile_cavaliere.png"
+dest_files=["res://.godot/imported/cortile_cavaliere.png-c05a1e2415bb737dc6d10e2ad2371cad.ctex"]
 
 [params]
 

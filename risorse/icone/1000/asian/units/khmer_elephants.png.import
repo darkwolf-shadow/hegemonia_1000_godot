@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://di68koovr5ptp"
-path="res://.godot/imported/khmer_elephants.png-e257024e7b26bb4f1345a21e6b49b1c9.ctex"
+path="res://.godot/imported/khmer_elephants.png-74afb6da24808187e20b22894c509dda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/asian/units/khmer_elephants.png"
-dest_files=["res://.godot/imported/khmer_elephants.png-e257024e7b26bb4f1345a21e6b49b1c9.ctex"]
+source_file="res://risorse/icone/1000/asian/units/khmer_elephants.png"
+dest_files=["res://.godot/imported/khmer_elephants.png-74afb6da24808187e20b22894c509dda.ctex"]
 
 [params]
 

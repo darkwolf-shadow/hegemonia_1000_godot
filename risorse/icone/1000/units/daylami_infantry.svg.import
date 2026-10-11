@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1pfrg8lkwgnl"
-path="res://.godot/imported/daylami_infantry.svg-7515cd8e38e4c73fbd2f6f4ad47b957b.ctex"
+path="res://.godot/imported/daylami_infantry.svg-adb7f7aeb8ce5978d67bc7ad6c40c1a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/daylami_infantry.svg"
-dest_files=["res://.godot/imported/daylami_infantry.svg-7515cd8e38e4c73fbd2f6f4ad47b957b.ctex"]
+source_file="res://risorse/icone/1000/units/daylami_infantry.svg"
+dest_files=["res://.godot/imported/daylami_infantry.svg-adb7f7aeb8ce5978d67bc7ad6c40c1a9.ctex"]
 
 [params]
 

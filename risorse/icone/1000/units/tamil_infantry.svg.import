@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3leyilyyj3yt"
-path="res://.godot/imported/tamil_infantry.svg-2cdd2516b8115b75419e6660f96ea1b7.ctex"
+path="res://.godot/imported/tamil_infantry.svg-cf5a5abc2eff2ee41c901f8b6a94cb56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/tamil_infantry.svg"
-dest_files=["res://.godot/imported/tamil_infantry.svg-2cdd2516b8115b75419e6660f96ea1b7.ctex"]
+source_file="res://risorse/icone/1000/units/tamil_infantry.svg"
+dest_files=["res://.godot/imported/tamil_infantry.svg-cf5a5abc2eff2ee41c901f8b6a94cb56.ctex"]
 
 [params]
 

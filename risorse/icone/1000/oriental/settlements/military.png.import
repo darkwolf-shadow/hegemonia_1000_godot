@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://davljkur483ga"
-path="res://.godot/imported/military.png-abf158c74789ad6fda92b958dba832be.ctex"
+path="res://.godot/imported/military.png-7e0672d196269fa45dbb1daa0d45e754.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/oriental/settlements/military.png"
-dest_files=["res://.godot/imported/military.png-abf158c74789ad6fda92b958dba832be.ctex"]
+source_file="res://risorse/icone/1000/oriental/settlements/military.png"
+dest_files=["res://.godot/imported/military.png-7e0672d196269fa45dbb1daa0d45e754.ctex"]
 
 [params]
 

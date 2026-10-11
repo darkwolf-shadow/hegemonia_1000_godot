@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfijae5gcks2e"
-path="res://.godot/imported/bondi.svg-cd134d9c9d3e05245d2cd359f7c30492.ctex"
+path="res://.godot/imported/bondi.svg-fd29f414e8b6f5d8e7a31ea928757e22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/bondi.svg"
-dest_files=["res://.godot/imported/bondi.svg-cd134d9c9d3e05245d2cd359f7c30492.ctex"]
+source_file="res://risorse/icone/1000/units/bondi.svg"
+dest_files=["res://.godot/imported/bondi.svg-fd29f414e8b6f5d8e7a31ea928757e22.ctex"]
 
 [params]
 

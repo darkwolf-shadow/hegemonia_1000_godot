@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtqd6trfe7mok"
-path="res://.godot/imported/nave_guerra.svg-e0e68f0f8094e407b801d324b6c8e776.ctex"
+path="res://.godot/imported/nave_guerra.svg-8f9b1693e665f296ebc10daa1f8cd36d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/ships/nave_guerra.svg"
-dest_files=["res://.godot/imported/nave_guerra.svg-e0e68f0f8094e407b801d324b6c8e776.ctex"]
+source_file="res://risorse/icone/1000/ships/nave_guerra.svg"
+dest_files=["res://.godot/imported/nave_guerra.svg-8f9b1693e665f296ebc10daa1f8cd36d.ctex"]
 
 [params]
 

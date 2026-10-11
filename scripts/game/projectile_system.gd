@@ -28,6 +28,12 @@ func _process(delta: float):
 		var arc: float = arc_height * sin(progress * PI)
 		pos.y += arc
 		node.position = pos
+		# Impatto: se il proiettile ha una vittima assegnata, tira per il colpo
+		if t + delta >= total_time and p.has("victim_fm"):
+			var fm = p["victim_fm"]
+			if fm != null and is_instance_valid(fm):
+				if randf() < p.get("kill_chance", 0.0):
+					fm.take_damage(p["victim_idx"], 1.0)
 		# Orienta il proiettile nella direzione di volo
 		var next_progress: float = min(progress + 0.05, 1.0)
 		var next_pos: Vector3 = p["origin"].lerp(p["target"], next_progress)
@@ -38,7 +44,9 @@ func _process(delta: float):
 	_projectiles = alive
 
 # Lancia una freccia da origine a target
-func spawn_arrow(origin: Vector3, target: Vector3):
+# victim_fm/victim_idx opzionali: all'impatto tira kill_chance per uccidere
+func spawn_arrow(origin: Vector3, target: Vector3,
+		victim_fm = null, victim_idx: int = -1, kill_chance: float = 0.0):
 	if _projectiles.size() >= _max_projectiles:
 		return
 	var arrow := MeshInstance3D.new()
@@ -58,10 +66,15 @@ func spawn_arrow(origin: Vector3, target: Vector3):
 		"time": 0.0,
 		"total_time": flight_time,
 		"arc_height": arc,
+		"victim_fm": victim_fm,
+		"victim_idx": victim_idx,
+		"kill_chance": kill_chance,
 	})
 
 # Lancia un proiettile di artiglieria (piu' grosso e lento)
-func spawn_artillery_projectile(origin: Vector3, target: Vector3):
+# victim_fm/victim_idx opzionali: all'impatto tira kill_chance per uccidere
+func spawn_artillery_projectile(origin: Vector3, target: Vector3,
+		victim_fm = null, victim_idx: int = -1, kill_chance: float = 0.0):
 	if _projectiles.size() >= _max_projectiles:
 		return
 	var proj := MeshInstance3D.new()
@@ -86,6 +99,9 @@ func spawn_artillery_projectile(origin: Vector3, target: Vector3):
 		"time": 0.0,
 		"total_time": flight_time,
 		"arc_height": arc,
+		"victim_fm": victim_fm,
+		"victim_idx": victim_idx,
+		"kill_chance": kill_chance,
 	})
 
 func clear_projectiles():

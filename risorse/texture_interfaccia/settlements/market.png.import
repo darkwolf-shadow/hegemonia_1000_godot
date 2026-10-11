@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yj36aovcgyvh"
-path="res://.godot/imported/market.png-c563fdaac5b988cfe9ec4f5961c15f2c.ctex"
+path="res://.godot/imported/market.png-b7a02ff2ffbffb45a119e947d028789e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/settlements/market.png"
-dest_files=["res://.godot/imported/market.png-c563fdaac5b988cfe9ec4f5961c15f2c.ctex"]
+source_file="res://risorse/texture_interfaccia/settlements/market.png"
+dest_files=["res://.godot/imported/market.png-b7a02ff2ffbffb45a119e947d028789e.ctex"]
 
 [params]
 

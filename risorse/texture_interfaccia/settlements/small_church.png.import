@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch4pix7f7qivi"
-path="res://.godot/imported/small_church.png-a801fdc8961b028a87634f4634ae6138.ctex"
+path="res://.godot/imported/small_church.png-54bd9a48952d641bd41462ff36ed9b34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/settlements/small_church.png"
-dest_files=["res://.godot/imported/small_church.png-a801fdc8961b028a87634f4634ae6138.ctex"]
+source_file="res://risorse/texture_interfaccia/settlements/small_church.png"
+dest_files=["res://.godot/imported/small_church.png-54bd9a48952d641bd41462ff36ed9b34.ctex"]
 
 [params]
 

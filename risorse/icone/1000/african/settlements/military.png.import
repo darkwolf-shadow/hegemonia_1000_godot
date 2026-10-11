@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cylmvc626ccey"
-path="res://.godot/imported/military.png-c2ad54f9bf34acf789699a5c6289ce5e.ctex"
+path="res://.godot/imported/military.png-24b4c1c68ffa7fb0d18341d3bbb2f552.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/african/settlements/military.png"
-dest_files=["res://.godot/imported/military.png-c2ad54f9bf34acf789699a5c6289ce5e.ctex"]
+source_file="res://risorse/icone/1000/african/settlements/military.png"
+dest_files=["res://.godot/imported/military.png-24b4c1c68ffa7fb0d18341d3bbb2f552.ctex"]
 
 [params]
 

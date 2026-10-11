@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvc8gwyqxrspy"
-path="res://.godot/imported/arcieri_evoluti.png-ae03b4ff22bc9db13b50f80c097fcce7.ctex"
+path="res://.godot/imported/arcieri_evoluti.png-0cb3ee85b7084467b89bbfb0adf6b74e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/american/units/arcieri_evoluti.png"
-dest_files=["res://.godot/imported/arcieri_evoluti.png-ae03b4ff22bc9db13b50f80c097fcce7.ctex"]
+source_file="res://risorse/icone/1000/american/units/arcieri_evoluti.png"
+dest_files=["res://.godot/imported/arcieri_evoluti.png-0cb3ee85b7084467b89bbfb0adf6b74e.ctex"]
 
 [params]
 

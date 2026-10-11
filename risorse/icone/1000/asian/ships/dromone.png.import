@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhdaldenuew6x"
-path="res://.godot/imported/dromone.png-bc456153462bf63683ac405dccaf2b18.ctex"
+path="res://.godot/imported/dromone.png-9a8f94ee3942d3870a2eb77b9b672a11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/asian/ships/dromone.png"
-dest_files=["res://.godot/imported/dromone.png-bc456153462bf63683ac405dccaf2b18.ctex"]
+source_file="res://risorse/icone/1000/asian/ships/dromone.png"
+dest_files=["res://.godot/imported/dromone.png-9a8f94ee3942d3870a2eb77b9b672a11.ctex"]
 
 [params]
 

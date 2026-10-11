@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckx2wka6fnjve"
-path="res://.godot/imported/malay_archers.png-11b364cd60aa74f556098beec76841fa.ctex"
+path="res://.godot/imported/malay_archers.png-7f4a156f9ee13b7f5344a8ab819efb9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/asian/units/malay_archers.png"
-dest_files=["res://.godot/imported/malay_archers.png-11b364cd60aa74f556098beec76841fa.ctex"]
+source_file="res://risorse/icone/1000/asian/units/malay_archers.png"
+dest_files=["res://.godot/imported/malay_archers.png-7f4a156f9ee13b7f5344a8ab819efb9e.ctex"]
 
 [params]
 

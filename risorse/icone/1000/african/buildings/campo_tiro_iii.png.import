@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ba6lih5y1sf0f"
-path="res://.godot/imported/campo_tiro_iii.png-eb7e4a450cbb06b5e5ca51820a38ec52.ctex"
+path="res://.godot/imported/campo_tiro_iii.png-8f8ed9c7dbae96243aa4c356c1d2e24a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/african/buildings/campo_tiro_iii.png"
-dest_files=["res://.godot/imported/campo_tiro_iii.png-eb7e4a450cbb06b5e5ca51820a38ec52.ctex"]
+source_file="res://risorse/icone/1000/african/buildings/campo_tiro_iii.png"
+dest_files=["res://.godot/imported/campo_tiro_iii.png-8f8ed9c7dbae96243aa4c356c1d2e24a.ctex"]
 
 [params]
 

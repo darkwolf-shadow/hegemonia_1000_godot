@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ijluanaa6okc"
-path="res://.godot/imported/port.png-e595ec0a075e2a6307e521663f81b30e.ctex"
+path="res://.godot/imported/port.png-7cdc67ec9ecd780dad824f04e94670b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/1000/png/settlements/port.png"
-dest_files=["res://.godot/imported/port.png-e595ec0a075e2a6307e521663f81b30e.ctex"]
+source_file="res://risorse/sfondi/1000/png/settlements/port.png"
+dest_files=["res://.godot/imported/port.png-7cdc67ec9ecd780dad824f04e94670b6.ctex"]
 
 [params]
 

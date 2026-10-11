@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2fnjrbg1ra61"
-path="res://.godot/imported/khitan_horse_archers.svg-5beae1152ac1a2fa16f543df14d919d1.ctex"
+path="res://.godot/imported/khitan_horse_archers.svg-075e349f8bfd483d25ed55f8ef4abfb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/khitan_horse_archers.svg"
-dest_files=["res://.godot/imported/khitan_horse_archers.svg-5beae1152ac1a2fa16f543df14d919d1.ctex"]
+source_file="res://risorse/icone/1000/units/khitan_horse_archers.svg"
+dest_files=["res://.godot/imported/khitan_horse_archers.svg-075e349f8bfd483d25ed55f8ef4abfb0.ctex"]
 
 [params]
 

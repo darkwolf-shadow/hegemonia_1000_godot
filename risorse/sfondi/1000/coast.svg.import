@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd145s7aehsht"
-path="res://.godot/imported/coast.svg-4989138dba3d39815f954733ff094cea.ctex"
+path="res://.godot/imported/coast.svg-cb6616c07f1c7632cda8b6c81e593020.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/1000/coast.svg"
-dest_files=["res://.godot/imported/coast.svg-4989138dba3d39815f954733ff094cea.ctex"]
+source_file="res://risorse/sfondi/1000/coast.svg"
+dest_files=["res://.godot/imported/coast.svg-cb6616c07f1c7632cda8b6c81e593020.ctex"]
 
 [params]
 

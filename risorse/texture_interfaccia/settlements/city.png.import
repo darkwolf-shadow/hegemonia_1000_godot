@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ciwrbktu4fnot"
-path="res://.godot/imported/city.png-41b190350f659c21e34ed4f36cf06174.ctex"
+path="res://.godot/imported/city.png-79b5778745980efe7c5e4275fe2ddd34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/settlements/city.png"
-dest_files=["res://.godot/imported/city.png-41b190350f659c21e34ed4f36cf06174.ctex"]
+source_file="res://risorse/texture_interfaccia/settlements/city.png"
+dest_files=["res://.godot/imported/city.png-79b5778745980efe7c5e4275fe2ddd34.ctex"]
 
 [params]
 

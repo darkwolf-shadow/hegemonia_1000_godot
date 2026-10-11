@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djk1w7jb5xybs"
-path="res://.godot/imported/war_elephants.png-c1e2b5dde932a02d4baf6afbfcee754f.ctex"
+path="res://.godot/imported/war_elephants.png-dd7beb2530a2b84b30b74e06b2df9f9c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/indian/units/war_elephants.png"
-dest_files=["res://.godot/imported/war_elephants.png-c1e2b5dde932a02d4baf6afbfcee754f.ctex"]
+source_file="res://risorse/icone/1000/indian/units/war_elephants.png"
+dest_files=["res://.godot/imported/war_elephants.png-dd7beb2530a2b84b30b74e06b2df9f9c.ctex"]
 
 [params]
 

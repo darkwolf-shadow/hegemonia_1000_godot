@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dy33hsiojogxn"
-path="res://.godot/imported/placement_message.png-e12ff756afbfd12240b221bdbd0db101.ctex"
+path="res://.godot/imported/placement_message.png-6b1a915b26a170ae905f7b68772670dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/generic/placement_message.png"
-dest_files=["res://.godot/imported/placement_message.png-e12ff756afbfd12240b221bdbd0db101.ctex"]
+source_file="res://risorse/texture_interfaccia/generic/placement_message.png"
+dest_files=["res://.godot/imported/placement_message.png-6b1a915b26a170ae905f7b68772670dc.ctex"]
 
 [params]
 

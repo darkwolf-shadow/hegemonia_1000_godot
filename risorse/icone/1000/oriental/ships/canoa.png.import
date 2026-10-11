@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvv5bnxhi3qa3"
-path="res://.godot/imported/canoa.png-e6399ca7a9142c57c8cd4c273d1a3099.ctex"
+path="res://.godot/imported/canoa.png-7d349399aeade4260e6516dae825f382.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/oriental/ships/canoa.png"
-dest_files=["res://.godot/imported/canoa.png-e6399ca7a9142c57c8cd4c273d1a3099.ctex"]
+source_file="res://risorse/icone/1000/oriental/ships/canoa.png"
+dest_files=["res://.godot/imported/canoa.png-7d349399aeade4260e6516dae825f382.ctex"]
 
 [params]
 

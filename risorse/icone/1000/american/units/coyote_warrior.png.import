@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4gkadeqn3k04"
-path="res://.godot/imported/coyote_warrior.png-6653d10ac4f4e8ed1c840007aa829063.ctex"
+path="res://.godot/imported/coyote_warrior.png-f56d91e38baa199cb7a9bfb5291a4366.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/american/units/coyote_warrior.png"
-dest_files=["res://.godot/imported/coyote_warrior.png-6653d10ac4f4e8ed1c840007aa829063.ctex"]
+source_file="res://risorse/icone/1000/american/units/coyote_warrior.png"
+dest_files=["res://.godot/imported/coyote_warrior.png-f56d91e38baa199cb7a9bfb5291a4366.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://df42u2chj8ipf"
-path="res://.godot/imported/turkish_horse_archers.png-114c1fd0a78683e3e26c8d42a79b31fa.ctex"
+path="res://.godot/imported/turkish_horse_archers.png-7b9f220271fba24816b7519f1bbef390.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/oriental/units/turkish_horse_archers.png"
-dest_files=["res://.godot/imported/turkish_horse_archers.png-114c1fd0a78683e3e26c8d42a79b31fa.ctex"]
+source_file="res://risorse/icone/1000/oriental/units/turkish_horse_archers.png"
+dest_files=["res://.godot/imported/turkish_horse_archers.png-7b9f220271fba24816b7519f1bbef390.ctex"]
 
 [params]
 

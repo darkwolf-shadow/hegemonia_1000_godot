@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://up3rv1ypf211"
-path="res://.godot/imported/civil.svg-62eeac27491c85e0cc228ec131daddc9.ctex"
+path="res://.godot/imported/civil.svg-6d7c97ac22f37f99bfd753b1662d5767.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/1000/civil.svg"
-dest_files=["res://.godot/imported/civil.svg-62eeac27491c85e0cc228ec131daddc9.ctex"]
+source_file="res://risorse/sfondi/1000/civil.svg"
+dest_files=["res://.godot/imported/civil.svg-6d7c97ac22f37f99bfd753b1662d5767.ctex"]
 
 [params]
 

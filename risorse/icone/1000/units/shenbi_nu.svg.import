@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg1gcfhvy0kpt"
-path="res://.godot/imported/shenbi_nu.svg-259867d3ef97c0404d80a9c8553e8dfb.ctex"
+path="res://.godot/imported/shenbi_nu.svg-da5d347e8cad63967b44e35731e4e76e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/shenbi_nu.svg"
-dest_files=["res://.godot/imported/shenbi_nu.svg-259867d3ef97c0404d80a9c8553e8dfb.ctex"]
+source_file="res://risorse/icone/1000/units/shenbi_nu.svg"
+dest_files=["res://.godot/imported/shenbi_nu.svg-da5d347e8cad63967b44e35731e4e76e.ctex"]
 
 [params]
 

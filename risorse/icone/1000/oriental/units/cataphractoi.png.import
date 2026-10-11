@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvdnerijid6j7"
-path="res://.godot/imported/cataphractoi.png-268553c97ac663aac44e74b1ce6c9387.ctex"
+path="res://.godot/imported/cataphractoi.png-4fe4bd14048864d2330509a885801ef5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/oriental/units/cataphractoi.png"
-dest_files=["res://.godot/imported/cataphractoi.png-268553c97ac663aac44e74b1ce6c9387.ctex"]
+source_file="res://risorse/icone/1000/oriental/units/cataphractoi.png"
+dest_files=["res://.godot/imported/cataphractoi.png-4fe4bd14048864d2330509a885801ef5.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkvndm18sm48p"
-path="res://.godot/imported/gravel_color.png-4c9cf045daf4bb345025510989fa22d5.ctex"
+path="res://.godot/imported/ghiaia_colore.png-d176103804034a2bd5a958e46050e324.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/terrain/gravel_color.png"
-dest_files=["res://.godot/imported/gravel_color.png-4c9cf045daf4bb345025510989fa22d5.ctex"]
+source_file="res://risorse/textures/terreno/ghiaia_colore.png"
+dest_files=["res://.godot/imported/ghiaia_colore.png-d176103804034a2bd5a958e46050e324.ctex"]
 
 [params]
 

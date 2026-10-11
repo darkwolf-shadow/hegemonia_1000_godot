@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bf6jb3xbkg1dm"
-path="res://.godot/imported/centro_cittadino.png-9ff0bcf68798baa4cad8c8f309dcee4d.ctex"
+path="res://.godot/imported/centro_cittadino.png-5658f7f87f3817b1ebd64e484be9d650.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/african/buildings/centro_cittadino.png"
-dest_files=["res://.godot/imported/centro_cittadino.png-9ff0bcf68798baa4cad8c8f309dcee4d.ctex"]
+source_file="res://risorse/icone/1000/african/buildings/centro_cittadino.png"
+dest_files=["res://.godot/imported/centro_cittadino.png-5658f7f87f3817b1ebd64e484be9d650.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvk47k8rw8ukb"
-path="res://.godot/imported/atlatl.svg-a4b19864eaf49475ca619e879c6a4c41.ctex"
+path="res://.godot/imported/atlatl.svg-795b088e5c7a6bf33af7b477bb87e545.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/units/atlatl.svg"
-dest_files=["res://.godot/imported/atlatl.svg-a4b19864eaf49475ca619e879c6a4c41.ctex"]
+source_file="res://risorse/icone/1000/units/atlatl.svg"
+dest_files=["res://.godot/imported/atlatl.svg-795b088e5c7a6bf33af7b477bb87e545.ctex"]
 
 [params]
 

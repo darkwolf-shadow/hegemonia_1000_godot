@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8j488kaxwcle"
-path="res://.godot/imported/motte_and_bailey.png-bc9c34f1e74201b46359b73a55aec4b0.ctex"
+path="res://.godot/imported/motte_and_bailey.png-77d0f600d0f5df76e33fc8aae54a18b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_textures/settlements/motte_and_bailey.png"
-dest_files=["res://.godot/imported/motte_and_bailey.png-bc9c34f1e74201b46359b73a55aec4b0.ctex"]
+source_file="res://risorse/texture_interfaccia/settlements/motte_and_bailey.png"
+dest_files=["res://.godot/imported/motte_and_bailey.png-77d0f600d0f5df76e33fc8aae54a18b9.ctex"]
 
 [params]
 

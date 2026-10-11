@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwjhxjko0jnp7"
-path="res://.godot/imported/fanteria_pesante.png-d0df97d5b5d8b603cd5230d267027e2e.ctex"
+path="res://.godot/imported/fanteria_pesante.png-f88e2f52fef8fa940cc35c5b68684655.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/1000/oriental/units/fanteria_pesante.png"
-dest_files=["res://.godot/imported/fanteria_pesante.png-d0df97d5b5d8b603cd5230d267027e2e.ctex"]
+source_file="res://risorse/icone/1000/oriental/units/fanteria_pesante.png"
+dest_files=["res://.godot/imported/fanteria_pesante.png-f88e2f52fef8fa940cc35c5b68684655.ctex"]
 
 [params]
 
