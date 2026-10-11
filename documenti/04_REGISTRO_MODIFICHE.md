@@ -15,6 +15,63 @@ una voce in cima alla sezione "Cronologia" con:
 
 ## Cronologia
 
+### 2026-10-11 — Passo 80: Battaglia 3D funzionante - quota, formazioni vere, melee, ordini plotone
+
+- **Merge base**: migrazione Summer/Godot 4.7 integrata nel branch 3D
+  (conflitti `project.godot` e `.gitignore` risolti; `config_api.json`
+  e `.summer/local/` entrambi ignorati)
+- **Bug critico quota risolto**: in `battle_view_3d.gd` l'array
+  `_all_formations` veniva popolato DOPO `_setup_formations()`: il
+  terreno non veniva mai assegnato e i soldati restavano a y=0.
+  Ora gli array sono riempiti prima e `set_terrain`/`set_enemies`
+  vengono applicati davvero
+- **Quota corretta**: l'altezza del terreno e' letta in coordinate
+  globali e convertita in locale sottraendo la Y del nodo formazione;
+  gli ordini di movimento non portano piu' componente Y (niente derive)
+- **Geometrie formazioni reali** in `formation_manager_3d.gd`:
+  - linea = fronte largo su 2 file
+  - quadrato = blocco compatto a lati uguali
+  - cuneo = triangolo vero (1 uomo in punta, file crescenti)
+  - colonna = fila a 2 per la marcia
+  - gli slot ruotano con `_face_direction`
+- **Cambio formazione sul posto**: `set_formation` non ricrea piu' i
+  soldati, riassegna i target attorno al centro attuale; funziona
+  anche mentre la formazione e' in marcia
+- **Avanzata autonoma**: `auto_advance` ora funziona: fanteria e
+  cavalleria avanzano verso la formazione nemica piu' vicina e si
+  fermano al contatto; arcieri e artiglieria tengono posizione
+- **Melee**: i soldati a contatto si infliggono danni per tick
+  (probabilita' uccisione 0.18 fanteria / 0.28 cavalleria ogni 0.4s),
+  le vittime cadono a terra e non ricevono piu' ordini
+- **Proiettili letali**: `projectile_system.gd` accetta bersaglio e
+  probabilita' di uccisione; all'impatto le frecce uccidono al 25%,
+  l'artiglieria al 60%
+- **Carica corretta**: il pulsante punta al centro della formazione
+  nemica piu' vicina, non piu' a (0,0,0)
+- **Ordini comportamentali veri**: fermo = tiene posizione e spegne
+  l'avanzata automatica; avanza = riprende l'avanzata; carica =
+  cuneo + velocita' x2; ritirata = indietreggia 40m dal nemico
+- **Selezione a due livelli**: primo click = formazione intera
+  (raggio = impronta reale dei soldati vivi, non 8m fisso);
+  secondo click su un soldato = singolo plotone, mosso col click dx
+  tramite `move_unit`
+- **Menu formazione persistente**: non si chiude piu' dopo ogni ordine
+  e la selezione non si perde
+- **Esito battaglia**: vittoria rilevata quando uno schieramento
+  e' annientato, annunciata e messa in pausa
+- **Nebbia ridotta** in tutte le 8 scene battaglia per bioma
+  (fog 0.008->0.002, volumetrica 0.01->0.003)
+- **Finestra gioco**: override 1280x720 in `project.godot`,
+  mai a tutto schermo
+- **Camera**: zoom anche da tastiera (+/-/PagSu/PagGiu)
+- **Fix minori**: "Veloce x3" applica velocita' 3 (era 5);
+  arcieri/artiglieria scelgono solo bersagli vivi; take_damage non
+  sprofonda piu' sotto il terreno
+- **Verifiche**: battle_view_3d e battle_hills avviati in Summer e
+  diretti, 0 errori; catture gameplay confermano schieramento a
+  fronte, avanzata, melee e caduti
+- **Task di riferimento**: `documenti/TASK_BATTAGLIA_3D_FUNZIONAMENTO.md`
+
 ### 2026-08-22 — Passo 79: Modalita' prova con risorse infinite e texture catalogo corrette
 - **Modalita' prova Agglomerato**:
   - Se aperta dal menu `Prova di Egemonia 1000`, imposta `GameState.state["render_test_mode"] = true`
