@@ -3,6 +3,7 @@
 .import/
 *.tmp
 *.uid
+*.bak
 
 # Esportazioni
 export.cfg
@@ -18,3 +19,6 @@ desktop.ini
 
 # Chiavi API locali: mai pubblicare su GitHub
 config_api.json
+
+# Summer Engine local-only state (SummerGit, caches, locks)
+.summer/local/
